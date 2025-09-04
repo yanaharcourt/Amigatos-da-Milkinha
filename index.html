@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amigatos da Milkinha - Abrigo de Gatos</title>
+
+    <link rel="icon" href="./logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/styles.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="./assets/img/logo.png" alt="Logo" class="logo-image">
+                Amigatos da Milkinha
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+            <ul class="nav-buttons">
+                <li><a href="cats_grid.html" class="btn btn-primary nav-btn-wide">Ver Gatos</a></li>
+                <li><a href="#ajudar" class="btn btn-secondary nav-btn-wide">Ajudar</a></li>
+                <div class="language-switcher">
+                    <a href="./en/index.html" class="language-btn" title="Switch to English">
+                        <img src="./assets/img/language-circle.svg" alt="Language" class="language-icon">
+                        <span class="language-text">EN</span>
+                    </a>
+                </div>
+            </ul>
+
+            <div class="mobile-menu" id="mobileMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <img src="./assets/img/hero1.png" alt="Background" class="hero-background">
+
+        <div class="hero-svg">
+            <svg width="736" height="450" viewBox="0 0 736 451" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                <path
+                    d="M87.591 200.904C94.3878 160.381 94.591 151.906 157.089 121.908C219.587 91.9094 349.089 104.411 349.089 104.411C349.089 104.411 468.087 116.919 535.589 139.411C571.737 151.457 602.813 167.782 608.595 205.911C611.444 224.7 607.708 236.289 600.595 253.911C590.881 277.977 576.414 288.342 558.595 305.411C496.374 365.012 444.746 381.638 358.595 382.911C272.085 384.19 217.292 375.05 157.089 312.911C122.118 276.815 79.0759 251.673 87.591 200.904Z"
+                    fill="#B8798E" />
+
+                <!-- <path
+                    d="M133.137 309.435C137.731 321.662 134.382 335.282 128 346.678C114.5 370.786 95.099 386.616 58.5 389.327C31.5 391.327 0 363.95 0 328.327C3 292.827 24 268.327 65.4453 268.327C98.7357 272.333 124.289 285.887 133.137 309.435Z"
+                    fill="#B8798E" />
+                <circle cx="466.5" cy="69.8274" r="34" fill="#B8798E" /> -->
+
+                <a href="tel:+351963260200" class="svg-phone-button">
+                    <path
+                        d="M133.137 309.435C137.731 321.662 134.382 335.282 128 346.678C114.5 370.786 95.099 386.616 58.5 389.327C31.5 391.327 0 363.95 0 328.327C3 292.827 24 268.327 65.4453 268.327C98.7357 272.333 124.289 285.887 133.137 309.435Z"
+                        fill="#B8798E" />
+                    <image x="40" y="305" width="50" height="50" href="./assets/img/Phone Calling Rounded.svg" />
+                </a>
+
+                <a href="cats_grid.html" class="svg-button-1">
+                    <path
+                        d="M534.083 101.265C526.244 89.5487 520.374 81.5667 516.789 74.2558C508.833 58.0329 520.489 38.9316 538.147 35.1058C552.863 31.9178 571.319 32.369 590.525 35.3677C641.02 47.5932 665.858 63.7039 694.218 102.199C699.81 109.79 704.008 118.335 706.981 127.282C710.103 136.676 711.672 143.068 709.754 149.732C705.993 160.586 702.315 166.73 691.572 171.638C686.567 173.924 681.109 175.045 675.644 175.688C659.298 177.612 648.298 177.09 633.946 175.552C627.227 174.832 620.602 173.353 614.198 171.195C601.93 167.061 592.727 163.477 582.475 156.437C577.043 152.707 572.452 147.911 568.266 142.823L534.083 101.265Z"
+                        fill="#B8798E" />
+                    <text x="600" y="112" fill="white" text-anchor="middle" font-family="Quicksand, sans-serif"
+                        font-size="32" font-weight="600" transform="rotate(28 600 115)">Ver Gatos</text>
+                </a>
+
+                <a href="cats_grid.html" class="svg-button-2">
+                    <path
+                        d="M519.5 347.828C507.022 354.408 497.942 358.722 491.184 363.388C475.731 374.056 477.283 397.281 492.069 408.856C504.1 418.275 521.122 426.229 540 432.329C592.726 444.818 623.434 441.898 668.413 420.571C676.826 416.582 684.49 411.143 691.308 404.803C698.911 397.732 703.55 392.735 705 385.828C706.746 374.398 706.283 367.234 698.591 357.847C695.127 353.619 690.766 350.213 686.192 347.222C671.674 337.728 661.125 333.099 646.717 327.712C640.603 325.426 634.252 323.804 627.797 322.832C613.869 320.735 603.383 319.599 589.958 321.274C583.631 322.064 577.53 324.046 571.63 326.464L519.5 347.828Z"
+                        fill="#B8798E" />
+                    <text x="590" y="394" fill="white" text-anchor="middle" font-family="Quicksand, sans-serif"
+                        font-size="32" font-weight="600">Ver Gatos</text>
+                </a>
+
+                <circle cx="432.5" cy="416.827" r="34" fill="#B8798E" />
+            </svg>
+        </div>
+
+        <div class="hero-title">
+            <h1>AMIGATOS DA<br>MILKINHA</h1>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats" id="stats">
+        <div class="stats-container">
+            <div class="stat-item fade-in">
+                <img src="./assets/img/paw1.svg" alt="Paw" class="paw-svg">
+                <div class="stat-content">
+                    <span class="stat-number">42</span>
+                    <span class="stat-label">Gatos Disponíveis</span>
+                </div>
+            </div>
+
+            <div class="stat-item fade-in">
+                <img src="./assets/img/paw1.svg" alt="Paw" class="paw-svg">
+                <div class="stat-content">
+                    <span class="stat-number">200+</span>
+                    <span class="stat-label">Gatos Adotados</span>
+                </div>
+            </div>
+
+            <div class="stat-item fade-in">
+                <img src="./assets/img/paw1.svg" alt="Paw" class="paw-svg">
+                <div class="stat-content">
+                    <span class="stat-number">5</span>
+                    <span class="stat-label">Anos de Experiência</span>
+                </div>
+            </div>
+
+            <div class="stat-item fade-in">
+                <img src="./assets/img/paw1.svg" alt="Paw" class="paw-svg">
+                <div class="stat-content">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">Cuidado Dedicado</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cats Carousel Section -->
+    <section class="cats-carousel">
+        <div class="cats-carousel-container">
+            <h2 class="fade-in">Conheça Alguns dos Nossos Amigatos</h2>
+            <p class="fade-in">Cada um tem sua própria personalidade e história especial</p>
+
+            <div class="carousel-wrapper fade-in">
+                <div class="carousel-container">
+                    <div class="carousel-track" id="carouselTrack">
+                        <!-- Slide 1 -->
+                        <div class="carousel-slide">
+                            <div class="cat-preview-card">
+                                <img src="./assets/img/Adolfina1.png" alt="Adolfina" loading="lazy">
+                                <div class="cat-preview-info">
+                                    <h3>Adolfina</h3>
+                                    <p>1 ano • Feminino • Europeu Comum</p>
+                                    <span class="cat-preview-status">Disponível</span>
+                                </div>
+                            </div>
+                            <div class="cat-preview-card">
+                                <img src="./assets/img/Baunilha.png" alt="Baunilha" loading="lazy">
+                                <div class="cat-preview-info">
+                                    <h3>Baunilha</h3>
+                                    <p>2 anos • Masculino • Europeu Comum</p>
+                                    <span class="cat-preview-status">Disponível</span>
+                                </div>
+                            </div>
+                            <div class="cat-preview-card">
+                                <img src="./assets/img/Brownie.png" alt="Brownie" loading="lazy">
+                                <div class="cat-preview-info">
+                                    <h3>Brownie</h3>
+                                    <p>2 anos • Masculino • Siamês</p>
+                                    <span class="cat-preview-status">Disponível</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="carousel-slide">
+                            <div class="cat-preview-card">
+                                <img src="./assets/img/Daisy.png" alt="Daisy" loading="lazy">
+                                <div class="cat-preview-info">
+                                    <h3>Daisy</h3>
+                                    <p>1 ano • Feminino • Pelo Longo</p>
+                                    <span class="cat-preview-status">Disponível</span>
+                                </div>
+                            </div>
+                            <div class="cat-preview-card">
+                                <img src="./assets/img/Flash.jpg" alt="Flash" loading="lazy">
+                                <div class="cat-preview-info">
+                                    <h3>Flash</h3>
+                                    <p>3 anos • Masculino • Pelo Longo</p>
+                                    <span class="cat-preview-status">Disponível</span>
+                                </div>
+                            </div>
+                            <div class="cat-preview-card">
+                                <img src="./assets/img/Gaio.jpg" alt="Gaio" loading="lazy">
+                                <div class="cat-preview-info">
+                                    <h3>Gaio</h3>
+                                    <p>2 anos • Masculino • Chartreux</p>
+                                    <span class="cat-preview-status">Disponível</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="carousel-slide">
+                            <div class="cat-preview-card">
+                                <img src="./assets/img/Gafanhoto.jpg" alt="Gafanhoto" loading="lazy">
+                                <div class="cat-preview-info">
+                                    <h3>Gafanhoto</h3>
+                                    <p>1 ano • Masculino • Europeu Comum</p>
+                                    <span class="cat-preview-status">Disponível</span>
+                                </div>
+                            </div>
+                            <div class="cat-preview-card">
+                                <img src="./assets/img/Harley Quinn.jpg" alt="Harley Quinn" loading="lazy">
+                                <div class="cat-preview-info">
+                                    <h3>Harley Quinn</h3>
+                                    <p>10 anos • Feminino • Calico</p>
+                                    <span class="cat-preview-status">Disponível</span>
+                                </div>
+                            </div>
+                            <div class="cat-preview-card">
+                                <img src="./assets/img/Isa.jpg" alt="Isa" loading="lazy">
+                                <div class="cat-preview-info">
+                                    <h3>Isa</h3>
+                                    <p>10 meses • Feminino • Europeu Comum</p>
+                                    <span class="cat-preview-status">Disponível</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 4 -->
+                        <div class="carousel-slide">
+                            <div class="cat-preview-card">
+                                <img src="./assets/img/Jubileu.jpg" alt="Jubileu" loading="lazy">
+                                <div class="cat-preview-info">
+                                    <h3>Jubileu</h3>
+                                    <p>5 anos • Masculino • Europeu Comum</p>
+                                    <span class="cat-preview-status">Disponível</span>
+                                </div>
+                            </div>
+                            <div class="cat-preview-card">
+                                <img src="./assets/img/Judy.jpg" alt="Judy" loading="lazy">
+                                <div class="cat-preview-info">
+                                    <h3>Judy</h3>
+                                    <p>10 anos • Feminino • Europeu Comum</p>
+                                    <span class="cat-preview-status">Disponível</span>
+                                </div>
+                            </div>
+                            <div class="cat-preview-card">
+                                <img src="./assets/img/Kika.jpg" alt="Kika" loading="lazy">
+                                <div class="cat-preview-info">
+                                    <h3>Kika</h3>
+                                    <p>1 ano • Feminino • Pelo Longo</p>
+                                    <span class="cat-preview-status">Disponível</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-btn carousel-btn-prev" id="prevBtn">❮</button>
+                <button class="carousel-btn carousel-btn-next" id="nextBtn">❯</button>
+
+                <div class="carousel-indicators" id="carouselIndicators"></div>
+            </div>
+
+            <div class="carousel-cta">
+                <a href="cats_grid.html" class="btn btn-primary carousel-main-btn">
+                    Ver Todos os Gatos
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="sobre">
+        <div class="about-container">
+            <div class="about-content fade-in">
+                <h2>Nossa Missão</h2>
+                <p>O Amigatos da Milkinha é mais do que um abrigo - é um lar temporário onde cada gato recebe amor,
+                    cuidado médico e a chance de encontrar uma família para sempre.</p>
+                <p>Trabalhamos incansavelmente para resgatar, reabilitar e realojar gatos abandonados,
+                    proporcionando-lhes uma segunda oportunidade de vida feliz.</p>
+                <p>Cada um dos nossos 42 gatos atuais tem sua própria história única e personalidade especial, esperando
+                    pelo momento certo para encontrar sua família perfeita.</p>
+            </div>
+            <div class="about-image fade-in">
+                <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=600&h=400&fit=crop"
+                    alt="Gatos do abrigo" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="servicos">
+        <div class="services-container">
+            <h2 class="fade-in">Como Você Pode Ajudar</h2>
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <span class="service-icon">🏠</span>
+                    <h3>Adoção</h3>
+                    <p>Dê um lar permanente a um dos nossos gatos. Cada adoção salva duas vidas - a do gato adotado e
+                        cria espaço para outro em necessidade.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <span class="service-icon">❤️</span>
+                    <h3>Doações</h3>
+                    <p>Suas doações financeiras nos ajudam a cobrir custos veterinários, alimentação e cuidados diários
+                        dos nossos amigos felinos.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <span class="service-icon">🤝</span>
+                    <h3>Voluntariado</h3>
+                    <p>Junte-se à nossa equipe de voluntários dedicados. Ajude com limpeza, alimentação, socialização e
+                        muito mais.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <span class="service-icon">🎁</span>
+                    <h3>Doação de Itens</h3>
+                    <p>Precisamos de ração, areia sanitária, medicamentos, brinquedos e outros suprimentos para manter
+                        nossos gatos felizes e saudáveis.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <span class="service-icon">🏡</span>
+                    <h3>Lar Temporário</h3>
+                    <p>Torne-se uma família de acolhimento temporário para gatos que precisam de cuidados especiais ou
+                        socialização extra.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <span class="service-icon">📢</span>
+                    <h3>Divulgação</h3>
+                    <p>Ajude-nos a divulgar nosso trabalho nas redes sociais e encontrar famílias para nossos gatos
+                        especiais.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contato">
+        <div class="contact-container">
+            <h2 class="fade-in">Entre em Contato</h2>
+            <p class="fade-in">Pronto para adotar ou tem dúvidas? Entre em contato conosco!</p>
+            <div class="contact-info">
+                <div class="contact-item fade-in">
+                    <h3>📞 Telefone</h3>
+                    <a href="tel:+351963260200">+351 963 260 200</a>
+                </div>
+                <div class="contact-item fade-in">
+                    <h3>📧 Email</h3>
+                    <a href="mailto:info@amigatosdamilkinha.pt">info@amigatosdamilkinha.pt</a>
+                </div>
+                <div class="contact-item fade-in">
+                    <h3>🌐 Redes Sociais</h3>
+                    <a href="https://linktr.ee/amigatosdamilkinha" target="_blank">Linktree</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">Amigatos da Milkinha</div>
+            <p>Salvando vidas felinas, uma adoção de cada vez.</p>
+            <div class="social-links">
+                <a href="https://linktr.ee/amigatosdamilkinha" target="_blank" aria-label="Linktree">🔗</a>
+                <a href="tel:+351963260200" aria-label="Telefone">📞</a>
+                <a href="mailto:info@amigatosdamilkinha.pt" aria-label="Email">📧</a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Amigatos da Milkinha. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Mobile menu toggle (basic implementation)
+        const mobileMenu = document.getElementById('mobileMenu');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenu.addEventListener('click', () => {
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Counter animation for stats
+        const animateCounters = () => {
+            const counters = document.querySelectorAll('.stat-number');
+            counters.forEach(counter => {
+                const target = counter.textContent;
+                const isNumber = !isNaN(parseInt(target));
+
+                if (isNumber) {
+                    const startValue = 0;
+                    const endValue = parseInt(target);
+                    const duration = 2000;
+                    const step = endValue / (duration / 16);
+
+                    let current = startValue;
+                    const timer = setInterval(() => {
+                        current += step;
+                        if (current >= endValue) {
+                            current = endValue;
+                            clearInterval(timer);
+                        }
+                        counter.textContent = Math.floor(current);
+                    }, 16);
+                }
+            });
+        };
+
+        // Trigger counter animation when stats section is visible
+        const statsSection = document.querySelector('.stats');
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    statsObserver.disconnect();
+                }
+            });
+        }, { threshold: 0.5 });
+
+        statsObserver.observe(statsSection);
+
+        // Cats Carousel Functionality
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const totalSlides = slides.length;
+        const carouselTrack = document.getElementById('carouselTrack');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const indicatorsContainer = document.getElementById('carouselIndicators');
+
+        // Create indicators
+        for (let i = 0; i < totalSlides; i++) {
+            const indicator = document.createElement('div');
+            indicator.className = `carousel-indicator ${i === 0 ? 'active' : ''}`;
+            indicator.addEventListener('click', () => goToSlide(i));
+            indicatorsContainer.appendChild(indicator);
+        }
+
+        const indicators = document.querySelectorAll('.carousel-indicator');
+
+        function updateCarousel() {
+            const translateX = -currentSlide * 100;
+            carouselTrack.style.transform = `translateX(${translateX}%)`;
+
+            // Update indicators
+            indicators.forEach((indicator, index) => {
+                indicator.classList.toggle('active', index === currentSlide);
+            });
+        }
+
+        function goToSlide(slideIndex) {
+            currentSlide = slideIndex;
+            updateCarousel();
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateCarousel();
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateCarousel();
+        }
+
+        // Event listeners
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+
+        // Auto-play carousel
+        let autoPlayInterval = setInterval(nextSlide, 4000);
+
+        // Pause auto-play on hover
+        const carouselWrapper = document.querySelector('.carousel-wrapper');
+        carouselWrapper.addEventListener('mouseenter', () => {
+            clearInterval(autoPlayInterval);
+        });
+
+        carouselWrapper.addEventListener('mouseleave', () => {
+            autoPlayInterval = setInterval(nextSlide, 4000);
+        });
+
+        // Touch/swipe support for mobile
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        carouselWrapper.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        carouselWrapper.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            const swipeThreshold = 50;
+            const swipeDistance = touchStartX - touchEndX;
+
+            if (Math.abs(swipeDistance) > swipeThreshold) {
+                if (swipeDistance > 0) {
+                    nextSlide();
+                } else {
+                    prevSlide();
+                }
+            }
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                prevSlide();
+            } else if (e.key === 'ArrowRight') {
+                nextSlide();
+            }
+        });
+    </script>
+
+    <!-- Carousel-->
+    <script>
+        (function () {
+            var currentSlide = 0;
+            var carouselTrack = document.getElementById('carouselTrack');
+            var prevBtn = document.getElementById('prevBtn');
+            var nextBtn = document.getElementById('nextBtn');
+            var indicatorsContainer = document.getElementById('carouselIndicators');
+            var indicators = [];
+            var autoPlayInterval;
+            var totalSlides = 4;
+
+            indicatorsContainer.innerHTML = '';
+
+            for (var i = 0; i < totalSlides; i++) {
+                var indicator = document.createElement('div');
+                indicator.className = 'carousel-indicator';
+                if (i === 0) {
+                    indicator.classList.add('active');
+                }
+                indicator.setAttribute('data-slide', i);
+                indicator.addEventListener('click', function () {
+                    goToSlide(parseInt(this.getAttribute('data-slide')));
+                });
+                indicatorsContainer.appendChild(indicator);
+                indicators.push(indicator);
+            }
+
+            function updateCarousel() {
+                var translateX = -currentSlide * 100;
+                carouselTrack.style.transform = 'translateX(' + translateX + '%)';
+
+                for (var i = 0; i < indicators.length; i++) {
+                    indicators[i].classList.remove('active');
+                }
+                indicators[currentSlide].classList.add('active');
+            }
+
+            function goToSlide(slideIndex) {
+                if (slideIndex >= 0 && slideIndex < totalSlides) {
+                    currentSlide = slideIndex;
+                    updateCarousel();
+                }
+            }
+
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % totalSlides;
+                updateCarousel();
+            }
+
+            function prevSlide() {
+                currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                updateCarousel();
+            }
+
+            function startAutoPlay() {
+                if (autoPlayInterval) {
+                    clearInterval(autoPlayInterval);
+                }
+                autoPlayInterval = setInterval(nextSlide, 5000);
+            }
+
+            function stopAutoPlay() {
+                if (autoPlayInterval) {
+                    clearInterval(autoPlayInterval);
+                    autoPlayInterval = null;
+                }
+            }
+
+            if (prevBtn) {
+                prevBtn.addEventListener('click', prevSlide);
+            }
+            if (nextBtn) {
+                nextBtn.addEventListener('click', nextSlide);
+            }
+
+            var carouselWrapper = document.querySelector('.carousel-wrapper');
+            if (carouselWrapper) {
+                carouselWrapper.addEventListener('mouseenter', stopAutoPlay);
+                carouselWrapper.addEventListener('mouseleave', startAutoPlay);
+
+                var touchStartX = 0;
+                carouselWrapper.addEventListener('touchstart', function (e) {
+                    touchStartX = e.touches[0].clientX;
+                });
+                carouselWrapper.addEventListener('touchend', function (e) {
+                    var touchEndX = e.changedTouches[0].clientX;
+                    var diff = touchStartX - touchEndX;
+                    if (Math.abs(diff) > 50) {
+                        if (diff > 0) {
+                            nextSlide();
+                        } else {
+                            prevSlide();
+                        }
+                    }
+                });
+            }
+
+            updateCarousel();
+            startAutoPlay();
+        })();
+    </script>
+
+    <!-- Stats card -->
+    <script>
+        // Простая функция анимации счетчиков
+        function animateCounters() {
+            var counters = document.querySelectorAll('.stat-number');
+            for (var i = 0; i < counters.length; i++) {
+                var counter = counters[i];
+                var target = counter.textContent;
+                var isNumber = !isNaN(parseInt(target));
+
+                if (isNumber) {
+                    animateCounter(counter, parseInt(target));
+                }
+            }
+        }
+
+        function animateCounter(element, endValue) {
+            var startValue = 0;
+            var duration = 2000;
+            var step = endValue / (duration / 16);
+            var current = startValue;
+
+            var timer = setInterval(function () {
+                current += step;
+                if (current >= endValue) {
+                    current = endValue;
+                    clearInterval(timer);
+                }
+                element.textContent = Math.floor(current);
+            }, 16);
+        }
+
+        // Простая проверка видимости элемента
+        function isElementInViewport(el) {
+            var rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        // Анимация появления элементов
+        function checkFadeIn() {
+            var fadeElements = document.querySelectorAll('.fade-in');
+            for (var i = 0; i < fadeElements.length; i++) {
+                var element = fadeElements[i];
+                if (isElementInViewport(element)) {
+                    element.classList.add('visible');
+                }
+            }
+        }
+
+        // Проверка видимости статистики
+        var statsAnimated = false;
+        function checkStats() {
+            if (statsAnimated) return;
+
+            var statsSection = document.querySelector('.stats');
+            if (statsSection && isElementInViewport(statsSection)) {
+                setTimeout(function () {
+                    animateCounters();
+                }, 500);
+                statsAnimated = true;
+            }
+        }
+
+        // Запуск при загрузке страницы
+        window.addEventListener('load', function () {
+            checkFadeIn();
+            checkStats();
+        });
+
+        // Запуск при скролле
+        window.addEventListener('scroll', function () {
+            checkFadeIn();
+            checkStats();
+        });
+
+        // Запуск при изменении размера окна
+        window.addEventListener('resize', function () {
+            checkFadeIn();
+            checkStats();
+        });
+    </script>
+
+    <!-- Mobile Nav. menu -->
+    <script>
+        // Complete mobile menu functionality - sidebar version
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuButton = document.getElementById('mobileMenu');
+            const navigationMenu = document.querySelector('.nav-links');
+            const navButtons = document.querySelector('.nav-buttons');
+            const languageSwitcher = document.querySelector('.language-switcher');
+
+            // Create mobile overlay
+            let mobileOverlay = document.querySelector('.mobile-overlay');
+            if (!mobileOverlay) {
+                mobileOverlay = document.createElement('div');
+                mobileOverlay.className = 'mobile-overlay';
+                document.body.appendChild(mobileOverlay);
+            }
+
+            // Check if elements exist
+            if (!mobileMenuButton || !navigationMenu) {
+                console.error('Mobile menu elements not found');
+                return;
+            }
+
+            // Toggle mobile menu
+            function toggleMobileMenu(e) {
+                e.preventDefault();
+                e.stopPropagation();
+
+                const isOpen = navigationMenu.classList.contains('mobile-active');
+
+                if (isOpen) {
+                    closeMobileMenu();
+                } else {
+                    openMobileMenu();
+                }
+            }
+
+            // Open mobile menu
+            function openMobileMenu() {
+                navigationMenu.classList.add('mobile-active');
+                mobileMenuButton.classList.add('active');
+                mobileOverlay.classList.add('active');
+                mobileOverlay.style.display = 'block';
+
+                // Show buttons and language switcher on mobile
+                if (navButtons) {
+                    navButtons.classList.add('mobile-active');
+                }
+                if (languageSwitcher) {
+                    languageSwitcher.classList.add('mobile-active');
+                }
+
+                // Prevent background scroll
+                document.body.style.overflow = 'hidden';
+            }
+
+            // Close mobile menu
+            function closeMobileMenu() {
+                navigationMenu.classList.remove('mobile-active');
+                mobileMenuButton.classList.remove('active');
+                mobileOverlay.classList.remove('active');
+
+                // Hide buttons and language switcher
+                if (navButtons) {
+                    navButtons.classList.remove('mobile-active');
+                }
+                if (languageSwitcher) {
+                    languageSwitcher.classList.remove('mobile-active');
+                }
+
+                // Restore background scroll
+                document.body.style.overflow = '';
+
+                // Hide overlay after animation
+                setTimeout(() => {
+                    if (!mobileOverlay.classList.contains('active')) {
+                        mobileOverlay.style.display = 'none';
+                    }
+                }, 300);
+            }
+
+            // Event listeners
+            mobileMenuButton.addEventListener('click', toggleMobileMenu);
+
+            // Close menu when clicking on navigation links
+            navigationMenu.addEventListener('click', function (e) {
+                if (e.target.tagName === 'A') {
+                    closeMobileMenu();
+                }
+            });
+
+            // Close menu when clicking on overlay
+            mobileOverlay.addEventListener('click', closeMobileMenu);
+
+            // Close menu on window resize to desktop
+            window.addEventListener('resize', function () {
+                if (window.innerWidth > 767) {
+                    closeMobileMenu();
+                }
+            });
+
+            // Handle escape key
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' && navigationMenu.classList.contains('mobile-active')) {
+                    closeMobileMenu();
+                }
+            });
+        });
+
+        // Navbar scroll effect (keep existing)
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (navbar) {
+                if (window.scrollY > 100) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
