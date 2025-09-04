@@ -94,6 +94,77 @@
         <div class="hero-title">
             <h1>AMIGATOS DA<br>MILKINHA</h1>
         </div>
+        <script>
+            // Fixed Responsive Hero Background Image Changer
+            function updateHeroBackground() {
+                const heroBackground = document.getElementById('heroBackground');
+                if (!heroBackground) {
+                    console.error('Hero background element not found');
+                    return;
+                }
+
+                const screenWidth = window.innerWidth;
+                let imagePath;
+
+                // Определяем какое изображение использовать
+                if (screenWidth <= 390) {
+                    imagePath = './assets/img/hero390.png';
+                    console.log('Using 390px image for screen width:', screenWidth);
+                } else if (screenWidth <= 414) {
+                    imagePath = './assets/img/hero414.png';
+                    console.log('Using 414px image for screen width:', screenWidth);
+                } else if (screenWidth <= 768) {
+                    imagePath = './assets/img/hero768.png';
+                    console.log('Using 768px image for screen width:', screenWidth);
+                } else if (screenWidth <= 1024) {
+                    imagePath = './assets/img/hero1024.png';
+                    console.log('Using 1024px image for screen width:', screenWidth);
+                } else {
+                    imagePath = './assets/img/hero1.png';
+                    console.log('Using default image for screen width:', screenWidth);
+                }
+
+                // Принудительно меняем src
+                heroBackground.src = imagePath;
+
+                // Дополнительная проверка что изображение действительно изменилось
+                heroBackground.onload = function () {
+                    console.log('Image successfully loaded:', imagePath);
+                };
+
+                heroBackground.onerror = function () {
+                    console.error('Failed to load image:', imagePath);
+                    // Fallback на основное изображение если файл не найден
+                    heroBackground.src = './assets/img/hero1.png';
+                };
+            }
+
+            // Запускаем при загрузке страницы
+            document.addEventListener('DOMContentLoaded', function () {
+                console.log('DOM loaded, updating hero background');
+                updateHeroBackground();
+            });
+
+            // Запускаем при изменении размера окна
+            window.addEventListener('resize', function () {
+                console.log('Window resized, updating hero background');
+                updateHeroBackground();
+            });
+
+            // Дополнительно для мобильных устройств
+            window.addEventListener('orientationchange', function () {
+                setTimeout(function () {
+                    console.log('Orientation changed, updating hero background');
+                    updateHeroBackground();
+                }, 100);
+            });
+
+            // Принудительный запуск через 1 секунду (на случай если что-то не сработало)
+            setTimeout(function () {
+                console.log('Forced update after 1 second');
+                updateHeroBackground();
+            }, 1000);
+        </script>
     </section>
 
     <!-- Stats Section -->
@@ -420,45 +491,6 @@
                 }
             });
         });
-
-        // Counter animation for stats
-        const animateCounters = () => {
-            const counters = document.querySelectorAll('.stat-number');
-            counters.forEach(counter => {
-                const target = counter.textContent;
-                const isNumber = !isNaN(parseInt(target));
-
-                if (isNumber) {
-                    const startValue = 0;
-                    const endValue = parseInt(target);
-                    const duration = 2000;
-                    const step = endValue / (duration / 16);
-
-                    let current = startValue;
-                    const timer = setInterval(() => {
-                        current += step;
-                        if (current >= endValue) {
-                            current = endValue;
-                            clearInterval(timer);
-                        }
-                        counter.textContent = Math.floor(current);
-                    }, 16);
-                }
-            });
-        };
-
-        // Trigger counter animation when stats section is visible
-        const statsSection = document.querySelector('.stats');
-        const statsObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    animateCounters();
-                    statsObserver.disconnect();
-                }
-            });
-        }, { threshold: 0.5 });
-
-        statsObserver.observe(statsSection);
 
         // Cats Carousel Functionality
         let currentSlide = 0;
