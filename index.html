@@ -50,6 +50,13 @@
 
     <!-- Hero Section -->
     <section class="hero" id="inicio">
+        <picture>
+            <source media="(max-width: 390px)" srcset="./assets/img/hero390.png">
+            <source media="(max-width: 414px)" srcset="./assets/img/hero414.png">
+            <source media="(max-width: 768px)" srcset="./assets/img/hero768.png">
+            <source media="(max-width: 1024px)" srcset="./assets/img/hero1024.png">
+            <img src="./assets/img/hero1.png" alt="Background" class="hero-background">
+        </picture>
         <img src="./assets/img/hero1.png" alt="Background" class="hero-background">
 
         <div class="hero-svg">
@@ -95,75 +102,63 @@
             <h1>AMIGATOS DA<br>MILKINHA</h1>
         </div>
         <script>
-            // Fixed Responsive Hero Background Image Changer
-            function updateHeroBackground() {
+            // Альтернативный JavaScript метод (если picture не работает)
+            function forceUpdateHeroBackground() {
                 const heroBackground = document.getElementById('heroBackground');
-                if (!heroBackground) {
-                    console.error('Hero background element not found');
-                    return;
-                }
-
                 const screenWidth = window.innerWidth;
-                let imagePath;
 
-                // Определяем какое изображение использовать
+                console.log('Current screen width:', screenWidth);
+
+                let newSrc;
+
                 if (screenWidth <= 390) {
-                    imagePath = './assets/img/hero390.png';
-                    console.log('Using 390px image for screen width:', screenWidth);
+                    newSrc = './assets/img/hero390.png';
                 } else if (screenWidth <= 414) {
-                    imagePath = './assets/img/hero414.png';
-                    console.log('Using 414px image for screen width:', screenWidth);
+                    newSrc = './assets/img/hero414.png';
                 } else if (screenWidth <= 768) {
-                    imagePath = './assets/img/hero768.png';
-                    console.log('Using 768px image for screen width:', screenWidth);
+                    newSrc = './assets/img/hero768.png';
                 } else if (screenWidth <= 1024) {
-                    imagePath = './assets/img/hero1024.png';
-                    console.log('Using 1024px image for screen width:', screenWidth);
+                    newSrc = './assets/img/hero1024.png';
                 } else {
-                    imagePath = './assets/img/hero1.png';
-                    console.log('Using default image for screen width:', screenWidth);
+                    newSrc = './assets/img/hero1.png';
                 }
 
-                // Принудительно меняем src
-                heroBackground.src = imagePath;
+                console.log('Attempting to load:', newSrc);
 
-                // Дополнительная проверка что изображение действительно изменилось
-                heroBackground.onload = function () {
-                    console.log('Image successfully loaded:', imagePath);
+                // Создаем новый Image объект для проверки существования файла
+                const testImage = new Image();
+
+                testImage.onload = function () {
+                    console.log('✅ Image exists and loaded:', newSrc);
+                    heroBackground.src = newSrc;
                 };
 
-                heroBackground.onerror = function () {
-                    console.error('Failed to load image:', imagePath);
-                    // Fallback на основное изображение если файл не найден
+                testImage.onerror = function () {
+                    console.error('❌ Image failed to load:', newSrc);
+                    console.log('Falling back to default image');
                     heroBackground.src = './assets/img/hero1.png';
                 };
+
+                testImage.src = newSrc;
             }
 
-            // Запускаем при загрузке страницы
-            document.addEventListener('DOMContentLoaded', function () {
-                console.log('DOM loaded, updating hero background');
-                updateHeroBackground();
+            // Запуск при загрузке
+            window.addEventListener('load', function () {
+                console.log('Page loaded');
+                setTimeout(forceUpdateHeroBackground, 100);
             });
 
-            // Запускаем при изменении размера окна
+            // Запуск при изменении размера
             window.addEventListener('resize', function () {
-                console.log('Window resized, updating hero background');
-                updateHeroBackground();
+                console.log('Window resized');
+                forceUpdateHeroBackground();
             });
 
-            // Дополнительно для мобильных устройств
-            window.addEventListener('orientationchange', function () {
-                setTimeout(function () {
-                    console.log('Orientation changed, updating hero background');
-                    updateHeroBackground();
-                }, 100);
-            });
-
-            // Принудительный запуск через 1 секунду (на случай если что-то не сработало)
+            // Принудительный запуск через 2 секунды
             setTimeout(function () {
-                console.log('Forced update after 1 second');
-                updateHeroBackground();
-            }, 1000);
+                console.log('Forced check after 2 seconds');
+                forceUpdateHeroBackground();
+            }, 2000);
         </script>
     </section>
 
