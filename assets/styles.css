@@ -22,7 +22,6 @@ body {
     min-height: 100vh;
     line-height: 1.6;
     color: var(--color-text);
-    overflow-x: hidden;
 }
 
 /* ==================================================
@@ -692,7 +691,6 @@ MOBILE RESPONSIVE BREAKPOINTS ONLY (768px and below)
         transform: rotate(-45deg) translate(4px, -4px);
     }
 }
-
 @media (min-width: 390px) and (max-width: 413px) {
     .mobile-menu {
         gap: 3px;
@@ -1075,7 +1073,6 @@ Hero Section
 .svg-phone-button:active {
     transform: scale(0.98);
 }
-
 
 /* =====================================================
 Responsive Breakpoints
