@@ -417,7 +417,6 @@ DESKTOP RESPONSIVE BREAKPOINTS
 MOBILE RESPONSIVE BREAKPOINTS ONLY (768px and below)
 ===================================================== */
 
-/* 768px and below - Mobile menu activation */
 @media (max-width: 768px) {
     .nav-links,
     .nav-buttons,
@@ -509,8 +508,8 @@ MOBILE RESPONSIVE BREAKPOINTS ONLY (768px and below)
         position: fixed;
         top: 350px;
         left: 0;
-        width: 220px;
-        max-width: 65vw;
+        width: 280px;
+        max-width: 75vw;
         background: transparent;
         flex-direction: column;
         gap: 15px;
@@ -525,37 +524,41 @@ MOBILE RESPONSIVE BREAKPOINTS ONLY (768px and below)
 
     .nav-buttons.mobile-active li a.btn.nav-btn-wide {
         width: 100%;
-        height: 45px;
+        height: 50px;
         font-size: 1rem;
         justify-content: center;
         min-width: auto;
-        padding: 10px 20px;
+        padding: 12px 25px;
         display: flex;
         align-items: center;
+        white-space: nowrap;
     }
 
     .language-switcher.mobile-active {
         display: block !important;
         position: fixed;
-        top: 480px;
+        top: 510px;
         left: 0;
         margin: 0;
         padding: 0 30px;
         z-index: 999;
+        width: 280px;
+        max-width: 75vw;
     }
 
     .mobile-menu {
-        display: block !important;
+        display: flex !important;
         position: fixed;
         right: 20px;
         top: 15px;
         width: 40px;
         height: 40px;
         cursor: pointer;
-        z-index: 1003;
+        z-index: 1010;
         background: white;
         border-radius: 8px;
-        padding: 8px;
+        align-items: center;
+        justify-content: center;
     }
 
     .mobile-menu span {
@@ -563,13 +566,26 @@ MOBILE RESPONSIVE BREAKPOINTS ONLY (768px and below)
         width: 20px;
         height: 2px;
         background: var(--color-accent);
-        margin: 4px 0;
+        position: absolute;
         transition: all 0.3s ease;
-        transform-origin: center;
+        transform-origin: center center;
+    }
+
+    .mobile-menu span:nth-child(1) {
+        top: 15px;
+    }
+
+    .mobile-menu span:nth-child(2) {
+        top: 19px;
+    }
+
+    .mobile-menu span:nth-child(3) {
+        top: 23px;
     }
 
     .mobile-menu.active span:nth-child(1) {
-        transform: rotate(45deg) translate(4px, 4px);
+        transform: rotate(45deg);
+        top: 19px;
         background: var(--color-accent-2);
     }
 
@@ -579,7 +595,8 @@ MOBILE RESPONSIVE BREAKPOINTS ONLY (768px and below)
     }
 
     .mobile-menu.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(4px, -4px);
+        transform: rotate(-45deg);
+        top: 19px;
         background: var(--color-accent-2);
     }
 
@@ -588,7 +605,6 @@ MOBILE RESPONSIVE BREAKPOINTS ONLY (768px and below)
     }
 }
 
-/* 600px and below */
 @media (max-width: 600px) {
     .nav-container {
         padding: 0 15px;
@@ -598,13 +614,28 @@ MOBILE RESPONSIVE BREAKPOINTS ONLY (768px and below)
         right: 15px;
         width: 38px;
         height: 38px;
-        padding: 7px;
     }
 
     .mobile-menu span {
         width: 18px;
         height: 2px;
-        margin: 3px 0;
+    }
+
+    .mobile-menu span:nth-child(1) {
+        top: 14px;
+    }
+
+    .mobile-menu span:nth-child(2) {
+        top: 18px;
+    }
+
+    .mobile-menu span:nth-child(3) {
+        top: 22px;
+    }
+
+    .mobile-menu.active span:nth-child(1),
+    .mobile-menu.active span:nth-child(3) {
+        top: 18px;
     }
 
     .nav-links.mobile-active {
@@ -615,18 +646,24 @@ MOBILE RESPONSIVE BREAKPOINTS ONLY (768px and below)
 
     .nav-buttons.mobile-active {
         top: 330px;
-        width: 200px;
-        max-width: 75vw;
+        width: 260px;
+        max-width: 80vw;
         padding: 0 25px;
+    }
+
+    .nav-buttons.mobile-active li a.btn.nav-btn-wide {
+        height: 48px;
+        padding: 10px 22px;
     }
 
     .language-switcher.mobile-active {
-        top: 450px;
+        top: 470px;
         padding: 0 25px;
+        width: 260px;
+        max-width: 80vw;
     }
 }
 
-/* 480px and below */
 @media (max-width: 480px) {
     .nav {
         padding: 12px 0;
@@ -650,13 +687,28 @@ MOBILE RESPONSIVE BREAKPOINTS ONLY (768px and below)
         top: 12px;
         width: 36px;
         height: 36px;
-        padding: 6px;
     }
 
     .mobile-menu span {
         width: 16px;
         height: 2px;
-        margin: 3px 0;
+    }
+
+    .mobile-menu span:nth-child(1) {
+        top: 13px;
+    }
+
+    .mobile-menu span:nth-child(2) {
+        top: 17px;
+    }
+
+    .mobile-menu span:nth-child(3) {
+        top: 21px;
+    }
+
+    .mobile-menu.active span:nth-child(1),
+    .mobile-menu.active span:nth-child(3) {
+        top: 17px;
     }
 
     .nav-links.mobile-active {
@@ -676,23 +728,25 @@ MOBILE RESPONSIVE BREAKPOINTS ONLY (768px and below)
 
     .nav-buttons.mobile-active {
         top: 310px;
-        width: 180px;
-        max-width: 80vw;
+        width: 240px;
+        max-width: 85vw;
         padding: 0 20px;
     }
 
     .nav-buttons.mobile-active li a.btn.nav-btn-wide {
-        height: 42px;
+        height: 46px;
         font-size: 0.95rem;
+        padding: 10px 20px;
     }
 
     .language-switcher.mobile-active {
-        top: 420px;
+        top: 440px;
         padding: 0 20px;
+        width: 240px;
+        max-width: 85vw;
     }
 }
 
-/* 414px and below */
 @media (max-width: 414px) {
     .nav-container {
         padding: 0 10px;
@@ -702,12 +756,28 @@ MOBILE RESPONSIVE BREAKPOINTS ONLY (768px and below)
         right: 10px;
         width: 34px;
         height: 34px;
-        padding: 6px;
     }
 
     .mobile-menu span {
         width: 14px;
         height: 2px;
+    }
+
+    .mobile-menu span:nth-child(1) {
+        top: 12px;
+    }
+
+    .mobile-menu span:nth-child(2) {
+        top: 16px;
+    }
+
+    .mobile-menu span:nth-child(3) {
+        top: 20px;
+    }
+
+    .mobile-menu.active span:nth-child(1),
+    .mobile-menu.active span:nth-child(3) {
+        top: 16px;
     }
 
     .nav-links.mobile-active {
@@ -716,12 +786,22 @@ MOBILE RESPONSIVE BREAKPOINTS ONLY (768px and below)
     }
 
     .nav-buttons.mobile-active {
-        width: 160px;
-        max-width: 85vw;
+        width: 220px;
+        max-width: 90vw;
+    }
+
+    .nav-buttons.mobile-active li a.btn.nav-btn-wide {
+        height: 44px;
+        font-size: 0.9rem;
+        padding: 8px 18px;
+    }
+
+    .language-switcher.mobile-active {
+        width: 220px;
+        max-width: 90vw;
     }
 }
 
-/* 390px and below */
 @media (max-width: 390px) {
     .nav {
         padding: 10px 0;
@@ -745,13 +825,28 @@ MOBILE RESPONSIVE BREAKPOINTS ONLY (768px and below)
         top: 10px;
         width: 32px;
         height: 32px;
-        padding: 5px;
     }
 
     .mobile-menu span {
         width: 14px;
         height: 2px;
-        margin: 2px 0;
+    }
+
+    .mobile-menu span:nth-child(1) {
+        top: 11px;
+    }
+
+    .mobile-menu span:nth-child(2) {
+        top: 15px;
+    }
+
+    .mobile-menu span:nth-child(3) {
+        top: 19px;
+    }
+
+    .mobile-menu.active span:nth-child(1),
+    .mobile-menu.active span:nth-child(3) {
+        top: 15px;
     }
 
     .nav-links.mobile-active {
@@ -771,24 +866,26 @@ MOBILE RESPONSIVE BREAKPOINTS ONLY (768px and below)
 
     .nav-buttons.mobile-active {
         top: 290px;
-        width: 140px;
-        max-width: 88vw;
+        width: 200px;
+        max-width: 92vw;
         padding: 0 18px;
         gap: 12px;
     }
 
     .nav-buttons.mobile-active li a.btn.nav-btn-wide {
-        height: 40px;
+        height: 42px;
         font-size: 0.9rem;
+        padding: 8px 16px;
     }
 
     .language-switcher.mobile-active {
-        top: 400px;
+        top: 397px;
         padding: 0 18px;
+        width: 200px;
+        max-width: 92vw;
     }
 }
 
-/* 375px and below */
 @media (max-width: 375px) {
     .nav-container {
         padding: 0 6px;
@@ -798,13 +895,28 @@ MOBILE RESPONSIVE BREAKPOINTS ONLY (768px and below)
         right: 6px;
         width: 30px;
         height: 30px;
-        padding: 4px;
     }
 
     .mobile-menu span {
         width: 12px;
         height: 1px;
-        margin: 2px 0;
+    }
+
+    .mobile-menu span:nth-child(1) {
+        top: 11px;
+    }
+
+    .mobile-menu span:nth-child(2) {
+        top: 14px;
+    }
+
+    .mobile-menu span:nth-child(3) {
+        top: 17px;
+    }
+
+    .mobile-menu.active span:nth-child(1),
+    .mobile-menu.active span:nth-child(3) {
+        top: 14px;
     }
 
     .nav-links.mobile-active {
@@ -824,24 +936,26 @@ MOBILE RESPONSIVE BREAKPOINTS ONLY (768px and below)
 
     .nav-buttons.mobile-active {
         top: 270px;
-        width: 120px;
-        max-width: 90vw;
+        width: 180px;
+        max-width: 95vw;
         padding: 0 15px;
         gap: 10px;
     }
 
     .nav-buttons.mobile-active li a.btn.nav-btn-wide {
-        height: 38px;
+        height: 40px;
         font-size: 0.85rem;
+        padding: 6px 14px;
     }
 
     .language-switcher.mobile-active {
-        top: 380px;
+        top: 400px;
         padding: 0 15px;
+        width: 180px;
+        max-width: 95vw;
     }
 }
 
-/* 360px and below */
 @media (max-width: 360px) {
     .nav {
         padding: 8px 0;
@@ -865,13 +979,28 @@ MOBILE RESPONSIVE BREAKPOINTS ONLY (768px and below)
         top: 8px;
         width: 28px;
         height: 28px;
-        padding: 4px;
     }
 
     .mobile-menu span {
         width: 12px;
         height: 1px;
-        margin: 2px 0;
+    }
+
+    .mobile-menu span:nth-child(1) {
+        top: 10px;
+    }
+
+    .mobile-menu span:nth-child(2) {
+        top: 13px;
+    }
+
+    .mobile-menu span:nth-child(3) {
+        top: 16px;
+    }
+
+    .mobile-menu.active span:nth-child(1),
+    .mobile-menu.active span:nth-child(3) {
+        top: 13px;
     }
 
     .nav-links.mobile-active {
@@ -882,18 +1011,25 @@ MOBILE RESPONSIVE BREAKPOINTS ONLY (768px and below)
 
     .nav-buttons.mobile-active {
         top: 250px;
-        width: 100px;
-        max-width: 92vw;
+        width: 160px;
+        max-width: 97vw;
         padding: 0 12px;
+    }
+
+    .nav-buttons.mobile-active li a.btn.nav-btn-wide {
+        height: 38px;
+        font-size: 0.8rem;
+        padding: 6px 12px;
     }
 
     .language-switcher.mobile-active {
-        top: 360px;
+        top: 380px;
         padding: 0 12px;
+        width: 160px;
+        max-width: 97vw;
     }
 }
 
-/* 320px and below */
 @media (max-width: 320px) {
     .nav {
         padding: 6px 0;
@@ -917,13 +1053,28 @@ MOBILE RESPONSIVE BREAKPOINTS ONLY (768px and below)
         top: 6px;
         width: 26px;
         height: 26px;
-        padding: 3px;
     }
 
     .mobile-menu span {
         width: 10px;
         height: 1px;
-        margin: 2px 0;
+    }
+
+    .mobile-menu span:nth-child(1) {
+        top: 9px;
+    }
+
+    .mobile-menu span:nth-child(2) {
+        top: 12px;
+    }
+
+    .mobile-menu span:nth-child(3) {
+        top: 15px;
+    }
+
+    .mobile-menu.active span:nth-child(1),
+    .mobile-menu.active span:nth-child(3) {
+        top: 12px;
     }
 
     .nav-links.mobile-active {
@@ -943,8 +1094,8 @@ MOBILE RESPONSIVE BREAKPOINTS ONLY (768px and below)
 
     .nav-buttons.mobile-active {
         top: 230px;
-        width: 80px;
-        max-width: 95vw;
+        width: 140px;
+        max-width: 98vw;
         padding: 0 10px;
         gap: 8px;
     }
@@ -952,11 +1103,14 @@ MOBILE RESPONSIVE BREAKPOINTS ONLY (768px and below)
     .nav-buttons.mobile-active li a.btn.nav-btn-wide {
         height: 36px;
         font-size: 0.8rem;
+        padding: 5px 10px;
     }
 
     .language-switcher.mobile-active {
-        top: 340px;
+        top: 360px;
         padding: 0 10px;
+        width: 140px;
+        max-width: 98vw;
     }
 }
 
