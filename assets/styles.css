@@ -1402,22 +1402,22 @@ Hero Section
     }
     
     .hero-svg {
-        width: 240px;
+        width: 260px;
         height: 165px;
         bottom: 0px;
         right: 0px;
     }
     
     .hero-title {
-        bottom: 63px;
-        left: 203px;
+        bottom: 56px;
+        left: 188px;
         max-width: 210px;
         line-height: 0.9;
     }
     
     .hero-title h1 {
-        font-size: 18px;
-        line-height: 0.98;
+        font-size: 20px;
+        line-height: 1.1;
     }
     
     .hero-svg text {
