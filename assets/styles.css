@@ -2455,7 +2455,7 @@ Cats Grid
     }
 
     .category-btn {
-        padding: 5px 6px;
+        padding: 6px 6px;
         font-size: 0.7rem;
         max-width: 100px;
     }
@@ -2469,7 +2469,6 @@ Cats Grid
         font-size: 0.65rem;
     }
 
-    /* Show category-specific content when no selections */
     .filter-category[data-category="gender"] .category-btn .btn-selections:empty::before {
         content: "♂♀";
         font-size: 12px;
