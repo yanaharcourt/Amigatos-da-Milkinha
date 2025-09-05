@@ -1945,7 +1945,7 @@ Responsive Breakpoints
 /* 1600px-1919px */
 @media (min-width: 1600px) and (max-width: 1919px) {
     .stats {
-        padding: 100px 25px;
+        padding: 150px 25px;
     }
 
     .stats-container {
@@ -2047,7 +2047,7 @@ Responsive Breakpoints
 /* 768px-1023px */
 @media (min-width: 768px) and (max-width: 1023px) {
     .stats {
-        padding: 60px 20px;
+        padding: 120px 20px;
     }
 
     .stats-container {
@@ -2082,7 +2082,7 @@ Responsive Breakpoints
 /* 600px-767px */
 @media (min-width: 600px) and (max-width: 767px) {
     .stats {
-        padding: 50px 15px;
+        padding: 120px 15px;
     }
 
     .stats-container {
@@ -2117,7 +2117,7 @@ Responsive Breakpoints
 /* 480px-599px */
 @media (min-width: 480px) and (max-width: 599px) {
     .stats {
-        padding: 45px 15px;
+        padding: 120px 15px;
     }
 
     .stats-container {
@@ -2152,7 +2152,7 @@ Responsive Breakpoints
 /* 414px-479px */
 @media (min-width: 414px) and (max-width: 479px) {
     .stats {
-        padding: 40px 15px;
+        padding: 120px 15px;
     }
 
     .stats-container {
@@ -2187,7 +2187,7 @@ Responsive Breakpoints
 /* 375px-413px */
 @media (min-width: 375px) and (max-width: 413px) {
     .stats {
-        padding: 40px 15px;
+        padding: 120px 15px;
     }
 
     .stats-container {
@@ -2222,7 +2222,7 @@ Responsive Breakpoints
 /* 360px-374px */
 @media (min-width: 360px) and (max-width: 374px) {
     .stats {
-        padding: 35px 12px;
+        padding: 120px 12px;
     }
 
     .stats-container {
@@ -2257,7 +2257,7 @@ Responsive Breakpoints
 /* 320px-359px */
 @media (min-width: 320px) and (max-width: 359px) {
     .stats {
-        padding: 30px 10px;
+        padding: 120px 10px;
     }
 
     .stats-container {
@@ -2292,7 +2292,7 @@ Responsive Breakpoints
 /* 280px and less */
 @media (max-width: 319px) {
     .stats {
-        padding: 25px 8px;
+        padding: 120px 8px;
     }
 
     .stats-container {
@@ -2327,7 +2327,7 @@ Responsive Breakpoints
 /* Landscape orientation of phones: 896×414 */
 @media (max-height: 414px) and (orientation: landscape) and (max-width: 896px) {
     .stats {
-        padding: 25px 20px;
+        padding: 120px 20px;
     }
 
     .stats-container {
@@ -2362,7 +2362,7 @@ Responsive Breakpoints
 /* Landscape orientation of phones: 915×412 */
 @media (max-height: 412px) and (orientation: landscape) and (max-width: 915px) {
     .stats {
-        padding: 25px 20px;
+        padding: 120px 20px;
     }
 
     .stats-container {
