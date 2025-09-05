@@ -2432,7 +2432,7 @@ Cats Carousel Section
 }
 
 /* =====================================================
-Адаптивы для секции карусели с кошками
+Responsive Breakpoints
 ===================================================== */
 
 /* 1920px+ */
@@ -2809,7 +2809,7 @@ Cats Carousel Section
 }
 
 /* =====================================================
-Обновленные адаптивы для карусели - одна карточка в ряд
+Responsive Breakpoints Mobile
 ===================================================== */
 
 /* 768px-1023px */
@@ -2853,7 +2853,7 @@ Cats Carousel Section
     }
 
     .cat-preview-card img {
-        height: 250px;
+        height: 300px;
     }
 
     .cat-preview-info {
@@ -2946,7 +2946,7 @@ Cats Carousel Section
     }
 
     .cat-preview-card img {
-        height: 200px;
+        height: 240px;
     }
 
     .cat-preview-info {
@@ -3039,7 +3039,7 @@ Cats Carousel Section
     }
 
     .cat-preview-card img {
-        height: 180px;
+        height: 220px;
     }
 
     .cat-preview-info {
@@ -3132,7 +3132,7 @@ Cats Carousel Section
     }
 
     .cat-preview-card img {
-        height: 170px;
+        height: 200px;
     }
 
     .cat-preview-info {
@@ -3225,7 +3225,7 @@ Cats Carousel Section
     }
 
     .cat-preview-card img {
-        height: 150px;
+        height: 180px;
     }
 
     .cat-preview-info {
@@ -3318,7 +3318,7 @@ Cats Carousel Section
     }
 
     .cat-preview-card img {
-        height: 140px;
+        height: 160px;
     }
 
     .cat-preview-info {
