@@ -1402,16 +1402,17 @@ Hero Section
     }
     
     .hero-svg {
-        width: 200px;
+        width: 240px;
         height: 165px;
-        bottom: -20px;
+        bottom: 0px;
         right: 0px;
     }
     
     .hero-title {
-        bottom: 223px;
-        left: 43px;
+        bottom: 63px;
+        left: 203px;
         max-width: 210px;
+        line-height: 0.9;
     }
     
     .hero-title h1 {
