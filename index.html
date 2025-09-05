@@ -361,8 +361,9 @@
         </div>
     </footer>
 
+    <!-- ================================================================ -->
+    <!-- Fade in animation -->
     <script>
-        // Fade in animation on scroll
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -498,9 +499,9 @@
             startAutoPlay();
         })();
     </script>
+
     <!-- Mobile Carousel-->
     <script>
-        // Адаптивная карусель с поддержкой разного количества карточек на экран
         (function () {
             var currentSlide = 0;
             var carouselTrack = document.getElementById('carouselTrack');
@@ -510,27 +511,27 @@
             var indicators = [];
             var autoPlayInterval;
 
-            // Данные о карточках - всего 12 карточек в 4 слайдах по 3 карточки
+            // Card data - total 12 cards in 4 slides, 3 cards each
             var allCatCards = [
-                // Слайд 1
+                // Slide 1
                 [
                     { name: 'Adolfina', age: '1 ano', gender: 'Feminino', breed: 'Europeu Comum', image: './assets/img/Adolfina1.png' },
                     { name: 'Baunilha', age: '2 anos', gender: 'Masculino', breed: 'Europeu Comum', image: './assets/img/Baunilha.png' },
                     { name: 'Brownie', age: '2 anos', gender: 'Masculino', breed: 'Siamês', image: './assets/img/Brownie.png' }
                 ],
-                // Слайд 2
+                // Slide 2
                 [
                     { name: 'Daisy', age: '1 ano', gender: 'Feminino', breed: 'Pelo Longo', image: './assets/img/Daisy.png' },
                     { name: 'Flash', age: '3 anos', gender: 'Masculino', breed: 'Pelo Longo', image: './assets/img/Flash.jpg' },
                     { name: 'Gaio', age: '2 anos', gender: 'Masculino', breed: 'Chartreux', image: './assets/img/Gaio.jpg' }
                 ],
-                // Слайд 3
+                // Slide 3
                 [
                     { name: 'Gafanhoto', age: '1 ano', gender: 'Masculino', breed: 'Europeu Comum', image: './assets/img/Gafanhoto.jpg' },
                     { name: 'Harley Quinn', age: '10 anos', gender: 'Feminino', breed: 'Calico', image: './assets/img/Harley Quinn.jpg' },
                     { name: 'Isa', age: '10 meses', gender: 'Feminino', breed: 'Europeu Comum', image: './assets/img/Isa.jpg' }
                 ],
-                // Слайд 4
+                // Slide 4
                 [
                     { name: 'Jubileu', age: '5 anos', gender: 'Masculino', breed: 'Europeu Comum', image: './assets/img/Jubileu.jpg' },
                     { name: 'Judy', age: '10 anos', gender: 'Feminino', breed: 'Europeu Comum', image: './assets/img/Judy.jpg' },
@@ -538,17 +539,17 @@
                 ]
             ];
 
-            // Функция для определения количества карточек на экран
+            // Function to determine number of cards per slide
             function getCardsPerSlide() {
                 var screenWidth = window.innerWidth;
                 if (screenWidth >= 1024) {
-                    return 3; // 3 карточки в ряд для больших экранов
+                    return 3; // 3 cards per row for large screens
                 } else {
-                    return 1; // 1 карточка для мобильных и планшетов
+                    return 1; // 1 card for mobile and tablets
                 }
             }
 
-            // Функция для создания HTML карточки
+            // Function to create card HTML
             function createCatCard(cat) {
                 return `
             <div class="cat-preview-card">
@@ -562,15 +563,15 @@
         `;
             }
 
-            // Функция для перестройки карусели
+            // Function to rebuild the carousel
             function rebuildCarousel() {
                 var cardsPerSlide = getCardsPerSlide();
-                var allCats = allCatCards.flat(); // Превращаем 2D массив в 1D
+                var allCats = allCatCards.flat(); // Flatten 2D array to 1D
                 var totalSlides;
                 var slidesHTML = '';
 
                 if (cardsPerSlide === 1) {
-                    // Для мобильных: каждая карточка = отдельный слайд
+                    // For mobile: each card = separate slide
                     totalSlides = allCats.length;
                     allCats.forEach(function (cat) {
                         slidesHTML += `
@@ -580,7 +581,7 @@
                 `;
                     });
                 } else {
-                    // Для больших экранов: 3 карточки в слайде
+                    // For large screens: 3 cards per slide
                     totalSlides = allCatCards.length;
                     allCatCards.forEach(function (slideData) {
                         var slideCardsHTML = '';
@@ -595,20 +596,20 @@
                     });
                 }
 
-                // Обновляем HTML карусели
+                // Update carousel HTML
                 carouselTrack.innerHTML = slidesHTML;
 
-                // Пересоздаем индикаторы
+                // Recreate indicators
                 createIndicators(totalSlides);
 
-                // Сбрасываем текущий слайд
+                // Reset current slide
                 currentSlide = 0;
                 updateCarousel();
 
                 return totalSlides;
             }
 
-            // Функция для создания индикаторов
+            // Function to create indicators
             function createIndicators(totalSlides) {
                 indicatorsContainer.innerHTML = '';
                 indicators = [];
@@ -628,7 +629,7 @@
                 }
             }
 
-            // Функция обновления карусели
+            // Function to update carousel position
             function updateCarousel() {
                 var translateX = -currentSlide * 100;
                 carouselTrack.style.transform = 'translateX(' + translateX + '%)';
@@ -641,7 +642,7 @@
                 }
             }
 
-            // Функция перехода к конкретному слайду
+            // Function to go to a specific slide
             function goToSlide(slideIndex) {
                 var totalSlides = indicators.length;
                 if (slideIndex >= 0 && slideIndex < totalSlides) {
@@ -650,14 +651,14 @@
                 }
             }
 
-            // Функция следующего слайда
+            // Function for next slide
             function nextSlide() {
                 var totalSlides = indicators.length;
                 currentSlide = (currentSlide + 1) % totalSlides;
                 updateCarousel();
             }
 
-            // Previous slide function
+            // Function for previous slide
             function prevSlide() {
                 var totalSlides = indicators.length;
                 currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
@@ -679,7 +680,7 @@
                 }
             }
 
-            // Event handlers
+            // Event listeners
             if (prevBtn) {
                 prevBtn.addEventListener('click', function () {
                     stopAutoPlay();
@@ -696,12 +697,13 @@
                 });
             }
 
-            // Handlers to stop autoplay on interaction
+            // Stop autoplay on interaction
             var carouselWrapper = document.querySelector('.carousel-wrapper');
             if (carouselWrapper) {
                 carouselWrapper.addEventListener('mouseenter', stopAutoPlay);
                 carouselWrapper.addEventListener('mouseleave', startAutoPlay);
 
+                // Touch events for mobile
                 var touchStartX = 0;
                 carouselWrapper.addEventListener('touchstart', function (e) {
                     touchStartX = e.touches[0].clientX;
@@ -722,7 +724,7 @@
                 });
             }
 
-            // Initialization function and handling of window resizing
+            // Initialization function and window resize handling
             function handleResize() {
                 rebuildCarousel();
                 startAutoPlay();
@@ -735,12 +737,12 @@
                 resizeTimeout = setTimeout(handleResize, 250);
             });
 
-            //Orientation change handler for mobile
+            // Orientation change handler for mobile
             window.addEventListener('orientationchange', function () {
                 setTimeout(handleResize, 500);
             });
 
-            // Initializing the carousel
+            // Carousel initialization
             function initCarousel() {
                 if (carouselTrack && indicatorsContainer) {
                     rebuildCarousel();
@@ -748,14 +750,14 @@
                 }
             }
 
-            // Run on DOM Load
+            // Start on DOM load
             if (document.readyState === 'loading') {
                 document.addEventListener('DOMContentLoaded', initCarousel);
             } else {
                 initCarousel();
             }
 
-            //Force initialization after 1 second (in case something didn't work)
+            // Forced initialization after 1 second (in case something didn't work)
             setTimeout(function () {
                 if (carouselTrack && !carouselTrack.innerHTML.trim()) {
                     initCarousel();
