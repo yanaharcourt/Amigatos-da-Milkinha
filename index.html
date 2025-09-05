@@ -498,6 +498,271 @@
             startAutoPlay();
         })();
     </script>
+    <!-- Mobile Carousel-->
+    <script>
+        // Адаптивная карусель с поддержкой разного количества карточек на экран
+        (function () {
+            var currentSlide = 0;
+            var carouselTrack = document.getElementById('carouselTrack');
+            var prevBtn = document.getElementById('prevBtn');
+            var nextBtn = document.getElementById('nextBtn');
+            var indicatorsContainer = document.getElementById('carouselIndicators');
+            var indicators = [];
+            var autoPlayInterval;
+
+            // Данные о карточках - всего 12 карточек в 4 слайдах по 3 карточки
+            var allCatCards = [
+                // Слайд 1
+                [
+                    { name: 'Adolfina', age: '1 ano', gender: 'Feminino', breed: 'Europeu Comum', image: './assets/img/Adolfina1.png' },
+                    { name: 'Baunilha', age: '2 anos', gender: 'Masculino', breed: 'Europeu Comum', image: './assets/img/Baunilha.png' },
+                    { name: 'Brownie', age: '2 anos', gender: 'Masculino', breed: 'Siamês', image: './assets/img/Brownie.png' }
+                ],
+                // Слайд 2
+                [
+                    { name: 'Daisy', age: '1 ano', gender: 'Feminino', breed: 'Pelo Longo', image: './assets/img/Daisy.png' },
+                    { name: 'Flash', age: '3 anos', gender: 'Masculino', breed: 'Pelo Longo', image: './assets/img/Flash.jpg' },
+                    { name: 'Gaio', age: '2 anos', gender: 'Masculino', breed: 'Chartreux', image: './assets/img/Gaio.jpg' }
+                ],
+                // Слайд 3
+                [
+                    { name: 'Gafanhoto', age: '1 ano', gender: 'Masculino', breed: 'Europeu Comum', image: './assets/img/Gafanhoto.jpg' },
+                    { name: 'Harley Quinn', age: '10 anos', gender: 'Feminino', breed: 'Calico', image: './assets/img/Harley Quinn.jpg' },
+                    { name: 'Isa', age: '10 meses', gender: 'Feminino', breed: 'Europeu Comum', image: './assets/img/Isa.jpg' }
+                ],
+                // Слайд 4
+                [
+                    { name: 'Jubileu', age: '5 anos', gender: 'Masculino', breed: 'Europeu Comum', image: './assets/img/Jubileu.jpg' },
+                    { name: 'Judy', age: '10 anos', gender: 'Feminino', breed: 'Europeu Comum', image: './assets/img/Judy.jpg' },
+                    { name: 'Kika', age: '1 ano', gender: 'Feminino', breed: 'Pelo Longo', image: './assets/img/Kika.jpg' }
+                ]
+            ];
+
+            // Функция для определения количества карточек на экран
+            function getCardsPerSlide() {
+                var screenWidth = window.innerWidth;
+                if (screenWidth >= 1024) {
+                    return 3; // 3 карточки в ряд для больших экранов
+                } else {
+                    return 1; // 1 карточка для мобильных и планшетов
+                }
+            }
+
+            // Функция для создания HTML карточки
+            function createCatCard(cat) {
+                return `
+            <div class="cat-preview-card">
+                <img src="${cat.image}" alt="${cat.name}" loading="lazy">
+                <div class="cat-preview-info">
+                    <h3>${cat.name}</h3>
+                    <p>${cat.age} • ${cat.gender} • ${cat.breed}</p>
+                    <span class="cat-preview-status">Disponível</span>
+                </div>
+            </div>
+        `;
+            }
+
+            // Функция для перестройки карусели
+            function rebuildCarousel() {
+                var cardsPerSlide = getCardsPerSlide();
+                var allCats = allCatCards.flat(); // Превращаем 2D массив в 1D
+                var totalSlides;
+                var slidesHTML = '';
+
+                if (cardsPerSlide === 1) {
+                    // Для мобильных: каждая карточка = отдельный слайд
+                    totalSlides = allCats.length;
+                    allCats.forEach(function (cat) {
+                        slidesHTML += `
+                    <div class="carousel-slide">
+                        ${createCatCard(cat)}
+                    </div>
+                `;
+                    });
+                } else {
+                    // Для больших экранов: 3 карточки в слайде
+                    totalSlides = allCatCards.length;
+                    allCatCards.forEach(function (slideData) {
+                        var slideCardsHTML = '';
+                        slideData.forEach(function (cat) {
+                            slideCardsHTML += createCatCard(cat);
+                        });
+                        slidesHTML += `
+                    <div class="carousel-slide">
+                        ${slideCardsHTML}
+                    </div>
+                `;
+                    });
+                }
+
+                // Обновляем HTML карусели
+                carouselTrack.innerHTML = slidesHTML;
+
+                // Пересоздаем индикаторы
+                createIndicators(totalSlides);
+
+                // Сбрасываем текущий слайд
+                currentSlide = 0;
+                updateCarousel();
+
+                return totalSlides;
+            }
+
+            // Функция для создания индикаторов
+            function createIndicators(totalSlides) {
+                indicatorsContainer.innerHTML = '';
+                indicators = [];
+
+                for (var i = 0; i < totalSlides; i++) {
+                    var indicator = document.createElement('div');
+                    indicator.className = 'carousel-indicator';
+                    if (i === 0) {
+                        indicator.classList.add('active');
+                    }
+                    indicator.setAttribute('data-slide', i);
+                    indicator.addEventListener('click', function () {
+                        goToSlide(parseInt(this.getAttribute('data-slide')));
+                    });
+                    indicatorsContainer.appendChild(indicator);
+                    indicators.push(indicator);
+                }
+            }
+
+            // Функция обновления карусели
+            function updateCarousel() {
+                var translateX = -currentSlide * 100;
+                carouselTrack.style.transform = 'translateX(' + translateX + '%)';
+
+                for (var i = 0; i < indicators.length; i++) {
+                    indicators[i].classList.remove('active');
+                }
+                if (indicators[currentSlide]) {
+                    indicators[currentSlide].classList.add('active');
+                }
+            }
+
+            // Функция перехода к конкретному слайду
+            function goToSlide(slideIndex) {
+                var totalSlides = indicators.length;
+                if (slideIndex >= 0 && slideIndex < totalSlides) {
+                    currentSlide = slideIndex;
+                    updateCarousel();
+                }
+            }
+
+            // Функция следующего слайда
+            function nextSlide() {
+                var totalSlides = indicators.length;
+                currentSlide = (currentSlide + 1) % totalSlides;
+                updateCarousel();
+            }
+
+            // Previous slide function
+            function prevSlide() {
+                var totalSlides = indicators.length;
+                currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                updateCarousel();
+            }
+
+            // Autoplay functions
+            function startAutoPlay() {
+                if (autoPlayInterval) {
+                    clearInterval(autoPlayInterval);
+                }
+                autoPlayInterval = setInterval(nextSlide, 5000);
+            }
+
+            function stopAutoPlay() {
+                if (autoPlayInterval) {
+                    clearInterval(autoPlayInterval);
+                    autoPlayInterval = null;
+                }
+            }
+
+            // Event handlers
+            if (prevBtn) {
+                prevBtn.addEventListener('click', function () {
+                    stopAutoPlay();
+                    prevSlide();
+                    startAutoPlay();
+                });
+            }
+
+            if (nextBtn) {
+                nextBtn.addEventListener('click', function () {
+                    stopAutoPlay();
+                    nextSlide();
+                    startAutoPlay();
+                });
+            }
+
+            // Handlers to stop autoplay on interaction
+            var carouselWrapper = document.querySelector('.carousel-wrapper');
+            if (carouselWrapper) {
+                carouselWrapper.addEventListener('mouseenter', stopAutoPlay);
+                carouselWrapper.addEventListener('mouseleave', startAutoPlay);
+
+                var touchStartX = 0;
+                carouselWrapper.addEventListener('touchstart', function (e) {
+                    touchStartX = e.touches[0].clientX;
+                    stopAutoPlay();
+                });
+
+                carouselWrapper.addEventListener('touchend', function (e) {
+                    var touchEndX = e.changedTouches[0].clientX;
+                    var diff = touchStartX - touchEndX;
+                    if (Math.abs(diff) > 50) {
+                        if (diff > 0) {
+                            nextSlide();
+                        } else {
+                            prevSlide();
+                        }
+                    }
+                    startAutoPlay();
+                });
+            }
+
+            // Initialization function and handling of window resizing
+            function handleResize() {
+                rebuildCarousel();
+                startAutoPlay();
+            }
+
+            // Window resize handler with debounce
+            var resizeTimeout;
+            window.addEventListener('resize', function () {
+                clearTimeout(resizeTimeout);
+                resizeTimeout = setTimeout(handleResize, 250);
+            });
+
+            //Orientation change handler for mobile
+            window.addEventListener('orientationchange', function () {
+                setTimeout(handleResize, 500);
+            });
+
+            // Initializing the carousel
+            function initCarousel() {
+                if (carouselTrack && indicatorsContainer) {
+                    rebuildCarousel();
+                    startAutoPlay();
+                }
+            }
+
+            // Run on DOM Load
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initCarousel);
+            } else {
+                initCarousel();
+            }
+
+            //Force initialization after 1 second (in case something didn't work)
+            setTimeout(function () {
+                if (carouselTrack && !carouselTrack.innerHTML.trim()) {
+                    initCarousel();
+                }
+            }, 1000);
+        })();
+    </script>
 
     <!-- Stats card -->
     <script>
