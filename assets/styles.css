@@ -1369,8 +1369,8 @@ Hero Section
     
     .hero-title {
         position: absolute;
-        bottom: 62px;
-        left: 166px;
+        bottom: 60px;
+        left: 145px;
         right: auto;
         transform: none;
         text-align: center;
@@ -1391,7 +1391,7 @@ Hero Section
 }
 
 /* 390px */
-@media (max-width: 390px) {
+/* @media (max-width: 390px) {
     .hero {
         min-height: 62vh;
         padding: 0 10px;
@@ -1402,8 +1402,8 @@ Hero Section
     }
     
     .hero-svg {
-        width: 260px;
-        height: 165px;
+        width: 300px;
+        height: 185px;
         bottom: 0px;
         right: 0px;
     }
@@ -1416,7 +1416,7 @@ Hero Section
     }
     
     .hero-title h1 {
-        font-size: 20px;
+        font-size: 26px;
         line-height: 1.1;
     }
     
@@ -1424,7 +1424,7 @@ Hero Section
         font-size: 30px;
         font-weight: 600;
     }
-}
+} */
 
 /* 375px and below */
 @media (max-width: 375px) {
