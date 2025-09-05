@@ -50,13 +50,6 @@
 
     <!-- Hero Section -->
     <section class="hero" id="inicio">
-        <picture>
-            <source media="(max-width: 390px)" srcset="./assets/img/hero390.png">
-            <source media="(max-width: 414px)" srcset="./assets/img/hero414.png">
-            <source media="(max-width: 768px)" srcset="./assets/img/hero768.png">
-            <source media="(max-width: 1024px)" srcset="./assets/img/hero1024.png">
-            <img src="./assets/img/hero1.png" alt="Background" class="hero-background">
-        </picture>
         <img src="./assets/img/hero1.png" alt="Background" class="hero-background">
 
         <div class="hero-svg">
@@ -102,63 +95,75 @@
             <h1>AMIGATOS DA<br>MILKINHA</h1>
         </div>
         <script>
-            // Альтернативный JavaScript метод (если picture не работает)
-            function forceUpdateHeroBackground() {
+            // Fixed Responsive Hero Background Image Changer
+            function updateHeroBackground() {
                 const heroBackground = document.getElementById('heroBackground');
-                const screenWidth = window.innerWidth;
-
-                console.log('Current screen width:', screenWidth);
-
-                let newSrc;
-
-                if (screenWidth <= 390) {
-                    newSrc = './assets/img/hero390.png';
-                } else if (screenWidth <= 414) {
-                    newSrc = './assets/img/hero414.png';
-                } else if (screenWidth <= 768) {
-                    newSrc = './assets/img/hero768.png';
-                } else if (screenWidth <= 1024) {
-                    newSrc = './assets/img/hero1024.png';
-                } else {
-                    newSrc = './assets/img/hero1.png';
+                if (!heroBackground) {
+                    console.error('Hero background element not found');
+                    return;
                 }
 
-                console.log('Attempting to load:', newSrc);
+                const screenWidth = window.innerWidth;
+                let imagePath;
 
-                // Создаем новый Image объект для проверки существования файла
-                const testImage = new Image();
+                // Определяем какое изображение использовать
+                if (screenWidth <= 390) {
+                    imagePath = './assets/img/hero390.png';
+                    console.log('Using 390px image for screen width:', screenWidth);
+                } else if (screenWidth <= 414) {
+                    imagePath = './assets/img/hero414.png';
+                    console.log('Using 414px image for screen width:', screenWidth);
+                } else if (screenWidth <= 768) {
+                    imagePath = './assets/img/hero768.png';
+                    console.log('Using 768px image for screen width:', screenWidth);
+                } else if (screenWidth <= 1024) {
+                    imagePath = './assets/img/hero1024.png';
+                    console.log('Using 1024px image for screen width:', screenWidth);
+                } else {
+                    imagePath = './assets/img/hero1.png';
+                    console.log('Using default image for screen width:', screenWidth);
+                }
 
-                testImage.onload = function () {
-                    console.log('✅ Image exists and loaded:', newSrc);
-                    heroBackground.src = newSrc;
+                // Принудительно меняем src
+                heroBackground.src = imagePath;
+
+                // Дополнительная проверка что изображение действительно изменилось
+                heroBackground.onload = function () {
+                    console.log('Image successfully loaded:', imagePath);
                 };
 
-                testImage.onerror = function () {
-                    console.error('❌ Image failed to load:', newSrc);
-                    console.log('Falling back to default image');
+                heroBackground.onerror = function () {
+                    console.error('Failed to load image:', imagePath);
+                    // Fallback на основное изображение если файл не найден
                     heroBackground.src = './assets/img/hero1.png';
                 };
-
-                testImage.src = newSrc;
             }
 
-            // Запуск при загрузке
-            window.addEventListener('load', function () {
-                console.log('Page loaded');
-                setTimeout(forceUpdateHeroBackground, 100);
+            // Запускаем при загрузке страницы
+            document.addEventListener('DOMContentLoaded', function () {
+                console.log('DOM loaded, updating hero background');
+                updateHeroBackground();
             });
 
-            // Запуск при изменении размера
+            // Запускаем при изменении размера окна
             window.addEventListener('resize', function () {
-                console.log('Window resized');
-                forceUpdateHeroBackground();
+                console.log('Window resized, updating hero background');
+                updateHeroBackground();
             });
 
-            // Принудительный запуск через 2 секунды
+            // Дополнительно для мобильных устройств
+            window.addEventListener('orientationchange', function () {
+                setTimeout(function () {
+                    console.log('Orientation changed, updating hero background');
+                    updateHeroBackground();
+                }, 100);
+            });
+
+            // Принудительный запуск через 1 секунду (на случай если что-то не сработало)
             setTimeout(function () {
-                console.log('Forced check after 2 seconds');
-                forceUpdateHeroBackground();
-            }, 2000);
+                console.log('Forced update after 1 second');
+                updateHeroBackground();
+            }, 1000);
         </script>
     </section>
 
@@ -436,16 +441,6 @@
     </footer>
 
     <script>
-        // Navbar scroll effect
-        window.addEventListener('scroll', () => {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 100) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-
         // Fade in animation on scroll
         const observerOptions = {
             threshold: 0.1,
@@ -465,14 +460,6 @@
             observer.observe(el);
         });
 
-        // Mobile menu toggle (basic implementation)
-        const mobileMenu = document.getElementById('mobileMenu');
-        const navLinks = document.querySelector('.nav-links');
-
-        mobileMenu.addEventListener('click', () => {
-            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-        });
-
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -485,102 +472,6 @@
                     });
                 }
             });
-        });
-
-        // Cats Carousel Functionality
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.carousel-slide');
-        const totalSlides = slides.length;
-        const carouselTrack = document.getElementById('carouselTrack');
-        const prevBtn = document.getElementById('prevBtn');
-        const nextBtn = document.getElementById('nextBtn');
-        const indicatorsContainer = document.getElementById('carouselIndicators');
-
-        // Create indicators
-        for (let i = 0; i < totalSlides; i++) {
-            const indicator = document.createElement('div');
-            indicator.className = `carousel-indicator ${i === 0 ? 'active' : ''}`;
-            indicator.addEventListener('click', () => goToSlide(i));
-            indicatorsContainer.appendChild(indicator);
-        }
-
-        const indicators = document.querySelectorAll('.carousel-indicator');
-
-        function updateCarousel() {
-            const translateX = -currentSlide * 100;
-            carouselTrack.style.transform = `translateX(${translateX}%)`;
-
-            // Update indicators
-            indicators.forEach((indicator, index) => {
-                indicator.classList.toggle('active', index === currentSlide);
-            });
-        }
-
-        function goToSlide(slideIndex) {
-            currentSlide = slideIndex;
-            updateCarousel();
-        }
-
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % totalSlides;
-            updateCarousel();
-        }
-
-        function prevSlide() {
-            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-            updateCarousel();
-        }
-
-        // Event listeners
-        nextBtn.addEventListener('click', nextSlide);
-        prevBtn.addEventListener('click', prevSlide);
-
-        // Auto-play carousel
-        let autoPlayInterval = setInterval(nextSlide, 4000);
-
-        // Pause auto-play on hover
-        const carouselWrapper = document.querySelector('.carousel-wrapper');
-        carouselWrapper.addEventListener('mouseenter', () => {
-            clearInterval(autoPlayInterval);
-        });
-
-        carouselWrapper.addEventListener('mouseleave', () => {
-            autoPlayInterval = setInterval(nextSlide, 4000);
-        });
-
-        // Touch/swipe support for mobile
-        let touchStartX = 0;
-        let touchEndX = 0;
-
-        carouselWrapper.addEventListener('touchstart', (e) => {
-            touchStartX = e.changedTouches[0].screenX;
-        });
-
-        carouselWrapper.addEventListener('touchend', (e) => {
-            touchEndX = e.changedTouches[0].screenX;
-            handleSwipe();
-        });
-
-        function handleSwipe() {
-            const swipeThreshold = 50;
-            const swipeDistance = touchStartX - touchEndX;
-
-            if (Math.abs(swipeDistance) > swipeThreshold) {
-                if (swipeDistance > 0) {
-                    nextSlide();
-                } else {
-                    prevSlide();
-                }
-            }
-        }
-
-        // Keyboard navigation
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowLeft') {
-                prevSlide();
-            } else if (e.key === 'ArrowRight') {
-                nextSlide();
-            }
         });
     </script>
 
@@ -689,7 +580,6 @@
 
     <!-- Stats card -->
     <script>
-        // Простая функция анимации счетчиков
         function animateCounters() {
             var counters = document.querySelectorAll('.stat-number');
             for (var i = 0; i < counters.length; i++) {
@@ -719,7 +609,7 @@
             }, 16);
         }
 
-        // Простая проверка видимости элемента
+        // Checking element visibility
         function isElementInViewport(el) {
             var rect = el.getBoundingClientRect();
             return (
@@ -730,7 +620,7 @@
             );
         }
 
-        // Анимация появления элементов
+        // Animation of the appearance of elements
         function checkFadeIn() {
             var fadeElements = document.querySelectorAll('.fade-in');
             for (var i = 0; i < fadeElements.length; i++) {
@@ -741,7 +631,7 @@
             }
         }
 
-        // Проверка видимости статистики
+        // Checking the visibility of statistics
         var statsAnimated = false;
         function checkStats() {
             if (statsAnimated) return;
@@ -755,19 +645,19 @@
             }
         }
 
-        // Запуск при загрузке страницы
+        // Launch on page load
         window.addEventListener('load', function () {
             checkFadeIn();
             checkStats();
         });
 
-        // Запуск при скролле
+        // Launch on scroll
         window.addEventListener('scroll', function () {
             checkFadeIn();
             checkStats();
         });
 
-        // Запуск при изменении размера окна
+        // Launch on window resize
         window.addEventListener('resize', function () {
             checkFadeIn();
             checkStats();
@@ -776,14 +666,14 @@
 
     <!-- Mobile Nav. menu -->
     <script>
-        // Complete mobile menu functionality - sidebar version
+        // Complete mobile menu functionality - исправленная версия
         document.addEventListener('DOMContentLoaded', function () {
             const mobileMenuButton = document.getElementById('mobileMenu');
             const navigationMenu = document.querySelector('.nav-links');
             const navButtons = document.querySelector('.nav-buttons');
             const languageSwitcher = document.querySelector('.language-switcher');
 
-            // Create mobile overlay
+            // Create mobile overlay если его нет
             let mobileOverlay = document.querySelector('.mobile-overlay');
             if (!mobileOverlay) {
                 mobileOverlay = document.createElement('div');
@@ -813,10 +703,13 @@
 
             // Open mobile menu
             function openMobileMenu() {
+                // Сначала показываем overlay
+                mobileOverlay.style.display = 'block';
+                mobileOverlay.classList.add('active');
+
+                // Затем активируем меню
                 navigationMenu.classList.add('mobile-active');
                 mobileMenuButton.classList.add('active');
-                mobileOverlay.classList.add('active');
-                mobileOverlay.style.display = 'block';
 
                 // Show buttons and language switcher on mobile
                 if (navButtons) {
@@ -865,12 +758,21 @@
                 }
             });
 
+            // Close menu when clicking on nav buttons
+            if (navButtons) {
+                navButtons.addEventListener('click', function (e) {
+                    if (e.target.tagName === 'A') {
+                        closeMobileMenu();
+                    }
+                });
+            }
+
             // Close menu when clicking on overlay
             mobileOverlay.addEventListener('click', closeMobileMenu);
 
             // Close menu on window resize to desktop
             window.addEventListener('resize', function () {
-                if (window.innerWidth > 767) {
+                if (window.innerWidth > 768) {
                     closeMobileMenu();
                 }
             });
@@ -881,6 +783,9 @@
                     closeMobileMenu();
                 }
             });
+
+            // Ensure overlay is properly hidden on page load
+            mobileOverlay.style.display = 'none';
         });
 
         // Navbar scroll effect (keep existing)
