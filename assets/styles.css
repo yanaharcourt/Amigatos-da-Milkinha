@@ -1436,13 +1436,13 @@ Hero Section
         width: 300px;
         height: 185px;
         bottom: 0px;
-        right: 0px;
+        right: 40px;
     }
     
     .hero-title {
         position: absolute;
         bottom: 60px;
-        left: 145px;
+        left: 107px;
         right: auto;
         transform: none;
         text-align: center;
