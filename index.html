@@ -50,7 +50,7 @@
 
     <!-- Hero Section -->
     <section class="hero" id="inicio">
-        <img src="./assets/img/hero1.png" alt="Background" class="hero-background">
+        <img src="./assets/img/hero1.png" alt="Background" class="hero-background" id="heroBackground">
 
         <div class="hero-svg">
             <svg width="736" height="450" viewBox="0 0 736 451" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -94,77 +94,6 @@
         <div class="hero-title">
             <h1>AMIGATOS DA<br>MILKINHA</h1>
         </div>
-        <script>
-            // Fixed Responsive Hero Background Image Changer
-            function updateHeroBackground() {
-                const heroBackground = document.getElementById('heroBackground');
-                if (!heroBackground) {
-                    console.error('Hero background element not found');
-                    return;
-                }
-
-                const screenWidth = window.innerWidth;
-                let imagePath;
-
-                // Определяем какое изображение использовать
-                if (screenWidth <= 390) {
-                    imagePath = './assets/img/hero390.png';
-                    console.log('Using 390px image for screen width:', screenWidth);
-                } else if (screenWidth <= 414) {
-                    imagePath = './assets/img/hero414.png';
-                    console.log('Using 414px image for screen width:', screenWidth);
-                } else if (screenWidth <= 768) {
-                    imagePath = './assets/img/hero768.png';
-                    console.log('Using 768px image for screen width:', screenWidth);
-                } else if (screenWidth <= 1024) {
-                    imagePath = './assets/img/hero1024.png';
-                    console.log('Using 1024px image for screen width:', screenWidth);
-                } else {
-                    imagePath = './assets/img/hero1.png';
-                    console.log('Using default image for screen width:', screenWidth);
-                }
-
-                // Принудительно меняем src
-                heroBackground.src = imagePath;
-
-                // Дополнительная проверка что изображение действительно изменилось
-                heroBackground.onload = function () {
-                    console.log('Image successfully loaded:', imagePath);
-                };
-
-                heroBackground.onerror = function () {
-                    console.error('Failed to load image:', imagePath);
-                    // Fallback на основное изображение если файл не найден
-                    heroBackground.src = './assets/img/hero1.png';
-                };
-            }
-
-            // Запускаем при загрузке страницы
-            document.addEventListener('DOMContentLoaded', function () {
-                console.log('DOM loaded, updating hero background');
-                updateHeroBackground();
-            });
-
-            // Запускаем при изменении размера окна
-            window.addEventListener('resize', function () {
-                console.log('Window resized, updating hero background');
-                updateHeroBackground();
-            });
-
-            // Дополнительно для мобильных устройств
-            window.addEventListener('orientationchange', function () {
-                setTimeout(function () {
-                    console.log('Orientation changed, updating hero background');
-                    updateHeroBackground();
-                }, 100);
-            });
-
-            // Принудительный запуск через 1 секунду (на случай если что-то не сработало)
-            setTimeout(function () {
-                console.log('Forced update after 1 second');
-                updateHeroBackground();
-            }, 1000);
-        </script>
     </section>
 
     <!-- Stats Section -->
@@ -666,14 +595,13 @@
 
     <!-- Mobile Nav. menu -->
     <script>
-        // Complete mobile menu functionality - исправленная версия
         document.addEventListener('DOMContentLoaded', function () {
             const mobileMenuButton = document.getElementById('mobileMenu');
             const navigationMenu = document.querySelector('.nav-links');
             const navButtons = document.querySelector('.nav-buttons');
             const languageSwitcher = document.querySelector('.language-switcher');
 
-            // Create mobile overlay если его нет
+            // Create mobile overlay
             let mobileOverlay = document.querySelector('.mobile-overlay');
             if (!mobileOverlay) {
                 mobileOverlay = document.createElement('div');
@@ -799,6 +727,11 @@
                 }
             }
         });
+    </script>
+
+    <!-- Hero section -->
+    <script>
+        
     </script>
 </body>
 

@@ -1165,7 +1165,6 @@ Hero Section
     font-size: 65px;
     font-weight: 700;
     margin-bottom: 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     line-height: 1.1;
 }
 
@@ -1207,6 +1206,328 @@ Hero Section
 
 .svg-phone-button:active {
     transform: scale(0.98);
+}
+
+/* 1920px+ */
+@media (min-width: 1920px) {
+    .hero {
+        min-height: 100vh;
+    }
+    
+    .hero-svg {
+        width: 920px;
+        height: 560px;
+        bottom: 30px;
+        right: -30px;
+    }
+    
+    .hero-title {
+        bottom: 209px;
+        right: 200px;
+    }
+    
+    .hero-title h1 {
+        font-size: 80px;
+    }
+    
+    .hero-svg text {
+        font-size: 34px;
+        font-weight: 600;
+    }
+}
+
+/* 1600px-1919px */
+@media (min-width: 1600px) and (max-width: 1919px) {
+    .hero {
+        min-height: 100vh;
+    }
+    
+    .hero-svg {
+        width: 820px;
+        height: 500px;
+        bottom: 25px;
+        right: -25px;
+    }
+    
+    .hero-title {
+        bottom: 182px;
+        right: 178px;
+    }
+    
+    .hero-title h1 {
+        font-size: 72px;
+    }
+    
+    .hero-svg text {
+        font-size: 34px;
+        font-weight: 600;
+    }
+}
+
+/* 1280px-1599px */
+@media (min-width: 1280px) and (max-width: 1599px) {
+    .hero {
+        min-height: 100vh;
+    }
+    
+    .hero-svg {
+        width: 736px;
+        height: 450px;
+        bottom: 20px;
+        right: -20px;
+    }
+    
+    .hero-title {
+        bottom: 166px;
+        right: 162px;
+    }
+    
+    .hero-title h1 {
+        font-size: 65px;
+    }
+    
+    .hero-svg text {
+        font-size: 32px;
+        font-weight: 600;
+    }
+}
+
+/* 1024px-1279px */
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .hero {
+        min-height: 90vh;
+    }
+    
+    .hero-svg {
+        width: 550px;
+        height: 335px;
+        bottom: 10px;
+        right: -10px;
+    }
+    
+    .hero-title {
+        bottom: 114px;
+        right: 112px;
+    }
+    
+    .hero-title h1 {
+        font-size: 50px;
+    }
+    
+    .hero-svg text {
+        font-size: 32px;
+        font-weight: 600;
+    }
+}
+
+/* 768px-1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .hero {
+        min-height: 600px;
+    }
+    
+    .hero-svg {
+        width: 450px;
+        height: 275px;
+        bottom: 5px;
+        right: -5px;
+    }
+    
+    .hero-title {
+        bottom: 90px;
+        right: 98px;
+    }
+    
+    .hero-title h1 {
+        font-size: 40px;
+        font-weight: 600;
+    }
+    
+    .hero-svg text {
+        font-size: 30px;
+        font-weight: 600;
+    }
+}
+
+/* 414px and below */
+@media (max-width: 414px) {
+    .hero {
+        min-height: 500px;
+        padding: 0 15px;
+    }
+    
+    .hero-background {
+        object-position: 20% center;
+    }
+    
+    .hero-svg {
+        width: 300px;
+        height: 185px;
+        bottom: 0px;
+        right: 0px;
+    }
+    
+    .hero-title {
+        position: absolute;
+        bottom: 62px;
+        left: 166px;
+        right: auto;
+        transform: none;
+        text-align: center;
+        width: auto;
+        max-width: 250px;
+    }
+    
+    .hero-title h1 {
+        font-size: 26px;
+        line-height: 1.0;
+        font-weight: 600;
+    }
+    
+    .hero-svg text {
+        font-size: 30px;
+        font-weight: 600;
+    }
+}
+
+/* 390px */
+@media (max-width: 390px) {
+    .hero {
+        min-height: 62vh;
+        padding: 0 10px;
+    }
+    
+    .hero-background {
+        object-position: 12% center;
+    }
+    
+    .hero-svg {
+        width: 200px;
+        height: 165px;
+        bottom: -20px;
+        right: 0px;
+    }
+    
+    .hero-title {
+        bottom: 223px;
+        left: 43px;
+        max-width: 210px;
+    }
+    
+    .hero-title h1 {
+        font-size: 18px;
+        line-height: 0.98;
+    }
+    
+    .hero-svg text {
+        font-size: 30px;
+        font-weight: 600;
+    }
+}
+
+/* 375px and below */
+@media (max-width: 375px) {
+    .hero {
+        min-height: 480px;
+        padding: 0 12px;
+    }
+    
+    .hero-background {
+        object-position: 15% center;
+    }
+    
+    .hero-svg {
+        width: 280px;
+        height: 170px;
+        bottom: 0px;
+        right: 0px;
+    }
+    
+    .hero-title {
+        bottom: 57px;
+        left: 146px;
+        max-width: 220px;
+    }
+    
+    .hero-title h1 {
+        font-size: 24px;
+        line-height: 1.0;
+    }
+    
+    .hero-svg text {
+        font-size: 30px;
+        font-weight: 600;
+    }
+}
+
+/* 360px and below */
+@media (max-width: 360px) {
+    .hero {
+        min-height: 460px;
+        padding: 0 10px;
+    }
+    
+    .hero-background {
+        object-position: 10% center;
+    }
+    
+    .hero-svg {
+        width: 260px;
+        height: 160px;
+        bottom: 0px;
+        right: 0px;
+    }
+    
+    .hero-title {
+        bottom: 56px;
+        left: 148px;
+        max-width: 200px;
+    }
+    
+    .hero-title h1 {
+        font-size: 22px;
+        line-height: 0.95;
+    }
+    
+    .hero-svg text {
+        font-size: 30px;
+        font-weight: 600;
+    }
+}
+
+/* 320px and below */
+@media (max-width: 320px) {
+    .hero {
+        min-height: 440px;
+        padding: 0 8px;
+    }
+    
+    .hero-background {
+        object-position: 5% center;
+    }
+    
+    .hero-svg {
+        width: 240px;
+        height: 150px;
+        bottom: 0px;
+        right: 0px;
+    }
+    
+    .hero-title {
+        bottom: 51px;
+        left: 131px;
+        max-width: 180px;
+    }
+    
+    .hero-title h1 {
+        font-size: 18px;
+        line-height: 1.2;
+    }
+    
+    .hero-svg text {
+        font-size: 30px;
+        font-weight: 600;
+    }
 }
 
 
