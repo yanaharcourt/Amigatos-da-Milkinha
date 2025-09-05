@@ -1370,7 +1370,7 @@ Hero Section
     .hero-title {
         position: absolute;
         bottom: 60px;
-        left: 145px;
+        left: 166px;
         right: auto;
         transform: none;
         text-align: center;
@@ -1390,10 +1390,10 @@ Hero Section
     }
 }
 
-/* Горизонтальная ориентация телефонов */
+/* Landscape orientation of phones: 896×414 */
 @media (max-height: 414px) {
   .hero {
-    min-height: 414px;
+    min-height: 500px;
   }
 
   .hero-svg {
@@ -1405,9 +1405,9 @@ Hero Section
 
   .hero-title {
     bottom: 100px;
-    left: 30px;
+    left: 570px;
     right: auto;
-    text-align: left;
+    text-align: center;
   }
 
   .hero-title h1 {
@@ -1416,11 +1416,10 @@ Hero Section
   }
 
   .hero-svg text {
-    font-size: 18px;
-    font-weight: 700;
+    font-size: 30px;
+    font-weight: 600;
   }
 }
-
 
 /* 390px */
 @media (max-width: 390px) {
@@ -1568,7 +1567,6 @@ Hero Section
     }
 }
 
-
 /* =====================================================
 Stats Section
 ===================================================== */
@@ -1582,8 +1580,8 @@ Stats Section
     max-width: 1320px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 60px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 80px;
     text-align: center;
 }
 
@@ -1609,7 +1607,6 @@ Stats Section
     transform: scale(1.05);
 }
 
-
 .stat-item:nth-child(1):hover .paw-svg {
     transform: rotate(-12deg) scale(1.05);
 }
@@ -1619,11 +1616,7 @@ Stats Section
 }
 
 .stat-item:nth-child(3):hover .paw-svg {
-    transform: rotate(-15deg) scale(1.05);
-}
-
-.stat-item:nth-child(4):hover .paw-svg {
-    transform: rotate(10deg) scale(1.05);
+    transform: rotate(-10deg) scale(1.05);
 }
 
 .stat-content {
@@ -1634,6 +1627,11 @@ Stats Section
     z-index: 2;
     pointer-events: none;
     text-align: center;
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .stat-number {
@@ -1651,6 +1649,11 @@ Stats Section
     font-weight: 700;
     line-height: 1.1;
     max-width: 140px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    text-align: center;
+    white-space: normal;
+    hyphens: auto;
 }
 
 .fade-in {
@@ -1664,7 +1667,7 @@ Stats Section
     transform: translateY(0);
 }
 
-/* Анимация появления */
+/* Delayed appearance animation */
 .stat-item:nth-child(1) {
     animation-delay: 0.1s;
 }
@@ -1675,10 +1678,6 @@ Stats Section
 
 .stat-item:nth-child(3) {
     animation-delay: 0.3s;
-}
-
-.stat-item:nth-child(4) {
-    animation-delay: 0.4s;
 }
 
 @keyframes pawAppear {
@@ -1702,7 +1701,495 @@ Stats Section
     animation: pawAppear 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) both;
 }
 
+/* =====================================================
+Responsive Breakpoints
+===================================================== */
 
+/* 1920px+ */
+@media (min-width: 1920px) {
+    .stats {
+        padding: 120px 30px;
+    }
+
+    .stats-container {
+        max-width: 1600px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 120px;
+    }
+
+    .paw-svg {
+        width: 340px;
+        height: 340px;
+        margin-bottom: 30px;
+    }
+
+    .stat-content {
+        top: 58%;
+        width: 220px;
+    }
+
+    .stat-number {
+        font-size: 3.8rem;
+        margin-bottom: 15px;
+    }
+
+    .stat-label {
+        font-size: 1.4rem;
+        max-width: 180px;
+    }
+}
+
+/* 1600px-1919px */
+@media (min-width: 1600px) and (max-width: 1919px) {
+    .stats {
+        padding: 100px 25px;
+    }
+
+    .stats-container {
+        max-width: 1400px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 100px;
+    }
+
+    .paw-svg {
+        width: 310px;
+        height: 310px;
+        margin-bottom: 25px;
+    }
+
+    .stat-content {
+        top: 58%;
+        width: 200px;
+    }
+
+    .stat-number {
+        font-size: 3.4rem;
+        margin-bottom: 12px;
+    }
+
+    .stat-label {
+        font-size: 1.3rem;
+        max-width: 160px;
+    }
+}
+
+/* 1280px-1599px */
+@media (min-width: 1280px) and (max-width: 1599px) {
+    .stats {
+        padding: 80px 20px;
+    }
+
+    .stats-container {
+        max-width: 1200px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 80px;
+    }
+
+    .paw-svg {
+        width: 260px;
+        height: 260px;
+        margin-bottom: 20px;
+    }
+
+    .stat-content {
+        top: 58%;
+        width: 180px;
+    }
+
+    .stat-number {
+        font-size: 2.8rem;
+        margin-bottom: 8px;
+    }
+
+    .stat-label {
+        font-size: 1.1rem;
+        max-width: 140px;
+    }
+}
+
+/* 1024px-1279px */
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .stats {
+        padding: 70px 20px;
+    }
+
+    .stats-container {
+        max-width: 1000px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 60px;
+    }
+
+    .paw-svg {
+        width: 220px;
+        height: 220px;
+        margin-bottom: 18px;
+    }
+
+    .stat-content {
+        top: 58%;
+        width: 160px;
+    }
+
+    .stat-number {
+        font-size: 2.4rem;
+        margin-bottom: 6px;
+    }
+
+    .stat-label {
+        font-size: 1rem;
+        max-width: 120px;
+    }
+}
+
+/* 768px-1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .stats {
+        padding: 60px 20px;
+    }
+
+    .stats-container {
+        max-width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+    }
+
+    .paw-svg {
+        width: 180px;
+        height: 180px;
+        margin-bottom: 15px;
+    }
+
+    .stat-content {
+        top: 58%;
+        width: 140px;
+    }
+
+    .stat-number {
+        font-size: 1.8rem;
+        margin-bottom: 2px;
+    }
+
+    .stat-label {
+        font-size: 0.9rem;
+        max-width: 100px;
+        line-height: 1.1;
+    }
+}
+
+/* 600px-767px */
+@media (min-width: 600px) and (max-width: 767px) {
+    .stats {
+        padding: 50px 15px;
+    }
+
+    .stats-container {
+        max-width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    .paw-svg {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 12px;
+    }
+
+    .stat-content {
+        top: 60%;
+        width: 120px;
+    }
+
+    .stat-number {
+        font-size: 1.6rem;
+        margin-bottom: 5px;
+    }
+
+    .stat-label {
+        font-size: 0.8rem;
+        max-width: 80px;
+        line-height: 1.1;
+    }
+}
+
+/* 480px-599px */
+@media (min-width: 480px) and (max-width: 599px) {
+    .stats {
+        padding: 45px 15px;
+    }
+
+    .stats-container {
+        max-width: 100%;
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .paw-svg {
+        width: 180px;
+        height: 180px;
+        margin-bottom: 12px;
+    }
+
+    .stat-content {
+        top: 60%;
+        width: 140px;
+    }
+
+    .stat-number {
+        font-size: 1.8rem;
+        margin-bottom: 5px;
+    }
+
+    .stat-label {
+        font-size: 0.9rem;
+        max-width: 100px;
+        line-height: 1.1;
+    }
+}
+
+/* 414px-479px */
+@media (min-width: 414px) and (max-width: 479px) {
+    .stats {
+        padding: 40px 15px;
+    }
+
+    .stats-container {
+        max-width: 100%;
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .paw-svg {
+        width: 160px;
+        height: 160px;
+        margin-bottom: 10px;
+    }
+
+    .stat-content {
+        top: 60%;
+        width: 120px;
+    }
+
+    .stat-number {
+        font-size: 1.6rem;
+        margin-bottom: 4px;
+    }
+
+    .stat-label {
+        font-size: 0.85rem;
+        max-width: 90px;
+        line-height: 1.1;
+    }
+}
+
+/* 375px-413px */
+@media (min-width: 375px) and (max-width: 413px) {
+    .stats {
+        padding: 40px 15px;
+    }
+
+    .stats-container {
+        max-width: 100%;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .paw-svg {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 10px;
+    }
+
+    .stat-content {
+        top: 60%;
+        width: 110px;
+    }
+
+    .stat-number {
+        font-size: 1.5rem;
+        margin-bottom: 4px;
+    }
+
+    .stat-label {
+        font-size: 0.8rem;
+        max-width: 80px;
+        line-height: 1.1;
+    }
+}
+
+/* 360px-374px */
+@media (min-width: 360px) and (max-width: 374px) {
+    .stats {
+        padding: 35px 12px;
+    }
+
+    .stats-container {
+        max-width: 100%;
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .paw-svg {
+        width: 140px;
+        height: 140px;
+        margin-bottom: 8px;
+    }
+
+    .stat-content {
+        top: 60%;
+        width: 100px;
+    }
+
+    .stat-number {
+        font-size: 1.4rem;
+        margin-bottom: 3px;
+    }
+
+    .stat-label {
+        font-size: 0.75rem;
+        max-width: 75px;
+        line-height: 1.1;
+    }
+}
+
+/* 320px-359px */
+@media (min-width: 320px) and (max-width: 359px) {
+    .stats {
+        padding: 30px 10px;
+    }
+
+    .stats-container {
+        max-width: 100%;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .paw-svg {
+        width: 130px;
+        height: 130px;
+        margin-bottom: 6px;
+    }
+
+    .stat-content {
+        top: 60%;
+        width: 95px;
+    }
+
+    .stat-number {
+        font-size: 1.3rem;
+        margin-bottom: 2px;
+    }
+
+    .stat-label {
+        font-size: 0.7rem;
+        max-width: 70px;
+        line-height: 1.0;
+    }
+}
+
+/* 280px and less */
+@media (max-width: 319px) {
+    .stats {
+        padding: 25px 8px;
+    }
+
+    .stats-container {
+        max-width: 100%;
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .paw-svg {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 6px;
+    }
+
+    .stat-content {
+        top: 60%;
+        width: 90px;
+    }
+
+    .stat-number {
+        font-size: 1.2rem;
+        margin-bottom: 2px;
+    }
+
+    .stat-label {
+        font-size: 0.65rem;
+        max-width: 65px;
+        line-height: 1.0;
+    }
+}
+
+/* Landscape orientation of phones: 896×414 */
+@media (max-height: 414px) and (orientation: landscape) and (max-width: 896px) {
+    .stats {
+        padding: 25px 20px;
+    }
+
+    .stats-container {
+        max-width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+    }
+
+    .paw-svg {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 8px;
+    }
+
+    .stat-content {
+        top: 58%;
+        width: 90px;
+    }
+
+    .stat-number {
+        font-size: 1.2rem;
+        margin-bottom: 3px;
+    }
+
+    .stat-label {
+        font-size: 0.65rem;
+        max-width: 65px;
+        line-height: 1.0;
+    }
+}
+
+/* Горизонтальная ориентация телефонов: 915×412 */
+@media (max-height: 412px) and (orientation: landscape) and (max-width: 915px) {
+    .stats {
+        padding: 25px 20px;
+    }
+
+    .stats-container {
+        max-width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+    }
+
+    .paw-svg {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 8px;
+    }
+
+    .stat-content {
+        top: 58%;
+        width: 90px;
+    }
+
+    .stat-number {
+        font-size: 1.2rem;
+        margin-bottom: 3px;
+    }
+
+    .stat-label {
+        font-size: 0.65rem;
+        max-width: 65px;
+        line-height: 1.0;
+    }
+}
 
 /* =====================================================
 Cats Carousel Section 
