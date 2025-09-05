@@ -1390,6 +1390,38 @@ Hero Section
     }
 }
 
+/* Горизонтальная ориентация телефонов */
+@media (max-height: 414px) {
+  .hero {
+    min-height: 414px;
+  }
+
+  .hero-svg {
+    width: 400px;
+    height: 240px;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .hero-title {
+    bottom: 100px;
+    left: 30px;
+    right: auto;
+    text-align: left;
+  }
+
+  .hero-title h1 {
+    font-size: 32px;
+    line-height: 1.0;
+  }
+
+  .hero-svg text {
+    font-size: 18px;
+    font-weight: 700;
+  }
+}
+
+
 /* 390px */
 @media (max-width: 390px) {
     .hero {
