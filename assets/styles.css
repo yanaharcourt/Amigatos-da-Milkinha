@@ -1391,7 +1391,7 @@ Hero Section
 }
 
 /* 390px */
-/* @media (max-width: 390px) {
+@media (max-width: 390px) {
     .hero {
         min-height: 62vh;
         padding: 0 10px;
@@ -1409,22 +1409,27 @@ Hero Section
     }
     
     .hero-title {
-        bottom: 56px;
-        left: 188px;
-        max-width: 210px;
-        line-height: 0.9;
+        position: absolute;
+        bottom: 60px;
+        left: 145px;
+        right: auto;
+        transform: none;
+        text-align: center;
+        width: auto;
+        max-width: 250px;
     }
     
     .hero-title h1 {
         font-size: 26px;
-        line-height: 1.1;
+        line-height: 1.0;
+        font-weight: 600;
     }
     
     .hero-svg text {
         font-size: 30px;
         font-weight: 600;
     }
-} */
+}
 
 /* 375px and below */
 @media (max-width: 375px) {
