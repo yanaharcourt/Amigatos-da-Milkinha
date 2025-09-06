@@ -927,7 +927,7 @@ MOBILE RESPONSIVE BREAKPOINTS ONLY (768px and below)
     .nav-buttons.mobile-active {
         display: flex !important;
         position: fixed;
-        top: 305px;
+        top: 355px;
         left: 0;
         width: 252px;
         background: transparent;
@@ -1092,7 +1092,7 @@ MOBILE RESPONSIVE BREAKPOINTS ONLY (768px and below)
     }
 
     .nav-buttons.mobile-active {
-        top: 330px;
+        top: 350px;
         width: 250px;
         padding: 0 16px;
         gap: 10px;
@@ -1155,7 +1155,7 @@ MOBILE RESPONSIVE BREAKPOINTS ONLY (768px and below)
     }
 
     .nav-buttons.mobile-active {
-        top: 305px;
+        top: 355px;
         width: 264px;
         padding: 0 15px;
         gap: 10px;
@@ -1238,7 +1238,7 @@ MOBILE RESPONSIVE BREAKPOINTS ONLY (768px and below)
     }
 
     .nav-buttons.mobile-active {
-        top: 270px;
+        top: 320px;
         width: 226px;
         padding: 0 14px;
         gap: 10px;
@@ -2013,7 +2013,7 @@ Responsive
     .hero-text {
         font-size: 15px;
         margin-bottom: 10px;
-        max-width: 350px;
+        max-width: 300px;
         margin-left: 0;
     }
 
