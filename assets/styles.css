@@ -5482,7 +5482,7 @@ FAQ Section
 
 .important-note {
     background: rgba(209, 153, 176, 0.08);
-    font-size: 0.9rem;
+    font-size: 1rem;
     line-height: 1.4;
     padding: 15px;
     color: var(--color-text-secondary);
