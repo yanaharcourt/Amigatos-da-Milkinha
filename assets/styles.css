@@ -2035,7 +2035,7 @@ Responsive
 
 @media (max-width: 480px) {
     .hero {
-        margin-top: 35px;
+        margin-top: 50px;
     }
 
     .hero-bg-image {
@@ -2071,7 +2071,7 @@ Responsive
 
 @media (max-width: 414px) {
     .hero {
-        margin-top: 35px;
+        margin-top: 50px;
     }
 
     .hero-title {
@@ -2153,7 +2153,7 @@ Responsive
 
 @media (max-width: 320px) {
     .hero {
-        margin-top: 25px;
+        margin-top: 40px;
     }
 
     .hero-title {
@@ -4867,7 +4867,7 @@ Services Section - Responsive Breakpoints
 
     .service-card {
         padding: 60px 40px;
-        border-radius: 25px;
+        border-radius: 50px;
     }
 
     .service-icon {
@@ -5161,7 +5161,7 @@ Services Section - Responsive Breakpoints
 
     .service-card {
         padding: 18px 15px;
-        border-radius: 12px;
+        border-radius: 30px;
     }
 
     .service-icon {
