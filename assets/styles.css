@@ -1562,7 +1562,7 @@ Hero Section
     font-weight: 700;
     line-height: 120%;
     margin-bottom: 20px;
-    background: linear-gradient(-77deg, var(--color-accent) 0%, var(--color-accent-2) 100%);
+    background: var(--color-neutral-dark);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -1570,7 +1570,7 @@ Hero Section
 }
 
 .hero-text {
-    font-size: 24px;
+    font-size: 20px;
     line-height: 150%;
     color: var(--color-text);
     margin-bottom: 50px;
@@ -1644,7 +1644,7 @@ Responsive
     }
 
     .hero-text {
-        font-size: 28px;
+        font-size: 24px;
         margin-bottom: 60px;
     }
 
@@ -1673,7 +1673,7 @@ Responsive
     }
 
     .hero-text {
-        font-size: 26px;
+        font-size: 24px;
         margin-bottom: 55px;
     }
 
@@ -1697,7 +1697,7 @@ Responsive
 
     .hero-content {
         padding-left: 120px;
-        max-width: 710px;
+        max-width: 620px;
     }
 
     .hero-title {
@@ -1706,7 +1706,7 @@ Responsive
     }
 
     .hero-text {
-        font-size: 24px;
+        font-size: 20px;
         margin-bottom: 50px;
     }
 
@@ -1735,7 +1735,7 @@ Responsive
     }
 
     .hero-text {
-        font-size: 22px;
+        font-size: 20px;
         margin-bottom: 45px;
     }
 
@@ -1827,7 +1827,7 @@ Responsive
     }
 
     .hero-text {
-        font-size: 19px;
+        font-size: 18px;
         margin-bottom: 35px;
     }
 
@@ -2884,7 +2884,7 @@ Cats Carousel Section
     max-width: 350px;
     position: relative;
     overflow: hidden;
-    border-radius: 20px;
+    border-radius: 40px;
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     border: 1px solid rgba(184, 121, 142, 0.08);
 }
