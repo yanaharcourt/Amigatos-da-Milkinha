@@ -3474,10 +3474,6 @@ Responsive Breakpoints
     }
 }
 
-/* =====================================================
-Responsive Breakpoints Mobile
-===================================================== */
-
 /* 768px-1023px */
 @media (min-width: 768px) and (max-width: 1023px) {
     .cats-carousel {
@@ -5348,6 +5344,153 @@ Services Section - Responsive Breakpoints
     }
 }
 
+/* =====================================================
+FAQ Section
+===================================================== */
+
+/*--------------------------------------------------------------
+         # FAQ
+         --------------------------------------------------------------*/
+        .faq-section {
+            padding: 80px 0;
+            background-color: var(--color-background);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .section-header {
+            text-align: left;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-family: 'Quicksand', sans-serif;
+            font-size: 40px;
+            font-weight: 600;
+            color: var(--color-text);
+            margin-bottom: 10px;
+        }
+
+        .section-header h2 span {
+            color: var(--color-accent);
+            font-style: italic;
+            margin-left: 10px;
+        }
+
+        .section-subheading {
+            font-family: 'Inter', sans-serif;
+            font-size: 18px;
+            color: var(--color-text-secondary);
+            margin-bottom: 20px;
+        }
+
+        .underline {
+            height: 2px;
+            width: 80px;
+            background-color: var(--color-accent);
+            margin: 0;
+        }
+
+        .accordion {
+            width: 800px;
+            max-width: 100%;
+        }
+
+        .accordion-item {
+            margin-bottom: 20px;
+        }
+
+        .accordion-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            padding: 15px 0;
+        }
+
+        .accordion-header h3 {
+            font-family: 'Quicksand', sans-serif;
+            font-size: 20px;
+            line-height: 150%;
+            color: var(--color-text);
+            font-weight: 500;
+            margin: 0;
+        }
+
+        .accordion-icon {
+            font-size: 24px;
+            color: var(--color-accent);
+            font-weight: 300;
+            transition: transform 0.3s ease;
+        }
+
+        .accordion-item.active .accordion-icon {
+            transform: rotate(45deg);
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .accordion-item.active .accordion-content {
+            max-height: 500px;
+        }
+
+        .accordion-content p {
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--color-text-secondary);
+            padding: 0 0 15px 0;
+            margin: 0;
+        }
+
+        .divider {
+            height: 1px;
+            background-color: #EEEEEE;
+        }
+
+        .virus-name {
+            color: var(--color-accent);
+            font-weight: 600;
+        }
+
+        .highlight-box {
+            background: var(--color-accent-3);
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border-left: 3px solid var(--color-accent);
+        }
+
+        .highlight-title {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            color: var(--color-text);
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+
+        .important-note {
+            background: rgba(209, 153, 176, 0.08);
+            padding: 15px;
+            border-radius: 6px;
+            margin: 15px 0;
+            border-left: 3px solid var(--color-accent-2);
+        }
+
+        .important-note strong {
+            color: var(--color-text);
+        }
 /* =====================================================
 Contact Section
 ===================================================== */
