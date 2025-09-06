@@ -242,8 +242,24 @@ DESKTOP RESPONSIVE BREAKPOINTS
 
 /* 1920px+ */
 @media (min-width: 1920px) {
+    .nav {
+        background: url('data:image/svg+xml,<svg width="1440" height="126" viewBox="0 0 1440 126" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M43.5667 93.5343L30.1403 103.295C23.6996 107.977 15.5291 109.597 7.78903 107.728C-4.40737 104.783 -13 93.8678 -13 81.3208V-65C-13 -87.4021 -13 -98.6032 -8.64026 -107.16C-4.80533 -114.686 1.3139 -120.805 8.84038 -124.64C17.3968 -129 28.5979 -129 51 -129H1388C1410.4 -129 1421.6 -129 1430.16 -124.64C1437.69 -120.805 1443.81 -114.686 1447.64 -107.16C1452 -98.6032 1452 -87.4021 1452 -65V98.5425C1452 105.243 1446.57 110.674 1439.87 110.674C1436.17 110.674 1432.66 108.983 1430.36 106.081L1425.75 100.268C1414.08 85.555 1391.42 86.615 1381.18 102.353L1376.62 109.362C1363.4 129.665 1333.67 129.665 1320.45 109.362L1316.14 102.733C1304.49 84.8435 1280.55 79.7797 1262.66 91.4226L1258.62 94.049L1258.62 94.0535C1256.67 95.3218 1255.69 95.9565 1254.77 96.487C1241.53 104.135 1225.09 103.566 1212.41 95.0197C1211.53 94.4263 1210.6 93.7246 1208.74 92.3212L1206.83 90.8808C1203.01 88.0006 1201.1 86.5605 1199.24 85.4503C1187.04 78.1706 1171.89 77.9108 1159.44 84.7678C1157.54 85.8135 1155.59 87.1873 1151.67 89.9349L1144.29 95.1161C1131.21 104.289 1113.6 103.522 1101.38 93.2455C1086.37 80.6344 1063.96 82.6913 1051.5 97.8228L1047.83 102.282L1047.82 102.294C1047.18 103.076 1046.86 103.468 1046.59 103.78C1030.94 122.014 1002.85 122.426 986.669 104.66C986.391 104.355 986.054 103.97 985.381 103.2L981.606 98.8794C980.786 97.9419 980.377 97.4731 980.012 97.0774C966.531 82.4629 944.361 79.969 927.97 91.2231C927.526 91.5278 927.023 91.8938 926.016 92.6259C925.185 93.2295 924.77 93.5313 924.389 93.795C910.482 103.421 892.023 103.259 878.287 93.3904C877.91 93.1201 877.501 92.8111 876.681 92.193L875.937 91.6317L875.936 91.6311C874.242 90.3535 873.395 89.7146 872.62 89.1856C857.914 79.1407 838.337 80.0288 824.601 91.3639C823.877 91.9609 823.092 92.6739 821.52 94.0997L821.519 94.1003L820.693 94.8504L820.691 94.8513C818.184 97.1263 816.93 98.2639 815.768 99.1716C801.553 110.275 781.665 110.49 767.212 99.698C766.031 98.8156 764.752 97.7052 762.195 95.4846L758.653 92.4084C758.303 92.1046 758.128 91.9527 757.973 91.82C743.558 79.5576 722.522 79.0754 707.56 90.6645C707.398 90.7898 707.216 90.9336 706.853 91.2211L706.199 91.7387C692.1 102.892 672.248 103.122 657.895 92.2978C641.452 79.8977 618.242 82.2072 604.565 97.6045L600.113 102.616C598.766 104.132 598.093 104.89 597.525 105.479C581.288 122.319 554.127 121.692 538.685 104.12C538.145 103.506 537.508 102.719 536.235 101.145L536.232 101.141L535.117 99.762L535.106 99.7484C521.758 83.2531 497.853 80.0504 480.635 92.4506L480.62 92.4608L479.14 93.5271C465.145 103.61 446.089 102.899 432.885 91.7999C418.311 79.5503 396.889 80.1005 382.963 93.0821L380.11 95.7423L380.108 95.7443C378.847 96.9191 378.217 97.5067 377.649 97.9978C363.22 110.469 341.992 111.02 326.937 99.3118C326.344 98.8505 325.683 98.2959 324.362 97.1868L319.464 93.0733C316.707 90.7579 315.328 89.6002 314.019 88.6688C300.869 79.3167 283.389 78.7811 269.691 87.3105C268.327 88.16 266.88 89.2311 263.986 91.3734L261.345 93.3286L261.185 93.4471C261.131 93.4875 261.09 93.5173 261.052 93.5454C247.222 103.693 228.461 103.893 214.417 94.0421C214.348 93.9935 214.272 93.9396 214.119 93.8316L212.986 93.0296C195.334 80.535 170.879 84.8393 158.554 102.61L155.842 106.521C140.943 128.003 108.802 126.825 95.5154 104.311C84.7679 86.0984 60.6717 81.0998 43.5667 93.5343Z" fill="%23F2E8ED" stroke="%23F2E8ED"/></svg>') center top/cover no-repeat;
+        position: sticky;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        height: 168px;
+        transition: all 0.3s ease;
+        margin: 0;
+        display: flex;
+        align-items: flex-start;
+        padding-top: 20px;
+    }
+
     .nav-container {
         max-width: 1600px;
+        padding-left: 0;
+        padding-right: 0;
     }
 
     .logo {
@@ -283,8 +299,23 @@ DESKTOP RESPONSIVE BREAKPOINTS
 
 /* 1600px-1919px */
 @media (min-width: 1600px) and (max-width: 1919px) {
+    .nav {
+        background: url('data:image/svg+xml,<svg width="1440" height="126" viewBox="0 0 1440 126" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M43.5667 93.5343L30.1403 103.295C23.6996 107.977 15.5291 109.597 7.78903 107.728C-4.40737 104.783 -13 93.8678 -13 81.3208V-65C-13 -87.4021 -13 -98.6032 -8.64026 -107.16C-4.80533 -114.686 1.3139 -120.805 8.84038 -124.64C17.3968 -129 28.5979 -129 51 -129H1388C1410.4 -129 1421.6 -129 1430.16 -124.64C1437.69 -120.805 1443.81 -114.686 1447.64 -107.16C1452 -98.6032 1452 -87.4021 1452 -65V98.5425C1452 105.243 1446.57 110.674 1439.87 110.674C1436.17 110.674 1432.66 108.983 1430.36 106.081L1425.75 100.268C1414.08 85.555 1391.42 86.615 1381.18 102.353L1376.62 109.362C1363.4 129.665 1333.67 129.665 1320.45 109.362L1316.14 102.733C1304.49 84.8435 1280.55 79.7797 1262.66 91.4226L1258.62 94.049L1258.62 94.0535C1256.67 95.3218 1255.69 95.9565 1254.77 96.487C1241.53 104.135 1225.09 103.566 1212.41 95.0197C1211.53 94.4263 1210.6 93.7246 1208.74 92.3212L1206.83 90.8808C1203.01 88.0006 1201.1 86.5605 1199.24 85.4503C1187.04 78.1706 1171.89 77.9108 1159.44 84.7678C1157.54 85.8135 1155.59 87.1873 1151.67 89.9349L1144.29 95.1161C1131.21 104.289 1113.6 103.522 1101.38 93.2455C1086.37 80.6344 1063.96 82.6913 1051.5 97.8228L1047.83 102.282L1047.82 102.294C1047.18 103.076 1046.86 103.468 1046.59 103.78C1030.94 122.014 1002.85 122.426 986.669 104.66C986.391 104.355 986.054 103.97 985.381 103.2L981.606 98.8794C980.786 97.9419 980.377 97.4731 980.012 97.0774C966.531 82.4629 944.361 79.969 927.97 91.2231C927.526 91.5278 927.023 91.8938 926.016 92.6259C925.185 93.2295 924.77 93.5313 924.389 93.795C910.482 103.421 892.023 103.259 878.287 93.3904C877.91 93.1201 877.501 92.8111 876.681 92.193L875.937 91.6317L875.936 91.6311C874.242 90.3535 873.395 89.7146 872.62 89.1856C857.914 79.1407 838.337 80.0288 824.601 91.3639C823.877 91.9609 823.092 92.6739 821.52 94.0997L821.519 94.1003L820.693 94.8504L820.691 94.8513C818.184 97.1263 816.93 98.2639 815.768 99.1716C801.553 110.275 781.665 110.49 767.212 99.698C766.031 98.8156 764.752 97.7052 762.195 95.4846L758.653 92.4084C758.303 92.1046 758.128 91.9527 757.973 91.82C743.558 79.5576 722.522 79.0754 707.56 90.6645C707.398 90.7898 707.216 90.9336 706.853 91.2211L706.199 91.7387C692.1 102.892 672.248 103.122 657.895 92.2978C641.452 79.8977 618.242 82.2072 604.565 97.6045L600.113 102.616C598.766 104.132 598.093 104.89 597.525 105.479C581.288 122.319 554.127 121.692 538.685 104.12C538.145 103.506 537.508 102.719 536.235 101.145L536.232 101.141L535.117 99.762L535.106 99.7484C521.758 83.2531 497.853 80.0504 480.635 92.4506L480.62 92.4608L479.14 93.5271C465.145 103.61 446.089 102.899 432.885 91.7999C418.311 79.5503 396.889 80.1005 382.963 93.0821L380.11 95.7423L380.108 95.7443C378.847 96.9191 378.217 97.5067 377.649 97.9978C363.22 110.469 341.992 111.02 326.937 99.3118C326.344 98.8505 325.683 98.2959 324.362 97.1868L319.464 93.0733C316.707 90.7579 315.328 89.6002 314.019 88.6688C300.869 79.3167 283.389 78.7811 269.691 87.3105C268.327 88.16 266.88 89.2311 263.986 91.3734L261.345 93.3286L261.185 93.4471C261.131 93.4875 261.09 93.5173 261.052 93.5454C247.222 103.693 228.461 103.893 214.417 94.0421C214.348 93.9935 214.272 93.9396 214.119 93.8316L212.986 93.0296C195.334 80.535 170.879 84.8393 158.554 102.61L155.842 106.521C140.943 128.003 108.802 126.825 95.5154 104.311C84.7679 86.0984 60.6717 81.0998 43.5667 93.5343Z" fill="%23F2E8ED" stroke="%23F2E8ED"/></svg>') center top/cover no-repeat;
+        position: sticky;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        height: 139px;
+        transition: all 0.3s ease;
+        margin: 0;
+        display: flex;
+        align-items: flex-start;
+        padding-top: 20px;
+    }
     .nav-container {
         max-width: 1440px;
+        padding-left: 0;
+        padding-right: 0;
     }
 
     .logo {
@@ -315,7 +346,9 @@ DESKTOP RESPONSIVE BREAKPOINTS
 /* 1280px-1599px */
 @media (min-width: 1280px) and (max-width: 1599px) {
     .nav-container {
-        max-width: 1200px;
+        max-width: 1320px;
+        padding-left: 0;
+        padding-right: 0;
     }
 
     .logo {
@@ -337,12 +370,16 @@ DESKTOP RESPONSIVE BREAKPOINTS
 @media (min-width: 1024px) and (max-width: 1279px) {
     .nav-container {
         max-width: 1000px;
+        padding-left: 0;
+        padding-right: 0;
     }
 
     .logo {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
     }
-
+    .nav-buttons {
+        gap: 5px;
+    }
     .nav-links {
         gap: 25px;
     }
@@ -427,30 +464,26 @@ MOBILE RESPONSIVE BREAKPOINTS ONLY (768px and below)
     }
 
     .nav {
-        /* Убираем SVG фон для мобильной версии и делаем простой фон */
-        background: rgba(242, 232, 237, 0.95);
-        backdrop-filter: blur(20px);
+        background: url('data:image/svg+xml,<svg width="1440" height="126" viewBox="0 0 1440 126" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M43.5667 93.5343L30.1403 103.295C23.6996 107.977 15.5291 109.597 7.78903 107.728C-4.40737 104.783 -13 93.8678 -13 81.3208V-65C-13 -87.4021 -13 -98.6032 -8.64026 -107.16C-4.80533 -114.686 1.3139 -120.805 8.84038 -124.64C17.3968 -129 28.5979 -129 51 -129H1388C1410.4 -129 1421.6 -129 1430.16 -124.64C1437.69 -120.805 1443.81 -114.686 1447.64 -107.16C1452 -98.6032 1452 -87.4021 1452 -65V98.5425C1452 105.243 1446.57 110.674 1439.87 110.674C1436.17 110.674 1432.66 108.983 1430.36 106.081L1425.75 100.268C1414.08 85.555 1391.42 86.615 1381.18 102.353L1376.62 109.362C1363.4 129.665 1333.67 129.665 1320.45 109.362L1316.14 102.733C1304.49 84.8435 1280.55 79.7797 1262.66 91.4226L1258.62 94.049L1258.62 94.0535C1256.67 95.3218 1255.69 95.9565 1254.77 96.487C1241.53 104.135 1225.09 103.566 1212.41 95.0197C1211.53 94.4263 1210.6 93.7246 1208.74 92.3212L1206.83 90.8808C1203.01 88.0006 1201.1 86.5605 1199.24 85.4503C1187.04 78.1706 1171.89 77.9108 1159.44 84.7678C1157.54 85.8135 1155.59 87.1873 1151.67 89.9349L1144.29 95.1161C1131.21 104.289 1113.6 103.522 1101.38 93.2455C1086.37 80.6344 1063.96 82.6913 1051.5 97.8228L1047.83 102.282L1047.82 102.294C1047.18 103.076 1046.86 103.468 1046.59 103.78C1030.94 122.014 1002.85 122.426 986.669 104.66C986.391 104.355 986.054 103.97 985.381 103.2L981.606 98.8794C980.786 97.9419 980.377 97.4731 980.012 97.0774C966.531 82.4629 944.361 79.969 927.97 91.2231C927.526 91.5278 927.023 91.8938 926.016 92.6259C925.185 93.2295 924.77 93.5313 924.389 93.795C910.482 103.421 892.023 103.259 878.287 93.3904C877.91 93.1201 877.501 92.8111 876.681 92.193L875.937 91.6317L875.936 91.6311C874.242 90.3535 873.395 89.7146 872.62 89.1856C857.914 79.1407 838.337 80.0288 824.601 91.3639C823.877 91.9609 823.092 92.6739 821.52 94.0997L821.519 94.1003L820.693 94.8504L820.691 94.8513C818.184 97.1263 816.93 98.2639 815.768 99.1716C801.553 110.275 781.665 110.49 767.212 99.698C766.031 98.8156 764.752 97.7052 762.195 95.4846L758.653 92.4084C758.303 92.1046 758.128 91.9527 757.973 91.82C743.558 79.5576 722.522 79.0754 707.56 90.6645C707.398 90.7898 707.216 90.9336 706.853 91.2211L706.199 91.7387C692.1 102.892 672.248 103.122 657.895 92.2978C641.452 79.8977 618.242 82.2072 604.565 97.6045L600.113 102.616C598.766 104.132 598.093 104.89 597.525 105.479C581.288 122.319 554.127 121.692 538.685 104.12C538.145 103.506 537.508 102.719 536.235 101.145L536.232 101.141L535.117 99.762L535.106 99.7484C521.758 83.2531 497.853 80.0504 480.635 92.4506L480.62 92.4608L479.14 93.5271C465.145 103.61 446.089 102.899 432.885 91.7999C418.311 79.5503 396.889 80.1005 382.963 93.0821L380.11 95.7423L380.108 95.7443C378.847 96.9191 378.217 97.5067 377.649 97.9978C363.22 110.469 341.992 111.02 326.937 99.3118C326.344 98.8505 325.683 98.2959 324.362 97.1868L319.464 93.0733C316.707 90.7579 315.328 89.6002 314.019 88.6688C300.869 79.3167 283.389 78.7811 269.691 87.3105C268.327 88.16 266.88 89.2311 263.986 91.3734L261.345 93.3286L261.185 93.4471C261.131 93.4875 261.09 93.5173 261.052 93.5454C247.222 103.693 228.461 103.893 214.417 94.0421C214.348 93.9935 214.272 93.9396 214.119 93.8316L212.986 93.0296C195.334 80.535 170.879 84.8393 158.554 102.61L155.842 106.521C140.943 128.003 108.802 126.825 95.5154 104.311C84.7679 86.0984 60.6717 81.0998 43.5667 93.5343Z" fill="%23F2E8ED" stroke="%23F2E8ED"/></svg>') center top/cover no-repeat;
+        background-size: 100% 100px;
         position: fixed;
         top: 0;
         left: 0;
         right: 0;
         width: 100vw;
         max-width: 100vw;
-        height: 70px;
-        /* Уменьшаем высоту с 126px до 70px */
+        height: 84px;
         padding: 10px 0;
-        /* Уменьшаем padding */
         z-index: 1000;
-        border-bottom: 1px solid var(--color-accent-3);
         margin: 0;
         display: flex;
         align-items: center;
-        /* Центрируем по вертикали */
     }
 
     .nav-container {
         max-width: 100vw;
         width: 100%;
+        top: -10px;
         padding: 0 20px;
         display: flex;
         justify-content: space-between;
@@ -461,7 +494,7 @@ MOBILE RESPONSIVE BREAKPOINTS ONLY (768px and below)
 
     .logo {
         font-size: 1.2rem;
-        z-index: 1002;
+        z-index: 1300;
         position: relative;
         display: flex;
         align-items: center;
@@ -478,31 +511,61 @@ MOBILE RESPONSIVE BREAKPOINTS ONLY (768px and below)
         position: fixed;
         top: 0;
         left: 0;
-        width: 280px;
-        max-width: 75vw;
+        width: 284px;
         height: 100vh;
         background: rgba(255, 255, 255, 0.98);
         backdrop-filter: blur(20px);
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-        padding: 90px 30px 30px 30px;
-        /* Увеличиваем верхний отступ с 80px до 90px */
+        padding: 90px 20px 20px 20px;
         gap: 0;
         margin: 0;
         list-style: none;
-        z-index: 999;
+        z-index: 1200;
         box-shadow: 2px 0 15px rgba(184, 121, 142, 0.1);
         overflow-y: auto;
+        transform: translateX(-100%);
+        transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .nav-links.mobile-active {
+        transform: translateX(0);
     }
 
     .nav-links.mobile-active li {
         width: 100%;
         margin-bottom: 15px;
+        opacity: 0;
+        transform: translateX(-20px);
+        animation: menuItemSlideIn 0.3s ease-out forwards;
+    }
+
+    .nav-links.mobile-active li:nth-child(1) {
+        animation-delay: 0.1s;
+    }
+
+    .nav-links.mobile-active li:nth-child(2) {
+        animation-delay: 0.15s;
+    }
+
+    .nav-links.mobile-active li:nth-child(3) {
+        animation-delay: 0.2s;
+    }
+
+    .nav-links.mobile-active li:nth-child(4) {
+        animation-delay: 0.25s;
+    }
+
+    @keyframes menuItemSlideIn {
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
     }
 
     .nav-links.mobile-active a {
-        font-size: 1.1rem;
+        font-size: 1rem;
         padding: 12px 0;
         display: block;
         width: 100%;
@@ -518,30 +581,45 @@ MOBILE RESPONSIVE BREAKPOINTS ONLY (768px and below)
     .nav-buttons.mobile-active {
         display: flex !important;
         position: fixed;
-        top: 360px;
-        /* Корректируем позицию */
+        top: 380px;
         left: 0;
-        width: 280px;
-        max-width: 75vw;
+        width: 284px;
         background: transparent;
         flex-direction: column;
-        gap: 15px;
+        gap: 10px;
         margin: 0;
-        padding: 0 30px;
-        z-index: 999;
+        padding: 0 20px;
+        z-index: 1200;
+        transform: translateX(-100%);
+        transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .nav-buttons.mobile-active {
+        transform: translateX(0);
     }
 
     .nav-buttons.mobile-active li {
         width: 100%;
+        opacity: 0;
+        transform: translateX(-20px);
+        animation: menuItemSlideIn 0.3s ease-out forwards;
+    }
+
+    .nav-buttons.mobile-active li:nth-child(1) {
+        animation-delay: 0.3s;
+    }
+
+    .nav-buttons.mobile-active li:nth-child(2) {
+        animation-delay: 0.35s;
     }
 
     .nav-buttons.mobile-active li a.btn.nav-btn-wide {
         width: 100%;
-        height: 50px;
+        height: 48px;
         font-size: 1rem;
         justify-content: center;
         min-width: auto;
-        padding: 12px 25px;
+        padding: 12px 20px;
         display: flex;
         align-items: center;
         white-space: nowrap;
@@ -550,22 +628,37 @@ MOBILE RESPONSIVE BREAKPOINTS ONLY (768px and below)
     .language-switcher.mobile-active {
         display: block !important;
         position: fixed;
-        top: 520px;
-        /* Корректируем позицию */
+        top: 116px;
         left: 0;
         margin: 0;
-        padding: 0 30px;
-        z-index: 999;
-        width: 280px;
-        max-width: 75vw;
+        padding: 0 20px;
+        z-index: 1200;
+        width: 284px;
+        transform: translateX(-100%);
+        transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        opacity: 0;
+        animation: menuItemSlideIn 0.3s ease-out forwards;
+        animation-delay: 0.4s;
+    }
+
+    .language-switcher.mobile-active {
+        transform: translateX(0);
+    }
+
+    .language-switcher.mobile-active .language-btn {
+        width: 100%;
+        height: 48px;
+        font-size: 1rem;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        padding: 12px 20px;
     }
 
     .mobile-menu {
         display: flex !important;
         position: relative;
-        /* Меняем с fixed на relative */
         right: auto;
-        /* Убираем фиксированное позиционирование */
         top: auto;
         width: 40px;
         height: 40px;
@@ -622,76 +715,331 @@ MOBILE RESPONSIVE BREAKPOINTS ONLY (768px and below)
 }
 
 @media (max-width: 600px) {
+    .hero {
+        min-height: auto;
+        margin-top: 65px;
+        margin-bottom: 0px;
+        display: block;
+        text-align: center;
+    }
+
+    .hero-bg-image {
+        position: static;
+        display: block;
+        width: 100%;
+        height: auto;
+        max-height: 350px;
+        object-fit: cover;
+        border-radius: 0 0 25px 25px;
+        margin-bottom: 35px;
+    }
+
+    .hero-container {
+        padding: 0 1rem;
+        margin: 0 auto;
+        margin-top: 35px;
+    }
+
+    .hero-content {
+        padding-left: 0;
+        max-width: 100%;
+        position: static;
+        z-index: auto;
+    }
+
+    .hero-title {
+        font-size: 1.8rem;
+        margin-bottom: 18px;
+    }
+
+    .hero-text {
+        font-size: 0.95rem;
+        margin-bottom: 35px;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    .hero-phone,
+    .hero-cta {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+        text-align: center;
+        white-space: normal;
+        width: 100%;
+        display: block;
+    }
+
+    /* ===================================================== 
+    NAVIGATION MOBILE LAYOUT FOR 600px
+    ===================================================== */
+    .nav-links,
+    .nav-buttons,
+    .language-switcher {
+        display: none !important;
+    }
+
     .nav {
+        background: url('data:image/svg+xml,<svg width="1440" height="126" viewBox="0 0 1440 126" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M43.5667 93.5343L30.1403 103.295C23.6996 107.977 15.5291 109.597 7.78903 107.728C-4.40737 104.783 -13 93.8678 -13 81.3208V-65C-13 -87.4021 -13 -98.6032 -8.64026 -107.16C-4.80533 -114.686 1.3139 -120.805 8.84038 -124.64C17.3968 -129 28.5979 -129 51 -129H1388C1410.4 -129 1421.6 -129 1430.16 -124.64C1437.69 -120.805 1443.81 -114.686 1447.64 -107.16C1452 -98.6032 1452 -87.4021 1452 -65V98.5425C1452 105.243 1446.57 110.674 1439.87 110.674C1436.17 110.674 1432.66 108.983 1430.36 106.081L1425.75 100.268C1414.08 85.555 1391.42 86.615 1381.18 102.353L1376.62 109.362C1363.4 129.665 1333.67 129.665 1320.45 109.362L1316.14 102.733C1304.49 84.8435 1280.55 79.7797 1262.66 91.4226L1258.62 94.049L1258.62 94.0535C1256.67 95.3218 1255.69 95.9565 1254.77 96.487C1241.53 104.135 1225.09 103.566 1212.41 95.0197C1211.53 94.4263 1210.6 93.7246 1208.74 92.3212L1206.83 90.8808C1203.01 88.0006 1201.1 86.5605 1199.24 85.4503C1187.04 78.1706 1171.89 77.9108 1159.44 84.7678C1157.54 85.8135 1155.59 87.1873 1151.67 89.9349L1144.29 95.1161C1131.21 104.289 1113.6 103.522 1101.38 93.2455C1086.37 80.6344 1063.96 82.6913 1051.5 97.8228L1047.83 102.282L1047.82 102.294C1047.18 103.076 1046.86 103.468 1046.59 103.78C1030.94 122.014 1002.85 122.426 986.669 104.66C986.391 104.355 986.054 103.97 985.381 103.2L981.606 98.8794C980.786 97.9419 980.377 97.4731 980.012 97.0774C966.531 82.4629 944.361 79.969 927.97 91.2231C927.526 91.5278 927.023 91.8938 926.016 92.6259C925.185 93.2295 924.77 93.5313 924.389 93.795C910.482 103.421 892.023 103.259 878.287 93.3904C877.91 93.1201 877.501 92.8111 876.681 92.193L875.937 91.6317L875.936 91.6311C874.242 90.3535 873.395 89.7146 872.62 89.1856C857.914 79.1407 838.337 80.0288 824.601 91.3639C823.877 91.9609 823.092 92.6739 821.52 94.0997L821.519 94.1003L820.693 94.8504L820.691 94.8513C818.184 97.1263 816.93 98.2639 815.768 99.1716C801.553 110.275 781.665 110.49 767.212 99.698C766.031 98.8156 764.752 97.7052 762.195 95.4846L758.653 92.4084C758.303 92.1046 758.128 91.9527 757.973 91.82C743.558 79.5576 722.522 79.0754 707.56 90.6645C707.398 90.7898 707.216 90.9336 706.853 91.2211L706.199 91.7387C692.1 102.892 672.248 103.122 657.895 92.2978C641.452 79.8977 618.242 82.2072 604.565 97.6045L600.113 102.616C598.766 104.132 598.093 104.89 597.525 105.479C581.288 122.319 554.127 121.692 538.685 104.12C538.145 103.506 537.508 102.719 536.235 101.145L536.232 101.141L535.117 99.762L535.106 99.7484C521.758 83.2531 497.853 80.0504 480.635 92.4506L480.62 92.4608L479.14 93.5271C465.145 103.61 446.089 102.899 432.885 91.7999C418.311 79.5503 396.889 80.1005 382.963 93.0821L380.11 95.7423L380.108 95.7443C378.847 96.9191 378.217 97.5067 377.649 97.9978C363.22 110.469 341.992 111.02 326.937 99.3118C326.344 98.8505 325.683 98.2959 324.362 97.1868L319.464 93.0733C316.707 90.7579 315.328 89.6002 314.019 88.6688C300.869 79.3167 283.389 78.7811 269.691 87.3105C268.327 88.16 266.88 89.2311 263.986 91.3734L261.345 93.3286L261.185 93.4471C261.131 93.4875 261.09 93.5173 261.052 93.5454C247.222 103.693 228.461 103.893 214.417 94.0421C214.348 93.9935 214.272 93.9396 214.119 93.8316L212.986 93.0296C195.334 80.535 170.879 84.8393 158.554 102.61L155.842 106.521C140.943 128.003 108.802 126.825 95.5154 104.311C84.7679 86.0984 60.6717 81.0998 43.5667 93.5343Z" fill="%23F2E8ED" stroke="%23F2E8ED"/></svg>') center top/cover no-repeat;
+        background-size: 100% 66px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        max-width: 100vw;
         height: 65px;
         padding: 8px 0;
+        z-index: 1000;
+        margin: 0;
+        display: flex;
+        align-items: center;
     }
 
     .nav-container {
+        max-width: 100vw;
+        width: 100%;
         padding: 0 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        height: 100%;
     }
 
-    .mobile-menu {
-        width: 38px;
-        height: 38px;
+    .logo {
+        font-size: 1.1rem;
+        z-index: 1300;
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 8px;
     }
 
-    .mobile-menu span {
-        width: 18px;
-        height: 2px;
-    }
-
-    .mobile-menu span:nth-child(1) {
-        top: 14px;
-    }
-
-    .mobile-menu span:nth-child(2) {
-        top: 18px;
-    }
-
-    .mobile-menu span:nth-child(3) {
-        top: 22px;
-    }
-
-    .mobile-menu.active span:nth-child(1),
-    .mobile-menu.active span:nth-child(3) {
-        top: 18px;
+    .logo-image {
+        width: 32px;
+        height: 32px;
     }
 
     .nav-links.mobile-active {
-        width: 260px;
-        max-width: 80vw;
-        padding: 85px 25px 25px 25px;
+        display: flex !important;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 252px;
+        height: 100vh;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 75px 15px 15px 15px;
+        gap: 0;
+        margin: 0;
+        list-style: none;
+        z-index: 1200;
+        box-shadow: 2px 0 15px rgba(184, 121, 142, 0.1);
+        overflow-y: auto;
+        transform: translateX(-100%);
+        transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .nav-links.mobile-active {
+        transform: translateX(0);
+    }
+
+    .nav-links.mobile-active li {
+        width: 100%;
+        margin-bottom: 12px;
+        opacity: 0;
+        transform: translateX(-20px);
+        animation: menuItemSlideIn 0.3s ease-out forwards;
+    }
+
+    .nav-links.mobile-active li:nth-child(1) {
+        animation-delay: 0.1s;
+    }
+
+    .nav-links.mobile-active li:nth-child(2) {
+        animation-delay: 0.15s;
+    }
+
+    .nav-links.mobile-active li:nth-child(3) {
+        animation-delay: 0.2s;
+    }
+
+    .nav-links.mobile-active li:nth-child(4) {
+        animation-delay: 0.25s;
+    }
+
+    .nav-links.mobile-active a {
+        font-size: 0.95rem;
+        padding: 10px 0;
+        display: block;
+        width: 100%;
+        border-bottom: 1px solid var(--color-accent-3);
+        color: var(--color-text);
+        text-decoration: none;
+    }
+
+    .nav-links.mobile-active a::after {
+        display: none;
     }
 
     .nav-buttons.mobile-active {
-        top: 340px;
-        width: 260px;
-        max-width: 80vw;
-        padding: 0 25px;
+        display: flex !important;
+        position: fixed;
+        top: 305px;
+        left: 0;
+        width: 252px;
+        background: transparent;
+        flex-direction: column;
+        gap: 10px;
+        margin: 0;
+        padding: 0 15px;
+        z-index: 1200;
+        transform: translateX(-100%);
+        transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .nav-buttons.mobile-active {
+        transform: translateX(0);
+    }
+
+    .nav-buttons.mobile-active li {
+        width: 100%;
+        opacity: 0;
+        transform: translateX(-20px);
+        animation: menuItemSlideIn 0.3s ease-out forwards;
+    }
+
+    .nav-buttons.mobile-active li:nth-child(1) {
+        animation-delay: 0.3s;
+    }
+
+    .nav-buttons.mobile-active li:nth-child(2) {
+        animation-delay: 0.35s;
     }
 
     .nav-buttons.mobile-active li a.btn.nav-btn-wide {
-        height: 48px;
-        padding: 10px 22px;
+        width: 100%;
+        height: 42px;
+        font-size: 0.9rem;
+        justify-content: center;
+        min-width: auto;
+        padding: 10px 15px;
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
     }
 
     .language-switcher.mobile-active {
-        top: 480px;
-        padding: 0 25px;
-        width: 260px;
-        max-width: 80vw;
+        display: block !important;
+        position: fixed;
+        top: 104px;
+        left: 0;
+        margin: 0;
+        padding: 0 15px;
+        z-index: 1200;
+        width: 252px;
+        transform: translateX(-100%);
+        transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        opacity: 0;
+        animation: menuItemSlideIn 0.3s ease-out forwards;
+        animation-delay: 0.4s;
+    }
+
+    .language-switcher.mobile-active {
+        transform: translateX(0);
+    }
+
+    .language-switcher.mobile-active .language-btn {
+        width: 100%;
+        height: 42px;
+        font-size: 0.9rem;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        padding: 10px 15px;
+    }
+
+    .mobile-menu {
+        display: flex !important;
+        position: relative;
+        right: auto;
+        top: auto;
+        width: 36px;
+        height: 36px;
+        cursor: pointer;
+        z-index: 1010;
+        background: white;
+        border-radius: 8px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mobile-menu span {
+        display: block;
+        width: 18px;
+        height: 2px;
+        background: var(--color-accent);
+        position: absolute;
+        transition: all 0.3s ease;
+        transform-origin: center center;
+    }
+
+    .mobile-menu span:nth-child(1) {
+        top: 13px;
+    }
+
+    .mobile-menu span:nth-child(2) {
+        top: 17px;
+    }
+
+    .mobile-menu span:nth-child(3) {
+        top: 21px;
+    }
+
+    .mobile-menu.active span:nth-child(1) {
+        transform: rotate(45deg);
+        top: 17px;
+        background: var(--color-accent-2);
+    }
+
+    .mobile-menu.active span:nth-child(2) {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    .mobile-menu.active span:nth-child(3) {
+        transform: rotate(-45deg);
+        top: 17px;
+        background: var(--color-accent-2);
+    }
+
+    .mobile-menu.active {
+        background: var(--color-accent-3);
     }
 }
 
 @media (max-width: 480px) {
     .nav {
+        background-size: 100% 80px;
         height: 60px;
         padding: 6px 0;
     }
 
     .nav-container {
         padding: 0 12px;
+        padding-top: 6px;
     }
 
     .logo {
@@ -701,6 +1049,41 @@ MOBILE RESPONSIVE BREAKPOINTS ONLY (768px and below)
     .logo-image {
         width: 30px;
         height: 30px;
+    }
+
+    .nav-links.mobile-active {
+        width: 250px;
+        padding: 80px 16px 16px 16px;
+    }
+
+    .nav-links.mobile-active a {
+        font-size: 0.95rem;
+        padding: 10px 0;
+    }
+
+    .nav-buttons.mobile-active {
+        top: 330px;
+        width: 250px;
+        padding: 0 16px;
+        gap: 10px;
+    }
+
+    .nav-buttons.mobile-active li a.btn.nav-btn-wide {
+        height: 44px;
+        font-size: 0.95rem;
+        padding: 10px 18px;
+    }
+
+    .language-switcher.mobile-active {
+        top: 108px;
+        width: 250px;
+        padding: 0 16px;
+    }
+
+    .language-switcher.mobile-active .language-btn {
+        height: 44px;
+        font-size: 0.95rem;
+        padding: 10px 18px;
     }
 
     .mobile-menu {
@@ -729,46 +1112,41 @@ MOBILE RESPONSIVE BREAKPOINTS ONLY (768px and below)
     .mobile-menu.active span:nth-child(3) {
         top: 17px;
     }
-
-    .nav-links.mobile-active {
-        width: 240px;
-        max-width: 85vw;
-        padding: 80px 20px 20px 20px;
-    }
-
-    .nav-links.mobile-active li {
-        margin-bottom: 12px;
-    }
-
-    .nav-links.mobile-active a {
-        font-size: 1rem;
-        padding: 10px 0;
-    }
-
-    .nav-buttons.mobile-active {
-        top: 320px;
-        width: 240px;
-        max-width: 85vw;
-        padding: 0 20px;
-    }
-
-    .nav-buttons.mobile-active li a.btn.nav-btn-wide {
-        height: 46px;
-        font-size: 0.95rem;
-        padding: 10px 20px;
-    }
-
-    .language-switcher.mobile-active {
-        top: 450px;
-        padding: 0 20px;
-        width: 240px;
-        max-width: 85vw;
-    }
 }
 
 @media (max-width: 414px) {
     .nav-container {
         padding: 0 10px;
+    }
+
+    .nav-links.mobile-active {
+        width: 264px;
+        padding: 75px 15px 15px 15px;
+    }
+
+    .nav-buttons.mobile-active {
+        top: 305px;
+        width: 264px;
+        padding: 0 15px;
+        gap: 10px;
+    }
+
+    .nav-buttons.mobile-active li a.btn.nav-btn-wide {
+        height: 42px;
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    .language-switcher.mobile-active {
+        top: 104px;
+        width: 264px;
+        padding: 0 15px;
+    }
+
+    .language-switcher.mobile-active .language-btn {
+        height: 42px;
+        font-size: 0.9rem;
+        padding: 8px 16px;
     }
 
     .mobile-menu {
@@ -797,31 +1175,11 @@ MOBILE RESPONSIVE BREAKPOINTS ONLY (768px and below)
     .mobile-menu.active span:nth-child(3) {
         top: 16px;
     }
-
-    .nav-links.mobile-active {
-        width: 220px;
-        max-width: 90vw;
-    }
-
-    .nav-buttons.mobile-active {
-        width: 220px;
-        max-width: 90vw;
-    }
-
-    .nav-buttons.mobile-active li a.btn.nav-btn-wide {
-        height: 44px;
-        font-size: 0.9rem;
-        padding: 8px 18px;
-    }
-
-    .language-switcher.mobile-active {
-        width: 220px;
-        max-width: 90vw;
-    }
 }
 
 @media (max-width: 390px) {
     .nav {
+        background-size: 100% 70px;
         height: 55px;
         padding: 5px 0;
     }
@@ -837,6 +1195,41 @@ MOBILE RESPONSIVE BREAKPOINTS ONLY (768px and below)
     .logo-image {
         width: 28px;
         height: 28px;
+    }
+
+    .nav-links.mobile-active {
+        width: 226px;
+        padding: 70px 14px 14px 14px;
+    }
+
+    .nav-links.mobile-active a {
+        font-size: 0.9rem;
+        padding: 8px 0;
+    }
+
+    .nav-buttons.mobile-active {
+        top: 270px;
+        width: 226px;
+        padding: 0 14px;
+        gap: 10px;
+    }
+
+    .nav-buttons.mobile-active li a.btn.nav-btn-wide {
+        height: 40px;
+        font-size: 0.85rem;
+        padding: 8px 14px;
+    }
+
+    .language-switcher.mobile-active {
+        top: 100px;
+        width: 226px;
+        padding: 0 14px;
+    }
+
+    .language-switcher.mobile-active .language-btn {
+        height: 40px;
+        font-size: 0.85rem;
+        padding: 8px 14px;
     }
 
     .mobile-menu {
@@ -865,47 +1258,41 @@ MOBILE RESPONSIVE BREAKPOINTS ONLY (768px and below)
     .mobile-menu.active span:nth-child(3) {
         top: 15px;
     }
-
-    .nav-links.mobile-active {
-        width: 200px;
-        max-width: 92vw;
-        padding: 75px 18px 18px 18px;
-    }
-
-    .nav-links.mobile-active li {
-        margin-bottom: 10px;
-    }
-
-    .nav-links.mobile-active a {
-        font-size: 0.95rem;
-        padding: 8px 0;
-    }
-
-    .nav-buttons.mobile-active {
-        top: 300px;
-        width: 200px;
-        max-width: 92vw;
-        padding: 0 18px;
-        gap: 12px;
-    }
-
-    .nav-buttons.mobile-active li a.btn.nav-btn-wide {
-        height: 42px;
-        font-size: 0.9rem;
-        padding: 8px 16px;
-    }
-
-    .language-switcher.mobile-active {
-        top: 407px;
-        padding: 0 18px;
-        width: 200px;
-        max-width: 92vw;
-    }
 }
 
 @media (max-width: 375px) {
     .nav-container {
         padding: 0 6px;
+    }
+
+    .nav-links.mobile-active {
+        width: 222px;
+        padding: 65px 12px 12px 12px;
+    }
+
+    .nav-buttons.mobile-active {
+        top: 300px;
+        width: 222px;
+        padding: 0 12px;
+        gap: 10px;
+    }
+
+    .nav-buttons.mobile-active li a.btn.nav-btn-wide {
+        height: 38px;
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+
+    .language-switcher.mobile-active {
+        top: 96px;
+        width: 222px;
+        padding: 0 12px;
+    }
+
+    .language-switcher.mobile-active .language-btn {
+        height: 38px;
+        font-size: 0.8rem;
+        padding: 6px 12px;
     }
 
     .mobile-menu {
@@ -934,46 +1321,11 @@ MOBILE RESPONSIVE BREAKPOINTS ONLY (768px and below)
     .mobile-menu.active span:nth-child(3) {
         top: 14px;
     }
-
-    .nav-links.mobile-active {
-        width: 180px;
-        max-width: 95vw;
-        padding: 70px 15px 15px 15px;
-    }
-
-    .nav-links.mobile-active li {
-        margin-bottom: 8px;
-    }
-
-    .nav-links.mobile-active a {
-        font-size: 0.9rem;
-        padding: 6px 0;
-    }
-
-    .nav-buttons.mobile-active {
-        top: 280px;
-        width: 180px;
-        max-width: 95vw;
-        padding: 0 15px;
-        gap: 10px;
-    }
-
-    .nav-buttons.mobile-active li a.btn.nav-btn-wide {
-        height: 40px;
-        font-size: 0.85rem;
-        padding: 6px 14px;
-    }
-
-    .language-switcher.mobile-active {
-        top: 410px;
-        padding: 0 15px;
-        width: 180px;
-        max-width: 95vw;
-    }
 }
 
 @media (max-width: 360px) {
     .nav {
+        background-size: 100% 60px;
         height: 50px;
         padding: 4px 0;
     }
@@ -989,6 +1341,41 @@ MOBILE RESPONSIVE BREAKPOINTS ONLY (768px and below)
     .logo-image {
         width: 25px;
         height: 25px;
+    }
+
+    .nav-links.mobile-active {
+        width: 200px;
+        padding: 60px 10px 10px 10px;
+    }
+
+    .nav-links.mobile-active a {
+        font-size: 0.85rem;
+        padding: 6px 0;
+    }
+
+    .nav-buttons.mobile-active {
+        top: 250px;
+        width: 200px;
+        padding: 0 10px;
+        gap: 10px;
+    }
+
+    .nav-buttons.mobile-active li a.btn.nav-btn-wide {
+        height: 36px;
+        font-size: 0.75rem;
+        padding: 6px 10px;
+    }
+
+    .language-switcher.mobile-active {
+        top: 92px;
+        width: 200px;
+        padding: 0 10px;
+    }
+
+    .language-switcher.mobile-active .language-btn {
+        height: 36px;
+        font-size: 0.75rem;
+        padding: 6px 10px;
     }
 
     .mobile-menu {
@@ -1017,36 +1404,11 @@ MOBILE RESPONSIVE BREAKPOINTS ONLY (768px and below)
     .mobile-menu.active span:nth-child(3) {
         top: 13px;
     }
-
-    .nav-links.mobile-active {
-        width: 160px;
-        max-width: 97vw;
-        padding: 65px 12px 12px 12px;
-    }
-
-    .nav-buttons.mobile-active {
-        top: 260px;
-        width: 160px;
-        max-width: 97vw;
-        padding: 0 12px;
-    }
-
-    .nav-buttons.mobile-active li a.btn.nav-btn-wide {
-        height: 38px;
-        font-size: 0.8rem;
-        padding: 6px 12px;
-    }
-
-    .language-switcher.mobile-active {
-        top: 390px;
-        padding: 0 12px;
-        width: 160px;
-        max-width: 97vw;
-    }
 }
 
 @media (max-width: 320px) {
     .nav {
+        background-size: 100% 50px;
         height: 45px;
         padding: 3px 0;
     }
@@ -1062,6 +1424,41 @@ MOBILE RESPONSIVE BREAKPOINTS ONLY (768px and below)
     .logo-image {
         width: 22px;
         height: 22px;
+    }
+
+    .nav-links.mobile-active {
+        width: 175px;
+        padding: 55px 8px 8px 8px;
+    }
+
+    .nav-links.mobile-active a {
+        font-size: 0.8rem;
+        padding: 5px 0;
+    }
+
+    .nav-buttons.mobile-active {
+        top: 240px;
+        width: 175px;
+        padding: 0 8px;
+        gap: 10px;
+    }
+
+    .nav-buttons.mobile-active li a.btn.nav-btn-wide {
+        height: 34px;
+        font-size: 0.7rem;
+        padding: 5px 8px;
+    }
+
+    .language-switcher.mobile-active {
+        top: 88px;
+        width: 175px;
+        padding: 0 8px;
+    }
+
+    .language-switcher.mobile-active .language-btn {
+        height: 34px;
+        font-size: 0.7rem;
+        padding: 5px 8px;
     }
 
     .mobile-menu {
@@ -1089,42 +1486,6 @@ MOBILE RESPONSIVE BREAKPOINTS ONLY (768px and below)
     .mobile-menu.active span:nth-child(1),
     .mobile-menu.active span:nth-child(3) {
         top: 12px;
-    }
-
-    .nav-links.mobile-active {
-        width: 140px;
-        max-width: 98vw;
-        padding: 60px 10px 10px 10px;
-    }
-
-    .nav-links.mobile-active li {
-        margin-bottom: 6px;
-    }
-
-    .nav-links.mobile-active a {
-        font-size: 0.85rem;
-        padding: 5px 0;
-    }
-
-    .nav-buttons.mobile-active {
-        top: 240px;
-        width: 140px;
-        max-width: 98vw;
-        padding: 0 10px;
-        gap: 8px;
-    }
-
-    .nav-buttons.mobile-active li a.btn.nav-btn-wide {
-        height: 36px;
-        font-size: 0.8rem;
-        padding: 5px 10px;
-    }
-
-    .language-switcher.mobile-active {
-        top: 370px;
-        padding: 0 10px;
-        width: 140px;
-        max-width: 98vw;
     }
 }
 
@@ -1161,7 +1522,7 @@ Hero Section
 }
 
 .hero-content {
-    padding-left: 120px;
+    padding-left: 100px;
     max-width: 760px;
 }
 
@@ -1175,6 +1536,7 @@ Hero Section
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    text-transform: uppercase;
 }
 
 .hero-text {
@@ -1236,9 +1598,9 @@ Responsive
 /* 1920px and above */
 @media (min-width: 1920px) {
     .hero {
-        min-height: 700px;
+        min-height: 900px;
         padding-top: 0;
-        margin-top: -48px;
+        margin-top: -80px;
     }
 
     .hero-content {
@@ -1266,7 +1628,7 @@ Responsive
 /* 1600px - 1919px */
 @media (max-width: 1919px) and (min-width: 1600px) {
     .hero {
-        min-height: 650px;
+        min-height: 710px;
         padding-top: 0;
     }
 
@@ -1305,7 +1667,7 @@ Responsive
 
     .hero-content {
         padding-left: 120px;
-        max-width: 760px;
+        max-width: 710px;
     }
 
     .hero-title {
@@ -1356,64 +1718,64 @@ Responsive
 
 
 @media (max-width: 1279px) and (min-width: 1024px) {
-   .hero {
-       min-height: 500px;
-       padding-top: 0;
-       display: flex;
-       align-items: center;
-       margin-top: -48px;
-       margin-bottom: 150px;
-       padding-right: 0;
-   }
-   
-   .hero-bg-image {
-       position: absolute;
-       top: 0;
-       right: 0;
-       height: 100%;
-       width: auto;
-       object-fit: cover;
-       z-index: 1;
-   }
-   
-   .hero-container {
-       max-width: 100%;
-       position: relative;
-       z-index: 2;
-       width: 100%;
-       padding: 0 0 0 2rem;
-       margin: 0;
-   }
-   
-   .hero-content {
-       padding-left: 0;
-       max-width: 540px;
-       position: relative;
-       z-index: 2;
-   }
-   
-   .hero-title {
-       font-size: 52px;
-       margin-bottom: 16px;
-   }
-   
-   .hero-text {
-       font-size: 20px;
-       margin-bottom: 40px;
-   }
-   
-   .hero-buttons {
-       display: flex;
-       gap: 1.5rem;
-       align-items: center;
-   }
-   
-   .hero-phone,
-   .hero-cta {
-       padding: 0.9rem 1.6rem;
-       font-size: 1rem;
-       white-space: nowrap;
-   }
+    .hero {
+        min-height: 500px;
+        padding-top: 0;
+        display: flex;
+        align-items: center;
+        margin-top: -48px;
+        margin-bottom: 150px;
+        padding-right: 0;
+    }
+
+    .hero-bg-image {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: auto;
+        object-fit: cover;
+        z-index: 1;
+    }
+
+    .hero-container {
+        max-width: 100%;
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        padding: 0 0 0 2rem;
+        margin: 0;
+    }
+
+    .hero-content {
+        padding-left: 0;
+        max-width: 540px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .hero-title {
+        font-size: 52px;
+        margin-bottom: 16px;
+    }
+
+    .hero-text {
+        font-size: 20px;
+        margin-bottom: 40px;
+    }
+
+    .hero-buttons {
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+    }
+
+    .hero-phone,
+    .hero-cta {
+        padding: 0.9rem 1.6rem;
+        font-size: 1rem;
+        white-space: nowrap;
+    }
 }
 
 @media (max-width: 1023px) and (min-width: 769px) {
@@ -1423,22 +1785,22 @@ Responsive
         margin-bottom: 100px;
         padding-top: 0;
     }
-    
+
     .hero-content {
         padding-left: 60px;
         max-width: 580px;
     }
-    
+
     .hero-title {
         font-size: 48px;
         margin-bottom: 15px;
     }
-    
+
     .hero-text {
         font-size: 19px;
         margin-bottom: 35px;
     }
-    
+
     .hero-phone,
     .hero-cta {
         padding: 0.85rem 1.5rem;
@@ -1449,12 +1811,12 @@ Responsive
 @media (max-width: 768px) {
     .hero {
         min-height: auto;
-        margin-top: 70px;
+        margin-top: 60px;
         margin-bottom: 0px;
         display: block;
         text-align: center;
     }
-    
+
     .hero-bg-image {
         position: static;
         display: block;
@@ -1465,25 +1827,25 @@ Responsive
         border-radius: 0 0 30px 30px;
         margin-bottom: 40px;
     }
-    
+
     .hero-container {
         padding: 0 1rem;
         margin: 0 auto;
         margin-top: 40px;
     }
-    
+
     .hero-content {
         padding-left: 0;
         max-width: 100%;
         position: static;
         z-index: auto;
     }
-    
+
     .hero-title {
         font-size: 40px;
         margin-bottom: 20px;
     }
-    
+
     .hero-text {
         font-size: 18px;
         margin-bottom: 40px;
@@ -1491,7 +1853,7 @@ Responsive
         margin-left: auto;
         margin-right: auto;
     }
-    
+
     .hero-buttons {
         flex-direction: column;
         gap: 1rem;
@@ -1499,7 +1861,7 @@ Responsive
         max-width: 300px;
         margin: 0 auto;
     }
-    
+
     .hero-phone,
     .hero-cta {
         padding: 0.75rem 1.2rem;
@@ -1514,14 +1876,14 @@ Responsive
 @media (max-width: 768px) and (min-width: 481px) {
     .hero {
         min-height: 500px;
-        margin-top: 70px;
+        margin-top: 60px;
         margin-bottom: 0px;
         display: flex;
         align-items: flex-start;
         text-align: left;
         padding-top: 60px;
     }
-    
+
     .hero-bg-image {
         position: absolute;
         top: 0;
@@ -1531,7 +1893,7 @@ Responsive
         object-fit: cover;
         z-index: 1;
     }
-    
+
     .hero-container {
         padding: 0 1rem;
         margin: 0 auto;
@@ -1539,26 +1901,26 @@ Responsive
         z-index: 2;
         margin-top: -26px;
     }
-    
+
     .hero-content {
         padding-left: 2rem;
         max-width: 100%;
         position: relative;
         z-index: 2;
     }
-    
+
     .hero-title {
         font-size: 36px;
         margin-bottom: 10px;
     }
-    
+
     .hero-text {
         font-size: 16px;
         margin-bottom: 20px;
         max-width: 350px;
         margin-left: 0;
     }
-    
+
     .hero-buttons {
         flex-direction: row;
         gap: 1rem;
@@ -1566,7 +1928,7 @@ Responsive
         max-width: 360px;
         margin-left: 0;
     }
-    
+
     .hero-phone,
     .hero-cta {
         padding: 0.7rem 1.1rem;
@@ -1581,7 +1943,7 @@ Responsive
 @media (max-width: 679px) and (min-width: 481px) {
     .hero {
         min-height: 500px;
-        margin-top: -35px;
+        margin-top: 35px;
         margin-bottom: 0px;
         display: flex;
         align-items: flex-start;
@@ -1646,27 +2008,32 @@ Responsive
 
 @media (max-width: 480px) {
     .hero {
-        margin-top: 55px;
+        margin-top: 35px;
     }
+
     .hero-bg-image {
         max-height: 300px;
         margin-bottom: 30px;
         border-radius: 0 0 20px 20px;
     }
+
     .hero-title {
         font-size: 32px;
         margin-bottom: 15px;
     }
+
     .hero-text {
         font-size: 16px;
         margin-bottom: 30px;
         max-width: 450px;
     }
+
     .hero-buttons {
         max-width: 450px;
         flex-direction: row;
         gap: 0.8rem;
     }
+
     .hero-phone,
     .hero-cta {
         padding: 0.8rem 1.3rem;
@@ -1677,16 +2044,19 @@ Responsive
 
 @media (max-width: 414px) {
     .hero {
-        margin-top: 55px;
+        margin-top: 35px;
     }
+
     .hero-title {
         font-size: 30px;
         margin-bottom: 14px;
     }
+
     .hero-text {
         font-size: 15px;
         max-width: 270px;
     }
+
     .hero-phone,
     .hero-cta {
         padding: 0.75rem 1.2rem;
@@ -1694,6 +2064,7 @@ Responsive
         flex: 1;
         box-shadow: none;
     }
+
     .hero-buttons {
         max-width: 370px;
         flex-direction: row;
@@ -1706,10 +2077,12 @@ Responsive
         font-size: 28px;
         margin-bottom: 12px;
     }
+
     .hero-text {
         font-size: 14px;
         max-width: 260px;
     }
+
     .hero-phone,
     .hero-cta {
         padding: 0.7rem 1.1rem;
@@ -1717,6 +2090,7 @@ Responsive
         flex: 1;
         box-shadow: none;
     }
+
     .hero-buttons {
         max-width: 330px;
         flex-direction: row;
@@ -1729,10 +2103,12 @@ Responsive
         font-size: 26px;
         margin-bottom: 10px;
     }
+
     .hero-text {
         font-size: 13px;
         max-width: 240px;
     }
+
     .hero-phone,
     .hero-cta {
         padding: 0.65rem 1rem;
@@ -1740,6 +2116,7 @@ Responsive
         flex: 1;
         box-shadow: none;
     }
+
     .hero-buttons {
         max-width: 300px;
         flex-direction: row;
@@ -1748,14 +2125,20 @@ Responsive
 }
 
 @media (max-width: 320px) {
+    .hero {
+        margin-top: 25px;
+    }
+
     .hero-title {
         font-size: 24px;
         margin-bottom: 8px;
     }
+
     .hero-text {
         font-size: 12px;
         max-width: 220px;
     }
+
     .hero-phone,
     .hero-cta {
         padding: 0.6rem 0.9rem;
@@ -1763,6 +2146,7 @@ Responsive
         flex: 1;
         box-shadow: none;
     }
+
     .hero-buttons {
         max-width: 280px;
         flex-direction: row;
@@ -1774,7 +2158,7 @@ Responsive
 Stats Section
 ===================================================== */
 .stats {
-    padding: 150px 20px;
+    padding: 200px 20px;
     background: var(--color-card-bg);
     position: relative;
 }
@@ -1911,7 +2295,7 @@ Responsive Breakpoints
 /* 1920px+ */
 @media (min-width: 1920px) {
     .stats {
-        padding: 120px 30px;
+        padding: 200px 30px;
     }
 
     .stats-container {
@@ -1945,7 +2329,7 @@ Responsive Breakpoints
 /* 1600px-1919px */
 @media (min-width: 1600px) and (max-width: 1919px) {
     .stats {
-        padding: 150px 25px;
+        padding: 200px 25px;
     }
 
     .stats-container {
@@ -1979,7 +2363,7 @@ Responsive Breakpoints
 /* 1280px-1599px */
 @media (min-width: 1280px) and (max-width: 1599px) {
     .stats {
-        padding: 150px 20px;
+        padding: 200px 20px;
     }
 
     .stats-container {
@@ -2013,7 +2397,7 @@ Responsive Breakpoints
 /* 1024px-1279px */
 @media (min-width: 1024px) and (max-width: 1279px) {
     .stats {
-        padding: 70px 20px;
+        padding: 150px 20px;
     }
 
     .stats-container {
@@ -2047,7 +2431,7 @@ Responsive Breakpoints
 /* 768px-1023px */
 @media (min-width: 768px) and (max-width: 1023px) {
     .stats {
-        padding: 120px 20px;
+        padding: 150px 20px;
     }
 
     .stats-container {
@@ -2082,7 +2466,7 @@ Responsive Breakpoints
 /* 600px-767px */
 @media (min-width: 600px) and (max-width: 767px) {
     .stats {
-        padding: 120px 15px;
+        padding: 150px 15px;
     }
 
     .stats-container {
@@ -3767,8 +4151,8 @@ Responsive Breakpoints Mobile
 About Section
 ===================================================== */
 .about {
-    padding: 100px 20px;
-    background: var(--color-background);
+    padding: 200px 20px;
+    background: var(--color-card-bg);
 }
 
 .about-container {
@@ -3814,7 +4198,7 @@ About Section - Responsive Breakpoints
 /* 1920px+ */
 @media (min-width: 1920px) {
     .about {
-        padding: 140px 30px;
+        padding: 200px 30px;
     }
 
     .about-container {
@@ -3850,7 +4234,7 @@ About Section - Responsive Breakpoints
 /* 1600px-1919px */
 @media (min-width: 1600px) and (max-width: 1919px) {
     .about {
-        padding: 120px 25px;
+        padding: 200px 25px;
     }
 
     .about-container {
@@ -3886,7 +4270,7 @@ About Section - Responsive Breakpoints
 /* 1280px-1599px */
 @media (min-width: 1280px) and (max-width: 1599px) {
     .about {
-        padding: 100px 20px;
+        padding: 200px 20px;
     }
 
     .about-container {
@@ -4338,7 +4722,7 @@ Services Section
 .service-card {
     background: var(--color-card-bg);
     padding: 40px 30px;
-    border-radius: 40px;
+    border-radius: 50px;
     box-shadow: 0 10px 30px rgba(184, 121, 142, 0.1);
     transition: all 0.3s ease;
     border: 1px solid var(--color-accent-3);
@@ -4437,7 +4821,7 @@ Services Section - Responsive Breakpoints
 
     .service-card {
         padding: 50px 35px;
-        border-radius: 30px;
+        border-radius: 50px;
     }
 
     .service-icon {
@@ -4479,7 +4863,7 @@ Services Section - Responsive Breakpoints
 
     .service-card {
         padding: 40px 30px;
-        border-radius: 30px;
+        border-radius: 50px;
     }
 
     .service-icon {
@@ -4521,7 +4905,7 @@ Services Section - Responsive Breakpoints
 
     .service-card {
         padding: 35px 25px;
-        border-radius: 30px;
+        border-radius: 50px;
     }
 
     .service-icon {
