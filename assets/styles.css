@@ -5358,7 +5358,7 @@ Services Section - Responsive Breakpoints
 FAQ Section
 ===================================================== */
 .faq-section {
-    padding: 80px 0;
+    padding: 100px 0;
     background-color: var(--color-background);
 }
 
@@ -5396,13 +5396,6 @@ FAQ Section
     color: var(--color-text-secondary);
     margin-bottom: 20px;
     width: 450px;
-}
-
-.underline {
-    height: 2px;
-    width: 80px;
-    background-color: var(--color-accent);
-    margin: 0;
 }
 
 .accordion {
@@ -5489,7 +5482,10 @@ FAQ Section
 
 .important-note {
     background: rgba(209, 153, 176, 0.08);
+    font-size: 0.8rem;
+    line-height: 1.4;
     padding: 15px;
+    color: var(--color-text-secondary);
     border-radius: 6px;
     margin: 15px 0;
     border-left: 3px solid var(--color-accent-2);
@@ -5497,11 +5493,8 @@ FAQ Section
 
 .important-note strong {
     color: var(--color-text);
-}
-
-/* Desktop padding adjustments */
-.faq-section {
-    padding: 100px 0; /* Increased from 80px */
+    line-height: 1.4;
+    color: var(--color-text-secondary);
 }
 
 /* 1920px+ */
@@ -5509,28 +5502,28 @@ FAQ Section
     .faq-section {
         padding: 120px 0;
     }
-    
+
     .section-header h2 {
         font-size: 48px;
     }
-    
+
     .section-subheading {
         font-size: 20px;
         width: 550px;
     }
-    
+
     .accordion {
         width: 900px;
     }
-    
+
     .accordion-header h3 {
         font-size: 22px;
     }
-    
+
     .accordion-content p {
         font-size: 17px;
     }
-    
+
     .accordion-item.active .accordion-content {
         max-height: 800px;
     }
@@ -5541,28 +5534,28 @@ FAQ Section
     .faq-section {
         padding: 110px 0;
     }
-    
+
     .section-header h2 {
         font-size: 44px;
     }
-    
+
     .section-subheading {
         font-size: 19px;
         width: 500px;
     }
-    
+
     .accordion {
         width: 850px;
     }
-    
+
     .accordion-header h3 {
         font-size: 21px;
     }
-    
+
     .accordion-content p {
         font-size: 16px;
     }
-    
+
     .accordion-item.active .accordion-content {
         max-height: 750px;
     }
@@ -5573,28 +5566,28 @@ FAQ Section
     .faq-section {
         padding: 100px 0;
     }
-    
+
     .section-header h2 {
         font-size: 40px;
     }
-    
+
     .section-subheading {
         font-size: 18px;
         width: 450px;
     }
-    
+
     .accordion {
         width: 800px;
     }
-    
+
     .accordion-header h3 {
         font-size: 20px;
     }
-    
+
     .accordion-content p {
         font-size: 16px;
     }
-    
+
     .accordion-item.active .accordion-content {
         max-height: 700px;
     }
@@ -5605,32 +5598,32 @@ FAQ Section
     .faq-section {
         padding: 100px 0;
     }
-    
+
     .container {
         padding: 0 30px;
     }
-    
+
     .section-header h2 {
         font-size: 36px;
     }
-    
+
     .section-subheading {
         font-size: 17px;
         width: 420px;
     }
-    
+
     .accordion {
         width: 750px;
     }
-    
+
     .accordion-header h3 {
         font-size: 19px;
     }
-    
+
     .accordion-content p {
         font-size: 15px;
     }
-    
+
     .accordion-item.active .accordion-content {
         max-height: 650px;
     }
@@ -5641,56 +5634,60 @@ FAQ Section
     .faq-section {
         padding: 80px 0;
     }
-    
+
     .container {
         padding: 0 25px;
     }
-    
+
     .section-header {
         margin-bottom: 40px;
     }
-    
+
     .section-header h2 {
-        font-size: 32px;
+        font-size: 28px;
     }
-    
+
     .section-subheading {
-        font-size: 16px;
+        font-size: 15px;
         width: 100%;
         max-width: 350px;
     }
-    
+
     .accordion {
         width: 100%;
         max-width: 600px;
     }
-    
+
     .accordion-header {
-        padding: 20px 0;
+        padding: 18px 0;
     }
-    
+
     .accordion-header h3 {
-        font-size: 18px;
+        font-size: 1rem;
         padding-right: 15px;
+        line-height: 1.4;
     }
-    
+
     .accordion-content p {
-        font-size: 15px;
-        line-height: 1.7;
+        font-size: 0.8rem;
+        line-height: 1.4;
     }
-    
+
     .accordion-item.active .accordion-content {
         max-height: 600px;
     }
-    
+
     .highlight-box {
         padding: 12px;
         margin: 12px 0;
     }
-    
+
     .important-note {
         padding: 12px;
         margin: 12px 0;
+        line-height: 1.4;
+        padding: 15px;
+        color: var(--color-text-secondary);
     }
 }
 
@@ -5699,66 +5696,69 @@ FAQ Section
     .faq-section {
         padding: 60px 0;
     }
-    
+
     .container {
         padding: 0 20px;
     }
-    
+
     .section-header {
         margin-bottom: 35px;
     }
-    
+
     .section-header h2 {
-        font-size: 28px;
+        font-size: 24px;
         line-height: 1.2;
     }
-    
+
     .section-subheading {
-        font-size: 15px;
+        font-size: 14px;
         width: 100%;
         max-width: none;
     }
-    
+
     .accordion {
         width: 100%;
     }
-    
+
     .accordion-header {
-        padding: 18px 0;
+        padding: 16px 0;
     }
-    
+
     .accordion-header h3 {
-        font-size: 17px;
+        font-size: 1rem;
         padding-right: 10px;
-        line-height: 1.3;
+        line-height: 1.4;
     }
-    
+
     .accordion-icon {
-        font-size: 22px;
+        font-size: 20px;
         flex-shrink: 0;
     }
-    
+
     .accordion-content p {
-        font-size: 14px;
-        line-height: 1.6;
+        font-size: 0.8rem;
+        line-height: 1.4;
     }
-    
+
     .accordion-item.active .accordion-content {
         max-height: 1000px;
     }
-    
+
     .highlight-box {
-        padding: 12px;
-        margin: 12px 0;
+        padding: 10px;
+        margin: 10px 0;
     }
-    
+
     .highlight-title {
-        font-size: 14px;
+        font-size: 0.8rem;
     }
-    
+
     .important-note {
-        padding: 12px;
-        margin: 12px 0;
+        padding: 10px;
+        margin: 10px 0;
+        line-height: 1.4;
+        padding: 15px;
+        color: var(--color-text-secondary);
     }
 }
 
@@ -5767,41 +5767,41 @@ FAQ Section
     .faq-section {
         padding: 60px 0;
     }
-    
+
     .container {
         padding: 0 18px;
     }
-    
+
     .section-header h2 {
-        font-size: 26px;
+        font-size: 22px;
     }
-    
+
     .section-subheading {
-        font-size: 14px;
+        font-size: 13px;
         width: 100%;
         max-width: none;
     }
-    
+
     .accordion-header {
-        padding: 16px 0;
+        padding: 15px 0;
     }
-    
+
     .accordion-header h3 {
-        font-size: 16px;
+        font-size: 1rem;
         padding-right: 10px;
         line-height: 1.4;
     }
-    
+
     .accordion-icon {
-        font-size: 20px;
+        font-size: 18px;
         flex-shrink: 0;
     }
-    
+
     .accordion-content p {
-        font-size: 13px;
-        line-height: 1.6;
+        font-size: 0.8rem;
+        line-height: 1.4;
     }
-    
+
     .accordion-item.active .accordion-content {
         max-height: 1200px;
     }
@@ -5812,52 +5812,56 @@ FAQ Section
     .faq-section {
         padding: 60px 0;
     }
-    
+
     .container {
         padding: 0 16px;
     }
-    
+
     .section-header h2 {
-        font-size: 24px;
+        font-size: 20px;
     }
-    
+
     .section-subheading {
-        font-size: 14px;
+        font-size: 12px;
         width: 100%;
         max-width: none;
     }
-    
+
     .accordion-header {
-        padding: 15px 0;
+        padding: 14px 0;
     }
-    
+
     .accordion-header h3 {
-        font-size: 15px;
+        font-size: 1rem;
         padding-right: 10px;
         line-height: 1.4;
     }
-    
+
     .accordion-icon {
+        font-size: 16px;
         flex-shrink: 0;
     }
-    
+
     .accordion-content p {
-        font-size: 13px;
-        line-height: 1.6;
+        font-size: 0.8rem;
+        line-height: 1.4;
     }
-    
+
     .accordion-item.active .accordion-content {
         max-height: 1200px;
     }
-    
+
     .highlight-box {
-        padding: 10px;
-        margin: 10px 0;
+        padding: 8px;
+        margin: 8px 0;
     }
-    
+
     .important-note {
-        padding: 10px;
-        margin: 10px 0;
+        padding: 8px;
+        margin: 8px 0;
+        line-height: 1.4;
+        padding: 15px;
+        color: var(--color-text-secondary);
     }
 }
 
@@ -5866,64 +5870,67 @@ FAQ Section
     .faq-section {
         padding: 60px 0;
     }
-    
+
     .container {
         padding: 0 15px;
     }
-    
+
     .section-header {
         margin-bottom: 30px;
     }
-    
+
     .section-header h2 {
-        font-size: 22px;
+        font-size: 18px;
         line-height: 1.2;
     }
-    
+
     .section-subheading {
-        font-size: 13px;
+        font-size: 11px;
         width: 100%;
         max-width: none;
     }
-    
+
     .accordion-header {
-        padding: 14px 0;
+        padding: 12px 0;
     }
-    
+
     .accordion-header h3 {
-        font-size: 14px;
+        font-size: 1rem;
         padding-right: 8px;
-        line-height: 1.3;
+        line-height: 1.4;
     }
-    
+
     .accordion-icon {
-        font-size: 18px;
+        font-size: 14px;
         flex-shrink: 0;
     }
-    
+
     .accordion-content p {
-        font-size: 12px;
-        line-height: 1.6;
+        font-size: 0.8rem;
+        line-height: 1.4;
     }
-    
+
     .accordion-item.active .accordion-content {
         max-height: 1500px;
     }
-    
+
     .highlight-box {
-        padding: 8px;
-        margin: 8px 0;
-        border-radius: 6px;
-    }
-    
-    .highlight-title {
-        font-size: 12px;
-    }
-    
-    .important-note {
-        padding: 8px;
-        margin: 8px 0;
+        padding: 6px;
+        margin: 6px 0;
         border-radius: 4px;
+    }
+
+    .highlight-title {
+        font-size: 0.8rem;
+    }
+
+    .important-note {
+        padding: 6px;
+        margin: 6px 0;
+        border-radius: 3px;
+        line-height: 1.4;
+        padding: 15px;
+        color: var(--color-text-secondary);
     }
 }
 
@@ -5932,45 +5939,49 @@ FAQ Section
     .faq-section {
         padding: 40px 0;
     }
-    
+
     .section-header {
         margin-bottom: 25px;
     }
-    
+
     .section-header h2 {
-        font-size: 24px;
+        font-size: 20px;
     }
-    
+
     .section-subheading {
-        font-size: 14px;
+        font-size: 12px;
         width: 100%;
         max-width: 400px;
     }
-    
+
     .accordion-header {
-        padding: 12px 0;
+        padding: 10px 0;
     }
-    
+
     .accordion-header h3 {
-        font-size: 16px;
+        font-size: 1rem;
     }
-    
+
     .accordion-content p {
-        font-size: 13px;
+        font-size: 0.8rem;
+        line-height: 1.4;
     }
-    
+
     .accordion-item.active .accordion-content {
         max-height: 400px;
     }
-    
+
     .highlight-box {
-        padding: 8px;
-        margin: 8px 0;
+        padding: 6px;
+        margin: 6px 0;
     }
-    
+
     .important-note {
-        padding: 8px;
-        margin: 8px 0;
+        padding: 6px;
+        margin: 6px 0;
+        line-height: 1.4;
+        padding: 15px;
+        color: var(--color-text-secondary);
     }
 }
 
@@ -5979,33 +5990,34 @@ FAQ Section
     .faq-section {
         padding: 30px 0;
     }
-    
+
     .section-header {
         margin-bottom: 20px;
     }
-    
+
     .section-header h2 {
-        font-size: 22px;
+        font-size: 18px;
     }
-    
+
     .section-subheading {
-        font-size: 13px;
+        font-size: 11px;
         width: 100%;
         max-width: 350px;
     }
-    
+
     .accordion-header {
-        padding: 10px 0;
+        padding: 8px 0;
     }
-    
+
     .accordion-header h3 {
-        font-size: 15px;
+        font-size: 1rem;
     }
-    
+
     .accordion-content p {
-        font-size: 12px;
+        font-size: 0.8rem;
+        line-height: 1.4;
     }
-    
+
     .accordion-item.active .accordion-content {
         max-height: 350px;
     }
