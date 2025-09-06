@@ -1,4 +1,4 @@
-:root {
+/* :root {
     --color-background: linear-gradient(135deg, #FFFBFC 0%, #FEF8FA 50%, #FFFFFF 100%);
     --color-card-bg: #FFFFFF;
     --color-accent: #B8798E;
@@ -8,6 +8,26 @@
     --color-text-secondary: #6B6B6B;
     --nav-icon-inactive: #E5D1DA;
     --nav-icon-active: #B8798E;
+} */
+
+:root {
+    --color-background: #FEFEFE;
+    --color-card-bg: #FFFFFF;
+    --color-accent: #B8798E;       
+    --color-accent-2: #D199B0;
+    --color-accent-3: #F2E8ED;
+    --color-text: #2D2D2D;
+    --color-text-secondary: #6B6B6B;
+    --color-nav-inactive: #E5D1DA;
+    --color-nav-active: #B8798E;
+    
+    --color-primary: #4A5568;       /* For main headings */
+    --color-secondary: #718096;     /* For subheadings */
+    --color-section-alt: #F8F9FA;   /* For alternating sections */
+    --color-neutral: #A0AEC0;       /* For paws and decorative elements */
+    --color-neutral-light: #E2E8F0; /* For card backgrounds */
+    --color-neutral-dark: #2D3748;  /* For contrast elements */
+    --color-muted: #EDF2F7;         /* For subtle backgrounds */
 }
 
 * {
@@ -190,11 +210,21 @@ Index
     backdrop-filter: blur(10px);
 }
 
-.language-btn:hover {
-    background: var(--color-accent);
-    color: white;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(184, 121, 142, 0.3);
+.language-btn::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-image: url('data:image/svg+xml,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10" stroke="%23B8798E" stroke-width="1.5"/><path d="M7 8.37931H11.5M17 8.37931H14.5M11.5 8.37931H14.5M11.5 8.37931V6.5M14.5 8.37931C13.9725 10.2656 12.8679 12.0487 11.6071 13.6158M8.39286 17C9.41205 16.0628 10.5631 14.9134 11.6071 13.6158M11.6071 13.6158C10.9643 12.8621 10.0643 11.6426 9.80714 11.0909M11.6071 13.6158L13.5357 15.6207" stroke="%23B8798E" stroke-width="1.5" stroke-linejoin="round"/></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.language-btn:hover::before {
+    background-image: url('data:image/svg+xml,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10" stroke="white" stroke-width="1.5"/><path d="M7 8.37931H11.5M17 8.37931H14.5M11.5 8.37931H14.5M11.5 8.37931V6.5M14.5 8.37931C13.9725 10.2656 12.8679 12.0487 11.6071 13.6158M8.39286 17C9.41205 16.0628 10.5631 14.9134 11.6071 13.6158M11.6071 13.6158C10.9643 12.8621 10.0643 11.6426 9.80714 11.0909M11.6071 13.6158L13.5357 15.6207" stroke="white" stroke-width="1.5" stroke-linejoin="round"/></svg>');
+    transform: rotate(360deg);
 }
 
 .language-icon {
@@ -2196,7 +2226,7 @@ Stats Section
     margin: 0 auto 20px;
     transition: all 0.4s ease;
     filter: drop-shadow(0 10px 25px rgba(184, 121, 142, 0.2));
-    background: url('data:image/svg+xml,<svg width="260" height="260" viewBox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity="0.3"><path d="M81.6358 0.111539C34.4908 4.25502 49.7449 92.5393 96.9674 90.9796C119.524 88.1111 127.46 62.6833 124.355 44.091C121.276 25.6594 104.501 -1.97432 81.6358 0.111539Z" fill="%23d199b0"/><path d="M175.201 0.170849C127.981 4.69821 120.392 92.8957 169.131 90.9689C208.921 82.7306 221.682 24.0778 190.753 3.86295C187.156 1.51151 179.591 -0.629158 175.201 0.170849Z" fill="%23d199b0"/><path d="M50.2749 145C-2.31925 144.005 -17.573 74.6817 23.4109 71.1132C63.4347 67.8344 97.0052 136.818 50.2749 145Z" fill="%23d199b0"/><path d="M216.04 144.824C171.586 149.059 185.272 75.6225 232.869 71.2155C245.982 69.2861 258.281 80.6251 259.731 92.6621C262.673 117.115 241.062 141.676 216.04 144.824Z" fill="%23d199b0"/><path d="M131.454 246.416C114.687 245.269 108.58 258.964 91.1044 259.84C44.5737 262.173 26.6975 197.037 64.3534 168.707C73.6759 162.841 79.2803 153.687 81.6746 142.259C87.1873 115.945 103.084 98.2255 128.568 97.0149C149.751 96.4576 169.416 111.614 176.548 133.321C179.414 142.046 179.444 149.168 184.242 157.286C189.347 165.925 196.069 167.87 202.378 174.937C220.496 195.179 220.695 227.062 202.051 246.909C190.913 259.255 171.195 263.613 156.592 256.758C146.893 252.206 143.561 246.649 131.454 246.416Z" fill="%23d199b0"/></g></svg>') center/contain no-repeat;
+    background: url('data:image/svg+xml,<svg width="260" height="260" viewBox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg"><g opacity="0.3"><path d="M81.6358 0.111539C34.4908 4.25502 49.7449 92.5393 96.9674 90.9796C119.524 88.1111 127.46 62.6833 124.355 44.091C121.276 25.6594 104.501 -1.97432 81.6358 0.111539Z" fill="%23A0AEC0"/><path d="M175.201 0.170849C127.981 4.69821 120.392 92.8957 169.131 90.9689C208.921 82.7306 221.682 24.0778 190.753 3.86295C187.156 1.51151 179.591 -0.629158 175.201 0.170849Z" fill="%23A0AEC0"/><path d="M50.2749 145C-2.31925 144.005 -17.573 74.6817 23.4109 71.1132C63.4347 67.8344 97.0052 136.818 50.2749 145Z" fill="%23A0AEC0"/><path d="M216.04 144.824C171.586 149.059 185.272 75.6225 232.869 71.2155C245.982 69.2861 258.281 80.6251 259.731 92.6621C262.673 117.115 241.062 141.676 216.04 144.824Z" fill="%23A0AEC0"/><path d="M131.454 246.416C114.687 245.269 108.58 258.964 91.1044 259.84C44.5737 262.173 26.6975 197.037 64.3534 168.707C73.6759 162.841 79.2803 153.687 81.6746 142.259C87.1873 115.945 103.084 98.2255 128.568 97.0149C149.751 96.4576 169.416 111.614 176.548 133.321C179.414 142.046 179.444 149.168 184.242 157.286C189.347 165.925 196.069 167.87 202.378 174.937C220.496 195.179 220.695 227.062 202.051 246.909C190.913 259.255 171.195 263.613 156.592 256.758C146.893 252.206 143.561 246.649 131.454 246.416Z" fill="%23A0AEC0"/></g></svg>') center/contain no-repeat;
 }
 
 .stat-item:hover .paw-svg {
@@ -2794,6 +2824,7 @@ Cats Carousel Section
     padding: 100px 20px;
     background: none;
     text-align: center;
+    background-color: var(--color-section-alt);
 }
 
 .cats-carousel-container {
@@ -2988,42 +3019,68 @@ Cats Carousel Section
 }
 
 .carousel-main-btn {
-    font-size: 1.3rem;
-    padding: 18px 45px;
-    background: var(--color-accent-2);
-    color: white;
-    box-shadow: 0 12px 35px rgba(184, 121, 142, 0.3);
-    border-radius: 50px;
-    border: none;
-    cursor: pointer;
-    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    font-weight: 600;
-    position: relative;
-    overflow: hidden;
+   display: inline-flex;
+   justify-content: center;
+   gap: 12px;
+   align-items: center;
+   font-size: 1.1rem;
+   background: var(--color-card-bg);
+   font-weight: 600;
+   border: 2px solid var(--color-accent);
+   transition: all 0.3s ease;
+   color: var(--color-accent);
+   padding: 12px 20px;
+   overflow: hidden;
+   border-radius: 50px;
+   position: relative;
+   z-index: 10;
+   text-decoration: none;
+   cursor: pointer;
 }
 
 .carousel-main-btn::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    transition: left 0.6s;
-}
-
-.carousel-main-btn:hover {
-    transform: translateY(-5px) scale(1.03);
-    box-shadow: 0 18px 50px rgba(184, 121, 142, 0.4);
+   content: '';
+   position: absolute;
+   width: 100%;
+   transition: all 0.7s ease;
+   left: -100%;
+   border-radius: 50px;
+   background: var(--color-accent);
+   z-index: -10;
+   aspect-ratio: 1;
+   transform: scale(1);
 }
 
 .carousel-main-btn:hover::before {
-    left: 100%;
+   left: 0;
+   width: 100%;
+   transform: scale(1.5);
+   transition-duration: 0.7s;
+}
+
+.carousel-main-btn:hover {
+   color: white;
+}
+
+.carousel-main-btn::after {
+   content: '';
+   width: 28px;
+   height: 28px;
+   border-radius: 50%;
+   border: 2px solid var(--color-accent);
+   transition: all 0.3s ease;
+   background-image: url('data:image/svg+xml,<svg width="260" height="260" viewBox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg"><g><path d="M81.6358 0.111539C34.4908 4.25502 49.7449 92.5393 96.9674 90.9796C119.524 88.1111 127.46 62.6833 124.355 44.091C121.276 25.6594 104.501 -1.97432 81.6358 0.111539Z" fill="%23B8798E"/><path d="M175.201 0.170849C127.981 4.69821 120.392 92.8957 169.131 90.9689C208.921 82.7306 221.682 24.0778 190.753 3.86295C187.156 1.51151 179.591 -0.629158 175.201 0.170849Z" fill="%23B8798E"/><path d="M50.2749 145C-2.31925 144.005 -17.573 74.6817 23.4109 71.1132C63.4347 67.8344 97.0052 136.818 50.2749 145Z" fill="%23B8798E"/><path d="M216.04 144.824C171.586 149.059 185.272 75.6225 232.869 71.2155C245.982 69.2861 258.281 80.6251 259.731 92.6621C262.673 117.115 241.062 141.676 216.04 144.824Z" fill="%23B8798E"/><path d="M131.454 246.416C114.687 245.269 108.58 258.964 91.1044 259.84C44.5737 262.173 26.6975 197.037 64.3534 168.707C73.6759 162.841 79.2803 153.687 81.6746 142.259C87.1873 115.945 103.084 98.2255 128.568 97.0149C149.751 96.4576 169.416 111.614 176.548 133.321C179.414 142.046 179.444 149.168 184.242 157.286C189.347 165.925 196.069 167.87 202.378 174.937C220.496 195.179 220.695 227.062 202.051 246.909C190.913 259.255 171.195 263.613 156.592 256.758C146.893 252.206 143.561 246.649 131.454 246.416Z" fill="%23B8798E"/></g></svg>');
+   background-size: 14px 14px;
+   background-position: center;
+   background-repeat: no-repeat;
+   flex-shrink: 0;
+   transform: rotate(45deg);
+}
+
+.carousel-main-btn:hover::after {
+   transform: rotate(90deg);
+   border-color: white;
+   background-image: url('data:image/svg+xml,<svg width="260" height="260" viewBox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg"><g><path d="M81.6358 0.111539C34.4908 4.25502 49.7449 92.5393 96.9674 90.9796C119.524 88.1111 127.46 62.6833 124.355 44.091C121.276 25.6594 104.501 -1.97432 81.6358 0.111539Z" fill="white"/><path d="M175.201 0.170849C127.981 4.69821 120.392 92.8957 169.131 90.9689C208.921 82.7306 221.682 24.0778 190.753 3.86295C187.156 1.51151 179.591 -0.629158 175.201 0.170849Z" fill="white"/><path d="M50.2749 145C-2.31925 144.005 -17.573 74.6817 23.4109 71.1132C63.4347 67.8344 97.0052 136.818 50.2749 145Z" fill="white"/><path d="M216.04 144.824C171.586 149.059 185.272 75.6225 232.869 71.2155C245.982 69.2861 258.281 80.6251 259.731 92.6621C262.673 117.115 241.062 141.676 216.04 144.824Z" fill="white"/><path d="M131.454 246.416C114.687 245.269 108.58 258.964 91.1044 259.84C44.5737 262.173 26.6975 197.037 64.3534 168.707C73.6759 162.841 79.2803 153.687 81.6746 142.259C87.1873 115.945 103.084 98.2255 128.568 97.0149C149.751 96.4576 169.416 111.614 176.548 133.321C179.414 142.046 179.444 149.168 184.242 157.286C189.347 165.925 196.069 167.87 202.378 174.937C220.496 195.179 220.695 227.062 202.051 246.909C190.913 259.255 171.195 263.613 156.592 256.758C146.893 252.206 143.561 246.649 131.454 246.416Z" fill="white"/></g></svg>');
 }
 
 /* =====================================================
@@ -3034,6 +3091,7 @@ Responsive Breakpoints
 @media (min-width: 1920px) {
     .cats-carousel {
         padding: 140px 30px;
+        background-color: var(--color-section-alt);
     }
 
     .cats-carousel-container {
@@ -3128,6 +3186,7 @@ Responsive Breakpoints
 @media (min-width: 1600px) and (max-width: 1919px) {
     .cats-carousel {
         padding: 120px 25px;
+        background-color: var(--color-section-alt);
     }
 
     .cats-carousel-container {
@@ -3221,6 +3280,7 @@ Responsive Breakpoints
 @media (min-width: 1280px) and (max-width: 1599px) {
     .cats-carousel {
         padding: 100px 20px;
+        background-color: var(--color-section-alt);
     }
 
     .cats-carousel-container {
@@ -3304,9 +3364,22 @@ Responsive Breakpoints
     }
 
     .carousel-main-btn {
-        font-size: 1.3rem;
-        padding: 18px 45px;
+        display: inline-flex;
+        justify-content: center;
         gap: 12px;
+        align-items: center;
+        font-size: 1.1rem;
+        background: var(--color-card-bg);
+        font-weight: 600;
+        border: 2px solid var(--color-accent);
+        transition: all 0.3s ease;
+        color: var(--color-accent);
+        padding: 12px 20px;
+        overflow: hidden;
+        border-radius: 50px;
+        position: relative;
+        z-index: 10;
+        text-decoration: n
     }
 }
 
@@ -3314,6 +3387,7 @@ Responsive Breakpoints
 @media (min-width: 1024px) and (max-width: 1279px) {
     .cats-carousel {
         padding: 80px 20px;
+        background-color: var(--color-section-alt);
     }
 
     .cats-carousel-container {
@@ -3411,6 +3485,7 @@ Responsive Breakpoints Mobile
 @media (min-width: 768px) and (max-width: 1023px) {
     .cats-carousel {
         padding: 70px 15px;
+        background-color: var(--color-section-alt);
     }
 
     .cats-carousel-container {
@@ -3509,6 +3584,7 @@ Responsive Breakpoints Mobile
 @media (min-width: 414px) and (max-width: 767px) {
     .cats-carousel {
         padding: 60px 15px;
+        background-color: var(--color-section-alt);
     }
 
     .cats-carousel h2 {
@@ -3602,6 +3678,7 @@ Responsive Breakpoints Mobile
 @media (min-width: 375px) and (max-width: 413px) {
     .cats-carousel {
         padding: 50px 15px;
+        background-color: var(--color-section-alt);
     }
 
     .cats-carousel h2 {
@@ -3695,6 +3772,7 @@ Responsive Breakpoints Mobile
 @media (min-width: 360px) and (max-width: 374px) {
     .cats-carousel {
         padding: 45px 12px;
+        background-color: var(--color-section-alt);
     }
 
     .cats-carousel h2 {
@@ -3788,6 +3866,7 @@ Responsive Breakpoints Mobile
 @media (min-width: 320px) and (max-width: 359px) {
     .cats-carousel {
         padding: 40px 10px;
+        background-color: var(--color-section-alt);
     }
 
     .cats-carousel h2 {
@@ -3881,6 +3960,7 @@ Responsive Breakpoints Mobile
 @media (max-width: 319px) {
     .cats-carousel {
         padding: 35px 8px;
+        background-color: var(--color-section-alt);
     }
 
     .cats-carousel h2 {
@@ -3974,6 +4054,7 @@ Responsive Breakpoints Mobile
 @media (max-height: 414px) and (orientation: landscape) and (max-width: 896px) {
     .cats-carousel {
         padding: 25px 15px;
+        background-color: var(--color-section-alt);
     }
 
     .cats-carousel h2 {
@@ -4067,6 +4148,7 @@ Responsive Breakpoints Mobile
 @media (max-height: 412px) and (orientation: landscape) and (max-width: 915px) {
     .cats-carousel {
         padding: 25px 15px;
+        background-color: var(--color-section-alt);
     }
 
     .cats-carousel h2 {
