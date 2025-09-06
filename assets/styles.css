@@ -1209,8 +1209,8 @@ MOBILE RESPONSIVE BREAKPOINTS ONLY (768px and below)
 
 @media (max-width: 390px) {
     .nav {
-        background-size: 100% 80px;
-        height: 55px;
+        background-size: 100% 90px;
+        height: 65px;
         padding: 5px 0;
     }
 
@@ -1355,8 +1355,8 @@ MOBILE RESPONSIVE BREAKPOINTS ONLY (768px and below)
 
 @media (max-width: 360px) {
     .nav {
-        background-size: 100% 60px;
-        height: 50px;
+        background-size: 100% 80px;
+        height: 60px;
         padding: 4px 0;
     }
 
@@ -1369,8 +1369,8 @@ MOBILE RESPONSIVE BREAKPOINTS ONLY (768px and below)
     }
 
     .logo-image {
-        width: 25px;
-        height: 25px;
+        width: 34px;
+        height: 34px;
     }
 
     .nav-links.mobile-active {
@@ -1438,8 +1438,8 @@ MOBILE RESPONSIVE BREAKPOINTS ONLY (768px and below)
 
 @media (max-width: 320px) {
     .nav {
-        background-size: 100% 50px;
-        height: 45px;
+        background-size: 100% 80px;
+        height: 55px;
         padding: 3px 0;
     }
 
@@ -1452,8 +1452,8 @@ MOBILE RESPONSIVE BREAKPOINTS ONLY (768px and below)
     }
 
     .logo-image {
-        width: 22px;
-        height: 22px;
+        width: 34px;
+        height: 34px;
     }
 
     .nav-links.mobile-active {
