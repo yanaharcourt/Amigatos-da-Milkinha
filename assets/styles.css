@@ -9010,7 +9010,7 @@ Responsive Media Queries for Cat Adoption Site
 
     .cat-card {
         flex: 1 1 calc(33.333% - 25px);
-        max-width: calc(33.333% - 25px);
+        max-width: calc(33.333%);
     }
 
     .cat-image {
