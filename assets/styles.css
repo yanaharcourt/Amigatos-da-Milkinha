@@ -2858,7 +2858,6 @@ Cats Carousel Section
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
-    white-space: nowrap
 }
 
 /* Carousel Wrapper */
@@ -5327,7 +5326,7 @@ Responsive Breakpoints
 FAQ Section
 ===================================================== */
 .faq-section {
-    padding: 100px 0;
+    padding: 100px 20px;
     background-color: var(--color-background);
 }
 
@@ -5469,7 +5468,7 @@ FAQ Section
 /* 1920px+ */
 @media (min-width: 1920px) {
     .faq-section {
-        padding: 120px 0;
+        padding: 120px 20;
     }
 
     .section-header h2 {
@@ -5501,7 +5500,7 @@ FAQ Section
 /* 1600px-1919px */
 @media (min-width: 1600px) and (max-width: 1919px) {
     .faq-section {
-        padding: 110px 0;
+        padding: 110px 20px;
     }
 
     .section-header h2 {
@@ -5533,7 +5532,7 @@ FAQ Section
 /* 1280px-1599px */
 @media (min-width: 1280px) and (max-width: 1599px) {
     .faq-section {
-        padding: 100px 0;
+        padding: 100px 15px;
     }
 
     .section-header h2 {
@@ -5565,7 +5564,7 @@ FAQ Section
 /* 1024px-1279px */
 @media (min-width: 1024px) and (max-width: 1279px) {
     .faq-section {
-        padding: 100px 0;
+        padding: 100px 15px;
     }
 
     .container {
@@ -5601,7 +5600,7 @@ FAQ Section
 /* 768px-1023px */
 @media (min-width: 768px) and (max-width: 1023px) {
     .faq-section {
-        padding: 80px 0;
+        padding: 80px 15px;
     }
 
     .container {
@@ -5663,7 +5662,7 @@ FAQ Section
 /* 414px-767px */
 @media (min-width: 414px) and (max-width: 767px) {
     .faq-section {
-        padding: 60px 0;
+        padding: 60px 15px;
     }
 
     .container {
@@ -5734,7 +5733,7 @@ FAQ Section
 /* 375px-413px */
 @media (min-width: 375px) and (max-width: 413px) {
     .faq-section {
-        padding: 60px 0;
+        padding: 60px 15px;
     }
 
     .container {
@@ -5779,7 +5778,7 @@ FAQ Section
 /* 360px-374px */
 @media (min-width: 360px) and (max-width: 374px) {
     .faq-section {
-        padding: 60px 0;
+        padding: 60px 15px;
     }
 
     .container {
@@ -5837,7 +5836,7 @@ FAQ Section
 /* 320px-359px */
 @media (min-width: 320px) and (max-width: 359px) {
     .faq-section {
-        padding: 60px 0;
+        padding: 60px 15px;
     }
 
     .container {
@@ -6753,7 +6752,7 @@ Contact Section Responsive Breakpoints
     .contact-info-new {
         flex-direction: column;
         padding: 14px 0;
-        gap: 12px;
+        gap: 16px;
         text-align: center;
     }
 
@@ -6866,7 +6865,7 @@ Contact Section Responsive Breakpoints
     .contact-info-new {
         flex-direction: column;
         padding: 12px 0;
-        gap: 10px;
+        gap: 16px;
         text-align: center;
     }
 
@@ -6979,7 +6978,7 @@ Contact Section Responsive Breakpoints
     .contact-info-new {
         flex-direction: column;
         padding: 10px 0;
-        gap: 8px;
+        gap: 16px;
         text-align: center;
     }
 
@@ -7092,7 +7091,7 @@ Contact Section Responsive Breakpoints
     .contact-info-new {
         flex-direction: column;
         padding: 8px 0;
-        gap: 6px;
+        gap: 16px;
         text-align: center;
     }
 
@@ -7417,6 +7416,7 @@ Footer Section
 .footer-logo-section {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .footer-logo {
