@@ -34,7 +34,6 @@
                 <li><a href="#ajudar" class="btn btn-secondary nav-btn-wide">Ajudar</a></li>
                 <div class="language-switcher">
                     <a href="./en/index.html" class="language-btn" title="Switch to English">
-                        <img src="./assets/img/language-circle.svg" alt="Language" class="language-icon">
                         <span class="language-text">EN</span>
                     </a>
                 </div>
@@ -858,6 +857,313 @@
         </div>
     </div>
 
+    <!-- =====================================================
+    Contact Section
+    ===================================================== -->
+    <section class="contact" id="contato">
+        <div class="contact-container">
+
+            <div class="section-header">
+                <h2 class="fade-in">Entre em <span class="italic-text">Contato</span></h2>
+                <p class="section-subheading fade-in">Pronto para adotar ou tem dúvidas? Entre em contato conosco!</p>
+            </div>
+
+            <div class="contact-content">
+                <!-- LEFT SIDE - FORM (40%) -->
+                <div class="contact-left fade-in">
+                    <div class="contact-form">
+                        <h3>Envie uma Mensagem</h3>
+
+                        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" id="contactForm">
+                            <div class="form-group form-row">
+                                <div>
+                                    <label for="firstName">Nome *</label>
+                                    <input type="text" id="firstName" name="firstName" required>
+                                </div>
+                                <div>
+                                    <label for="lastName">Sobrenome *</label>
+                                    <input type="text" id="lastName" name="lastName" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Telefone</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Assunto</label>
+                                <select id="subject" name="subject">
+                                    <option value="">Selecione um assunto</option>
+                                    <option value="adocao">Adoção</option>
+                                    <option value="voluntariado">Voluntariado</option>
+                                    <option value="doacao">Doação</option>
+                                    <option value="informacoes">Informações Gerais</option>
+                                    <option value="outro">Outro</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Mensagem *</label>
+                                <textarea id="message" name="message"
+                                    placeholder="Conte-nos como podemos ajudar você..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="submit-btn">
+                                Enviar Mensagem
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- RIGHT SIDE - MAP (60%) -->
+                <div class="contact-right fade-in">
+                    <div class="map-container">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2976.7842474845624!2d-8.423774584655!3d41.555031479246676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd24ffd9f5b8e7e7%3A0x7e9c8f8e8e8e8e8e!2sRua%20Fonte%20do%20Mundo%2C%2040%2C%204700-383%20Braga%2C%20Portugal!5e0!3m2!1spt!2spt!4v1652345678901!5m2!1spt!2spt"
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                            title="Localização da Amigatos da Milkinha">
+                        </iframe>
+                    </div>
+
+                    <!-- Contact Info Icons - ONE LINE -->
+                    <div class="contact-info-new">
+                        <div class="contact-info-item">
+                            <div class="contact-icon contact-icon-phone"></div>
+                            <a href="tel:+351963260200">+351 963 260 200</a>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="contact-icon contact-icon-email"></div>
+                            <a href="mailto:info@amigatosdamilkinha.pt">info@amigatosdamilkinha.pt</a>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="contact-icon contact-icon-location"></div>
+                            <p>Rua Fonte do Mundo, nº 40, 4700-383 Braga</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            // Contact Form JavaScript for GitHub Pages
+            document.addEventListener('DOMContentLoaded', function () {
+                const contactForm = document.getElementById('contactForm');
+
+                if (contactForm) {
+                    contactForm.addEventListener('submit', function (e) {
+                        e.preventDefault();
+
+                        const form = this;
+                        const formData = new FormData(form);
+                        const submitBtn = form.querySelector('.submit-btn');
+                        const originalText = submitBtn.textContent;
+
+                        // Show loading state
+                        submitBtn.textContent = 'Enviando...';
+                        submitBtn.disabled = true;
+
+                        // Remove any existing messages
+                        const existingMessage = form.querySelector('.form-message');
+                        if (existingMessage) {
+                            existingMessage.remove();
+                        }
+
+                        // For GitHub Pages, you'll need to replace this URL with your actual form service
+                        // Options: Formspree, Netlify Forms, EmailJS, etc.
+                        fetch('https://formspree.io/f/YOUR_FORM_ID', {
+                            method: 'POST',
+                            body: formData,
+                            headers: {
+                                'Accept': 'application/json'
+                            }
+                        })
+                            .then(response => {
+                                if (response.ok) {
+                                    // Show success message
+                                    const successMessage = document.createElement('div');
+                                    successMessage.className = 'form-message success';
+                                    successMessage.textContent = 'Mensagem enviada com sucesso! Entraremos em contato em breve.';
+                                    form.insertBefore(successMessage, form.firstChild);
+
+                                    // Reset form
+                                    form.reset();
+                                } else {
+                                    throw new Error('Erro no envio');
+                                }
+                            })
+                            .catch(error => {
+                                // Show error message
+                                const errorMessage = document.createElement('div');
+                                errorMessage.className = 'form-message error';
+                                errorMessage.textContent = 'Erro ao enviar mensagem. Tente novamente ou entre em contato diretamente.';
+                                form.insertBefore(errorMessage, form.firstChild);
+                            })
+                            .finally(() => {
+                                // Reset button
+                                submitBtn.textContent = originalText;
+                                submitBtn.disabled = false;
+                            });
+                    });
+                }
+            });
+
+            // Alternative: Simple mailto fallback for GitHub Pages
+            function sendEmailFallback() {
+                const firstName = document.getElementById('firstName')?.value || '';
+                const lastName = document.getElementById('lastName')?.value || '';
+                const email = document.getElementById('email')?.value || '';
+                const phone = document.getElementById('phone')?.value || '';
+                const subject = document.getElementById('subject')?.value || '';
+                const message = document.getElementById('message')?.value || '';
+
+                const emailSubject = subject ? `[${subject}] Contato do site` : 'Contato do site';
+                const emailBody = `Nome: ${firstName} ${lastName}
+        Email: ${email}
+        Telefone: ${phone}
+        Assunto: ${subject}
+
+        Mensagem:
+        ${message}`;
+
+                const mailtoLink = `mailto:info@amigatosdamilkinha.pt?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+                window.location.href = mailtoLink;
+            }
+
+            // To use mailto fallback instead of Formspree, uncomment the lines below:
+            /*
+            document.addEventListener('DOMContentLoaded', function() {
+                const contactForm = document.getElementById('contactForm');
+                if (contactForm) {
+                    contactForm.addEventListener('submit', function(e) { 
+                        e.preventDefault(); 
+                        sendEmailFallback(); 
+                    });
+                }
+            });
+            */
+        </script>
+    </section>
+
+    <!-- ============================================
+    Footer Section
+    ============================================ -->
+    <div class="footer-wrapper">
+        <svg class="footer-wave" width="1923" height="153" viewBox="0 0 1923 153" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path opacity="0.2"
+                d="M98 120.818C87 90.3177 39.5 73.3177 1 90.3177V143.318H1923V87.3177C1892 57.3164 1856.5 56.3164 1826.5 90.3164C1800 44.3164 1758 44.3164 1722 87.3177C1690 21.3164 1604.5 24.3164 1590 108.816C1561 68.8151 1510 64.3164 1463 97.3164C1427 33.8151 1357.5 29.8164 1305 87.3177C1278 21.8164 1209.5 7.31641 1166.5 60.8184C1128.5 -11.6836 1028 -26.1817 987 54.8177C951 33.822 918 43.3219 905 87.3177C868 17.3219 791 6.8232 726 72.8177C689 22.3234 633 18.8235 593 67.3177C531 16.8206 453 26.3208 434.5 103.818C414 68.8235 368 64.3235 337 98.8235C310.5 58.8293 267 53.3235 233 97.3177C198.5 38.819 123 25.3235 98 120.818Z"
+                fill="#F2E8ED" />
+            <path
+                d="M96 152.854C123 68.855 199.5 68.352 231.5 135.854C265 91.3551 304.5 92.3551 337 135.854C371.5 101.855 415 106.855 434.5 141.354C456.5 59.8607 539 57.8583 593 105.354C637.5 50.862 699 63.8615 727.5 114.854C773 42.3659 870.5 52.8638 905.5 127.354C910 81.3658 958.5 71.8658 986 94.8543C1025 2.87308 1136.5 32.3661 1166 101.354C1201 44.3731 1278.5 59.3731 1305 124.854C1353.5 63.3731 1430 71.8731 1462.5 137.854C1505 100.373 1553 100.373 1589.5 145.354C1608.5 59.3731 1689 60.3731 1721.5 125.354C1753.5 80.3731 1805 82.3731 1823 128.354C1856.5 97.3731 1896.5 94.3731 1923 125.354V152.854H96H0V128.354C0 128.354 30.7226 117.216 50 121.354C71.2874 125.924 96 152.854 96 152.854Z"
+                fill="#F2E8ED" />
+        </svg>
+
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-content">
+                    <!-- Logo and Description -->
+                    <div class="footer-logo-section">
+                        <div class="footer-logo">
+                            <img src="./assets/img/logo.png" alt="Amigatos da Milkinha" class="footer-logo-img">
+                            <span class="footer-logo-text">Amigatos da Milkinha</span>
+                        </div>
+                        <p class="footer-description">
+                            Salvando vidas felinas, uma adoção de cada vez. Conectando gatos especiais com famílias
+                            amorosas.
+                        </p>
+                        <div class="footer-social">
+                            <a href="https://instagram.com/amigatosdamilkinha" target="_blank" aria-label="Instagram">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                                        fill="currentColor" />
+                                </svg>
+                            </a>
+                            <a href="https://facebook.com/amigatosdamilkinha" target="_blank" aria-label="Facebook">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                                        fill="currentColor" />
+                                </svg>
+                            </a>
+                            <a href="https://linkedin.com/company/amigatosdamilkinha" target="_blank"
+                                aria-label="LinkedIn">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                                        fill="currentColor" />
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="footer-legal">
+                            Associação Amigatos da Milkinha<br>
+                            NIPC: 123456789<br>
+                            Rua Fonte do Mundo, nº 40, 4700-383 Braga
+                        </div>
+                    </div>
+
+                    <!-- Menu -->
+                    <div class="footer-section">
+                        <h4>Menu</h4>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Início</a></li>
+                            <li><a href="#sobre">Sobre Nós</a></li>
+                            <li><a href="cats_grid.html">Nossos Gatos</a></li>
+                            <li><a href="#servicos">Serviços</a></li>
+                            <li><a href="#faq">FAQ</a></li>
+                            <li><a href="#contato">Contato</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Contacts -->
+                    <div class="footer-section">
+                        <h4>Contatos</h4>
+                        <div class="contact-item">
+                            <img src="./assets/img/Phone Calling Rounded.svg" alt="Telefone" class="contact-icon">
+                            <span>+351 963 260 200</span>
+                        </div>
+                        <div class="contact-item">
+                            <img src="./assets/img/Letter.svg" alt="Email" class="contact-icon">
+                            <span>info@amigatosdamilkinha.pt</span>
+                        </div>
+                        <div class="contact-item">
+                            <img src="./assets/img/Map Point.svg" alt="Endereço" class="contact-icon">
+                            <span>Rua Fonte do Mundo, nº 40<br>4700-383 Braga, Portugal</span>
+                        </div>
+                        <div class="contact-item">
+                            <img src="./assets/img/Case.svg" alt="Horário" class="contact-icon">
+                            <span>Seg-Dom 9:00-18:00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <div class="footer-copyright">
+                        © 2025 Amigatos da Milkinha. Todos os Direitos Reservados.
+                    </div>
+                    <div class="footer-bottom-links">
+                        <a href="#terms">Termos</a>
+                        <a href="#privacy">Privacidade</a>
+                        <a href="#cookies">Cookies</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- ============================================
+    CATS GRID
+    ============================================ -->
     <script>
         const catData = {
             cat1: {

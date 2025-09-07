@@ -7859,11 +7859,11 @@ Footer Responsive
     .footer-links a {
         font-size: 11px;
     }
-    
+
     .footer-links li {
         margin-bottom: 0.2rem;
     }
-    
+
     .contact-item {
         font-size: 11px;
         margin-bottom: 0.7rem;
@@ -8180,7 +8180,7 @@ Cats Grid Page
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0px;
+    padding: 0px !important;
 }
 
 /* Single Line Inline Filter Styles */
@@ -8199,6 +8199,7 @@ Cats Grid Page
     gap: 15px;
     padding: 18px 25px;
     flex-wrap: wrap;
+    min-width: 1200px;
 }
 
 .filter-title-inline {
@@ -8404,6 +8405,7 @@ Cats Grid Page
     .filter-header-inline {
         gap: 12px;
         padding: 15px 20px;
+        min-width: 1200px;
     }
 
     .filter-buttons-inline {
@@ -8580,6 +8582,7 @@ Cats Grid Page
     gap: 25px;
     margin-top: 40px;
     justify-content: space-between;
+    margin-bottom: 100px;
 }
 
 .cat-card {
@@ -8905,6 +8908,7 @@ Responsive Media Queries for Cat Adoption Site
     .container {
         max-width: 1600px;
         padding: 30px;
+        padding: 0px !important;
     }
 
     .header h1 {
@@ -8917,6 +8921,7 @@ Responsive Media Queries for Cat Adoption Site
 
     .cats-grid {
         gap: 35px;
+        margin-bottom: 100px;
     }
 
     .cat-card {
@@ -8958,6 +8963,7 @@ Responsive Media Queries for Cat Adoption Site
 
     .cats-grid {
         gap: 30px;
+        margin-bottom: 100px;
     }
 
     .cat-card {
@@ -8999,6 +9005,7 @@ Responsive Media Queries for Cat Adoption Site
 
     .cats-grid {
         gap: 25px;
+        margin-bottom: 100px;
     }
 
     .cat-card {
@@ -9040,6 +9047,7 @@ Responsive Media Queries for Cat Adoption Site
 
     .cats-grid {
         gap: 20px;
+        margin-bottom: 100px;
     }
 
     .cat-card {
@@ -9081,6 +9089,7 @@ Responsive Media Queries for Cat Adoption Site
 
     .cats-grid {
         gap: 20px;
+        margin-bottom: 100px;
     }
 
     .cat-card {
@@ -9136,6 +9145,7 @@ Responsive Media Queries for Cat Adoption Site
     .cats-grid {
         gap: 15px;
         margin-top: 30px;
+        margin-bottom: 100px;
     }
 
     .cat-card {
@@ -9230,6 +9240,7 @@ Responsive Media Queries for Cat Adoption Site
     .cats-grid {
         gap: 15px;
         margin-top: 30px;
+        margin-bottom: 100px;
     }
 
     .cat-card {
@@ -9380,6 +9391,7 @@ Responsive Media Queries for Cat Adoption Site
     .cats-grid {
         gap: 12px;
         margin-top: 25px;
+        margin-bottom: 100px;
     }
 
     .cat-card {
@@ -9535,6 +9547,7 @@ Responsive Media Queries for Cat Adoption Site
     .cats-grid {
         gap: 10px;
         margin-top: 20px;
+        margin-bottom: 100px;
     }
 
     .cat-card {
@@ -9691,6 +9704,7 @@ Responsive Media Queries for Cat Adoption Site
     .cats-grid {
         gap: 8px;
         margin-top: 18px;
+        margin-bottom: 100px;
     }
 
     .cat-card {
@@ -9829,4 +9843,9 @@ Responsive Media Queries for Cat Adoption Site
         height: 28px;
         font-size: 20px;
     }
+}
+
+.contact .fade-in {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
 }
