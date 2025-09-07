@@ -7,9 +7,9 @@
 
     <!-- Portuguese SEO -->
     <meta name="description"
-    content="Amigatos da Milkinha - abrigo de gatos em Braga. 42 gatos à espera de um lar. Adopção, voluntariado, donativos.">
+        content="Amigatos da Milkinha - abrigo de gatos em Braga. 42 gatos à espera de um lar. Adopção, voluntariado, donativos.">
     <meta name="keywords"
-    content="abrigo de gatos, adopção de gatos, Braga, Portugal, voluntariado, donativos, felinos">
+        content="abrigo de gatos, adopção de gatos, Braga, Portugal, voluntariado, donativos, felinos">
     <meta property="og:title" content="Amigatos da Milkinha - Abrigo de Gatos">
     <meta property="og:description" content="Cada gato merece amor. 42 gatos procuram um lar para sempre.">
     <meta property="og:image" content="./assets/img/hero.png">
@@ -66,7 +66,7 @@
         <img src="./assets/img/hero.png" alt="Gatos do abrigo Amigatos da Milkinha" class="hero-bg-image" />
         <div class="hero-container">
             <div class="hero-content">
-                <h1 class="hero-title">Cada gato <br>merece amor</h1>
+                <h1 class="hero-title">Cada gato <br><span class="italic-text">merece amor</span></h1>
                 <p class="hero-text">Criamos um ambiente seguro e acolhedor onde cada felino recebe cuidado, carinho e a
                     oportunidade de encontrar sua família para sempre.</p>
                 <div class="hero-buttons">
@@ -113,7 +113,7 @@
     ===================================================== -->
     <section class="cats-carousel">
         <div class="cats-carousel-container">
-            <h2 class="fade-in">Conheça Alguns dos Nossos Amigatos</h2>
+            <h2 class="fade-in">Conheça Alguns dos <span class="italic-text">Nossos Amigatos</span></h2>
             <p class="fade-in">Cada um tem sua própria personalidade e história especial</p>
 
             <div class="carousel-wrapper fade-in">
@@ -250,7 +250,7 @@
     <section class="about" id="sobre">
         <div class="about-container">
             <div class="about-content fade-in">
-                <h2>Nossa Missão</h2>
+                <h2 class="fade-in">Nossa<span class="italic-text"> Missão</span></h2>
                 <p>O Amigatos da Milkinha é mais do que um abrigo - é um lar temporário onde cada gato recebe amor,
                     cuidado médico e a chance de encontrar uma família para sempre.</p>
                 <p>Trabalhamos incansavelmente para resgatar, reabilitar e realojar gatos abandonados,
@@ -270,7 +270,7 @@
     ===================================================== -->
     <section class="services" id="servicos">
         <div class="services-container">
-            <h2 class="fade-in">Como Você Pode Ajudar</h2>
+            <h2 class="fade-in">Como Você Pode <span class="italic-text">Ajudar</span></h2>
             <div class="services-grid">
                 <div class="service-card fade-in">
                     <!-- <span class="service-icon">🏠</span> -->
@@ -319,7 +319,7 @@
     <section class="faq-section">
         <div class="container">
             <div class="section-header">
-                <h2>Perguntas <span>Frequentes</span></h2>
+                <h2>Perguntas <span class="italic-text">Frequentes</span></h2>
                 <div class="underline"></div>
                 <p class="section-subheading">Informações importantes sobre gatos com condições especiais que procuram
                     um lar amoroso</p>
@@ -430,26 +430,198 @@
         });
     </script>
 
-    <!-- Contact Section -->
+    <!-- =====================================================
+    Contact Section
+    ===================================================== -->
     <section class="contact" id="contato">
         <div class="contact-container">
-            <h2 class="fade-in">Entre em Contato</h2>
-            <p class="fade-in">Pronto para adotar ou tem dúvidas? Entre em contato conosco!</p>
-            <div class="contact-info">
-                <div class="contact-item fade-in">
-                    <h3>📞 Telefone</h3>
-                    <a href="tel:+351963260200">+351 963 260 200</a>
+
+            <div class="section-header">
+                <h2 class="fade-in">Entre em <span class="italic-text">Contato</span></h2>
+                <p class="section-subheading fade-in">Pronto para adotar ou tem dúvidas? Entre em contato conosco!</p>
+            </div>
+
+            <div class="contact-content">
+                <!-- LEFT SIDE - FORM (40%) -->
+                <div class="contact-left fade-in">
+                    <div class="contact-form">
+                        <h3>Envie uma Mensagem</h3>
+
+                        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" id="contactForm">
+                            <div class="form-group form-row">
+                                <div>
+                                    <label for="firstName">Nome *</label>
+                                    <input type="text" id="firstName" name="firstName" required>
+                                </div>
+                                <div>
+                                    <label for="lastName">Sobrenome *</label>
+                                    <input type="text" id="lastName" name="lastName" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Telefone</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Assunto</label>
+                                <select id="subject" name="subject">
+                                    <option value="">Selecione um assunto</option>
+                                    <option value="adocao">Adoção</option>
+                                    <option value="voluntariado">Voluntariado</option>
+                                    <option value="doacao">Doação</option>
+                                    <option value="informacoes">Informações Gerais</option>
+                                    <option value="outro">Outro</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Mensagem *</label>
+                                <textarea id="message" name="message"
+                                    placeholder="Conte-nos como podemos ajudar você..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="submit-btn">
+                                Enviar Mensagem
+                            </button>
+                        </form>
+                    </div>
                 </div>
-                <div class="contact-item fade-in">
-                    <h3>📧 Email</h3>
-                    <a href="mailto:info@amigatosdamilkinha.pt">info@amigatosdamilkinha.pt</a>
-                </div>
-                <div class="contact-item fade-in">
-                    <h3>🌐 Redes Sociais</h3>
-                    <a href="https://linktr.ee/amigatosdamilkinha" target="_blank">Linktree</a>
+
+                <!-- RIGHT SIDE - MAP (60%) -->
+                <div class="contact-right fade-in">
+                    <div class="map-container">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2976.7842474845624!2d-8.423774584655!3d41.555031479246676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd24ffd9f5b8e7e7%3A0x7e9c8f8e8e8e8e8e!2sRua%20Fonte%20do%20Mundo%2C%2040%2C%204700-383%20Braga%2C%20Portugal!5e0!3m2!1spt!2spt!4v1652345678901!5m2!1spt!2spt"
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                            title="Localização da Amigatos da Milkinha">
+                        </iframe>
+                    </div>
+
+                    <!-- Contact Info Icons - ONE LINE -->
+                    <div class="contact-info-new">
+                        <div class="contact-info-item">
+                            <div class="contact-icon contact-icon-phone"></div>
+                            <a href="tel:+351963260200">+351 963 260 200</a>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="contact-icon contact-icon-email"></div>
+                            <a href="mailto:info@amigatosdamilkinha.pt">info@amigatosdamilkinha.pt</a>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <div class="contact-icon contact-icon-location"></div>
+                            <p>Rua Fonte do Mundo, nº 40, 4700-383 Braga</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+        <script>
+            // Contact Form JavaScript for GitHub Pages
+            document.addEventListener('DOMContentLoaded', function () {
+                const contactForm = document.getElementById('contactForm');
+
+                if (contactForm) {
+                    contactForm.addEventListener('submit', function (e) {
+                        e.preventDefault();
+
+                        const form = this;
+                        const formData = new FormData(form);
+                        const submitBtn = form.querySelector('.submit-btn');
+                        const originalText = submitBtn.textContent;
+
+                        // Show loading state
+                        submitBtn.textContent = 'Enviando...';
+                        submitBtn.disabled = true;
+
+                        // Remove any existing messages
+                        const existingMessage = form.querySelector('.form-message');
+                        if (existingMessage) {
+                            existingMessage.remove();
+                        }
+
+                        // For GitHub Pages, you'll need to replace this URL with your actual form service
+                        // Options: Formspree, Netlify Forms, EmailJS, etc.
+                        fetch('https://formspree.io/f/YOUR_FORM_ID', {
+                            method: 'POST',
+                            body: formData,
+                            headers: {
+                                'Accept': 'application/json'
+                            }
+                        })
+                            .then(response => {
+                                if (response.ok) {
+                                    // Show success message
+                                    const successMessage = document.createElement('div');
+                                    successMessage.className = 'form-message success';
+                                    successMessage.textContent = 'Mensagem enviada com sucesso! Entraremos em contato em breve.';
+                                    form.insertBefore(successMessage, form.firstChild);
+
+                                    // Reset form
+                                    form.reset();
+                                } else {
+                                    throw new Error('Erro no envio');
+                                }
+                            })
+                            .catch(error => {
+                                // Show error message
+                                const errorMessage = document.createElement('div');
+                                errorMessage.className = 'form-message error';
+                                errorMessage.textContent = 'Erro ao enviar mensagem. Tente novamente ou entre em contato diretamente.';
+                                form.insertBefore(errorMessage, form.firstChild);
+                            })
+                            .finally(() => {
+                                // Reset button
+                                submitBtn.textContent = originalText;
+                                submitBtn.disabled = false;
+                            });
+                    });
+                }
+            });
+
+            // Alternative: Simple mailto fallback for GitHub Pages
+            function sendEmailFallback() {
+                const firstName = document.getElementById('firstName')?.value || '';
+                const lastName = document.getElementById('lastName')?.value || '';
+                const email = document.getElementById('email')?.value || '';
+                const phone = document.getElementById('phone')?.value || '';
+                const subject = document.getElementById('subject')?.value || '';
+                const message = document.getElementById('message')?.value || '';
+
+                const emailSubject = subject ? `[${subject}] Contato do site` : 'Contato do site';
+                const emailBody = `Nome: ${firstName} ${lastName}
+        Email: ${email}
+        Telefone: ${phone}
+        Assunto: ${subject}
+
+        Mensagem:
+        ${message}`;
+
+                const mailtoLink = `mailto:info@amigatosdamilkinha.pt?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+                window.location.href = mailtoLink;
+            }
+
+            // To use mailto fallback instead of Formspree, uncomment the lines below:
+            /*
+            document.addEventListener('DOMContentLoaded', function() {
+                const contactForm = document.getElementById('contactForm');
+                if (contactForm) {
+                    contactForm.addEventListener('submit', function(e) { 
+                        e.preventDefault(); 
+                        sendEmailFallback(); 
+                    });
+                }
+            });
+            */
+        </script>
     </section>
 
     <!-- Footer -->

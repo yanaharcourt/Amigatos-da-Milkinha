@@ -1048,6 +1048,11 @@ Hero Section
     margin-bottom: 50px;
 }
 
+.italic-text {
+    font-style: italic;
+    margin-left: 0;
+}
+
 .hero-buttons {
     display: flex;
     gap: 1.5rem;
@@ -1753,6 +1758,7 @@ Stats Section
 .fade-in.visible {
     opacity: 1;
     transform: translateY(0);
+    margin-bottom: 20px;
 }
 
 .stat-item:nth-child(1) {
@@ -4846,7 +4852,7 @@ FAQ Section
 .section-header h2 {
     font-family: 'Quicksand', sans-serif;
     font-size: var(--font-section-title);
-    font-weight: 600;
+    font-weight: 700;
     color: var(--color-text);
     margin-bottom: 10px;
 }
@@ -4854,7 +4860,7 @@ FAQ Section
 .section-header h2 span {
     color: var(--color-accent);
     font-style: italic;
-    margin-left: 10px;
+    margin-left: 0px;
 }
 
 .section-subheading {
@@ -5493,6 +5499,9 @@ FAQ Section
 /* =====================================================
 Contact Section
 ===================================================== */
+/* =====================================================
+Contact Section - FIXED VERSION
+===================================================== */
 .contact {
     padding: 100px 20px;
     background: var(--color-background);
@@ -5503,58 +5512,273 @@ Contact Section
     margin: 0 auto;
     text-align: center;
 }
-
-.contact h2 {
-    font-family: 'Quicksand', sans-serif;
-    font-size: 2.5rem;
-    color: var(--color-accent);
-    margin-bottom: 30px;
-    font-weight: 700;
-}
-
-.contact>p {
-    font-size: 1.2rem;
-    color: var(--color-text-secondary);
+/* Contact Section Header Styles */
+.contact .section-header {
+    text-align: center;
     margin-bottom: 50px;
 }
 
-.contact-info {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 50px;
-    flex-wrap: wrap;
-}
-
-.contact-item {
-    background: var(--color-card-bg);
-    padding: 30px 25px;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(184, 121, 142, 0.1);
-    flex: 1;
-    min-width: 350px;
-    max-width: 400px;
-}
-
-.contact-item h3 {
+.contact .section-header h2 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: var(--font-section-title);
     color: var(--color-accent);
-    margin-bottom: 10px;
-    font-weight: 600;
-    font-size: 1.1rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    line-height: 1.2;
 }
 
-.contact-item a {
+.contact .section-header .italic-text {
+    font-style: italic;
+    color: var(--color-accent);
+    margin-left: 0;
+}
+
+.contact .section-header .section-subheading {
+    font-size: var(--font-text-body);
     color: var(--color-text-secondary);
-    text-decoration: none;
-    font-weight: 500;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-content {
+    display: flex;
+    gap: 30px;
+    align-items: stretch;
+    text-align: left;
+    min-height: 600px;
+}
+
+/* LEFT SIDE - FORM (40%) */
+.contact-left {
+    flex: 0 0 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* RIGHT SIDE - MAP (60%) */
+.contact-right {
+    flex: 0 0 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== FORM STYLES - NO BACKGROUND ===== */
+.contact-form {
+    /* НИКАКОГО ФОНА! */
+    background: none !important;
+    padding: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    
+    /* Layout */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.contact-form h3 {
+    font-family: 'Quicksand', sans-serif;
+    color: var(--color-accent);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    color: var(--color-text);
+    font-weight: 600;
+    margin-bottom: 8px;
     font-size: 0.95rem;
 }
 
-.contact-item a:hover {
-    color: var(--color-accent);
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid var(--color-accent-3);
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    background: var(--color-card-bg);
+    color: var(--color-text);
+    transition: all 0.3s ease;
+    box-sizing: border-box;
 }
 
-/* Footer */
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px rgba(184, 121, 142, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-group.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+/* SELECT STYLING - PROJECT STYLES */
+.form-group select {
+    appearance: none;
+    background: var(--color-card-bg);
+    background-image: url('data:image/svg+xml,<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 4L6 8L10 4" stroke="%23B8798E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 12px;
+    padding-right: 40px;
+    cursor: pointer;
+}
+
+.form-group select:hover {
+    border-color: var(--color-accent-2);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(184, 121, 142, 0.15);
+}
+
+.submit-btn {
+    width: 100%;
+    background: var(--color-accent);
+    color: var(--color-card-bg);
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    font-family: inherit;
+}
+
+.submit-btn:hover {
+    background: var(--color-accent-2);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(184, 121, 142, 0.3);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+/* ===== MAP SECTION (60%) ===== */
+.map-container {
+    width: 100%;
+    height: 610px;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(184, 121, 142, 0.15);
+    margin-bottom: 25px;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 30px;
+}
+
+/* ===== CONTACT INFO - HORIZONTAL LINE ===== */
+.contact-info-new {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.contact-info-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+    text-align: left;
+}
+
+.contact-icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.contact-icon-phone::before {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-image: url('data:image/svg+xml,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.2596 1.88014C13.3258 1.47125 13.7124 1.19387 14.1213 1.26007C14.1466 1.26491 14.228 1.28013 14.2707 1.28964C14.356 1.30864 14.475 1.3379 14.6234 1.38112C14.9202 1.46757 15.3348 1.60997 15.8324 1.83811C16.8287 2.29486 18.1545 3.09387 19.5303 4.46967C20.9061 5.84547 21.7051 7.17128 22.1619 8.16756C22.39 8.66517 22.5324 9.07978 22.6189 9.37656C22.6621 9.52496 22.6914 9.64399 22.7104 9.72932C22.7199 9.77199 22.7268 9.80625 22.7317 9.83156L22.7374 9.86275C22.8036 10.2716 22.5288 10.6742 22.1199 10.7404C21.7121 10.8064 21.328 10.5303 21.2602 10.1234C21.2581 10.1124 21.2524 10.0831 21.2462 10.0554C21.2339 10 21.2126 9.91218 21.1787 9.79603C21.111 9.56369 20.9935 9.21836 20.7984 8.79268C20.4085 7.94238 19.7075 6.76819 18.4697 5.53033C17.2318 4.29247 16.0576 3.59147 15.2073 3.20164C14.7816 3.00648 14.4363 2.88895 14.204 2.82128C14.0878 2.78745 13.9418 2.75394 13.8864 2.7416C13.4795 2.67378 13.1936 2.28786 13.2596 1.88014Z" fill="%23B8798E"/><path fill-rule="evenodd" clip-rule="evenodd" d="M13.4859 5.3296C13.5997 4.93133 14.0148 4.70071 14.4131 4.8145L14.207 5.53564C14.4131 4.8145 14.4131 4.8145 14.4131 4.8145L14.4145 4.81491L14.416 4.81536L14.4194 4.81633L14.4271 4.81864L14.4469 4.82481C14.462 4.82963 14.4808 4.83591 14.5033 4.84388C14.5482 4.85981 14.6075 4.88248 14.6804 4.91368C14.826 4.97612 15.0251 5.07254 15.2696 5.21725C15.7591 5.50693 16.4273 5.98811 17.2122 6.77308C17.9972 7.55805 18.4784 8.22624 18.7681 8.7157C18.9128 8.96021 19.0092 9.15928 19.0716 9.30496C19.1028 9.37777 19.1255 9.43713 19.1414 9.48204C19.1494 9.50449 19.1557 9.52332 19.1605 9.5384L19.1667 9.55818L19.169 9.56594L19.17 9.56927L19.1704 9.5708C19.1704 9.5708 19.1708 9.57224 18.4497 9.77828L19.1708 9.57224C19.2846 9.97052 19.054 10.3856 18.6557 10.4994C18.2608 10.6123 17.8494 10.3865 17.7315 9.99443L17.7278 9.98365C17.7225 9.96863 17.7114 9.93904 17.6929 9.89584C17.6559 9.80951 17.5888 9.66827 17.4772 9.47968C17.2542 9.10294 16.8515 8.53369 16.1516 7.83374C15.4516 7.13379 14.8824 6.73108 14.5056 6.50811C14.317 6.3965 14.1758 6.3294 14.0895 6.2924C14.0463 6.27388 14.0167 6.26285 14.0017 6.25752L13.9909 6.25382C13.5988 6.13594 13.3731 5.7245 13.4859 5.3296Z" fill="%23B8798E"/><path fill-rule="evenodd" clip-rule="evenodd" d="M5.00748 4.4069C6.68755 2.72683 9.52269 2.85455 10.6925 4.95067L11.3415 6.1136C12.1054 7.48242 11.7799 9.2095 10.6616 10.3415C10.6467 10.3619 10.5678 10.4768 10.5579 10.6776C10.5454 10.9339 10.6364 11.5267 11.5548 12.4452C12.473 13.3633 13.0657 13.4545 13.3221 13.4421C13.5231 13.4323 13.6381 13.3533 13.6585 13.3384C14.7905 12.2201 16.5176 11.8946 17.8864 12.6585L19.0493 13.3075C21.1455 14.4773 21.2732 17.3125 19.5931 18.9925C18.6944 19.8912 17.4995 20.6897 16.0953 20.7429C14.0144 20.8218 10.5592 20.2844 7.13737 16.8626C3.71559 13.4408 3.1782 9.9856 3.25709 7.90467C3.31032 6.50048 4.10882 5.30556 5.00748 4.4069ZM9.38268 5.68167C8.78366 4.60832 7.17397 4.36173 6.06814 5.46756C5.29279 6.24291 4.78872 7.09872 4.75601 7.9615C4.69023 9.69684 5.11867 12.7226 8.19803 15.802C11.2774 18.8813 14.3032 19.3098 16.0385 19.244C16.9013 19.2113 17.7571 18.7072 18.5324 17.9319C19.6383 16.826 19.3917 15.2163 18.3183 14.6173L17.1554 13.9683C16.432 13.5646 15.4159 13.7023 14.7026 14.4156C14.6325 14.4856 14.1865 14.9018 13.395 14.9403C12.5848 14.9797 11.604 14.6157 10.4942 13.5058C9.38398 12.3956 9.02005 11.4146 9.05973 10.6043C9.09848 9.81275 9.51471 9.36715 9.58435 9.2975C10.2977 8.58418 10.4354 7.56801 10.0317 6.8446L9.38268 5.68167Z" fill="%23B8798E"/></svg>');
+}
+
+.contact-icon-email::before {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-image: url('data:image/svg+xml,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.94358 3.25H14.0564C15.8942 3.24998 17.3498 3.24997 18.489 3.40314C19.6614 3.56076 20.6104 3.89288 21.3588 4.64124C22.1071 5.38961 22.4392 6.33856 22.5969 7.51098C22.75 8.65019 22.75 10.1058 22.75 11.9436V12.0564C22.75 13.8942 22.75 15.3498 22.5969 16.489C22.4392 17.6614 22.1071 18.6104 21.3588 19.3588C20.6104 20.1071 19.6614 20.4392 18.489 20.5969C17.3498 20.75 15.8942 20.75 14.0564 20.75H9.94359C8.10583 20.75 6.65019 20.75 5.51098 20.5969C4.33856 20.4392 3.38961 20.1071 2.64124 19.3588C1.89288 18.6104 1.56076 17.6614 1.40314 16.489C1.24997 15.3498 1.24998 13.8942 1.25 12.0564V11.9436C1.24998 10.1058 1.24997 8.65019 1.40314 7.51098C1.56076 6.33856 1.89288 5.38961 2.64124 4.64124C3.38961 3.89288 4.33856 3.56076 5.51098 3.40314C6.65019 3.24997 8.10582 3.24998 9.94358 3.25ZM5.71085 4.88976C4.70476 5.02502 4.12511 5.27869 3.7019 5.7019C3.27869 6.12511 3.02502 6.70476 2.88976 7.71085C2.75159 8.73851 2.75 10.0932 2.75 12C2.75 13.9068 2.75159 15.2615 2.88976 16.2892C3.02502 17.2952 3.27869 17.8749 3.7019 18.2981C4.12511 18.7213 4.70476 18.975 5.71085 19.1102C6.73851 19.2484 8.09318 19.25 10 19.25H14C15.9068 19.25 17.2615 19.2484 18.2892 19.1102C19.2952 18.975 19.8749 18.7213 20.2981 18.2981C20.7213 17.8749 20.975 17.2952 21.1102 16.2892C21.2484 15.2615 21.25 13.9068 21.25 12C21.25 10.0932 21.2484 8.73851 21.1102 7.71085C20.975 6.70476 20.7213 6.12511 20.2981 5.7019C19.8749 5.27869 19.2952 5.02502 18.2892 4.88976C17.2615 4.75159 15.9068 4.75 14 4.75H10C8.09318 4.75 6.73851 4.75159 5.71085 4.88976ZM5.42383 7.51986C5.68901 7.20165 6.16193 7.15866 6.48014 7.42383L8.63903 9.22291C9.57199 10.0004 10.2197 10.5384 10.7666 10.8901C11.2959 11.2306 11.6549 11.3449 12 11.3449C12.3451 11.3449 12.7041 11.2306 13.2334 10.8901C13.7803 10.5384 14.428 10.0004 15.361 9.22291L17.5199 7.42383C17.8381 7.15866 18.311 7.20165 18.5762 7.51986C18.8413 7.83807 18.7983 8.31099 18.4801 8.57617L16.2836 10.4066C15.3973 11.1452 14.6789 11.7439 14.0448 12.1517C13.3843 12.5765 12.7411 12.8449 12 12.8449C11.2589 12.8449 10.6157 12.5765 9.95518 12.1517C9.32112 11.7439 8.60272 11.1452 7.71636 10.4066L5.51986 8.57617C5.20165 8.31099 5.15866 7.83807 5.42383 7.51986Z" fill="%23B8798E"/></svg>');
+}
+
+.contact-icon-location::before {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-image: url('data:image/svg+xml,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.25 10.1433C3.25 5.24427 7.15501 1.25 12 1.25C16.845 1.25 20.75 5.24427 20.75 10.1433C20.75 12.5084 20.076 15.0479 18.8844 17.2419C17.6944 19.4331 15.9556 21.3372 13.7805 22.3539C12.6506 22.882 11.3494 22.882 10.2195 22.3539C8.04437 21.3372 6.30562 19.4331 5.11556 17.2419C3.92403 15.0479 3.25 12.5084 3.25 10.1433ZM12 2.75C8.00843 2.75 4.75 6.04748 4.75 10.1433C4.75 12.2404 5.35263 14.5354 6.4337 16.526C7.51624 18.5192 9.04602 20.1496 10.8546 20.995C11.5821 21.335 12.4179 21.335 13.1454 20.995C14.954 20.1496 16.4838 18.5192 17.5663 16.526C18.6474 14.5354 19.25 12.2404 19.25 10.1433C19.25 6.04748 15.9916 2.75 12 2.75ZM12 7.75C10.7574 7.75 9.75 8.75736 9.75 10C9.75 11.2426 10.7574 12.25 12 12.25C13.2426 12.25 14.25 11.2426 14.25 10C14.25 8.75736 13.2426 7.75 12 7.75ZM8.25 10C8.25 7.92893 9.92893 6.25 12 6.25C14.0711 6.25 15.75 7.92893 15.75 10C15.75 12.0711 14.0711 13.75 12 13.75C9.92893 13.75 8.25 12.0711 8.25 10Z" fill="%23B8798E"/></svg>');
+}
+
+.contact-info-item a,
+.contact-info-item p {
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.contact-info-item a:hover {
+    color: var(--color-accent);
+    transition: color 0.3s ease;
+}
+
+/* Form Success/Error Messages */
+.form-message {
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.form-message.success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.form-message.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* =====================================================
+Footer
+===================================================== */
 .footer {
     background: var(--color-text);
     color: var(--color-card-bg);
@@ -5625,6 +5849,7 @@ Contact Section
     transform: translateY(0);
 }
 
+/* ================================================ */
 /* Smooth scrolling */
 html {
     scroll-behavior: smooth;
