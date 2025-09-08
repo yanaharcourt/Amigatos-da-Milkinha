@@ -6708,7 +6708,7 @@ Contact Section Responsive Breakpoints
 
     .contact-info-new {
         padding: 16px 0;
-        gap: 16px;
+        gap: 20px;
     }
 
     .contact-info-item a,
@@ -6928,7 +6928,7 @@ Contact Section Responsive Breakpoints
     .contact-info-item {
         justify-content: center;
         text-align: center;
-        gap: 8px;
+        gap: 10px;
     }
 
     .contact-info-item a,
@@ -7041,7 +7041,7 @@ Contact Section Responsive Breakpoints
     .contact-info-item {
         justify-content: center;
         text-align: center;
-        gap: 6px;
+        gap: 10px;
     }
 
     .contact-info-item a,
@@ -7154,7 +7154,7 @@ Contact Section Responsive Breakpoints
     .contact-info-item {
         justify-content: center;
         text-align: center;
-        gap: 4px;
+        gap: 10px;
     }
 
     .contact-info-item a,
@@ -7585,8 +7585,8 @@ Footer Section
 }
 
 .contact-icon {
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
     flex-shrink: 0;
 }
 
@@ -7666,8 +7666,8 @@ Footer Responsive
     }
     
     .contact-icon {
-        width: 22px;
-        height: 22px;
+        width: 24px;
+        height: 24px;
     }
 }
 
@@ -7712,8 +7712,8 @@ Footer Responsive
     }
     
     .contact-icon {
-        width: 21px;
-        height: 21px;
+        width: 24px;
+        height: 24px;
     }
 }
 
@@ -7758,8 +7758,8 @@ Footer Responsive
     }
     
     .contact-icon {
-        width: 20px;
-        height: 20px;
+        width: 24px;
+        height: 24px;
     }
 }
 
@@ -7864,8 +7864,8 @@ Footer Responsive
     }
     
     .contact-icon {
-        width: 16px;
-        height: 16px;
+        width: 24px;
+        height: 24px;
     }
 }
 
@@ -7925,8 +7925,8 @@ Footer Responsive
     }
     
     .contact-icon {
-        width: 14px;
-        height: 14px;
+        width: 24px;
+        height: 24px;
     }
     
     .footer-content {
@@ -8007,8 +8007,8 @@ Footer Responsive
    }
    
    .contact-icon {
-       width: 16px;
-       height: 16px;
+       width: 24px;
+       height: 24px;
    }
    
    .footer-bottom {
@@ -8076,8 +8076,8 @@ Footer Responsive
    }
    
    .contact-icon {
-       width: 15px;
-       height: 15px;
+       width: 24px;
+       height: 24px;
    }
 }
 
@@ -8134,8 +8134,8 @@ Footer Responsive
    }
    
    .contact-icon {
-       width: 14px;
-       height: 14px;
+       width: 24px;
+       height: 24px;
    }
 }
 
@@ -8196,8 +8196,8 @@ Footer Responsive
    }
    
    .contact-icon {
-       width: 12px;
-       height: 12px;
+       width: 24px;
+       height: 24px;
    }
    
    .footer-bottom-links {
