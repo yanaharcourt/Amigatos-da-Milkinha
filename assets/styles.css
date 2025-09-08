@@ -7472,7 +7472,7 @@ Footer Section
 .footer-logo-section {
     display: flex;
     flex-direction: column;
-    align-items: left;
+    align-items: center;
 }
 
 .footer-logo {
