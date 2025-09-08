@@ -6056,6 +6056,62 @@ Contact Section
     display: flex;
     flex-direction: column;
 }
+.image-container {
+    width: 100%;
+    height: 610px;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(184, 121, 142, 0.15);
+    margin-bottom: 25px;
+}
+
+.contact-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+    transition: transform 0.3s ease;
+}
+
+.contact-image:hover {
+    transform: scale(1.02);
+}
+@media (max-width: 768px) {
+    .image-container {
+        height: 300px;
+        border-radius: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .contact-image {
+        border-radius: 20px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
+    .image-container {
+        height: 450px;
+        border-radius: 25px;
+    }
+    
+    .contact-image {
+        border-radius: 25px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .image-container {
+        height: 550px;
+        border-radius: 30px;
+    }
+}
+
+@media (min-width: 1280px) and (max-width: 1599px) {
+    .image-container {
+        height: 610px;
+        border-radius: 30px;
+    }
+}
 
 /* ===== FORM STYLES - NO BACKGROUND ===== */
 .contact-form {
@@ -7416,7 +7472,7 @@ Footer Section
 .footer-logo-section {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
 }
 
 .footer-logo {
@@ -7496,7 +7552,6 @@ Footer Section
     left: 0;
     width: 120px;
     height: 12px;
-    background: url('./assets/img/underline.svg') no-repeat left center;
     background-size: contain;
 }
 
@@ -8472,7 +8527,7 @@ Cats Grid Page
 
 @media (max-width: 600px) {
     .filter-buttons-inline {
-        gap: 5px;
+        gap: 6px;
     }
 
     .category-btn {
