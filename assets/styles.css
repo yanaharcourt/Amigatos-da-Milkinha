@@ -7472,7 +7472,7 @@ Footer Section
 .footer-logo-section {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
 }
 
 .footer-logo {
@@ -7878,7 +7878,13 @@ Footer Responsive
     .footer {
         margin-top: -47px;
     }
-    
+
+    .footer-logo-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .footer-content {
         grid-template-columns: 1fr 1fr;
         gap: 2rem;
@@ -7941,6 +7947,12 @@ Footer Responsive
        z-index: 10;
    }
    
+    .footer-logo-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
    .footer-wave {
        position: relative;
        z-index: 11;
@@ -8029,6 +8041,12 @@ Footer Responsive
        z-index: 10;
    }
    
+    .footer-logo-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
    .footer-wave {
        position: relative;
        z-index: 11;
@@ -8088,6 +8106,12 @@ Footer Responsive
        z-index: 10;
    }
    
+    .footer-logo-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
    .footer-wave {
        position: relative;
        z-index: 11;
@@ -8146,6 +8170,12 @@ Footer Responsive
        z-index: 10;
    }
    
+    .footer-logo-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
    .footer-wave {
        position: relative;
        z-index: 11;
@@ -9012,7 +9042,7 @@ Cats Grid Page
 }
 
 /* ============================================
-Responsive Media Queries for Cat Adoption Site
+Responsives
 ============================================ */
 
 /* 1920px+ */
@@ -9960,4 +9990,420 @@ Responsive Media Queries for Cat Adoption Site
 .contact .fade-in {
     opacity: 1 !important;
     transform: translateY(0) !important;
+}
+
+/* ============================================
+Donate page
+============================================ */
+.donate-hero {
+    background: var(--color-card-bg);
+    padding: 50px 0 120px;
+    position: relative;
+    overflow: hidden;
+}
+
+.donate-hero-container {
+    max-width: 100%;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.donate-hero-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 0;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+}
+
+.donate-hero-left,
+.donate-hero-right {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.donate-hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.donate-hero-center {
+    text-align: center;
+    max-width: 700px;
+    padding: 0 40px;
+}
+
+.donate-hero-center h1 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: var(--font-hero-title);
+    font-weight: 700;
+    color: var(--color-accent);
+    margin-bottom: 25px;
+    line-height: 120%;
+}
+
+.donate-hero-center p {
+    font-size: var(--font-text-body);
+    color: var(--color-text);
+    max-width: 400px;
+    margin: 0 auto 40px auto;
+    line-height: 150%;
+}
+
+
+.donate-hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.help-section {
+    position: relative;
+    margin-bottom: 100px;
+}
+
+.help-wave {
+    width: 100%;
+    height: 154px;
+    background-image: url('data:image/svg+xml,<svg width="1440" height="154" viewBox="0 0 1440 154" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M257.054 77.0048C152.388 72.142 20.4645 -4.99016 0 11.0088C0.000235149 65.0057 0 154 0 154H1440V77.0048C1440 77.0048 1283.97 0.958035 1176.96 0.00950448C1059.43 -1.03217 1006.43 83.8899 888.957 87.5042C758.183 91.5277 696.353 0.398251 565.518 0.00950448C441.372 -0.359368 381.067 82.7664 257.054 77.0048Z" fill="%23F8F9FA"/></svg>');
+    background-repeat: no-repeat;
+    background-size: 1440px 154px;
+    background-position: center top;
+}
+
+.help-content {
+    background: var(--color-section-alt);
+    padding: 60px 20px 100px;
+    box-sizing: border-box;
+}
+
+.help-section-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.help-header {
+    text-align: center;
+    margin-bottom: 80px;
+    position: relative;
+}
+
+.help-header h2 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: var(--font-section-title);
+    font-weight: 700;
+    color: var(--color-accent);
+    margin: 0;
+}
+
+.help-header-decoration {
+    width: 96px;
+    height: 92px;
+    position: absolute;
+    top: -54px;
+    left: 48%;
+    margin-left: 140px; 
+}
+
+.help-items {
+    display: grid;
+    max-width: 1200px;
+    margin: 0 auto;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 60px;
+    align-items: center;
+    justify-items: center;
+}
+
+.help-item {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.help-item-icon {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+
+.help-item h3 {
+    font-family: 'Comfortaa', sans-serif;
+    font-size: var(--font-heading-h3);
+    font-weight: 600;
+    color: var(--color-text-secondary);
+    margin: 0;
+}
+
+/* Ways Section */
+.ways-section {
+    background: var(--color-card-bg);
+    padding: 120px 20px;
+}
+
+.ways-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.way-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    align-items: center;
+}
+
+.way-item.reverse {
+    grid-template-columns: 1fr 1fr;
+}
+
+.way-content {
+    padding: 40px;
+}
+
+.way-content h2 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: var(--font-section-title);
+    font-weight: 700;
+    color: var(--color-accent);
+    margin-bottom: 30px;
+    line-height: 120%;
+}
+
+.way-content p {
+    font-size: var(--font-text-body);
+    color: var(--color-text-secondary);
+    line-height: 150%;
+    margin-bottom: 25px;
+}
+
+.way-content p:last-child {
+    margin-bottom: 0;
+}
+
+.way-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.way-image img {
+    width: 80%;
+    height: auto;
+    border-radius: 50px;
+}
+
+/* Donate About Section */
+.donate-about-section {
+    background: var(--color-card-bg);
+    padding: 120px 20px;
+}
+
+.donate-about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+/* Donate about content styling */
+.donate-about-content {
+    padding: 40px;
+}
+
+.donate-about-content h2 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: var(--font-section-title);
+    font-weight: 700;
+    color: var(--color-accent);
+    margin-bottom: 30px;
+    line-height: 120%;
+}
+
+.donate-about-content p {
+    font-size: var(--font-text-body);
+    color: var(--color-text-secondary);
+    line-height: 150%;
+    margin-bottom: 25px;
+}
+
+.donate-about-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Donate about image styling */
+.donate-about-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.donate-about-image img {
+    width: 100%;
+    height: auto;
+}
+
+.donate-payment-section {
+    background: var(--color-card-bg);
+    padding: 120px 20px;
+}
+
+.donate-payment-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 20px;
+    padding: 60px;
+}
+
+/* Header styling */
+.donate-payment-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.donate-payment-title h2 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: var(--font-section-title);
+    font-weight: 700;
+    color: var(--color-accent);
+    margin: 0 0 8px 0;
+    line-height: 120%;
+}
+
+.donate-payment-title p {
+    font-size: var(--font-text-body);
+    color: var(--color-text-secondary);
+    margin: 0;
+}
+
+/* Info box styling */
+.donate-payment-info {
+    background: var(--color-accent-3);
+    border: 1px solid var(--color-accent);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.donate-payment-info p {
+    font-size: var(--font-text-body);
+    color: var(--color-text);
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Payment methods styling */
+.donate-payment-methods {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.donate-payment-methods h3 {
+    font-family: 'Comfortaa', sans-serif;
+    font-size: var(--font-heading-h3);
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 25px;
+}
+
+.donate-payment-method {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: var(--color-card-bg);
+    border-radius: 12px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(184, 121, 142, 0.2);
+}
+
+.donate-method-label {
+    font-size: var(--font-text-body);
+    color: var(--color-text);
+}
+
+.donate-method-value {
+    font-size: var(--font-text-body);
+    color: var(--color-accent);
+    font-weight: 600;
+    background: var(--color-accent-3);
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px solid var(--color-accent);
+}
+
+/* Recurring donations styling */
+.donate-recurring {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.donate-recurring h3 {
+    font-family: 'Comfortaa', sans-serif;
+    font-size: var(--font-heading-h3);
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 20px;
+}
+
+.donate-liberapay-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--color-accent);
+    color: var(--color-card-bg);
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: var(--font-button);
+    transition: all 0.3s ease;
+    border: 2px solid var(--color-accent);
+}
+
+.donate-liberapay-btn:hover {
+    background: var(--color-accent-2);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(184, 121, 142, 0.3);
+}
+
+.donate-liberapay-btn::after {
+    content: '↗';
+    font-size: 1.2em;
+}
+
+/* Benefit notice styling */
+.donate-benefit-notice {
+    background: linear-gradient(135deg, #FFF3CD 0%, #FFEAA7 100%);
+    border: 1px solid #D4B106;
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+}
+
+.donate-benefit-notice p {
+    font-size: var(--font-text-body);
+    color: #8B6914;
+    margin: 0;
+    line-height: 150%;
+}
+
+.donate-benefit-notice strong {
+    color: #6C5711;
 }
