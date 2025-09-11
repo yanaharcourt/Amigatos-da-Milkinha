@@ -10059,6 +10059,455 @@ Donate page
     z-index: 2;
 }
 
+/* =====================================================
+Donate Hero Section - Responsive Breakpoints
+===================================================== */
+/* 1920px+ */
+@media (min-width: 1920px) {
+    .donate-hero {
+        padding: 80px 0 180px;
+    }
+
+    .donate-hero-container {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .donate-hero-center {
+        max-width: 900px;
+        padding: 0 60px;
+    }
+
+    .donate-hero-center h1 {
+        font-size: var(--font-hero-title);
+        margin-bottom: 35px;
+        line-height: 110%;
+    }
+
+    .donate-hero-center p {
+        font-size: var(--font-heading-h3);
+        max-width: 500px;
+        margin: 0 auto 50px auto;
+        line-height: 160%;
+    }
+}
+
+/* 1600px-1919px */
+@media (min-width: 1600px) and (max-width: 1919px) {
+    .donate-hero {
+        padding: 70px 0 160px;
+    }
+
+    .donate-hero-container {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .donate-hero-center {
+        max-width: 800px;
+        padding: 0 50px;
+    }
+
+    .donate-hero-center h1 {
+        font-size: var(--font-hero-title);
+        margin-bottom: 30px;
+        line-height: 115%;
+    }
+
+    .donate-hero-center p {
+        font-size: var(--font-heading-h3);
+        max-width: 450px;
+        margin: 0 auto 45px auto;
+        line-height: 155%;
+    }
+}
+
+/* 1280px-1599px */
+@media (min-width: 1280px) and (max-width: 1599px) {
+    .donate-hero {
+        padding: 60px 0 140px;
+    }
+
+    .donate-hero-container {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .donate-hero-center {
+        max-width: 700px;
+        padding: 0 40px;
+    }
+
+    .donate-hero-center h1 {
+        font-size: var(--font-hero-title);
+        margin-bottom: 25px;
+        line-height: 120%;
+    }
+
+    .donate-hero-center p {
+        font-size: var(--font-heading-h3);
+        max-width: 400px;
+        margin: 0 auto 40px auto;
+        line-height: 150%;
+    }
+}
+
+/* 1024px-1279px */
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .donate-hero-center {
+        padding: 0 30px;
+    }
+}
+
+/* 768px-1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .donate-hero {
+        margin-top: 100px;
+        padding: 40px 0 100px;
+    }
+
+    .donate-hero-center {
+        padding: 0 20px;
+        max-width: 500px;
+    }
+
+    .donate-hero-center h1 {
+        font-size: var(--font-hero-title);
+        margin-bottom: 20px;
+        line-height: 120%;
+    }
+
+    .donate-hero-center p {
+        font-size: var(--font-heading-h3);
+        max-width: 350px;
+        margin: 0 auto 30px auto;
+        line-height: 150%;
+    }
+}
+
+/* 414px-767px */
+@media (min-width: 414px) and (max-width: 767px) {
+    .donate-hero {
+        padding: 30px 0 80px;
+        margin-top: 100px;
+        position: relative;
+    }
+
+    .donate-hero-container {
+        padding: 0;
+        max-width: 100%;
+        position: relative;
+    }
+
+    .donate-hero-content {
+        display: block;
+        position: relative;
+        width: 100%;
+    }
+
+    .donate-hero-left {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: auto;
+        z-index: 1;
+    }
+
+    .donate-hero-right {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: auto;
+        z-index: 1;
+    }
+
+    .donate-hero-center {
+        position: relative;
+        text-align: center;
+        max-width: 100%;
+        padding: 320px 15px 0;
+        margin: 0 auto;
+        z-index: 2;
+    }
+
+    .donate-hero-image {
+        width: auto;
+        max-width: 150px;
+        height: auto;
+        display: block;
+    }
+
+    .donate-hero-center h1 {
+        font-size: var(--font-hero-title);
+        margin-bottom: 20px;
+        line-height: 120%;
+    }
+
+    .donate-hero-center p {
+        font-size: var(--font-heading-h3);
+        max-width: 350px;
+        margin: 0 auto 40px auto;
+        line-height: 150%;
+    }
+}
+
+/* 375px-413px */
+@media (min-width: 375px) and (max-width: 413px) {
+    .donate-hero {
+        padding: 25px 0 70px;
+        margin-top: 100px;
+        position: relative;
+    }
+
+    .donate-hero-container {
+        padding: 0;
+        max-width: 100%;
+        position: relative;
+    }
+
+    .donate-hero-content {
+        display: block;
+        position: relative;
+        width: 100%;
+    }
+
+    .donate-hero-left {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: auto;
+        z-index: 1;
+    }
+
+    .donate-hero-right {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: auto;
+        z-index: 1;
+    }
+
+    .donate-hero-center {
+        position: relative;
+        text-align: center;
+        max-width: 100%;
+        padding: 280px 10px 0;
+        margin: 0 auto;
+        z-index: 2;
+    }
+
+    .donate-hero-image {
+        width: auto;
+        max-width: 130px;
+        height: auto;
+        display: block;
+    }
+
+    .donate-hero-center h1 {
+        font-size: var(--font-hero-title);
+        margin-bottom: 15px;
+        line-height: 120%;
+    }
+
+    .donate-hero-center p {
+        font-size: var(--font-heading-h3);
+        max-width: 320px;
+        margin: 0 auto 30px auto;
+        line-height: 150%;
+    }
+}
+
+/* 360px-374px */
+@media (min-width: 360px) and (max-width: 374px) {
+    .donate-hero {
+        padding: 20px 0 60px;
+        margin-top: 100px;
+        position: relative;
+    }
+
+    .donate-hero-container {
+        padding: 0;
+        max-width: 100%;
+        position: relative;
+    }
+
+    .donate-hero-content {
+        display: block;
+        position: relative;
+        width: 100%;
+    }
+
+    .donate-hero-left {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: auto;
+        z-index: 1;
+    }
+
+    .donate-hero-right {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: auto;
+        z-index: 1;
+    }
+
+    .donate-hero-center {
+        position: relative;
+        text-align: center;
+        max-width: 100%;
+        padding: 240px 8px 0;
+        margin: 0 auto;
+        z-index: 2;
+    }
+
+    .donate-hero-image {
+        width: auto;
+        max-width: 110px;
+        height: auto;
+        display: block;
+    }
+
+    .donate-hero-center h1 {
+        font-size: var(--font-hero-title);
+        margin-bottom: 15px;
+        line-height: 120%;
+    }
+
+    .donate-hero-center p {
+        font-size: var(--font-heading-h3);
+        max-width: 320px;
+        margin: 0 auto 30px auto;
+        line-height: 150%;
+    }
+}
+
+/* 320px-359px */
+@media (min-width: 320px) and (max-width: 359px) {
+    .donate-hero {
+        padding: 15px 0 50px;
+        margin-top: 100px;
+        position: relative;
+    }
+
+    .donate-hero-container {
+        padding: 0;
+        max-width: 100%;
+        position: relative;
+    }
+
+    .donate-hero-content {
+        display: block;
+        position: relative;
+        width: 100%;
+    }
+
+    .donate-hero-left {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: auto;
+        z-index: 1;
+    }
+
+    .donate-hero-right {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: auto;
+        z-index: 1;
+    }
+
+    .donate-hero-center {
+        position: relative;
+        text-align: center;
+        max-width: 100%;
+        padding: 200px 5px 0;
+        margin: 0 auto;
+        z-index: 2;
+    }
+
+    .donate-hero-image {
+        width: auto;
+        max-width: 90px;
+        height: auto;
+        display: block;
+    }
+
+    .donate-hero-center h1 {
+        font-size: var(--font-hero-title);
+        margin-bottom: 15px;
+        line-height: 120%;
+    }
+
+    .donate-hero-center p {
+        font-size: var(--font-heading-h3);
+        max-width: 300px;
+        margin: 0 auto 30px auto;
+        line-height: 150%;
+    }
+}
+
+/* =====================================================
+Horizontal Phone Orientations
+===================================================== */
+
+/* 896×414 landscape */
+@media (min-width: 896px) and (max-width: 896px) and (min-height: 414px) and (max-height: 414px) and (orientation: landscape) {
+    .donate-hero {
+        padding: 15px 0 40px;
+        margin-top: 10px;
+    }
+
+    .donate-hero-center {
+        max-width: 400px;
+        padding: 0 15px;
+    }
+
+    .donate-hero-center h1 {
+        font-size: var(--font-hero-title);
+        margin-bottom: 8px;
+        line-height: 120%;
+    }
+
+    .donate-hero-center p {
+        font-size: var(--font-heading-h3);
+        max-width: 350px;
+        margin: 0 auto 15px auto;
+        line-height: 140%;
+    }
+}
+
+/* 915×412 landscape */
+@media (min-width: 915px) and (max-width: 915px) and (min-height: 412px) and (max-height: 412px) and (orientation: landscape) {
+    .donate-hero {
+        padding: 15px 0 40px;
+        margin-top: 10px;
+    }
+
+    .donate-hero-center {
+        max-width: 420px;
+        padding: 0 15px;
+    }
+
+    .donate-hero-center h1 {
+        font-size: var(--font-hero-title);
+        margin-bottom: 8px;
+        line-height: 120%;
+    }
+
+    .donate-hero-center p {
+        font-size: var(--font-heading-h3);
+        max-width: 370px;
+        margin: 0 auto 15px auto;
+        line-height: 140%;
+    }
+}
+
 /* ============================================
 How to help section 
 ============================================ */
@@ -10142,6 +10591,9 @@ How to help section
     margin: 0;
 }
 
+/* ============================================
+Banking section in How to help section
+============================================ */
 .help-bank-section {
     margin-top: 0;
     background: var(--color-section-alt);
@@ -10291,7 +10743,9 @@ How to help section
     transform: scaleY(-1); 
 }
 
-/* Ways Section */
+/* ============================================
+Ways to help Section
+============================================ */
 .ways-section {
     background: var(--color-card-bg);
     padding: 120px 20px;
@@ -10353,7 +10807,9 @@ How to help section
     border-radius: 50px;
 }
 
-/* Donate About Section */
+/* ============================================
+About us Section
+============================================ */
 .donate-about-section {
     background: var(--color-card-bg);
     padding: 120px 20px;
@@ -10368,7 +10824,6 @@ How to help section
     align-items: center;
 }
 
-/* Donate about content styling */
 .donate-about-content {
     padding: 0px;
 }
@@ -10393,7 +10848,6 @@ How to help section
     margin-bottom: 0;
 }
 
-/* Donate about image styling */
 .donate-about-image {
     display: flex;
     align-items: center;
@@ -10406,6 +10860,9 @@ How to help section
     height: auto;
 }
 
+/* ============================================
+Bank Section
+============================================ */
 .donate-payment-section {
     background: var(--color-card-bg);
     padding: 120px 20px;
@@ -10418,7 +10875,6 @@ How to help section
     padding: 60px;
 }
 
-/* Header styling */
 .donate-payment-header {
     display: flex;
     flex-direction: column;
@@ -10443,7 +10899,6 @@ How to help section
     margin: 0;
 }
 
-/* Info box styling */
 .donate-payment-info {
     background: var(--color-accent-3);
     border: 1px solid var(--color-accent);
@@ -10460,7 +10915,6 @@ How to help section
     font-weight: 500;
 }
 
-/* Payment methods styling */
 .donate-payment-methods {
     margin-bottom: 40px;
     text-align: center;
@@ -10500,7 +10954,6 @@ How to help section
     border: 1px solid var(--color-accent);
 }
 
-/* Recurring donations styling */
 .donate-recurring {
     margin-bottom: 40px;
     text-align: center;
@@ -10540,7 +10993,6 @@ How to help section
     font-size: 1.2em;
 }
 
-/* Benefit notice styling */
 .donate-benefit-notice {
     background: linear-gradient(135deg, #FFF3CD 0%, #FFEAA7 100%);
     border: 1px solid #D4B106;
