@@ -10059,6 +10059,9 @@ Donate page
     z-index: 2;
 }
 
+/* ============================================
+How to help section 
+============================================ */
 .help-section {
     position: relative;
     margin-bottom: 100px;
@@ -10075,7 +10078,7 @@ Donate page
 
 .help-content {
     background: var(--color-section-alt);
-    padding: 60px 20px 100px;
+    padding: 60px 20px 20px;
     box-sizing: border-box;
 }
 
@@ -10137,6 +10140,155 @@ Donate page
     font-weight: 600;
     color: var(--color-text-secondary);
     margin: 0;
+}
+
+.help-bank-section {
+    margin-top: 0;
+    background: var(--color-section-alt);
+    padding: 100px 20px 0px;
+    box-sizing: border-box;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.help-bank-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.help-payment-info {
+    background: var(--color-accent-3);
+    border: 1px solid var(--color-accent);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.help-payment-info p {
+    font-size: var(--font-text-body);
+    color: var(--color-text);
+    margin: 0;
+    font-weight: 500;
+}
+
+.help-payment-methods {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.help-payment-methods h3 {
+    font-family: 'Comfortaa', sans-serif;
+    font-size: var(--font-heading-h3);
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 25px;
+}
+
+.help-payment-methods-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.help-payment-method {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: var(--color-card-bg);
+    border-radius: 12px;
+    border: 1px solid rgba(184, 121, 142, 0.2);
+    flex: 1;
+}
+
+.help-method-label {
+    font-size: var(--font-text-body);
+    color: var(--color-text);
+}
+
+.help-method-value {
+    font-size: var(--font-text-body);
+    color: var(--color-accent);
+    font-weight: 600;
+    background: var(--color-accent-3);
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px solid var(--color-accent);
+    white-space: nowrap;
+}
+
+.help-recurring {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.help-recurring h3 {
+    font-family: 'Comfortaa', sans-serif;
+    font-size: var(--font-heading-h3);
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 20px;
+}
+
+.help-liberapay-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--color-accent);
+    color: var(--color-card-bg);
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: var(--font-button);
+    transition: all 0.3s ease;
+    border: 2px solid var(--color-accent);
+}
+
+.help-liberapay-btn:hover {
+    background: var(--color-accent-2);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(184, 121, 142, 0.3);
+}
+
+.help-liberapay-btn::after {
+    content: '↗';
+    font-size: 1.2em;
+}
+
+.help-benefit-notice {
+    background: linear-gradient(135deg, #FFF3CD 0%, #FFEAA7 100%);
+    border: 1px solid #D4B106;
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+}
+
+.help-benefit-notice p {
+    font-size: var(--font-text-body);
+    color: #8B6914;
+    margin: 0;
+    line-height: 150%;
+}
+
+.help-benefit-notice strong {
+    color: #6C5711;
+}
+
+
+.help-wave-close {
+    width: 100%;
+    height: 154px;
+    background-image: url('data:image/svg+xml,<svg width="1440" height="154" viewBox="0 0 1440 154" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M257.054 77.0048C152.388 72.142 20.4645 -4.99016 0 11.0088C0.000235149 65.0057 0 154 0 154H1440V77.0048C1440 77.0048 1283.97 0.958035 1176.96 0.00950448C1059.43 -1.03217 1006.43 83.8899 888.957 87.5042C758.183 91.5277 696.353 0.398251 565.518 0.00950448C441.372 -0.359368 381.067 82.7664 257.054 77.0048Z" fill="%23F8F9FA"/></svg>');
+    background-repeat: no-repeat;
+    background-size: 1440px 154px;
+    background-position: center bottom;
+    transform: scaleY(-1); 
 }
 
 /* Ways Section */
