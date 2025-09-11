@@ -10743,6 +10743,820 @@ Banking section in How to help section
     transform: scaleY(-1); 
 }
 
+/* =====================================================
+Help Section - Responsive Breakpoints
+===================================================== */
+
+/* 1920px+ */
+@media (min-width: 1920px) {
+    .help-section {
+        margin-bottom: 140px;
+    }
+
+    .help-wave {
+        height: 200px;
+        background-size: cover;
+    }
+
+    .help-content {
+        padding: 80px 30px 30px;
+    }
+
+    .help-section-container {
+        max-width: 1600px;
+    }
+
+    .help-header {
+        margin-bottom: 100px;
+    }
+
+    .help-header-decoration {
+        width: 120px;
+        height: 115px;
+        top: -65px;
+        margin-left: 160px;
+    }
+
+    .help-items {
+        max-width: 1400px;
+        gap: 80px;
+    }
+
+    .help-item-icon {
+        width: 240px;
+        height: 240px;
+    }
+
+    .help-item {
+        gap: 25px;
+    }
+
+    .help-bank-section {
+        padding: 120px 30px 0px;
+    }
+
+    .help-bank-container {
+        max-width: 1400px;
+    }
+
+    .help-payment-methods-container {
+        gap: 30px;
+        max-width: 1400px;
+    }
+
+    .help-payment-method {
+        padding: 25px;
+    }
+
+    .help-wave-close {
+        height: 200px;
+        background-size: cover;
+    }
+}
+
+/* 1600px-1919px */
+@media (min-width: 1600px) and (max-width: 1919px) {
+    .help-section {
+        margin-bottom: 120px;
+    }
+
+    .help-wave {
+        height: 180px;
+        background-size: cover;
+    }
+
+    .help-content {
+        padding: 70px 25px 25px;
+    }
+
+    .help-section-container {
+        max-width: 1400px;
+    }
+
+    .help-header {
+        margin-bottom: 90px;
+    }
+
+    .help-header-decoration {
+        width: 110px;
+        height: 105px;
+        top: -60px;
+        margin-left: 150px;
+    }
+
+    .help-items {
+        max-width: 1300px;
+        gap: 70px;
+    }
+
+    .help-item-icon {
+        width: 220px;
+        height: 220px;
+    }
+
+    .help-item {
+        gap: 22px;
+    }
+
+    .help-bank-section {
+        padding: 110px 25px 0px;
+    }
+
+    .help-bank-container {
+        max-width: 1300px;
+    }
+
+    .help-payment-methods-container {
+        gap: 25px;
+        max-width: 1300px;
+    }
+
+    .help-payment-method {
+        padding: 22px;
+    }
+
+    .help-wave-close {
+        height: 180px;
+        background-size: cover;
+    }
+}
+
+/* 1280px-1599px */
+@media (min-width: 1280px) and (max-width: 1599px) {
+    .help-section {
+        margin-bottom: 100px;
+    }
+
+    .help-wave {
+        height: 154px;
+        background-size: cover;
+    }
+
+    .help-content {
+        padding: 60px 20px 20px;
+    }
+
+    .help-section-container {
+        max-width: 1200px;
+    }
+
+    .help-header {
+        margin-bottom: 80px;
+    }
+
+    .help-header-decoration {
+        width: 96px;
+        height: 92px;
+        top: -54px;
+        margin-left: 140px;
+    }
+
+    .help-items {
+        max-width: 1100px;
+        gap: 50px;
+    }
+
+    .help-item-icon {
+        width: 180px;
+        height: 180px;
+    }
+
+    .help-item {
+        gap: 18px;
+    }
+
+    .help-bank-section {
+        padding: 100px 20px 0px;
+    }
+
+    .help-bank-container {
+        max-width: 1100px;
+    }
+
+    .help-payment-methods-container {
+        gap: 18px;
+        max-width: 1100px;
+    }
+
+    .help-payment-method {
+        padding: 18px;
+    }
+
+    .help-wave-close {
+        height: 154px;
+        background-size: cover;
+    }
+}
+
+/* 1024px-1279px */
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .help-section {
+        margin-bottom: 80px;
+    }
+
+    .help-wave {
+        height: 120px;
+        background-size: cover;
+    }
+
+    .help-content {
+        padding: 50px 15px 15px;
+    }
+
+    .help-section-container {
+        max-width: 1000px;
+    }
+
+    .help-header {
+        margin-bottom: 60px;
+    }
+
+    .help-header-decoration {
+        width: 80px;
+        height: 76px;
+        top: -45px;
+        margin-left: 110px;
+    }
+
+    .help-items {
+        max-width: 900px;
+        gap: 40px;
+    }
+
+    .help-item-icon {
+        width: 150px;
+        height: 150px;
+    }
+
+    .help-item {
+        gap: 15px;
+    }
+
+    .help-bank-section {
+        padding: 80px 15px 0px;
+    }
+
+    .help-bank-container {
+        max-width: 900px;
+    }
+
+    .help-payment-methods-container {
+        gap: 15px;
+        max-width: 900px;
+    }
+
+    .help-payment-method {
+        padding: 15px;
+    }
+
+    .help-wave-close {
+        height: 120px;
+        background-size: cover;
+    }
+}
+
+/* 768px-1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .help-section {
+        margin-bottom: 60px;
+        margin-top: 50px;
+    }
+
+    .help-wave {
+        height: 100px;
+        background-size: cover;
+    }
+
+    .help-content {
+        padding: 40px 15px 15px;
+    }
+
+    .help-section-container {
+        max-width: 700px;
+    }
+
+    .help-header {
+        margin-bottom: 50px;
+    }
+
+    .help-header-decoration {
+        width: 70px;
+        height: 67px;
+        top: -38px;
+        margin-left: 85px;
+    }
+
+    .help-items {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(2, auto);
+        max-width: 600px;
+        gap: 30px;
+        justify-items: center;
+        margin: 0 auto;
+    }
+
+    .help-item:nth-child(1) {
+        grid-column: 1 / 3;
+        grid-row: 1;
+    }
+
+    .help-item:nth-child(2) {
+        grid-column: 3 / 5;
+        grid-row: 1;
+    }
+
+    .help-item:nth-child(3) {
+        grid-column: 5 / 7;
+        grid-row: 1;
+    }
+
+    .help-item:nth-child(4) {
+        grid-column: 2 / 4;
+        grid-row: 2;
+    }
+
+    .help-item:nth-child(5) {
+        grid-column: 4 / 6;
+        grid-row: 2;
+    }
+
+    .help-item-icon {
+        width: 120px;
+        height: 120px;
+    }
+
+    .help-item {
+        gap: 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .help-bank-section {
+        padding: 60px 15px 0px;
+    }
+
+    .help-bank-container {
+        max-width: 650px;
+    }
+
+    .help-payment-methods-container {
+        flex-direction: column;
+        gap: 15px;
+        max-width: 100%;
+    }
+
+    .help-payment-method {
+        padding: 15px;
+        width: 100%;
+    }
+
+    .help-wave-close {
+        height: 100px;
+        background-size: cover;
+    }
+}
+
+/* 414px-767px */
+@media (min-width: 414px) and (max-width: 767px) {
+    .help-section {
+        margin-bottom: 50px;
+        margin-top: 80px;
+    }
+
+    .help-wave {
+        height: 80px;
+        background-size: cover;
+    }
+
+    .help-content {
+        padding: 30px 10px 10px;
+    }
+
+    .help-section-container {
+        max-width: 100%;
+    }
+
+    .help-header {
+        margin-bottom: 40px;
+    }
+
+    .help-header-decoration {
+        width: 60px;
+        height: 57px;
+        top: -32px;
+        margin-left: 70px;
+    }
+
+    .help-items {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 100%;
+        gap: 25px;
+    }
+
+    .help-item:nth-child(5) {
+        grid-column: span 2;
+        justify-self: center;
+    }
+
+    .help-item-icon {
+        width: 100px;
+        height: 100px;
+    }
+
+    .help-item {
+        gap: 10px;
+    }
+
+    .help-bank-section {
+        padding: 50px 10px 0px;
+    }
+
+    .help-bank-container {
+        max-width: 100%;
+    }
+
+    .help-payment-methods-container {
+        flex-direction: column;
+        gap: 12px;
+        max-width: 100%;
+    }
+
+    .help-payment-method {
+        padding: 12px;
+        width: 100%;
+    }
+
+    .help-method-value {
+        padding: 6px 12px;
+        font-size: var(--font-text-small);
+    }
+
+    .help-wave-close {
+        height: 80px;
+        background-size: cover;
+    }
+}
+
+/* 375px-413px */
+@media (min-width: 375px) and (max-width: 413px) {
+    .help-section {
+        margin-bottom: 40px;
+        margin-top: 80px;
+    }
+
+    .help-wave {
+        height: 70px;
+        background-size: cover;
+    }
+
+    .help-content {
+        padding: 25px 8px 8px;
+    }
+
+    .help-section-container {
+        max-width: 100%;
+    }
+
+    .help-header {
+        margin-bottom: 35px;
+    }
+
+    .help-header-decoration {
+        width: 50px;
+        height: 48px;
+        top: -28px;
+        margin-left: 60px;
+    }
+
+    .help-items {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+        gap: 25px;
+        justify-items: center;
+    }
+
+    .help-item-icon {
+        width: 140px;
+        height: 140px;
+    }
+
+    .help-item {
+        gap: 12px;
+    }
+
+    .help-bank-section {
+        padding: 40px 8px 0px;
+    }
+
+    .help-bank-container {
+        max-width: 100%;
+    }
+
+    .help-payment-methods-container {
+        flex-direction: column;
+        gap: 10px;
+        max-width: 100%;
+    }
+
+    .help-payment-method {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .help-method-value {
+        padding: 5px 10px;
+        font-size: var(--font-text-small);
+    }
+
+    .help-wave-close {
+        height: 70px;
+        background-size: cover;
+    }
+}
+
+/* 360px-374px */
+@media (min-width: 360px) and (max-width: 374px) {
+    .help-section {
+        margin-bottom: 35px;
+        margin-top: 80px;
+    }
+
+    .help-wave {
+        height: 60px;
+        background-size: cover;
+    }
+
+    .help-content {
+        padding: 20px 6px 6px;
+    }
+
+    .help-section-container {
+        max-width: 100%;
+    }
+
+    .help-header {
+        margin-bottom: 30px;
+    }
+
+    .help-header-decoration {
+        width: 45px;
+        height: 43px;
+        top: -25px;
+        margin-left: 50px;
+    }
+
+    .help-items {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+        gap: 20px;
+        justify-items: center;
+    }
+
+    .help-item-icon {
+        width: 120px;
+        height: 120px;
+    }
+
+    .help-item {
+        gap: 10px;
+    }
+
+    .help-bank-section {
+        padding: 35px 6px 0px;
+    }
+
+    .help-bank-container {
+        max-width: 100%;
+    }
+
+    .help-payment-methods-container {
+        flex-direction: column;
+        gap: 8px;
+        max-width: 100%;
+    }
+
+    .help-payment-method {
+        padding: 8px;
+        width: 100%;
+    }
+
+    .help-method-value {
+        padding: 4px 8px;
+        font-size: var(--font-text-small);
+    }
+
+    .help-wave-close {
+        height: 60px;
+        background-size: cover;
+    }
+}
+
+/* 320px-359px */
+@media (min-width: 320px) and (max-width: 359px) {
+    .help-section {
+        margin-bottom: 30px;
+        margin-top: 80px;
+    }
+
+    .help-wave {
+        height: 50px;
+        background-size: cover;
+    }
+
+    .help-content {
+        padding: 18px 5px 5px;
+    }
+
+    .help-section-container {
+        max-width: 100%;
+    }
+
+    .help-header {
+        margin-bottom: 25px;
+    }
+
+    .help-header-decoration {
+        width: 40px;
+        height: 38px;
+        top: -22px;
+        margin-left: 45px;
+    }
+
+    .help-items {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+        gap: 18px;
+        justify-items: center;
+    }
+
+    .help-item-icon {
+        width: 100px;
+        height: 100px;
+    }
+
+    .help-item {
+        gap: 8px;
+    }
+
+    .help-bank-section {
+        padding: 30px 5px 0px;
+    }
+
+    .help-bank-container {
+        max-width: 100%;
+    }
+
+    .help-payment-methods-container {
+        flex-direction: column;
+        gap: 6px;
+        max-width: 100%;
+    }
+
+    .help-payment-method {
+        padding: 6px;
+        width: 100%;
+    }
+
+    .help-method-value {
+        padding: 3px 6px;
+        font-size: var(--font-text-small);
+    }
+
+    .help-wave-close {
+        height: 50px;
+        background-size: cover;
+    }
+}
+
+/* =====================================================
+Horizontal Phone Orientations
+===================================================== */
+
+/* 896×414 landscape */
+@media (min-width: 896px) and (max-width: 896px) and (min-height: 414px) and (max-height: 414px) and (orientation: landscape) {
+    .help-section {
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+    .help-wave {
+        height: 40px;
+        background-size: cover;
+    }
+
+    .help-content {
+        padding: 15px 10px 10px;
+    }
+
+    .help-header {
+        margin-bottom: 20px;
+    }
+
+    .help-header-decoration {
+        width: 35px;
+        height: 33px;
+        top: -18px;
+        margin-left: 40px;
+    }
+
+    .help-items {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 15px;
+    }
+
+    .help-item-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .help-item {
+        gap: 5px;
+    }
+
+    .help-bank-section {
+        padding: 20px 10px 0px;
+    }
+
+    .help-payment-methods-container {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .help-payment-method {
+        padding: 8px;
+        flex: 1;
+    }
+
+    .help-wave-close {
+        height: 40px;
+        background-size: cover;
+    }
+}
+
+/* 915×412 landscape */
+@media (min-width: 915px) and (max-width: 915px) and (min-height: 412px) and (max-height: 412px) and (orientation: landscape) {
+    .help-section {
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+    .help-wave {
+        height: 40px;
+        background-size: cover;
+    }
+
+    .help-content {
+        padding: 15px 10px 10px;
+    }
+
+    .help-header {
+        margin-bottom: 20px;
+    }
+
+    .help-header-decoration {
+        width: 35px;
+        height: 33px;
+        top: -18px;
+        margin-left: 40px;
+    }
+
+    .help-items {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 15px;
+    }
+
+    .help-item-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .help-item {
+        gap: 5px;
+    }
+
+    .help-bank-section {
+        padding: 20px 10px 0px;
+    }
+
+    .help-payment-methods-container {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .help-payment-method {
+        padding: 8px;
+        flex: 1;
+    }
+
+    .help-wave-close {
+        height: 40px;
+        background-size: cover;
+    }
+}
+
 /* ============================================
 Ways to help Section
 ============================================ */
