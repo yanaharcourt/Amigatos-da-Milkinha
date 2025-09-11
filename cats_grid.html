@@ -1808,7 +1808,7 @@
     </script>
 
     <!-- ============================================
-    Filters (please don't move it to another file, it should be in this file)
+    Filters
     ============================================ -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -2112,7 +2112,143 @@
         });
     </script>
 
-    <script src="assets/script.js"></script>
+    <!-- ============================================
+    Mobile Nav. menu
+    ============================================ -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuButton = document.getElementById('mobileMenu');
+            const navigationMenu = document.querySelector('.nav-links');
+            const navButtons = document.querySelector('.nav-buttons');
+            const languageSwitcher = document.querySelector('.language-switcher');
+
+            // Create mobile overlay
+            let mobileOverlay = document.querySelector('.mobile-overlay');
+            if (!mobileOverlay) {
+                mobileOverlay = document.createElement('div');
+                mobileOverlay.className = 'mobile-overlay';
+                document.body.appendChild(mobileOverlay);
+            }
+
+            // Check if elements exist
+            if (!mobileMenuButton || !navigationMenu) {
+                console.error('Mobile menu elements not found');
+                return;
+            }
+
+            // Toggle mobile menu
+            function toggleMobileMenu(e) {
+                e.preventDefault();
+                e.stopPropagation();
+
+                const isOpen = navigationMenu.classList.contains('mobile-active');
+
+                if (isOpen) {
+                    closeMobileMenu();
+                } else {
+                    openMobileMenu();
+                }
+            }
+
+            // Open mobile menu
+            function openMobileMenu() {
+                // Сначала показываем overlay
+                mobileOverlay.style.display = 'block';
+                mobileOverlay.classList.add('active');
+
+                // Затем активируем меню
+                navigationMenu.classList.add('mobile-active');
+                mobileMenuButton.classList.add('active');
+
+                // Show buttons and language switcher on mobile
+                if (navButtons) {
+                    navButtons.classList.add('mobile-active');
+                }
+                if (languageSwitcher) {
+                    languageSwitcher.classList.add('mobile-active');
+                }
+
+                // Prevent background scroll
+                document.body.style.overflow = 'hidden';
+            }
+
+            // Close mobile menu
+            function closeMobileMenu() {
+                navigationMenu.classList.remove('mobile-active');
+                mobileMenuButton.classList.remove('active');
+                mobileOverlay.classList.remove('active');
+
+                // Hide buttons and language switcher
+                if (navButtons) {
+                    navButtons.classList.remove('mobile-active');
+                }
+                if (languageSwitcher) {
+                    languageSwitcher.classList.remove('mobile-active');
+                }
+
+                // Restore background scroll
+                document.body.style.overflow = '';
+
+                // Hide overlay after animation
+                setTimeout(() => {
+                    if (!mobileOverlay.classList.contains('active')) {
+                        mobileOverlay.style.display = 'none';
+                    }
+                }, 300);
+            }
+
+            // Event listeners
+            mobileMenuButton.addEventListener('click', toggleMobileMenu);
+
+            // Close menu when clicking on navigation links
+            navigationMenu.addEventListener('click', function (e) {
+                if (e.target.tagName === 'A') {
+                    closeMobileMenu();
+                }
+            });
+
+            // Close menu when clicking on nav buttons
+            if (navButtons) {
+                navButtons.addEventListener('click', function (e) {
+                    if (e.target.tagName === 'A') {
+                        closeMobileMenu();
+                    }
+                });
+            }
+
+            // Close menu when clicking on overlay
+            mobileOverlay.addEventListener('click', closeMobileMenu);
+
+            // Close menu on window resize to desktop
+            window.addEventListener('resize', function () {
+                if (window.innerWidth > 768) {
+                    closeMobileMenu();
+                }
+            });
+
+            // Handle escape key
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' && navigationMenu.classList.contains('mobile-active')) {
+                    closeMobileMenu();
+                }
+            });
+
+            // Ensure overlay is properly hidden on page load
+            mobileOverlay.style.display = 'none';
+        });
+
+        // Navbar scroll effect (keep existing)
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (navbar) {
+                if (window.scrollY > 100) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>
