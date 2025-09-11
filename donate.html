@@ -302,7 +302,7 @@
                     <div class="contact-form">
                         <h3>Envie uma Mensagem</h3>
 
-                        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" id="contactForm">
+                        <form action="https://formspree.io/f/mkgvewpy" method="POST" id="contactForm">
                             <div class="form-group form-row">
                                 <div>
                                     <label for="firstName">Nome *</label>
@@ -537,7 +537,108 @@
         });
     </script>
 
+    <!--  ==============================
+    Contact Section
+    ============================== -->
+    <script>
+        // Contact Form JavaScript for GitHub Pages
+        document.addEventListener('DOMContentLoaded', function () {
+            const contactForm = document.getElementById('contactForm');
 
+            if (contactForm) {
+                contactForm.addEventListener('submit', function (e) {
+                    e.preventDefault();
+
+                    const form = this;
+                    const formData = new FormData(form);
+                    const submitBtn = form.querySelector('.submit-btn');
+                    const originalText = submitBtn.textContent;
+
+                    // Show loading state
+                    submitBtn.textContent = 'Enviando...';
+                    submitBtn.disabled = true;
+
+                    // Remove any existing messages
+                    const existingMessage = form.querySelector('.form-message');
+                    if (existingMessage) {
+                        existingMessage.remove();
+                    }
+
+                    // For GitHub Pages, you'll need to replace this URL with your actual form service
+                    // Options: Formspree, Netlify Forms, EmailJS, etc.
+                    fetch('https://formspree.io/f/mkgvewpy', {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    })
+                        .then(response => {
+                            if (response.ok) {
+                                // Show success message
+                                const successMessage = document.createElement('div');
+                                successMessage.className = 'form-message success';
+                                successMessage.textContent = 'Mensagem enviada com sucesso! Entraremos em contato em breve.';
+                                form.insertBefore(successMessage, form.firstChild);
+
+                                // Reset form
+                                form.reset();
+                            } else {
+                                throw new Error('Erro no envio');
+                            }
+                        })
+                        .catch(error => {
+                            // Show error message
+                            const errorMessage = document.createElement('div');
+                            errorMessage.className = 'form-message error';
+                            errorMessage.textContent = 'Erro ao enviar mensagem. Tente novamente ou entre em contato diretamente.';
+                            form.insertBefore(errorMessage, form.firstChild);
+                        })
+                        .finally(() => {
+                            // Reset button
+                            submitBtn.textContent = originalText;
+                            submitBtn.disabled = false;
+                        });
+                });
+            }
+        });
+
+        // Alternative: Simple mailto fallback for GitHub Pages
+        function sendEmailFallback() {
+            const firstName = document.getElementById('firstName')?.value || '';
+            const lastName = document.getElementById('lastName')?.value || '';
+            const email = document.getElementById('email')?.value || '';
+            const phone = document.getElementById('phone')?.value || '';
+            const subject = document.getElementById('subject')?.value || '';
+            const message = document.getElementById('message')?.value || '';
+
+            const emailSubject = subject ? `[${subject}] Contato do site` : 'Contato do site';
+            const emailBody = `Nome: ${firstName} ${lastName}
+        Email: ${email}
+        Telefone: ${phone}
+        Assunto: ${subject}
+
+        Mensagem:
+        ${message}`;
+
+            const mailtoLink = `mailto:info@amigatosdamilkinha.pt?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+            window.location.href = mailtoLink;
+        }
+
+        // To use mailto fallback instead of Formspree, uncomment the lines below:
+        /*
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) { 
+                    e.preventDefault(); 
+                    sendEmailFallback(); 
+                });
+            }
+        });
+        */
+    </script>
+    
     <!-- Mobile Nav. menu -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
