@@ -4243,13 +4243,15 @@ About Section
 .about-image {
     position: relative;
     border-radius: 20px;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .about-image img {
     width: 100%;
     height: 400px;
     object-fit: cover;
+    border-radius: 50px;
+    object-position: center center;
 }
 
 /* =====================================================
@@ -11089,8 +11091,8 @@ Help Section - Responsive Breakpoints
 /* 414px-767px */
 @media (min-width: 414px) and (max-width: 767px) {
     .help-section {
-        margin-bottom: 50px;
-        margin-top: 80px;
+        margin-bottom: 40px;
+        margin-top: 40px;
     }
 
     .help-wave {
@@ -11171,7 +11173,7 @@ Help Section - Responsive Breakpoints
 @media (min-width: 375px) and (max-width: 413px) {
     .help-section {
         margin-bottom: 40px;
-        margin-top: 80px;
+        margin-top: 40px;
     }
 
     .help-wave {
@@ -11252,8 +11254,8 @@ Help Section - Responsive Breakpoints
 /* 360px-374px */
 @media (min-width: 360px) and (max-width: 374px) {
     .help-section {
-        margin-bottom: 35px;
-        margin-top: 80px;
+        margin-bottom: 40px;
+        margin-top: 40px;
     }
 
     .help-wave {
@@ -11329,8 +11331,8 @@ Help Section - Responsive Breakpoints
 /* 320px-359px */
 @media (min-width: 320px) and (max-width: 359px) {
     .help-section {
-        margin-bottom: 30px;
-        margin-top: 80px;
+        margin-bottom: 40px;
+        margin-top: 40px;
     }
 
     .help-wave {
@@ -11779,8 +11781,8 @@ Ways Section - Responsive Breakpoints
 /* 414px-767px */
 @media (min-width: 414px) and (max-width: 767px) {
     .ways-section {
-        padding: 60px 20px;
-        margin-top: 80px;
+        padding: 40px 20px;
+        margin-top: 40px;
     }
 
     .ways-container {
@@ -11830,8 +11832,8 @@ Ways Section - Responsive Breakpoints
 /* 375px-413px */
 @media (min-width: 375px) and (max-width: 413px) {
     .ways-section {
-        padding: 50px 16px;
-        margin-top: 80px;
+        padding: 40px 16px;
+        margin-top: 40px;
     }
 
     .ways-container {
@@ -11881,8 +11883,8 @@ Ways Section - Responsive Breakpoints
 /* 360px-374px */
 @media (min-width: 360px) and (max-width: 374px) {
     .ways-section {
-        padding: 45px 16px;
-        margin-top: 80px;
+        padding: 40px 16px;
+        margin-top: 40px;
     }
 
     .ways-container {
@@ -11933,7 +11935,7 @@ Ways Section - Responsive Breakpoints
 @media (min-width: 320px) and (max-width: 359px) {
     .ways-section {
         padding: 40px 12px;
-        margin-top: 80px;
+        margin-top: 40px;
     }
 
     .ways-container {
@@ -12293,8 +12295,8 @@ Donate About Section - Responsive Breakpoints
 /* 414px-767px */
 @media (min-width: 414px) and (max-width: 767px) {
     .donate-about-section {
-        padding: 60px 20px;
-        margin-top: 80px;
+        padding: 40px 20px;
+        margin-top: 0px;
     }
 
     .donate-about-container {
@@ -12336,8 +12338,8 @@ Donate About Section - Responsive Breakpoints
 /* 375px-413px */
 @media (min-width: 375px) and (max-width: 413px) {
     .donate-about-section {
-        padding: 50px 16px;
-        margin-top: 80px;
+        padding: 40px 16px;
+        margin-top: 0px;
     }
 
     .donate-about-container {
@@ -12379,8 +12381,8 @@ Donate About Section - Responsive Breakpoints
 /* 360px-374px */
 @media (min-width: 360px) and (max-width: 374px) {
     .donate-about-section {
-        padding: 45px 16px;
-        margin-top: 80px;
+        padding: 40px 16px;
+        margin-top: 0px;
     }
 
     .donate-about-container {
@@ -12423,7 +12425,7 @@ Donate About Section - Responsive Breakpoints
 @media (min-width: 320px) and (max-width: 359px) {
     .donate-about-section {
         padding: 40px 12px;
-        margin-top: 80px;
+        margin-top: 0px;
     }
 
     .donate-about-container {
@@ -13084,8 +13086,8 @@ Donate Payment Section - Responsive Breakpoints
 /* 414px-767px */
 @media (min-width: 414px) and (max-width: 767px) {
     .donate-payment-section {
-        padding: 60px 20px;
-        margin-top: 80px;
+        padding: 40px 20px;
+        margin-top: 40px;
     }
 
     .donate-payment-container {
@@ -13167,8 +13169,8 @@ Donate Payment Section - Responsive Breakpoints
 /* 375px-413px */
 @media (min-width: 375px) and (max-width: 413px) {
     .donate-payment-section {
-        padding: 50px 16px;
-        margin-top: 80px;
+        padding: 40px 16px;
+        margin-top: 40px;
     }
 
     .donate-payment-container {
@@ -13250,8 +13252,8 @@ Donate Payment Section - Responsive Breakpoints
 /* 360px-374px */
 @media (min-width: 360px) and (max-width: 374px) {
     .donate-payment-section {
-        padding: 45px 16px;
-        margin-top: 80px;
+        padding: 40px 16px;
+        margin-top: 40px;
     }
 
     .donate-payment-container {
