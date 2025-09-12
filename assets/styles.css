@@ -9638,7 +9638,7 @@ Responsives
     }
 
     .info-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
         gap: 15px;
         margin-bottom: 25px;
     }
@@ -9789,7 +9789,7 @@ Responsives
     }
 
     .info-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
         gap: 12px;
         margin-bottom: 22px;
     }
@@ -9945,7 +9945,7 @@ Responsives
     }
 
     .info-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
         gap: 10px;
         margin-bottom: 20px;
     }
@@ -10108,7 +10108,7 @@ Responsives
     }
 
     .info-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
         gap: 8px;
         margin-bottom: 18px;
     }
