@@ -1,25 +1,24 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Portuguese SEO -->
+
+    <!-- English SEO -->
     <meta name="description"
-        content="Amigatos da Milkinha - abrigo de gatos em Braga. Gatos à espera de um lar. Adopção, voluntariado, donativos.">
-    <meta name="keywords"
-        content="abrigo de gatos, adopção de gatos, Braga, Portugal, voluntariado, donativos, felinos">
-    <meta property="og:title" content="Amigatos da Milkinha - Abrigo de Gatos">
-    <meta property="og:description" content="Cada gato merece amor. Gatos procuram um lar para sempre.">
+        content="Amigatos da Milkinha - cat shelter in Braga. Cats waiting for a home. Adoption, volunteering, donations.">
+    <meta name="keywords" content="cat shelter, cat adoption, Braga, Portugal, volunteering, donations, felines">
+    <meta property="og:title" content="Amigatos da Milkinha - Cat Shelter">
+    <meta property="og:description" content="Every cat deserves love. Cats looking for a forever home.">
     <meta property="og:image" content="./assets/img/hero.png">
-    <meta property="og:url" content="https://amigatosdamilkinha.pt">
+    <meta property="og:url" content="https://amigatosdamilkinha.pt/en">
     <meta property="og:type" content="website">
-    <meta property="og:locale" content="pt_PT">
+    <meta property="og:locale" content="en">
 
-    <title>Amigatos da Milkinha - Abrigo de Gatos</title>
+    <title>Amigatos da Milkinha - Cat Shelter</title>
 
-    <link rel="icon" href="./logo.png">
-
+    <link rel="icon" href="../logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
@@ -31,26 +30,25 @@
     <!-- Navigation -->
     <nav class="nav" id="navbar">
         <div class="nav-container">
-            <a href="index.html" class="logo">
+            <a href="EN-index.html" class="logo">
                 <img src="./assets/img/logo.png" alt="Logo" class="logo-image">
                 Amigatos da Milkinha
             </a>
             <ul class="nav-links">
-                <li><a href="index.html">Início</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#contato">Contato</a></li>
+                <li><a href="EN-index.html">Home</a></li>
+                <li><a href="#sobre">About</a></li>
+                <li><a href="#servicos">Services</a></li>
+                <li><a href="#contato">Contact</a></li>
             </ul>
             <ul class="nav-buttons">
-                <li><a href="cats_grid.html" class="btn btn-primary nav-btn-wide">Ver Gatos</a></li>
-                <li><a href="donate.html" class="btn btn-secondary nav-btn-wide">Ajudar</a></li>
+                <li><a href="EN-cats_grid.html" class="btn btn-primary nav-btn-wide">View Cats</a></li>
+                <li><a href="./EN-donate.html" class="btn btn-secondary nav-btn-wide">Donate</a></li>
                 <div class="language-switcher">
-                    <a href="./EN-cats_grid.html" class="language-btn" title="Switch to English">
-                        <span class="language-text">EN</span>
+                    <a href="./cats_grid.html" class="language-btn" title="Switch to Portuguese">
+                        <span class="language-text">PT</span>
                     </a>
                 </div>
             </ul>
-
             <div class="mobile-menu" id="mobileMenu">
                 <span></span>
                 <span></span>
@@ -59,10 +57,13 @@
         </div>
     </nav>
 
+    <!-- ============================================
+    Short information about the cat 
+    ============================================ -->
     <div class="container">
         <div class="header">
             <h1>AMIGATOS DA MILKINHA</h1>
-            <p>Atuais residentes no abrigo.</p>
+            <p>Current residents at the shelter.</p>
         </div>
 
         <!-- Filter Section - Single Line with Selections in Buttons -->
@@ -70,8 +71,8 @@
             <div class="filter-header-inline">
                 <!-- Title and Filter Buttons in One Line -->
                 <div class="filter-title-inline">
-                    <img src="./assets/img/Filter.svg" alt="Filtro" class="filter-icon">
-                    <span class="filter-label-text">Filtros:</span>
+                    <img src="./assets/img/Filter.svg" alt="Filter" class="filter-icon">
+                    <span class="filter-label-text">Filters:</span>
                 </div>
 
                 <!-- Filter Category Buttons -->
@@ -79,18 +80,18 @@
                     <!-- Gender Filter -->
                     <div class="filter-category" data-category="gender">
                         <button class="category-btn" data-category="gender">
-                            <span class="btn-label">Sexo</span>
+                            <span class="btn-label">Gender</span>
                             <span class="btn-selections" id="genderSelections"></span>
                             <span class="dropdown-arrow">▼</span>
                         </button>
                         <div class="category-dropdown">
                             <label class="dropdown-option">
-                                <input type="checkbox" name="gender" value="Masculino">
-                                <span>Masculino</span>
+                                <input type="checkbox" name="gender" value="Male">
+                                <span>Male</span>
                             </label>
                             <label class="dropdown-option">
-                                <input type="checkbox" name="gender" value="Feminino">
-                                <span>Feminino</span>
+                                <input type="checkbox" name="gender" value="Female">
+                                <span>Female</span>
                             </label>
                         </div>
                     </div>
@@ -98,22 +99,22 @@
                     <!-- Age Filter -->
                     <div class="filter-category" data-category="age">
                         <button class="category-btn" data-category="age">
-                            <span class="btn-label">Idade</span>
+                            <span class="btn-label">Age</span>
                             <span class="btn-selections" id="ageSelections"></span>
                             <span class="dropdown-arrow">▼</span>
                         </button>
                         <div class="category-dropdown">
                             <label class="dropdown-option">
                                 <input type="checkbox" name="age" value="young">
-                                <span>Jovem (até 2 anos)</span>
+                                <span>Young (up to 2 years)</span>
                             </label>
                             <label class="dropdown-option">
                                 <input type="checkbox" name="age" value="adult">
-                                <span>Adulto (2-7 anos)</span>
+                                <span>Adult (2-7 years)</span>
                             </label>
                             <label class="dropdown-option">
                                 <input type="checkbox" name="age" value="senior">
-                                <span>Sênior (7+ anos)</span>
+                                <span>Senior (7+ years)</span>
                             </label>
                         </div>
                     </div>
@@ -128,15 +129,15 @@
                         <div class="category-dropdown">
                             <label class="dropdown-option">
                                 <input type="checkbox" name="fiv" value="positive">
-                                <span>FIV Positivo</span>
+                                <span>FIV Positive</span>
                             </label>
                             <label class="dropdown-option">
                                 <input type="checkbox" name="fiv" value="negative">
-                                <span>FIV Negativo</span>
+                                <span>FIV Negative</span>
                             </label>
                             <label class="dropdown-option">
                                 <input type="checkbox" name="fiv" value="unknown">
-                                <span>Não testado</span>
+                                <span>Not tested</span>
                             </label>
                         </div>
                     </div>
@@ -151,15 +152,15 @@
                         <div class="category-dropdown">
                             <label class="dropdown-option">
                                 <input type="checkbox" name="felv" value="positive">
-                                <span>FeLV Positivo</span>
+                                <span>FeLV Positive</span>
                             </label>
                             <label class="dropdown-option">
                                 <input type="checkbox" name="felv" value="negative">
-                                <span>FeLV Negativo</span>
+                                <span>FeLV Negative</span>
                             </label>
                             <label class="dropdown-option">
                                 <input type="checkbox" name="felv" value="unknown">
-                                <span>Não testado</span>
+                                <span>Not tested</span>
                             </label>
                         </div>
                     </div>
@@ -167,22 +168,22 @@
                     <!-- Compatibility Filter -->
                     <div class="filter-category" data-category="compatibility">
                         <button class="category-btn" data-category="compatibility">
-                            <span class="btn-label">Compatível</span>
+                            <span class="btn-label">Compatible</span>
                             <span class="btn-selections" id="compatibilitySelections"></span>
                             <span class="dropdown-arrow">▼</span>
                         </button>
                         <div class="category-dropdown">
                             <label class="dropdown-option">
                                 <input type="checkbox" name="compatibility" value="cats">
-                                <span>Com outros gatos</span>
+                                <span>With other cats</span>
                             </label>
                             <label class="dropdown-option">
                                 <input type="checkbox" name="compatibility" value="children">
-                                <span>Com crianças</span>
+                                <span>With children</span>
                             </label>
                             <label class="dropdown-option">
                                 <input type="checkbox" name="compatibility" value="dogs">
-                                <span>Com cães</span>
+                                <span>With dogs</span>
                             </label>
                         </div>
                     </div>
@@ -190,26 +191,26 @@
                     <!-- Breed Filter -->
                     <div class="filter-category" data-category="breed">
                         <button class="category-btn" data-category="breed">
-                            <span class="btn-label">Raça</span>
+                            <span class="btn-label">Breed</span>
                             <span class="btn-selections" id="breedSelections"></span>
                             <span class="dropdown-arrow">▼</span>
                         </button>
                         <div class="category-dropdown">
                             <label class="dropdown-option">
-                                <input type="checkbox" name="breed" value="Europeu Comum">
-                                <span>Europeu Comum</span>
+                                <input type="checkbox" name="breed" value="European Shorthair">
+                                <span>European Shorthair</span>
                             </label>
                             <label class="dropdown-option">
-                                <input type="checkbox" name="breed" value="Siamês">
-                                <span>Siamês</span>
+                                <input type="checkbox" name="breed" value="Siamese">
+                                <span>Siamese</span>
                             </label>
                             <label class="dropdown-option">
-                                <input type="checkbox" name="breed" value="Domestico Pelo Longo">
-                                <span>Pelo Longo</span>
+                                <input type="checkbox" name="breed" value="Domestic Longhair">
+                                <span>Longhair</span>
                             </label>
                             <label class="dropdown-option">
                                 <input type="checkbox" name="breed" value="Other">
-                                <span>Outras raças</span>
+                                <span>Other breeds</span>
                             </label>
                         </div>
                     </div>
@@ -217,8 +218,8 @@
 
                 <!-- Clear All and Results -->
                 <div class="filter-actions-inline">
-                    <button class="clear-all-btn" id="clearAllBtn">Limpar Tudo</button>
-                    <div class="results-count" id="resultsCount">42 encontrados</div>
+                    <button class="clear-all-btn" id="clearAllBtn">Clear All</button>
+                    <div class="results-count" id="resultsCount">42 found</div>
                 </div>
             </div>
         </div>
@@ -226,251 +227,251 @@
         <div class="cats-grid">
             <!-- Cat 1 - Adolfina -->
             <div class="cat-card" onclick="openModal('cat1')">
-                <div class="status-available">Disponível</div>
+                <div class="status-available">Available</div>
                 <img src="./assets/img/Adolfina.png" alt="Adolfina" class="cat-image">
                 <div class="cat-info">
                     <div class="cat-name">Adolfina</div>
                     <div class="cat-details">
-                        <span class="detail-tag">1 ano</span>
-                        <span class="detail-tag">Feminino</span>
-                        <span class="detail-tag">Europeu Comum</span>
+                        <span class="detail-tag">1 year</span>
+                        <span class="detail-tag">Female</span>
+                        <span class="detail-tag">European Shorthair</span>
                     </div>
                 </div>
             </div>
 
             <!-- Cat 2 - Baunilha -->
             <div class="cat-card" onclick="openModal('cat2')">
-                <div class="status-available">Disponível</div>
+                <div class="status-available">Available</div>
                 <img src="./assets/img/Baunilha.png" alt="Baunilha" class="cat-image">
                 <div class="cat-info">
                     <div class="cat-name">Baunilha</div>
                     <div class="cat-details">
-                        <span class="detail-tag">2 anos</span>
-                        <span class="detail-tag">Masculino</span>
-                        <span class="detail-tag">Europeu Comum</span>
+                        <span class="detail-tag">2 years</span>
+                        <span class="detail-tag">Male</span>
+                        <span class="detail-tag">European Shorthair</span>
                     </div>
                 </div>
             </div>
 
             <!-- Cat 3 - Bino-->
             <div class="cat-card" onclick="openModal('cat3')">
-                <div class="status-available">Disponível</div>
+                <div class="status-available">Available</div>
                 <img src="./assets/img/Bino.png" alt="Bino" class="cat-image">
                 <div class="cat-info">
                     <div class="cat-name">Bino</div>
                     <div class="cat-details">
-                        <span class="detail-tag">1 ano</span>
-                        <span class="detail-tag">Masculino</span>
-                        <span class="detail-tag">Europeu Comum</span>
+                        <span class="detail-tag">1 year</span>
+                        <span class="detail-tag">Male</span>
+                        <span class="detail-tag">European Shorthair</span>
                     </div>
                 </div>
             </div>
 
             <!-- Cat 4 - Boganga -->
             <div class="cat-card" onclick="openModal('cat4')">
-                <div class="status-available">Disponível</div>
+                <div class="status-available">Available</div>
                 <img src="./assets/img/Boganga.png" alt="Boganga" class="cat-image">
                 <div class="cat-info">
                     <div class="cat-name">Boganga</div>
                     <div class="cat-details">
-                        <span class="detail-tag">10 mes.</span>
-                        <span class="detail-tag">Feminino</span>
-                        <span class="detail-tag">Europeu Comum</span>
+                        <span class="detail-tag">10 months</span>
+                        <span class="detail-tag">Female</span>
+                        <span class="detail-tag">European Shorthair</span>
                     </div>
                 </div>
             </div>
 
             <!-- Cat 5 - Boris -->
             <div class="cat-card" onclick="openModal('cat5')">
-                <div class="status-available">Disponível</div>
+                <div class="status-available">Available</div>
                 <img src="./assets/img/Boris.png" alt="Boris" class="cat-image">
                 <div class="cat-info">
                     <div class="cat-name">Boris</div>
                     <div class="cat-details">
-                        <span class="detail-tag">10 anos</span>
-                        <span class="detail-tag">Masculino</span>
-                        <span class="detail-tag">Europeu Comum</span>
+                        <span class="detail-tag">10 years</span>
+                        <span class="detail-tag">Male</span>
+                        <span class="detail-tag">European Shorthair</span>
                     </div>
                 </div>
             </div>
 
             <!-- Cat 6 - Bowie -->
             <div class="cat-card" onclick="openModal('cat6')">
-                <div class="status-available">Disponível</div>
+                <div class="status-available">Available</div>
                 <img src="./assets/img/Bowie.png" alt="Bowie" class="cat-image">
                 <div class="cat-info">
                     <div class="cat-name">Bowie</div>
                     <div class="cat-details">
-                        <span class="detail-tag">1 ano</span>
-                        <span class="detail-tag">Feminino</span>
-                        <span class="detail-tag">Europeu Comum</span>
+                        <span class="detail-tag">1 year</span>
+                        <span class="detail-tag">Female</span>
+                        <span class="detail-tag">European Shorthair</span>
                     </div>
                 </div>
             </div>
 
             <!-- Cat 7 - Bragaparque -->
             <div class="cat-card" onclick="openModal('cat7')">
-                <div class="status-available">Disponível</div>
+                <div class="status-available">Available</div>
                 <img src="./assets/img/Bragaparque.jpg" alt="Bragaparque" class="cat-image">
                 <div class="cat-info">
                     <div class="cat-name">Bragaparque</div>
                     <div class="cat-details">
-                        <span class="detail-tag">10 anos</span>
-                        <span class="detail-tag">Masculino</span>
-                        <span class="detail-tag">Europeu Comum</span>
+                        <span class="detail-tag">10 years</span>
+                        <span class="detail-tag">Male</span>
+                        <span class="detail-tag">European Shorthair</span>
                     </div>
                 </div>
             </div>
 
             <!-- Cat 8 -Branquinha -->
             <div class="cat-card" onclick="openModal('cat8')">
-                <div class="status-available">Disponível</div>
+                <div class="status-available">Available</div>
                 <img src="./assets/img/Branquinha.png" alt="Branquinha" class="cat-image">
                 <div class="cat-info">
                     <div class="cat-name">Branquinha</div>
                     <div class="cat-details">
-                        <span class="detail-tag">1 ano</span>
-                        <span class="detail-tag">Feminino</span>
-                        <span class="detail-tag">Europeu Comum</span>
+                        <span class="detail-tag">1 year</span>
+                        <span class="detail-tag">Female</span>
+                        <span class="detail-tag">European Shorthair</span>
                     </div>
                 </div>
             </div>
 
             <!-- Cat 9 - Brownie -->
             <div class="cat-card" onclick="openModal('cat9')">
-                <div class="status-available">Disponível</div>
+                <div class="status-available">Available</div>
                 <img src="./assets/img/Brownie.png" alt="Brownie" class="cat-image">
                 <div class="cat-info">
                     <div class="cat-name">Brownie</div>
                     <div class="cat-details">
-                        <span class="detail-tag">2 anos</span>
-                        <span class="detail-tag">Masculino</span>
-                        <span class="detail-tag">Siamês</span>
+                        <span class="detail-tag">2 years</span>
+                        <span class="detail-tag">Male</span>
+                        <span class="detail-tag">Siamese</span>
                     </div>
                 </div>
             </div>
 
             <!-- Cat 10 - Bruxinha -->
             <div class="cat-card" onclick="openModal('cat10')">
-                <div class="status-available">Disponível</div>
+                <div class="status-available">Available</div>
                 <img src="./assets/img/Bruxinha.png" alt="Bruxinha" class="cat-image">
                 <div class="cat-info">
                     <div class="cat-name">Bruxinha</div>
                     <div class="cat-details">
-                        <span class="detail-tag">2 anos</span>
-                        <span class="detail-tag">Feminino</span>
-                        <span class="detail-tag">Europeu Comum</span>
+                        <span class="detail-tag">2 years</span>
+                        <span class="detail-tag">Female</span>
+                        <span class="detail-tag">European Shorthair</span>
                     </div>
                 </div>
             </div>
 
             <!-- Cat 11 - Cléo -->
             <div class="cat-card" onclick="openModal('cat11')">
-                <div class="status-available">Disponível</div>
-                <img src="./assets/img/Cléo.png" alt="Cléo" class="cat-image">
+                <div class="status-available">Available</div>
+                <img src="./assets/img/Cléo.png" alt="Cléo" class="cat-image">
                 <div class="cat-info">
                     <div class="cat-name">Cléo</div>
                     <div class="cat-details">
-                        <span class="detail-tag">2 anos</span>
-                        <span class="detail-tag">Feminino</span>
-                        <span class="detail-tag">Europeu Comum</span>
+                        <span class="detail-tag">2 years</span>
+                        <span class="detail-tag">Female</span>
+                        <span class="detail-tag">European Shorthair</span>
                     </div>
                 </div>
             </div>
 
             <!-- Cat 12 - Daisy -->
             <div class="cat-card" onclick="openModal('cat12')">
-                <div class="status-available">Disponível</div>
+                <div class="status-available">Available</div>
                 <img src="./assets/img/Daisy.png" alt="Daisy" class="cat-image">
                 <div class="cat-info">
                     <div class="cat-name">Daisy</div>
                     <div class="cat-details">
-                        <span class="detail-tag">1 ano</span>
-                        <span class="detail-tag">Feminino</span>
-                        <span class="detail-tag">Domestico Pelo Longo</span>
+                        <span class="detail-tag">1 year</span>
+                        <span class="detail-tag">Female</span>
+                        <span class="detail-tag">Domestic Longhair</span>
                     </div>
                 </div>
             </div>
 
             <!-- Cat 13 - Donatella -->
             <div class="cat-card" onclick="openModal('cat13')">
-                <div class="status-available">Disponível</div>
+                <div class="status-available">Available</div>
                 <img src="./assets/img/Donatella.jpg" alt="Donatella" class="cat-image">
                 <div class="cat-info">
                     <div class="cat-name">Donatella</div>
                     <div class="cat-details">
-                        <span class="detail-tag">1 ano</span>
-                        <span class="detail-tag">Feminino</span>
-                        <span class="detail-tag">Europeu Comum</span>
+                        <span class="detail-tag">1 year</span>
+                        <span class="detail-tag">Female</span>
+                        <span class="detail-tag">European Shorthair</span>
                     </div>
                 </div>
             </div>
 
             <!-- Cat 14 - Douradinho -->
             <div class="cat-card" onclick="openModal('cat14')">
-                <div class="status-available">Disponível</div>
+                <div class="status-available">Available</div>
                 <img src="./assets/img/Douradinho.jpg" alt="Douradinho" class="cat-image">
                 <div class="cat-info">
                     <div class="cat-name">Douradinho</div>
                     <div class="cat-details">
-                        <span class="detail-tag">2 anos</span>
-                        <span class="detail-tag">Masculino</span>
-                        <span class="detail-tag">Europeu Comum</span>
+                        <span class="detail-tag">2 years</span>
+                        <span class="detail-tag">Male</span>
+                        <span class="detail-tag">European Shorthair</span>
                     </div>
                 </div>
             </div>
 
             <!-- Cat 15 - Eusébio (Zezéba) -->
             <div class="cat-card" onclick="openModal('cat15')">
-                <div class="status-available">Disponível</div>
-                <img src="./assets/img/Eusébio.jpg" alt="Eusébio (Zezéba)" class="cat-image">
+                <div class="status-available">Available</div>
+                <img src="./assets/img/Eusébio.jpg" alt="Eusébio (Zezéba)" class="cat-image">
                 <div class="cat-info">
                     <div class="cat-name">Eusébio (Zezéba)</div>
                     <div class="cat-details">
-                        <span class="detail-tag">5 anos</span>
-                        <span class="detail-tag">Masculino</span>
-                        <span class="detail-tag">Europeu Comum</span>
+                        <span class="detail-tag">5 years</span>
+                        <span class="detail-tag">Male</span>
+                        <span class="detail-tag">European Shorthair</span>
                     </div>
                 </div>
             </div>
 
             <!-- Cat 16 - Flash -->
             <div class="cat-card" onclick="openModal('cat16')">
-                <div class="status-available">Disponível</div>
+                <div class="status-available">Available</div>
                 <img src="./assets/img/Flash.jpg" alt="Flash" class="cat-image">
                 <div class="cat-info">
                     <div class="cat-name">Flash</div>
                     <div class="cat-details">
-                        <span class="detail-tag">3 anos</span>
-                        <span class="detail-tag">Masculino</span>
-                        <span class="detail-tag">Domestico Pelo Longo</span>
+                        <span class="detail-tag">3 years</span>
+                        <span class="detail-tag">Male</span>
+                        <span class="detail-tag">Domestic Longhair</span>
                     </div>
                 </div>
             </div>
 
             <!-- Cat 17 - Gafanhoto -->
             <div class="cat-card" onclick="openModal('cat17')">
-                <div class="status-available">Disponível</div>
+                <div class="status-available">Available</div>
                 <img src="./assets/img/Gafanhoto.jpg" alt="Gafanhoto" class="cat-image">
                 <div class="cat-info">
                     <div class="cat-name">Gafanhoto</div>
                     <div class="cat-details">
-                        <span class="detail-tag">1 ano</span>
-                        <span class="detail-tag">Masculino</span>
-                        <span class="detail-tag">Europeu Comum</span>
+                        <span class="detail-tag">1 year</span>
+                        <span class="detail-tag">Male</span>
+                        <span class="detail-tag">European Shorthair</span>
                     </div>
                 </div>
             </div>
 
             <!-- Cat 18 - Gaio -->
             <div class="cat-card" onclick="openModal('cat18')">
-                <div class="status-available">Disponível</div>
+                <div class="status-available">Available</div>
                 <img src="./assets/img/Gaio.jpg" alt="Gaio" class="cat-image">
                 <div class="cat-info">
                     <div class="cat-name">Gaio</div>
                     <div class="cat-details">
-                        <span class="detail-tag">2 anos</span>
-                        <span class="detail-tag">Masculino</span>
+                        <span class="detail-tag">2 years</span>
+                        <span class="detail-tag">Male</span>
                         <span class="detail-tag">Chartreux</span>
                     </div>
                 </div>
@@ -478,13 +479,13 @@
 
             <!-- Cat 19 - Harley Quinn -->
             <div class="cat-card" onclick="openModal('cat19')">
-                <div class="status-available">Disponível</div>
+                <div class="status-available">Available</div>
                 <img src="./assets/img/Harley Quinn.jpg" alt="Harley Quinn" class="cat-image">
                 <div class="cat-info">
                     <div class="cat-name">Harley Quinn</div>
                     <div class="cat-details">
-                        <span class="detail-tag">10 anos</span>
-                        <span class="detail-tag">Feminino</span>
+                        <span class="detail-tag">10 years</span>
+                        <span class="detail-tag">Female</span>
                         <span class="detail-tag">Calico</span>
                     </div>
                 </div>
@@ -492,97 +493,97 @@
 
             <!-- Cat 20 - Isa -->
             <div class="cat-card" onclick="openModal('cat20')">
-                <div class="status-available">Disponível</div>
+                <div class="status-available">Available</div>
                 <img src="./assets/img/Isa.jpg" alt="Isa" class="cat-image">
                 <div class="cat-info">
                     <div class="cat-name">Isa</div>
                     <div class="cat-details">
-                        <span class="detail-tag">10 meses</span>
-                        <span class="detail-tag">Feminino</span>
-                        <span class="detail-tag">Europeu Comum</span>
+                        <span class="detail-tag">10 months</span>
+                        <span class="detail-tag">Female</span>
+                        <span class="detail-tag">European Shorthair</span>
                     </div>
                 </div>
             </div>
 
             <!-- Cat 21 - Jubileu -->
             <div class="cat-card" onclick="openModal('cat21')">
-                <div class="status-available">Disponível</div>
+                <div class="status-available">Available</div>
                 <img src="./assets/img/Jubileu.jpg" alt="Jubileu" class="cat-image">
                 <div class="cat-info">
                     <div class="cat-name">Jubileu</div>
                     <div class="cat-details">
-                        <span class="detail-tag">5 anos</span>
-                        <span class="detail-tag">Masculino</span>
-                        <span class="detail-tag">Europeu Comum</span>
+                        <span class="detail-tag">5 years</span>
+                        <span class="detail-tag">Male</span>
+                        <span class="detail-tag">European Shorthair</span>
                     </div>
                 </div>
             </div>
 
             <!-- Cat 22 - Judy -->
             <div class="cat-card" onclick="openModal('cat22')">
-                <div class="status-available">Disponível</div>
+                <div class="status-available">Available</div>
                 <img src="./assets/img/Judy.jpg" alt="Judy" class="cat-image">
                 <div class="cat-info">
                     <div class="cat-name">Judy</div>
                     <div class="cat-details">
-                        <span class="detail-tag">10 anos</span>
-                        <span class="detail-tag">Feminino</span>
-                        <span class="detail-tag">Europeu Comum</span>
+                        <span class="detail-tag">10 years</span>
+                        <span class="detail-tag">Female</span>
+                        <span class="detail-tag">European Shorthair</span>
                     </div>
                 </div>
             </div>
 
             <!-- Cat 23 - Kika -->
             <div class="cat-card" onclick="openModal('cat23')">
-                <div class="status-available">Disponível</div>
+                <div class="status-available">Available</div>
                 <img src="./assets/img/Kika.jpg" alt="Kika" class="cat-image">
                 <div class="cat-info">
                     <div class="cat-name">Kika</div>
                     <div class="cat-details">
-                        <span class="detail-tag">1 ano</span>
-                        <span class="detail-tag">Feminino</span>
-                        <span class="detail-tag">Domestico Pelo Longo</span>
+                        <span class="detail-tag">1 year</span>
+                        <span class="detail-tag">Female</span>
+                        <span class="detail-tag">Domestic Longhair</span>
                     </div>
                 </div>
             </div>
 
             <!-- Cat 24 - Lamaçães -->
             <div class="cat-card" onclick="openModal('cat24')">
-                <div class="status-available">Disponível</div>
-                <img src="./assets/img/Lamaçães.jpg" alt="Lamaçães" class="cat-image">
+                <div class="status-available">Available</div>
+                <img src="./assets/img/Lamaçães.jpg" alt="Lamaçães" class="cat-image">
                 <div class="cat-info">
                     <div class="cat-name">Lamaçães</div>
                     <div class="cat-details">
-                        <span class="detail-tag">3 anos</span>
-                        <span class="detail-tag">Masculino</span>
-                        <span class="detail-tag">Europeu Comum</span>
+                        <span class="detail-tag">3 years</span>
+                        <span class="detail-tag">Male</span>
+                        <span class="detail-tag">European Shorthair</span>
                     </div>
                 </div>
             </div>
 
             <!-- Cat 25 - Link -->
             <div class="cat-card" onclick="openModal('cat25')">
-                <div class="status-available">Disponível</div>
+                <div class="status-available">Available</div>
                 <img src="./assets/img/Link.jpg" alt="Link" class="cat-image">
                 <div class="cat-info">
                     <div class="cat-name">Link</div>
                     <div class="cat-details">
-                        <span class="detail-tag">6 anos</span>
-                        <span class="detail-tag">Masculino</span>
-                        <span class="detail-tag">Europeu Comum</span>
+                        <span class="detail-tag">6 years</span>
+                        <span class="detail-tag">Male</span>
+                        <span class="detail-tag">European Shorthair</span>
                     </div>
                 </div>
             </div>
 
             <!-- Cat 26 - Maria Joaquina (Quininha) -->
             <div class="cat-card" onclick="openModal('cat26')">
-                <div class="status-available">Disponível</div>
+                <div class="status-available">Available</div>
                 <img src="./assets/img/Maria Joaquina (Quininha).jpg" alt="Maria Joaquina (Quininha)" class="cat-image">
                 <div class="cat-info">
                     <div class="cat-name">Maria Joaquina (Quininha)</div>
                     <div class="cat-details">
-                        <span class="detail-tag">1 ano</span>
-                        <span class="detail-tag">Feminino</span>
+                        <span class="detail-tag">1 year</span>
+                        <span class="detail-tag">Female</span>
                         <span class="detail-tag">Calico</span>
                     </div>
                 </div>
@@ -590,83 +591,83 @@
 
             <!-- Cat 27 - Mariano -->
             <div class="cat-card" onclick="openModal('cat27')">
-                <div class="status-available">Disponível</div>
+                <div class="status-available">Available</div>
                 <img src="./assets/img/Mariano.jpg" alt="Mariano" class="cat-image">
                 <div class="cat-info">
                     <div class="cat-name">Mariano</div>
                     <div class="cat-details">
-                        <span class="detail-tag">5 anos</span>
-                        <span class="detail-tag">Masculino</span>
-                        <span class="detail-tag">Europeu Comum</span>
+                        <span class="detail-tag">5 years</span>
+                        <span class="detail-tag">Male</span>
+                        <span class="detail-tag">European Shorthair</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Cat 28 - Meia de Leite (Camões) -->
+            <!-- Cat 28 - Meia de Leite (Camões) -->
             <div class="cat-card" onclick="openModal('cat28')">
-                <div class="status-available">Disponível</div>
-                <img src="./assets/img/Meia de Leite (Camões).jpg" alt="Meia de Leite (Camões)" class="cat-image">
+                <div class="status-available">Available</div>
+                <img src="./assets/img/Meia de Leite (Camões).jpg" alt="Meia de Leite (Camões)" class="cat-image">
                 <div class="cat-info">
-                    <div class="cat-name">Meia de Leite (Camões)</div>
+                    <div class="cat-name">Meia de Leite (Camões)</div>
                     <div class="cat-details">
-                        <span class="detail-tag">9 meses</span>
-                        <span class="detail-tag">Masculino</span>
-                        <span class="detail-tag">Siamês</span>
+                        <span class="detail-tag">9 months</span>
+                        <span class="detail-tag">Male</span>
+                        <span class="detail-tag">Siamese</span>
                     </div>
                 </div>
             </div>
 
             <!-- Cat 29 - Mr. Blind -->
             <div class="cat-card" onclick="openModal('cat29')">
-                <div class="status-available">Disponível</div>
+                <div class="status-available">Available</div>
                 <img src="./assets/img/Mr. Blind.jpg" alt="Mr. Blind" class="cat-image">
                 <div class="cat-info">
                     <div class="cat-name">Mr. Blind</div>
                     <div class="cat-details">
-                        <span class="detail-tag">5 anos</span>
-                        <span class="detail-tag">Masculino</span>
-                        <span class="detail-tag">Burmês</span>
+                        <span class="detail-tag">5 years</span>
+                        <span class="detail-tag">Male</span>
+                        <span class="detail-tag">Burmese</span>
                     </div>
                 </div>
             </div>
 
             <!-- Cat 30 - Olavo -->
             <div class="cat-card" onclick="openModal('cat30')">
-                <div class="status-available">Disponível</div>
+                <div class="status-available">Available</div>
                 <img src="./assets/img/Olavo.jpg" alt="Olavo" class="cat-image">
                 <div class="cat-info">
                     <div class="cat-name">Olavo</div>
                     <div class="cat-details">
-                        <span class="detail-tag">2 anos</span>
-                        <span class="detail-tag">Masculino</span>
-                        <span class="detail-tag">Europeu Comum</span>
+                        <span class="detail-tag">2 years</span>
+                        <span class="detail-tag">Male</span>
+                        <span class="detail-tag">European Shorthair</span>
                     </div>
                 </div>
             </div>
 
             <!-- Cat 31 - Picolé -->
             <div class="cat-card" onclick="openModal('cat31')">
-                <div class="status-available">Disponível</div>
+                <div class="status-available">Available</div>
                 <img src="./assets/img/Picolé.jpg" alt="Picolé" class="cat-image">
                 <div class="cat-info">
                     <div class="cat-name">Picolé</div>
                     <div class="cat-details">
-                        <span class="detail-tag">1 ano</span>
-                        <span class="detail-tag">Feminino</span>
-                        <span class="detail-tag">Europeu Comum</span>
+                        <span class="detail-tag">1 year</span>
+                        <span class="detail-tag">Female</span>
+                        <span class="detail-tag">European Shorthair</span>
                     </div>
                 </div>
             </div>
 
             <!-- Cat 32 - Príncipe -->
             <div class="cat-card" onclick="openModal('cat32')">
-                <div class="status-available">Disponível</div>
+                <div class="status-available">Available</div>
                 <img src="./assets/img/Príncipe.jpg" alt="Príncipe" class="cat-image">
                 <div class="cat-info">
                     <div class="cat-name">Príncipe</div>
                     <div class="cat-details">
-                        <span class="detail-tag">10 anos</span>
-                        <span class="detail-tag">Masculino</span>
+                        <span class="detail-tag">10 years</span>
+                        <span class="detail-tag">Male</span>
                         <span class="detail-tag">Persian</span>
                     </div>
                 </div>
@@ -674,140 +675,140 @@
 
             <!-- Cat 33 - Salmiaki -->
             <div class="cat-card" onclick="openModal('cat33')">
-                <div class="status-available">Disponível</div>
+                <div class="status-available">Available</div>
                 <img src="./assets/img/Salmiaki.jpg" alt="Salmiaki" class="cat-image">
                 <div class="cat-info">
                     <div class="cat-name">Salmiaki</div>
                     <div class="cat-details">
-                        <span class="detail-tag">1 ano</span>
-                        <span class="detail-tag">Feminino</span>
-                        <span class="detail-tag">Europeu Comum</span>
+                        <span class="detail-tag">1 year</span>
+                        <span class="detail-tag">Female</span>
+                        <span class="detail-tag">European Shorthair</span>
                     </div>
                 </div>
             </div>
 
             <!-- Cat 34 - Speedy -->
             <div class="cat-card" onclick="openModal('cat34')">
-                <div class="status-available">Disponível</div>
+                <div class="status-available">Available</div>
                 <img src="./assets/img/Speedy.jpg" alt="Speedy" class="cat-image">
                 <div class="cat-info">
                     <div class="cat-name">Speedy</div>
                     <div class="cat-details">
-                        <span class="detail-tag">3 anos</span>
-                        <span class="detail-tag">Masculino</span>
-                        <span class="detail-tag">Europeu Comum</span>
+                        <span class="detail-tag">3 years</span>
+                        <span class="detail-tag">Male</span>
+                        <span class="detail-tag">European Shorthair</span>
                     </div>
                 </div>
             </div>
 
             <!-- Cat 35 - Survivor -->
             <div class="cat-card" onclick="openModal('cat35')">
-                <div class="status-available">Disponível</div>
+                <div class="status-available">Available</div>
                 <img src="./assets/img/Survivor.jpg" alt="Survivor" class="cat-image">
                 <div class="cat-info">
                     <div class="cat-name">Survivor</div>
                     <div class="cat-details">
-                        <span class="detail-tag">2 anos</span>
-                        <span class="detail-tag">Masculino</span>
-                        <span class="detail-tag">Europeu Comum</span>
+                        <span class="detail-tag">2 years</span>
+                        <span class="detail-tag">Male</span>
+                        <span class="detail-tag">European Shorthair</span>
                     </div>
                 </div>
             </div>
 
             <!-- Cat 36 - Thor -->
             <div class="cat-card" onclick="openModal('cat36')">
-                <div class="status-available">Disponível</div>
+                <div class="status-available">Available</div>
                 <img src="./assets/img/Thor.jpg" alt="Thor" class="cat-image">
                 <div class="cat-info">
                     <div class="cat-name">Thor</div>
                     <div class="cat-details">
-                        <span class="detail-tag">4 anos</span>
-                        <span class="detail-tag">Masculino</span>
-                        <span class="detail-tag">Domestico Pelo Longo</span>
+                        <span class="detail-tag">4 years</span>
+                        <span class="detail-tag">Male</span>
+                        <span class="detail-tag">Domestic Longhair</span>
                     </div>
                 </div>
             </div>
 
             <!-- Cat 37 - Tina -->
             <div class="cat-card" onclick="openModal('cat37')">
-                <div class="status-available">Disponível</div>
+                <div class="status-available">Available</div>
                 <img src="./assets/img/Tina.jpg" alt="Tina" class="cat-image">
                 <div class="cat-info">
                     <div class="cat-name">Tina</div>
                     <div class="cat-details">
-                        <span class="detail-tag">6 anos</span>
-                        <span class="detail-tag">Feminino</span>
-                        <span class="detail-tag">Europeu Comum</span>
+                        <span class="detail-tag">6 years</span>
+                        <span class="detail-tag">Female</span>
+                        <span class="detail-tag">European Shorthair</span>
                     </div>
                 </div>
             </div>
 
             <!-- Cat 38 - Tontinha -->
             <div class="cat-card" onclick="openModal('cat38')">
-                <div class="status-available">Disponível</div>
+                <div class="status-available">Available</div>
                 <img src="./assets/img/Tontinha.jpg" alt="Tontinha" class="cat-image">
                 <div class="cat-info">
                     <div class="cat-name">Tontinha</div>
                     <div class="cat-details">
-                        <span class="detail-tag">2 anos</span>
-                        <span class="detail-tag">Feminino</span>
-                        <span class="detail-tag">Siamês</span>
+                        <span class="detail-tag">2 years</span>
+                        <span class="detail-tag">Female</span>
+                        <span class="detail-tag">Siamese</span>
                     </div>
                 </div>
             </div>
 
             <!-- Cat 39 - Vegeta -->
             <div class="cat-card" onclick="openModal('cat39')">
-                <div class="status-available">Disponível</div>
+                <div class="status-available">Available</div>
                 <img src="./assets/img/Vegeta.jpg" alt="Vegeta" class="cat-image">
                 <div class="cat-info">
                     <div class="cat-name">Vegeta</div>
                     <div class="cat-details">
-                        <span class="detail-tag">4 anos</span>
-                        <span class="detail-tag">Masculino</span>
-                        <span class="detail-tag">Europeu Comum</span>
+                        <span class="detail-tag">4 years</span>
+                        <span class="detail-tag">Male</span>
+                        <span class="detail-tag">European Shorthair</span>
                     </div>
                 </div>
             </div>
 
             <!-- Cat 40 - Vitória -->
             <div class="cat-card" onclick="openModal('cat40')">
-                <div class="status-available">Disponível</div>
+                <div class="status-available">Available</div>
                 <img src="./assets/img/Vitória.jpg" alt="Vitória" class="cat-image">
                 <div class="cat-info">
                     <div class="cat-name">Vitória</div>
                     <div class="cat-details">
-                        <span class="detail-tag">4 anos</span>
-                        <span class="detail-tag">Feminino</span>
-                        <span class="detail-tag">Siamês</span>
+                        <span class="detail-tag">4 years</span>
+                        <span class="detail-tag">Female</span>
+                        <span class="detail-tag">Siamese</span>
                     </div>
                 </div>
             </div>
 
             <!-- Cat 41 - Xerife -->
             <div class="cat-card" onclick="openModal('cat41')">
-                <div class="status-available">Disponível</div>
+                <div class="status-available">Available</div>
                 <img src="./assets/img/Xerife.jpg" alt="Xerife" class="cat-image">
                 <div class="cat-info">
                     <div class="cat-name">Xerife</div>
                     <div class="cat-details">
-                        <span class="detail-tag">5 anos</span>
-                        <span class="detail-tag">Masculino</span>
-                        <span class="detail-tag">Domestico Pelo Longo</span>
+                        <span class="detail-tag">5 years</span>
+                        <span class="detail-tag">Male</span>
+                        <span class="detail-tag">Domestic Longhair</span>
                     </div>
                 </div>
             </div>
 
             <!-- Cat 42 - Zuzu -->
             <div class="cat-card" onclick="openModal('cat42')">
-                <div class="status-available">Disponível</div>
+                <div class="status-available">Available</div>
                 <img src="./assets/img/Zuzu.jpg" alt="Zuzu" class="cat-image">
                 <div class="cat-info">
                     <div class="cat-name">Zuzu</div>
                     <div class="cat-details">
-                        <span class="detail-tag">4 anos</span>
-                        <span class="detail-tag">Feminino</span>
-                        <span class="detail-tag">Europeu Comum</span>
+                        <span class="detail-tag">4 years</span>
+                        <span class="detail-tag">Female</span>
+                        <span class="detail-tag">European Shorthair</span>
                     </div>
                 </div>
             </div>
@@ -828,39 +829,35 @@
                 </div>
                 <div class="modal-info">
                     <h2 id="modalCatName" class="modal-cat-name"></h2>
-                    <span class="modal-status">Disponível para adoção</span>
-
+                    <span class="modal-status">Available for adoption</span>
                     <div class="info-grid">
                         <div class="info-item">
-                            <div class="info-label">Nome</div>
+                            <div class="info-label">Name</div>
                             <div id="catName" class="info-value"></div>
                         </div>
                         <div class="info-item">
-                            <div class="info-label">Sexo</div>
+                            <div class="info-label">Gender</div>
                             <div id="catGender" class="info-value"></div>
                         </div>
                         <div class="info-item">
-                            <div class="info-label">Idade</div>
+                            <div class="info-label">Age</div>
                             <div id="catAge" class="info-value"></div>
                         </div>
                         <div class="info-item">
-                            <div class="info-label">Raça</div>
+                            <div class="info-label">Breed</div>
                             <div id="catBreed" class="info-value"></div>
                         </div>
                     </div>
-
                     <div class="compatibility-section">
-                        <h3 class="compatibility-title">Detalhes importantes</h3>
+                        <h3 class="compatibility-title">Important details</h3>
                         <div id="compatibilityTags" class="compatibility-tags">
                             <!-- Tags will be added dynamically -->
                         </div>
                     </div>
-
                     <div class="modal-description">
-                        <h3>Descrição</h3>
+                        <h3>Description</h3>
                         <p id="catDescription"></p>
                     </div>
-
                     <a href="tel:+351963260200" class="contact-button">
                         +351 963 260 200
                     </a>
@@ -876,25 +873,24 @@
         <div class="contact-container">
 
             <div class="section-header">
-                <h2 class="fade-in">Entre em <span class="italic-text">Contato</span></h2>
-                <p class="section-subheading fade-in">Pronto para adotar ou tem dúvidas? Entre em contato conosco!</p>
+                <h2 class="fade-in">Get in <span class="italic-text">Touch</span></h2>
+                <p class="section-subheading fade-in">Ready to adopt or have questions? Contact us!</p>
             </div>
 
             <div class="contact-content">
                 <!-- LEFT SIDE - FORM (40%) -->
                 <div class="contact-left fade-in">
                     <div class="contact-form">
-                        <h3>Envie uma Mensagem</h3>
+                        <h3>Send a Message</h3>
 
-                        <!-- <form action="https://formspree.io/f/mkgvewpy" method="POST" id="contactForm"> -->
                         <form action="https://formspree.io/f/mkgvewpy" method="POST">
                             <div class="form-group form-row">
                                 <div>
-                                    <label for="firstName">Nome *</label>
+                                    <label for="firstName">First Name *</label>
                                     <input type="text" id="firstName" name="firstName" required>
                                 </div>
                                 <div>
-                                    <label for="lastName">Sobrenome *</label>
+                                    <label for="lastName">Last Name *</label>
                                     <input type="text" id="lastName" name="lastName" required>
                                 </div>
                             </div>
@@ -905,30 +901,30 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="phone">Telefone</label>
+                                <label for="phone">Phone</label>
                                 <input type="tel" id="phone" name="phone">
                             </div>
 
                             <div class="form-group">
-                                <label for="subject">Assunto</label>
+                                <label for="subject">Subject</label>
                                 <select id="subject" name="subject">
-                                    <option value="">Selecione um assunto</option>
-                                    <option value="adocao">Adoção</option>
-                                    <option value="voluntariado">Voluntariado</option>
-                                    <option value="doacao">Doação</option>
-                                    <option value="informacoes">Informações Gerais</option>
-                                    <option value="outro">Outro</option>
+                                    <option value="">Select a subject</option>
+                                    <option value="adoption">Adoption</option>
+                                    <option value="volunteering">Volunteering</option>
+                                    <option value="donation">Donation</option>
+                                    <option value="general">General Information</option>
+                                    <option value="other">Other</option>
                                 </select>
                             </div>
 
                             <div class="form-group">
-                                <label for="message">Mensagem *</label>
-                                <textarea id="message" name="message"
-                                    placeholder="Conte-nos como podemos ajudar você..." required></textarea>
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" placeholder="Tell us how we can help you..."
+                                    required></textarea>
                             </div>
 
                             <button type="submit" class="submit-btn">
-                                Enviar Mensagem
+                                Send Message
                             </button>
                         </form>
                     </div>
@@ -936,16 +932,16 @@
 
                 <!-- RIGHT SIDE - MAP (60%) -->
                 <div class="contact-right fade-in">
-                   <!--  <div class="map-container">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2976.7842474845624!2d-8.423774584655!3d41.555031479246676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd24ffd9f5b8e7e7%3A0x7e9c8f8e8e8e8e8e!2sRua%20Fonte%20do%20Mundo%2C%2040%2C%204700-383%20Braga%2C%20Portugal!5e0!3m2!1spt!2spt!4v1652345678901!5m2!1spt!2spt"
-                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-                            title="Localização da Amigatos da Milkinha">
-                        </iframe>
-                    </div> -->
+                    <!--  <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2976.7842474845624!2d-8.423774584655!3d41.555031479246676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd24ffd9f5b8e7e7%3A0x7e9c8f8e8e8e8e8e!2sRua%20Fonte%20do%20Mundo%2C%2040%2C%204700-383%20Braga%2C%20Portugal!5e0!3m2!1spt!2spt!4v1652345678901!5m2!1spt!2spt"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                        title="Localização da Amigatos da Milkinha">
+                    </iframe>
+                </div> -->
 
                     <div class="image-container">
-                        <img src="assets/img/kid-with-a-cat.jpg" alt="Bebê com gatinho" class="contact-image">
+                        <img src="./assets/img/kid-with-a-cat.jpg" alt="Baby with kitten" class="contact-image">
                     </div>
 
                     <div class="contact-info-new">
@@ -960,111 +956,13 @@
                         </div>
 
                         <!-- <div class="contact-info-item">
-                            <div class="contact-icon contact-icon-location"></div>
-                            <p>Rua Fonte do Mundo, nº 40, 4700-383 Braga</p>
-                        </div> -->
+                        <div class="contact-icon contact-icon-location"></div>
+                        <p>Rua Fonte do Mundo, nº 40, 4700-383 Braga</p>
+                    </div> -->
                     </div>
                 </div>
             </div>
         </div>
-        <script>
-            // Contact Form JavaScript for GitHub Pages
-            document.addEventListener('DOMContentLoaded', function () {
-                const contactForm = document.getElementById('contactForm');
-
-                if (contactForm) {
-                    contactForm.addEventListener('submit', function (e) {
-                        e.preventDefault();
-
-                        const form = this;
-                        const formData = new FormData(form);
-                        const submitBtn = form.querySelector('.submit-btn');
-                        const originalText = submitBtn.textContent;
-
-                        // Show loading state
-                        submitBtn.textContent = 'Enviando...';
-                        submitBtn.disabled = true;
-
-                        // Remove any existing messages
-                        const existingMessage = form.querySelector('.form-message');
-                        if (existingMessage) {
-                            existingMessage.remove();
-                        }
-
-                        // For GitHub Pages, you'll need to replace this URL with your actual form service
-                        // Options: Formspree, Netlify Forms, EmailJS, etc.
-                        fetch('https://formspree.io/f/mkgvewpy', {
-                            method: 'POST',
-                            body: formData,
-                            headers: {
-                                'Accept': 'application/json'
-                            }
-                        })
-                            .then(response => {
-                                if (response.ok) {
-                                    // Show success message
-                                    const successMessage = document.createElement('div');
-                                    successMessage.className = 'form-message success';
-                                    successMessage.textContent = 'Mensagem enviada com sucesso! Entraremos em contato em breve.';
-                                    form.insertBefore(successMessage, form.firstChild);
-
-                                    // Reset form
-                                    form.reset();
-                                } else {
-                                    throw new Error('Erro no envio');
-                                }
-                            })
-                            .catch(error => {
-                                // Show error message
-                                const errorMessage = document.createElement('div');
-                                errorMessage.className = 'form-message error';
-                                errorMessage.textContent = 'Erro ao enviar mensagem. Tente novamente ou entre em contato diretamente.';
-                                form.insertBefore(errorMessage, form.firstChild);
-                            })
-                            .finally(() => {
-                                // Reset button
-                                submitBtn.textContent = originalText;
-                                submitBtn.disabled = false;
-                            });
-                    });
-                }
-            });
-
-            // Alternative: Simple mailto fallback for GitHub Pages
-            function sendEmailFallback() {
-                const firstName = document.getElementById('firstName')?.value || '';
-                const lastName = document.getElementById('lastName')?.value || '';
-                const email = document.getElementById('email')?.value || '';
-                const phone = document.getElementById('phone')?.value || '';
-                const subject = document.getElementById('subject')?.value || '';
-                const message = document.getElementById('message')?.value || '';
-
-                const emailSubject = subject ? `[${subject}] Contato do site` : 'Contato do site';
-                const emailBody = `Nome: ${firstName} ${lastName}
-        Email: ${email}
-        Telefone: ${phone}
-        Assunto: ${subject}
-
-        Mensagem:
-        ${message}`;
-
-                const mailtoLink = `mailto:info@amigatosdamilkinha.pt?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
-                window.location.href = mailtoLink;
-            }
-
-            // To use mailto fallback instead of Formspree, uncomment the lines below:
-            /*
-            document.addEventListener('DOMContentLoaded', function() {
-                const contactForm = document.getElementById('contactForm');
-                if (contactForm) {
-                    contactForm.addEventListener('submit', function(e) { 
-                        e.preventDefault(); 
-                        sendEmailFallback(); 
-                    });
-                }
-            });
-            */
-        </script>
     </section>
 
     <!-- ============================================
@@ -1091,8 +989,7 @@
                             <span class="footer-logo-text">Amigatos da Milkinha</span>
                         </div>
                         <p class="footer-description">
-                            Salvando vidas felinas, uma adoção de cada vez. Conectando gatos especiais com famílias
-                            amorosas.
+                            Saving feline lives, one adoption at a time. Connecting special cats with loving families.
                         </p>
                         <div class="footer-social">
                             <a href="https://instagram.com/amigatosdamilkinha" target="_blank" aria-label="Instagram">
@@ -1132,20 +1029,20 @@
                     <div class="footer-section">
                         <h4>Menu</h4>
                         <ul class="footer-links">
-                            <li><a href="index.html">Início</a></li>
-                            <li><a href="#sobre">Sobre Nós</a></li>
-                            <li><a href="cats_grid.html">Nossos Gatos</a></li>
-                            <li><a href="#servicos">Serviços</a></li>
+                            <li><a href="EN-index.html">Home</a></li>
+                            <li><a href="#sobre">About Us</a></li>
+                            <li><a href="EN-cats_grid.html">Our Cats</a></li>
+                            <li><a href="#servicos">Services</a></li>
                             <li><a href="#faq">FAQ</a></li>
-                            <li><a href="#contato">Contato</a></li>
+                            <li><a href="#contato">Contact</a></li>
                         </ul>
                     </div>
 
                     <!-- Contacts -->
                     <div class="footer-section">
-                        <h4>Contatos</h4>
+                        <h4>Contacts</h4>
                         <div class="contact-item">
-                            <img src="./assets/img/Phone Calling Rounded.svg" alt="Telefone" class="contact-icon">
+                            <img src="./assets/img/Phone Calling Rounded.svg" alt="Phone" class="contact-icon">
                             <span>+351 963 260 200</span>
                         </div>
                         <div class="contact-item">
@@ -1153,13 +1050,13 @@
                             <span>info@amigatosdamilkinha.pt</span>
                         </div>
                         <!-- <div class="contact-item">
-                            <img src="./assets/img/Map Point.svg" alt="Endereço" class="contact-icon">
-                            <span>Rua Fonte do Mundo, nº 40<br>4700-383 Braga, Portugal</span>
-                        </div> -->
-                        <div class="contact-item">
-                            <img src="./assets/img/Case.svg" alt="Horário" class="contact-icon">
-                            <span>Seg-Dom 9:00-18:00</span>
-                        </div>
+                        <img src="./assets/img/Map Point.svg" alt="Address" class="contact-icon">
+                        <span>Rua Fonte do Mundo, nº 40<br>4700-383 Braga, Portugal</span>
+                    </div> -->
+                        <!-- <div class="contact-item">
+                        <img src="./assets/img/Case.svg" alt="Hours" class="contact-icon">
+                        <span>Mon-Sun 9:00-18:00</span>
+                    </div> -->
                     </div>
                 </div>
 
@@ -1169,11 +1066,11 @@
                             <p>Made by <a href="http://yanaharcourt.dev" class="designer-link">Yana Harcourt</a></p>
                         </div>
                         <div class="footer-center">
-                            <p>© 2025 Amigatos da Milkinha. Todos os Direitos Reservados.</p>
+                            <p>© 2025 Amigatos da Milkinha. All Rights Reserved.</p>
                         </div>
                         <div class="footer-right">
-                            <a href="#">Termos</a>
-                            <a href="#">Privacidade</a>
+                            <a href="#">Terms</a>
+                            <a href="#">Privacy</a>
                             <a href="#">Cookies</a>
                         </div>
                     </div>
@@ -1190,11 +1087,11 @@
         const catData = {
             cat1: {
                 name: 'Adolfina',
-                gender: 'Feminino',
-                age: '1 ano',
-                breed: 'Europeu Comum',
-                compatibility: ['Simpático com outros gatos', 'Simpático com crianças'],
-                description: 'Muito curiosa e simpática, esta linda mamã foi resgatada primeiro e só depois se descobriu que tinha deixado 4 gatinhas para trás. Logo foram resgatadas também e a mamã ficou grata desde então. Agora com as filhotas crescidas, prefere a companhia e o colo dos humanos. Mãe da Boganga, Mel e Isa.',
+                gender: 'Female',
+                age: '1 year',
+                breed: 'European Shorthair',
+                compatibility: ['Friendly with other cats', 'Friendly with children'],
+                description: 'Very curious and friendly, this beautiful mama was rescued first and only later we discovered she had left 4 kittens behind. They were rescued too and mama has been grateful ever since. Now with her daughters grown up, she prefers the company and lap of humans. Mother of Boganga, Mel and Isa.',
                 images: [
                     './assets/img/Adolfina.png',
                     'https://images.unsplash.com/photo-1533738363-b7f9aef128ce?w=600&h=400&fit=crop',
@@ -1203,11 +1100,11 @@
             },
             cat2: {
                 name: 'Baunilha',
-                gender: 'Masculino',
-                age: '2 anos',
-                breed: 'Europeu Comum',
-                compatibility: ['Simpático com outros gatos', 'Simpático com crianças', 'FIV: Positivo', 'FeLV: Negativo'],
-                description: 'É o melhor amigo do Gafanhoto e o amigo mais chato da Quininha. Adora uma boa brincadeira, mas não dispensa de mimo e de um bom colo. Chegou ao abrigo muito stressado, mas junto dos amiguinhos virou um dos gatos mais simpático e meigos.',
+                gender: 'Male',
+                age: '2 years',
+                breed: 'European Shorthair',
+                compatibility: ['Friendly with other cats', 'Friendly with children', 'FIV: Positive', 'FeLV: Negative'],
+                description: 'He is Gafanhoto\'s best friend and Quininha\'s most annoying friend. Loves a good game, but doesn\'t give up cuddles and a good lap. He arrived at the shelter very stressed, but among his little friends he became one of the most friendly and gentle cats.',
                 images: [
                     './assets/img/Baunilha.png',
                     'https://images.unsplash.com/photo-1529257414772-1960b7bea4eb?w=600&h=400&fit=crop',
@@ -1216,11 +1113,11 @@
             },
             cat3: {
                 name: 'Bino',
-                gender: 'Masculino',
-                age: '1 ano',
-                breed: 'Europeu Comum',
-                compatibility: ['Simpático com outros gatos', 'Simpático com crianças'],
-                description: 'Este jovem simpático, dá sempre um saltinho quando lhe fazemos festinhas na cabeça. Começou por ser um gatinho muito assustado, mas com o tempo apercebeu-se de que não há nada melhor que uma boa festinha (e um bom patê).',
+                gender: 'Male',
+                age: '1 year',
+                breed: 'European Shorthair',
+                compatibility: ['Friendly with other cats', 'Friendly with children'],
+                description: 'This friendly young cat always gives a little jump when we pet his head. He started as a very scared kitten, but over time he realized there\'s nothing better than a good pet (and good wet food).',
                 images: [
                     './assets/img/Bino.png',
                     'https://images.unsplash.com/photo-1571566882372-1598d88abd90?w=600&h=400&fit=crop',
@@ -1229,11 +1126,11 @@
             },
             cat4: {
                 name: 'Boganga',
-                gender: 'Feminino',
-                age: '10 meses',
-                breed: 'Europeu Comum',
-                compatibility: ['Simpático com outros gatos'],
-                description: 'Ainda bastante tímida, mas só com os humanos. É muito curiosa e adora brincar com as irmãs, com os amiguinhos e de chatear a mãe. Filhota da Adolfina e irmã da Mel e da Isa.',
+                gender: 'Female',
+                age: '10 months',
+                breed: 'European Shorthair',
+                compatibility: ['Friendly with other cats'],
+                description: 'Still quite shy, but only with humans. She\'s very curious and loves to play with her sisters, with friends and to annoy her mother. Daughter of Adolfina and sister of Mel and Isa.',
                 images: [
                     './assets/img/Boganga.png',
                     'https://images.unsplash.com/photo-1551717743-49959800b1f6?w=600&h=400&fit=crop',
@@ -1242,11 +1139,11 @@
             },
             cat5: {
                 name: 'Boris',
-                gender: 'Masculino',
-                age: '10 anos',
-                breed: 'Europeu Comum',
+                gender: 'Male',
+                age: '10 years',
+                breed: 'European Shorthair',
                 compatibility: [''],
-                description: 'O Boris apareceu um dia perto da casa do Sr. Avelino com uma coleira verde. Parecendo um pouco perdido, o Sr. Avelino resolveu acolhê-lo e ajuda-lo a encontrar os donos. Sem sorte, este grande e simpático rapaz procura agora uma nova casa.',
+                description: 'Boris appeared one day near Mr. Avelino\'s house with a green collar. Looking a bit lost, Mr. Avelino decided to take him in and help find his owners. With no luck, this big and friendly guy is now looking for a new home.',
                 images: [
                     './assets/img/Boris.png',
                     'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
@@ -1255,11 +1152,11 @@
             },
             cat6: {
                 name: 'Bowie',
-                gender: 'Feminino',
-                age: '1 ano',
-                breed: 'Europeu Comum',
-                compatibility: ['Simpático com outros gatos'],
-                description: 'Esta tímida, mas muito querida, mamã foi resgatada com os seu 4 filhotes ainda pequeninos. Adotados 3 deles, a Bowie gosta de passar os seus dias a dormitar à janela e a observar de cima o que se passa no abrigo.',
+                gender: 'Female',
+                age: '1 year',
+                breed: 'European Shorthair',
+                compatibility: ['Friendly with other cats'],
+                description: 'This shy but very dear mama was rescued with her 4 small kittens. With 3 of them adopted, Bowie likes to spend her days napping by the window and observing from above what happens in the shelter.',
                 images: [
                     './assets/img/Bowie.png',
                     'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
@@ -1268,11 +1165,11 @@
             },
             cat7: {
                 name: 'Bragaparque',
-                gender: 'Masculino',
-                age: '10 anos',
-                breed: 'Europeu Comum',
-                compatibility: ['Simpático com outros gatos'],
-                description: 'Tem uns lindos olhos verdes, mas estava tão fofo nesta foto que não conseguimos resistir em usá-la. Encontrado perto do sítio homónimo, este lindo e simpático gatão, viveu durante muitos anos na rua até a sua cuidadora nos pedir ajuda para cuidar do seu pêlo. Adora um bom patê e de receber miminhos.',
+                gender: 'Male',
+                age: '10 years',
+                breed: 'European Shorthair',
+                compatibility: ['Friendly with other cats'],
+                description: 'He has beautiful green eyes, but he was so cute in this photo that we couldn\'t resist using it. Found near the place with the same name, this beautiful and friendly big cat lived for many years on the street until his caregiver asked us to help care for his fur. Loves good wet food and receiving cuddles.',
                 images: [
                     './assets/img/Bragaparque.jpg',
                     'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
@@ -1281,11 +1178,11 @@
             },
             cat8: {
                 name: 'Branquinha',
-                gender: 'Feminino',
-                age: '1 ano',
-                breed: 'Europeu Comum',
-                compatibility: ['Simpático com outros gatos'],
-                description: 'Irmãzinha da Kika e da Daisy. Tem um belo pelo macio e olhos azuis. Um pouco medrosa, mas gulosa. Adora receber mimo e de brincar com os amiguinhos.',
+                gender: 'Female',
+                age: '1 year',
+                breed: 'European Shorthair',
+                compatibility: ['Friendly with other cats'],
+                description: 'Little sister of Kika and Daisy. Has beautiful soft fur and blue eyes. A little fearful, but greedy. Loves receiving cuddles and playing with friends.',
                 images: [
                     './assets/img/Branquinha.png',
                     'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
@@ -1294,11 +1191,11 @@
             },
             cat9: {
                 name: 'Brownie',
-                gender: 'Masculino',
-                age: '2 anos',
-                breed: 'Siamês',
-                compatibility: ['FIV: Positivo', 'FeLV: Negativo'],
-                description: 'Encontrado com coleira na Avenida João XXI e sem sorte a encontrar os donos, este rapaz veio parar ao nosso abrigo. Recentemente lutou contra uma infeção pulmonar de origem desconhecida e conseguiu sair por cima. Hoje em dia é um gatinho saudável que adora mimo dos humanos e de resmungar com os colegas.',
+                gender: 'Male',
+                age: '2 years',
+                breed: 'Siamese',
+                compatibility: ['FIV: Positive', 'FeLV: Negative'],
+                description: 'Found with a collar on João XXI Avenue and with no luck finding his owners, this boy ended up at our shelter. Recently fought against a lung infection of unknown origin and came out on top. Today he is a healthy kitten who loves human cuddles and grumbling with colleagues.',
                 images: [
                     './assets/img/Brownie.png',
                     'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
@@ -1307,11 +1204,11 @@
             },
             cat10: {
                 name: 'Bruxinha',
-                gender: 'Feminino',
-                age: '2 anos',
-                breed: 'Europeu Comum',
-                compatibility: ['Simpático com outros gatos', 'NÃO É compatível com crianças'],
-                description: 'Resgatada em Guimarães com a sua mamã Vitória e irmãozinhos. Apesar de pequenina e muito fofinha, esta malandra é ainda desconfiada das pessoas. Adora a hora do patê e de brincar.',
+                gender: 'Female',
+                age: '2 years',
+                breed: 'European Shorthair',
+                compatibility: ['Friendly with other cats', 'NOT compatible with children'],
+                description: 'Rescued in Guimarães with her mama Vitória and little brothers. Despite being small and very cute, this rascal is still distrustful of people. Loves wet food time and playing.',
                 images: [
                     './assets/img/Bruxinha.png',
                     'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
@@ -1320,24 +1217,24 @@
             },
             cat11: {
                 name: 'Cléo',
-                gender: 'Feminino',
-                age: '2 anos',
-                breed: 'Europeu Comum',
-                compatibility: ['Simpático com outros gatos'],
-                description: 'Esta beldade tem um pelo longo e macio, mesmo convidativo a festinhas. Inicialmente bastante tímida, a Cléo tem-se tornado numa gatinha muito dengosa e meiga. Adora uma boa brincadeira e a hora do patê.',
+                gender: 'Female',
+                age: '2 years',
+                breed: 'European Shorthair',
+                compatibility: ['Friendly with other cats'],
+                description: 'This beauty has long and soft fur, very inviting for pets. Initially quite shy, Cléo has become a very cuddly and sweet kitten. Loves a good game and wet food time.',
                 images: [
-                    './assets/img/Cléo.png',
+                    './assets/img/Cléo.png',
                     'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
                     'https://images.unsplash.com/photo-1516750105099-4b8a83e217ee?w=600&h=400&fit=crop'
                 ]
             },
             cat12: {
                 name: 'Daisy',
-                gender: 'Feminino',
-                age: '1 ano',
-                breed: 'Domestico Pelo Longo',
-                compatibility: ['Simpático com outros gatos', 'Simpático com crianças'],
-                description: 'Um pouco tímida, mas muito macia e simpática. Irmãzinha da Branquinha e da Kika, a Daisy é a mais extrovertida das 3 e muitas vezes anda atrás de nós à espera da sua vez de comer patê. Gosta de festinhas na cabeça e de brincar com as amigas.',
+                gender: 'Female',
+                age: '1 year',
+                breed: 'Domestic Longhair',
+                compatibility: ['Friendly with other cats', 'Friendly with children'],
+                description: 'A little shy, but very soft and friendly. Little sister of Branquinha and Kika, Daisy is the most extroverted of the 3 and often follows us around waiting for her turn to eat wet food. Likes head pets and playing with friends.',
                 images: [
                     './assets/img/Daisy.png',
                     'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
@@ -1346,11 +1243,11 @@
             },
             cat13: {
                 name: 'Donatella',
-                gender: 'Feminino',
-                age: '1 ano',
-                breed: 'Europeu Comum',
-                compatibility: ['Simpático com outros gatos', 'Simpático com crianças', 'FIV: Negativo', 'FeLV: Negativo'],
-                description: 'Adora ser segurada como um bebé e de festinhas na barriga. Muito ronroneira e meiga, esta tartaruguinha foi resgatada junto com a irmã perto da escola de Palmeira. Tímida com outros gatinhos desde que perdeu a irmã, tem-se tornado compincha da Daisy.',
+                gender: 'Female',
+                age: '1 year',
+                breed: 'European Shorthair',
+                compatibility: ['Friendly with other cats', 'Friendly with children', 'FIV: Negative', 'FeLV: Negative'],
+                description: 'Loves being held like a baby and belly rubs. Very purry and sweet, this little tortoiseshell was rescued with her sister near Palmeira school. Shy with other kittens since losing her sister, she has become Daisy\'s buddy.',
                 images: [
                     './assets/img/Donatella.jpg',
                     'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
@@ -1359,11 +1256,11 @@
             },
             cat14: {
                 name: 'Douradinho',
-                gender: 'Masculino',
-                age: '2 anos',
-                breed: 'Europeu Comum',
-                compatibility: ['Simpático com outros gatos', 'FIV: Negativo', 'FeLV: Negativo'],
-                description: 'Foi encontrado com feridas nas orelhitas. Veio para o abrigo ainda muito assustado, mas sempre se deixou ser cuidado. Agora recuperado não nos dá muita confiança, mas vai recebendo festinhas com algum receio. Adora descansar à janela com a Salmiakki.',
+                gender: 'Male',
+                age: '2 years',
+                breed: 'European Shorthair',
+                compatibility: ['Friendly with other cats', 'FIV: Negative', 'FeLV: Negative'],
+                description: 'Was found with wounds on his little ears. Came to the shelter still very scared, but always let himself be cared for. Now recovered, he doesn\'t give us much trust, but receives pets with some fear. Loves resting by the window with Salmiakki.',
                 images: [
                     './assets/img/Douradinho.jpg',
                     'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
@@ -1372,24 +1269,24 @@
             },
             cat15: {
                 name: 'Eusébio (Zezéba)',
-                gender: 'Masculino',
-                age: '5 anos',
-                breed: 'Europeu Comum',
-                compatibility: ['Simpático com outros gatos', 'FIV: Negativo', 'FeLV: Negativo'],
-                description: 'Tem um miar muito peculiar e bastante distinto - conseguimos sempre saber quando ele anda a fazer das dele. Muito meigo e simpático, adora colo, miminho e patê. Também conhecido como o paizão do abrigo, o Eusébio adora cuidar dos mais pequenos.',
+                gender: 'Male',
+                age: '5 years',
+                breed: 'European Shorthair',
+                compatibility: ['Friendly with other cats', 'FIV: Negative', 'FeLV: Negative'],
+                description: 'Has a very peculiar and distinctive meow - we can always tell when he\'s up to something. Very sweet and friendly, loves laps, cuddles and wet food. Also known as the shelter daddy, Eusébio loves taking care of the little ones.',
                 images: [
-                    './assets/img/Eusébio.jpg',
+                    './assets/img/Eusébio.jpg',
                     'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
                     'https://images.unsplash.com/photo-1516750105099-4b8a83e217ee?w=600&h=400&fit=crop'
                 ]
             },
             cat16: {
                 name: 'Flash',
-                gender: 'Masculino',
-                age: '3 anos',
-                breed: 'Domestico Pelo Longo',
-                compatibility: ['Simpático com outros gatos'],
-                description: 'Um gatinho bastante desconfiado, tem vindo ficar confortável com pessoas aos poucos (especialmente se tivermos patê para lhe dar). Gosta de brincar e partilhar as alcofas com os jovens de vez em quando. Arquinimigo do Thor.',
+                gender: 'Male',
+                age: '3 years',
+                breed: 'Domestic Longhair',
+                compatibility: ['Friendly with other cats'],
+                description: 'A quite distrustful kitten, he has been getting comfortable with people gradually (especially if we have wet food to give him). Likes to play and share beds with the young ones from time to time. Thor\'s archenemy.',
                 images: [
                     './assets/img/Flash.jpg',
                     'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
@@ -1398,11 +1295,11 @@
             },
             cat17: {
                 name: 'Gafanhoto',
-                gender: 'Masculino',
-                age: '1 ano',
-                breed: 'Europeu Comum',
-                compatibility: ['Simpático com outros gatos', 'Simpático com crianças', 'FIV: Negativo', 'FeLV: Negativo'],
-                description: 'Sempre muito simpático e sociável desde o primeiro dia. Adora brincar com os amigos, comer patê e receber miminhos. Anda sempre atrás dos voluntários, a saltitar de um lado para o outro à procura da próxima brincadeira. Melhor amigo do Baunilha.',
+                gender: 'Male',
+                age: '1 year',
+                breed: 'European Shorthair',
+                compatibility: ['Friendly with other cats', 'Friendly with children', 'FIV: Negative', 'FeLV: Negative'],
+                description: 'Always very friendly and sociable from day one. Loves playing with friends, eating wet food and receiving cuddles. Always follows volunteers around, hopping from side to side looking for the next game. Baunilha\'s best friend.',
                 images: [
                     './assets/img/Gafanhoto.jpg',
                     'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
@@ -1411,11 +1308,11 @@
             },
             cat18: {
                 name: 'Gaio',
-                gender: 'Masculino',
-                age: '2 anos',
+                gender: 'Male',
+                age: '2 years',
                 breed: 'Chartreux',
-                compatibility: ['Simpático com outros gatos', 'Simpático com crianças'],
-                description: 'Longo e esbelto, o Gaio tem um pelo cinzento curto e macio. Muito simpático e brincalhão com os seus colegas, aprendeu aos poucos a confiar nos humanos. Adora uma boa festinha, principalmente de crianças.',
+                compatibility: ['Friendly with other cats', 'Friendly with children'],
+                description: 'Long and slender, Gaio has short and soft gray fur. Very friendly and playful with his colleagues, he gradually learned to trust humans. Loves a good pet, especially from children.',
                 images: [
                     './assets/img/Gaio.jpg',
                     'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
@@ -1424,11 +1321,11 @@
             },
             cat19: {
                 name: 'Harley Quinn',
-                gender: 'Feminino',
-                age: '10 anos',
+                gender: 'Female',
+                age: '10 years',
                 breed: 'Calico',
                 compatibility: [''],
-                description: 'Uma das mais recentes residentes do abrigo, esta meiga mas tímida menina tem uma pelagem muito peculiar no focinho, que nos fez lembrar uma arlequim. Precisa ainda de muito amor e carinho para ganhar confiança com os humanos.',
+                description: 'One of the shelter\'s most recent residents, this sweet but shy girl has very peculiar markings on her muzzle, which reminded us of a harlequin. Still needs lots of love and affection to gain confidence with humans.',
                 images: [
                     './assets/img/Harley Quinn.jpg',
                     'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
@@ -1437,11 +1334,11 @@
             },
             cat20: {
                 name: 'Isa',
-                gender: 'Feminino',
-                age: '10 meses',
-                breed: 'Europeu Comum',
-                compatibility: ['Simpático com outros gatos'],
-                description: 'Um pouco tímida com humanos, a festinhas de vez em quando diz não, mas nunca diz que não a um bom patê e a uma boa brincadeira, seja com humanos ou gatinhos. Filhota da Adolfina e irmã da Mel e da Boganga.',
+                gender: 'Female',
+                age: '10 months',
+                breed: 'European Shorthair',
+                compatibility: ['Friendly with other cats'],
+                description: 'A little shy with humans, sometimes says no to pets, but never says no to good wet food and a good game, whether with humans or kittens. Daughter of Adolfina and sister of Mel and Boganga.',
                 images: [
                     './assets/img/Isa.jpg',
                     'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
@@ -1450,11 +1347,11 @@
             },
             cat21: {
                 name: 'Jubileu',
-                gender: 'Masculino',
-                age: '5 anos',
-                breed: 'Europeu Comum',
+                gender: 'Male',
+                age: '5 years',
+                breed: 'European Shorthair',
                 compatibility: [''],
-                description: 'Este rapagão rondava as portas do abrigo há algumas semanas até o conseguirmos apanhar e trazer para o quentinho. Muito simpático e falador com os humanos, mas ainda um pouco tímido com os outros colegas do abrigo. Gosta muito de estar à janela e não é grande fã de patê (eu sei que é difícil de acreditar).',
+                description: 'This big guy was hanging around the shelter doors for a few weeks until we managed to catch him and bring him into the warmth. Very friendly and talkative with humans, but still a bit shy with other shelter colleagues. Really likes being by the window and is not a big fan of wet food (I know it\'s hard to believe).',
                 images: [
                     './assets/img/Jubileu.jpg',
                     'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
@@ -1463,11 +1360,11 @@
             },
             cat22: {
                 name: 'Judy',
-                gender: 'Feminino',
-                age: '10 anos',
-                breed: 'Europeu Comum',
-                compatibility: ['Simpático com crianças'],
-                description: 'Muito fofa e redondinha, a Judy é uma senhora muito meiga e simpática com os humanos. Gosta muito de estar em sítios altos e não dá muita confiança a outros gatos, gostando de partilhar o espaço apenas com os gatinhos mais calmos. Grande fã de mimo e patê.',
+                gender: 'Female',
+                age: '10 years',
+                breed: 'European Shorthair',
+                compatibility: ['Friendly with children'],
+                description: 'Very cute and round, Judy is a very sweet and friendly lady with humans. Really likes being in high places and doesn\'t trust other cats much, preferring to share space only with the calmer kittens. Big fan of cuddles and wet food.',
                 images: [
                     './assets/img/Judy.jpg',
                     'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
@@ -1476,11 +1373,11 @@
             },
             cat23: {
                 name: 'Kika',
-                gender: 'Feminino',
-                age: '1 ano',
-                breed: 'Domestico Pelo Longo',
-                compatibility: ['Simpático com outros gatos'],
-                description: 'Uma das gatinhas com o pelo mais macio do abrigo. Muito tímida, mas não resiste a um patêzinho (só assim nos vai deixando fazer-lhe festinhas). Gosta muito de brincar, mas também de estar no seu cantinho a relaxar à janela.',
+                gender: 'Female',
+                age: '1 year',
+                breed: 'Domestic Longhair',
+                compatibility: ['Friendly with other cats'],
+                description: 'One of the kittens with the softest fur in the shelter. Very shy, but can\'t resist a little wet food (that\'s the only way she lets us pet her). Really likes to play, but also to be in her corner relaxing by the window.',
                 images: [
                     './assets/img/Kika.jpg',
                     'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
@@ -1489,24 +1386,24 @@
             },
             cat24: {
                 name: 'Lamaçães',
-                gender: 'Masculino',
-                age: '3 anos',
-                breed: 'Europeu Comum',
-                compatibility: ['Simpático com outros gatos', 'Simpático com crianças', 'FIV: Negativo', 'FeLV: Negativo'],
-                description: 'Como um verdadeiro senhor, o Lamaçães espera sempre pacientemente pela sua vez de comer patê. Apesar de parecer um gatinho bastante independente, é muito afeiçoado às pessoas e aos amiguinhos. Gosta de estar tranquilo, mas nunca sozinho.',
+                gender: 'Male',
+                age: '3 years',
+                breed: 'European Shorthair',
+                compatibility: ['Friendly with other cats', 'Friendly with children', 'FIV: Negative', 'FeLV: Negative'],
+                description: 'Like a true gentleman, Lamaçães always waits patiently for his turn to eat wet food. Despite seeming like a quite independent kitten, he is very attached to people and little friends. Likes to be calm, but never alone.',
                 images: [
-                    './assets/img/Lamaçães.jpg',
+                    './assets/img/Lamaçães.jpg',
                     'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
                     'https://images.unsplash.com/photo-1516750105099-4b8a83e217ee?w=600&h=400&fit=crop'
                 ]
             },
             cat25: {
                 name: 'Link',
-                gender: 'Masculino',
-                age: '6 anos',
-                breed: 'Europeu Comum',
-                compatibility: ['FIV: Positivo', 'FeLV: Negativo'],
-                description: 'Encontrado na Rodovia, este rapagão tinha mordidelas de cão nas patinhas. Apesar de algum receio dos humanos, foi muito corajoso e deixou-se ser tratado até recuperar completamente. Infelizmente entretanto contraiu PIF e está neste momento em tratamento a recuperar.',
+                gender: 'Male',
+                age: '6 years',
+                breed: 'European Shorthair',
+                compatibility: ['FIV: Positive', 'FeLV: Negative'],
+                description: 'Found on the highway, this big guy had dog bite marks on his paws. Despite some fear of humans, he was very brave and let himself be treated until he recovered completely. Unfortunately, he then contracted FIP and is currently in treatment recovering.',
                 images: [
                     './assets/img/Link.jpg',
                     'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
@@ -1515,11 +1412,11 @@
             },
             cat26: {
                 name: 'Maria Joaquina (Quininha)',
-                gender: 'Feminino',
-                age: '1 ano',
+                gender: 'Female',
+                age: '1 year',
                 breed: 'Calico',
-                compatibility: ['Simpático com outros gatos', 'Simpático com crianças', 'FIV: Negativo', 'FeLV: Negativo'],
-                description: 'Muito meiga e brincalhona com todos (mas sem muita paciência para o Baunilha). Quando foi resgatada tinha sido atacada por um cão e ficou gravemente ferida, mas apesar de tudo nunca deixou de ser um docinho. Recuperou totalmente e hoje é a mãezona do abrigo, pois adora cuidar dos pequenotes (e as mamãs do abrigo agradecem!)',
+                compatibility: ['Friendly with other cats', 'Friendly with children', 'FIV: Negative', 'FeLV: Negative'],
+                description: 'Very sweet and playful with everyone (but with no patience for Baunilha). When she was rescued she had been attacked by a dog and was seriously injured, but despite everything she never stopped being a sweetheart. She recovered completely and today is the shelter\'s big mama, as she loves taking care of the little ones (and the shelter mamas are grateful!).',
                 images: [
                     './assets/img/Maria Joaquina (Quininha).jpg',
                     'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
@@ -1528,11 +1425,11 @@
             },
             cat27: {
                 name: 'Mariano',
-                gender: 'Masculino',
-                age: '5 anos',
-                breed: 'Europeu Comum',
-                compatibility: ['Simpático com outros gatos'],
-                description: 'Este lindo rapaz, como muitos outros, foi apanhado para esterilizar mas acabou por ficar por ser um gatinho muito meigo. Tornou-se um pouco mais tímido no abrigo, mas adora roçar-se nas nossas pernas e pedir festinhas. Sempre atento atrás do patê.',
+                gender: 'Male',
+                age: '5 years',
+                breed: 'European Shorthair',
+                compatibility: ['Friendly with other cats'],
+                description: 'This beautiful boy, like many others, was caught for neutering but ended up staying for being a very sweet kitten. He became a bit more shy at the shelter, but loves rubbing against our legs and asking for pets. Always alert for wet food.',
                 images: [
                     './assets/img/Mariano.jpg',
                     'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
@@ -1540,25 +1437,25 @@
                 ]
             },
             cat28: {
-                name: 'Meia de Leite (Camões)',
-                gender: 'Masculino',
-                age: '9 meses',
-                breed: 'Siamês',
-                compatibility: ['Simpático com outros gatos', 'Simpático com crianças'],
-                description: 'Chamado Meia de Leite para combinar com o nome da irmãzinha (Café) que entretanto foi adotada. Este pequeno traquina recuperou de uma infeção ocular que tinha quando foi resgatado, perdendo um olho. Muito aventureiro e um ronroneiro nato. Adora patê e de brincar com os amiguinhos.',
+                name: 'Meia de Leite (Camões)',
+                gender: 'Male',
+                age: '9 months',
+                breed: 'Siamese',
+                compatibility: ['Friendly with other cats', 'Friendly with children'],
+                description: 'Called Meia de Leite to match his little sister\'s name (Café) who was later adopted. This little rascal recovered from an eye infection he had when rescued, losing one eye. Very adventurous and a natural purrer. Loves wet food and playing with friends.',
                 images: [
-                    './assets/img/Meia de Leite (Camões).jpg',
+                    './assets/img/Meia de Leite (Camões).jpg',
                     'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
                     'https://images.unsplash.com/photo-1516750105099-4b8a83e217ee?w=600&h=400&fit=crop'
                 ]
             },
             cat29: {
                 name: 'Mr. Blind',
-                gender: 'Masculino',
-                age: '5 anos',
-                breed: 'Burmês',
-                compatibility: ['Simpático com outros gatos'],
-                description: 'Apesar de cego, nada o para. Resmunga com os outros para saírem da frente, mas adora a companhia dos colegas, sendo o Survivor um dos seus maiores amigos. Foi resgatado da estrada, pois já tinha sido atropelado por não ver, e ficou com uma lesão numa das patas.',
+                gender: 'Male',
+                age: '5 years',
+                breed: 'Burmese',
+                compatibility: ['Friendly with other cats'],
+                description: 'Despite being blind, nothing stops him. He grumbles at others to get out of the way, but loves the company of colleagues, with Survivor being one of his best friends. He was rescued from the road, as he had already been hit by a car for not seeing, and was left with an injury to one of his paws.',
                 images: [
                     './assets/img/Mr. Blind.jpg',
                     'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
@@ -1567,11 +1464,11 @@
             },
             cat30: {
                 name: 'Olavo',
-                gender: 'Masculino',
-                age: '2 anos',
-                breed: 'Europeu Comum',
-                compatibility: ['Simpático com outros gatos', 'Simpático com cães', 'Simpático com crianças'],
-                description: 'Resgatado no Nova Arcada. Este lindão gosta de dormir a sesta e de estar sossegadinho no seu canto. Grande apreciador de patê e de mimos. Muito simpático tanto com humanos como com qualquer patudo. Paciente e sábio. É cego do olho esquerdo.',
+                gender: 'Male',
+                age: '2 years',
+                breed: 'European Shorthair',
+                compatibility: ['Friendly with other cats', 'Friendly with dogs', 'Friendly with children'],
+                description: 'Rescued at Nova Arcada. This handsome guy likes to take naps and be quietly in his corner. Great appreciator of wet food and cuddles. Very friendly with both humans and any furry friend. Patient and wise. He is blind in his left eye.',
                 images: [
                     './assets/img/Olavo.jpg',
                     'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
@@ -1580,24 +1477,24 @@
             },
             cat31: {
                 name: 'Picolé',
-                gender: 'Feminino',
-                age: '1 ano',
-                breed: 'Europeu Comum',
-                compatibility: ['Simpático com outros gatos'],
-                description: 'Resgatada na mesma altura que o Bino, a Picolé não estava habituada à interação com humanos. Esta pequenina é ainda bastante tímida, mas tem vindo a perceber que não há nada melhor do que um bom mimo. Gosta muito de patê e de dormir sestas com os pequenotes.',
+                gender: 'Female',
+                age: '1 year',
+                breed: 'European Shorthair',
+                compatibility: ['Friendly with other cats'],
+                description: 'Rescued at the same time as Bino, Picolé was not used to interaction with humans. This little one is still quite shy, but has been realizing that there\'s nothing better than a good cuddle. Really likes wet food and taking naps with the little ones.',
                 images: [
-                    './assets/img/Picolé.jpg',
+                    './assets/img/Picolé.jpg',
                     'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
                     'https://images.unsplash.com/photo-1516750105099-4b8a83e217ee?w=600&h=400&fit=crop'
                 ]
             },
             cat32: {
                 name: 'Príncipe',
-                gender: 'Masculino',
-                age: '10 anos',
+                gender: 'Male',
+                age: '10 years',
                 breed: 'Persian',
-                compatibility: ['Simpático com outros gatos'],
-                description: 'Resgatado em muito mau estado, o nosso pequeno Principe apareceu perdido coberto de óleo. Sem sorte em encontrar os donos, o nosso velho rapaz procura agora uma nova casa para viver o resto dos seus anos dourados. Muito meigo e ronroneiro. Tem um problema na anca que lhe causa alguns problemas de mobilidade.',
+                compatibility: ['Friendly with other cats'],
+                description: 'Rescued in very bad condition, our little Prince appeared lost covered in oil. With no luck finding his owners, our old boy is now looking for a new home to live out the rest of his golden years. Very sweet and purry. Has a hip problem that causes him some mobility issues.',
                 images: [
                     './assets/img/Príncipe.jpg',
                     'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
@@ -1606,11 +1503,11 @@
             },
             cat33: {
                 name: 'Salmiaki',
-                gender: 'Feminino',
-                age: '1 ano',
-                breed: 'Europeu Comum',
-                compatibility: ['Simpático com outros gatos'],
-                description: 'Esta tímida e simpática mamã apareceu numa colónia em Gualtar. No dia em que foi resgatada acabou por ter a sua pequena ninhada de 4 gatinhos. Cansada do duro trabalho de ser mãe, agora passa o dia a dormitar à janela com o Douradinho. Mamã da Kima, do Koda e do Rodolfo',
+                gender: 'Female',
+                age: '1 year',
+                breed: 'European Shorthair',
+                compatibility: ['Friendly with other cats'],
+                description: 'This shy and friendly mama appeared in a colony in Gualtar. On the day she was rescued she ended up having her small litter of 4 kittens. Tired from the hard work of being a mom, she now spends the day napping by the window with Douradinho. Mama of Kima, Koda and Rodolfo.',
                 images: [
                     './assets/img/Salmiaki.jpg',
                     'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
@@ -1619,11 +1516,11 @@
             },
             cat34: {
                 name: 'Speedy',
-                gender: 'Masculino',
-                age: '3 anos',
-                breed: 'Europeu Comum',
-                compatibility: ['Simpático com outros gatos', 'Simpático com crianças'],
-                description: 'Vindo de uma situação complicada, o Speedy depressa aceitou os novos humanos e colegas. Adora estar ao colo (embora resmungue um bocadinho só para parecer que não) e é viciado em Churus. Muito simpático e meigo, só não tem tanta paciência para aturar a pequenada.',
+                gender: 'Male',
+                age: '3 years',
+                breed: 'European Shorthair',
+                compatibility: ['Friendly with other cats', 'Friendly with children'],
+                description: 'Coming from a complicated situation, Speedy quickly accepted the new humans and colleagues. Loves being on laps (although he grumbles a little just to seem like he doesn\'t) and is addicted to Churus. Very friendly and sweet, just doesn\'t have much patience for dealing with the little ones.',
                 images: [
                     './assets/img/Speedy.jpg',
                     'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
@@ -1632,11 +1529,11 @@
             },
             cat35: {
                 name: 'Survivor',
-                gender: 'Masculino',
-                age: '2 anos',
-                breed: 'Europeu Comum',
-                compatibility: ['Simpático com outros gatos', 'Simpático com crianças', 'FIV: Negativo', 'FeLV: Negativo'],
-                description: 'Muito simpático e brincalhão, espera sempre pacientemente que o patê chegue até ele. Adora dormir junto dos colegas, festinhas e brincar. Este patudo é um dos raros sobreviventes de paleucopenia, daí o seu nome. Compincha do Mr. Blind.',
+                gender: 'Male',
+                age: '2 years',
+                breed: 'European Shorthair',
+                compatibility: ['Friendly with other cats', 'Friendly with children', 'FIV: Negative', 'FeLV: Negative'],
+                description: 'Very friendly and playful, always waits patiently for wet food to reach him. Loves sleeping with colleagues, pets and playing. This furry friend is one of the rare survivors of panleukopenia, hence his name. Mr. Blind\'s buddy.',
                 images: [
                     './assets/img/Survivor.jpg',
                     'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
@@ -1645,11 +1542,11 @@
             },
             cat36: {
                 name: 'Thor',
-                gender: 'Masculino',
-                age: '4 anos',
-                breed: 'Domestico Pelo Longo',
-                compatibility: ['NÃO É compatível com outros gatos', 'NÃO É compatível com crianças', 'FIV: Positivo', 'FeLV: Negativo'],
-                description: 'Este lindão de olhos verde e azul, é um gato bastante independente. Não gosta muito nem de gatos nem de humanos, mas nunca diz que não a um bom miminho (desde que estejamos atentos). Um verdadeiro connoisseur de patê. Arquinimigo do Flash.',
+                gender: 'Male',
+                age: '4 years',
+                breed: 'Domestic Longhair',
+                compatibility: ['NOT compatible with other cats', 'NOT compatible with children', 'FIV: Positive', 'FeLV: Negative'],
+                description: 'This handsome guy with green and blue eyes is a quite independent cat. Doesn\'t like cats or humans much, but never says no to a good cuddle (as long as we pay attention). A true wet food connoisseur. Flash\'s archenemy.',
                 images: [
                     './assets/img/Thor.jpg',
                     'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
@@ -1658,11 +1555,11 @@
             },
             cat37: {
                 name: 'Tina',
-                gender: 'Feminino',
-                age: '6 anos',
-                breed: 'Europeu Comum',
-                compatibility: ['Simpático com outros gatos', 'FIV: Negativo', 'FeLV: Negativo'],
-                description: 'Um verdadeiro docinho, esta pequenina tem uns lindos e grandes olhos castanhos. Um pouco tímida com alguns gatos, gostando mais de estar só no seu cantinho. Muito paciente e meiga com os humanos, adora um bom colo.',
+                gender: 'Female',
+                age: '6 years',
+                breed: 'European Shorthair',
+                compatibility: ['Friendly with other cats', 'FIV: Negative', 'FeLV: Negative'],
+                description: 'A true sweetheart, this little one has beautiful big brown eyes. A little shy with some cats, preferring to be alone in her corner. Very patient and sweet with humans, loves a good lap.',
                 images: [
                     './assets/img/Tina.jpg',
                     'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
@@ -1671,11 +1568,11 @@
             },
             cat38: {
                 name: 'Tontinha',
-                gender: 'Feminino',
-                age: '2 anos',
-                breed: 'Siamês',
+                gender: 'Female',
+                age: '2 years',
+                breed: 'Siamese',
                 compatibility: [''],
-                description: 'Assim chamada porque tem um pequeno desequilíbrio que faz com que a sua cabeça esteja sempre caída para o lado esquerdo. Apesar disso, corre e brinca atrás dos outros gatinhos. Tímida devido à sua condição, a Tontinha vai aos poucos deixando-nos aproximar (especialmente se tivermos patê).',
+                description: 'So called because she has a small imbalance that makes her head always tilted to the left side. Despite this, she runs and plays after other kittens. Shy due to her condition, Tontinha is gradually letting us get closer (especially if we have wet food).',
                 images: [
                     './assets/img/Tontinha.jpg',
                     'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
@@ -1684,11 +1581,11 @@
             },
             cat39: {
                 name: 'Vegeta',
-                gender: 'Masculino',
-                age: '4 anos',
-                breed: 'Europeu Comum',
-                compatibility: ['FIV: Negativo', 'FeLV: Negativo'],
-                description: 'Um verdadeiro filho único desde que veio para o abrigo, o Vegeta começou por ser um gato complicado e desconfiado tanto dos colegas como dos humanos. Hoje é o maior ronroneiro e adora ser carregado ao colo enquanto se queixa dos colegas. Adora patê e de dormitar junto dos amigos.',
+                gender: 'Male',
+                age: '4 years',
+                breed: 'European Shorthair',
+                compatibility: ['FIV: Negative', 'FeLV: Negative'],
+                description: 'A true only child since coming to the shelter, Vegeta started as a complicated and distrustful cat with both colleagues and humans. Today he is the biggest purrer and loves being carried on laps while complaining about colleagues. Loves wet food and napping with friends.',
                 images: [
                     './assets/img/Vegeta.jpg',
                     'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
@@ -1697,24 +1594,24 @@
             },
             cat40: {
                 name: 'Vitória',
-                gender: 'Feminino',
-                age: '4 anos',
-                breed: 'Siamês',
-                compatibility: ['FIV: Positivo', 'FeLV: Negativo'],
-                description: 'Muito tranquila e sossegada, mas um pouco tímida. Adora uma boa dose de festinhas. Resgatada em Guimarães, esta redondinha foi resgatada com filhotes dela e de outras ninhadas (entretanto adotados).Mamã da Bruxinha.',
+                gender: 'Female',
+                age: '4 years',
+                breed: 'Siamese',
+                compatibility: ['FIV: Positive', 'FeLV: Negative'],
+                description: 'Very calm and quiet, but a little shy. Loves a good dose of pets. Rescued in Guimarães, this round lady was rescued with her kittens and other litters (since adopted). Bruxinha\'s mama.',
                 images: [
-                    './assets/img/Vitória.jpg',
+                    './assets/img/Vitória.jpg',
                     'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
                     'https://images.unsplash.com/photo-1516750105099-4b8a83e217ee?w=600&h=400&fit=crop'
                 ]
             },
             cat41: {
                 name: 'Xerife',
-                gender: 'Masculino',
-                age: '5 anos',
-                breed: 'Domestico Pelo Longo',
-                compatibility: ['FIV: Positivo', 'FeLV: Negativo'],
-                description: 'Sempre a impor respeito no abrigo, mas amiguinho de todos, o Xerife é um gatinho sénior muito amoroso. Adora a nossa companhia e um bom patê. Perdeu os dentinhos todos devido à gengivite, mas continua a ser um dos nossos maiores gulosos. Apesar da idade ainda adora uma boa brincadeira. Vivia num quintal até a cuidadora ter pedido ajuda ao abrigo para cuidar dele.',
+                gender: 'Male',
+                age: '5 years',
+                breed: 'Domestic Longhair',
+                compatibility: ['FIV: Positive', 'FeLV: Negative'],
+                description: 'Always imposing respect at the shelter, but everyone\'s friend, Xerife is a very loving senior kitten. Loves our company and good wet food. Lost all his teeth due to gingivitis, but continues to be one of our biggest foodies. Despite his age, still loves a good game. He lived in a yard until his caregiver asked the shelter for help caring for him.',
                 images: [
                     './assets/img/Xerife.jpg',
                     'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
@@ -1723,11 +1620,11 @@
             },
             cat42: {
                 name: 'Zuzu',
-                gender: 'Feminino',
-                age: '4 anos',
-                breed: 'Europeu Comum',
-                compatibility: ['Simpático com outros gatos'],
-                description: 'Confundida por muitos pela Oreo, mas tem uma bela cauda longa e a orelha cortada. A Zuzu é uma gatinha tímida, mas muito meiga. Adora a companhia dos gatos juvenis e não perde uma oportunidade para comer patê. Aceita uma boa festinha, mas com algum cuidado.',
+                gender: 'Female',
+                age: '4 years',
+                breed: 'European Shorthair',
+                compatibility: ['Friendly with other cats'],
+                description: 'Confused by many with Oreo, but has a beautiful long tail and cut ear. Zuzu is a shy kitten, but very sweet. Loves the company of young cats and never misses an opportunity to eat wet food. Accepts a good pet, but with some care.',
                 images: [
                     './assets/img/Zuzu.jpg',
                     'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
@@ -1915,20 +1812,20 @@
 
             function updateButtonDisplay() {
                 const filterLabels = {
-                    gender: { 'Masculino': '♂', 'Feminino': '♀' },
-                    age: { 'young': 'Jovem', 'adult': 'Adulto', 'senior': 'Sênior' },
+                    gender: { 'Male': '♂', 'Female': '♀' },
+                    age: { 'young': 'Young', 'adult': 'Adult', 'senior': 'Senior' },
                     fiv: { 'positive': '+', 'negative': '-', 'unknown': '?' },
                     felv: { 'positive': '+', 'negative': '-', 'unknown': '?' },
                     compatibility: {
-                        'cats': 'Gatos',
-                        'children': 'Crianças',
-                        'dogs': 'Cães'
+                        'cats': 'Cats',
+                        'children': 'Children',
+                        'dogs': 'Dogs'
                     },
                     breed: {
-                        'Europeu Comum': 'Europeu',
-                        'Siamês': 'Siamês',
-                        'Domestico Pelo Longo': 'P.Longo',
-                        'Other': 'Outras'
+                        'European Shorthair': 'European',
+                        'Siamese': 'Siamese',
+                        'Domestic Longhair': 'Longhair',
+                        'Other': 'Other'
                     }
                 };
 
@@ -1968,7 +1865,7 @@
                     }
                 });
 
-                resultsCount.textContent = `${visibleCount} encontrados`;
+                resultsCount.textContent = `${visibleCount} found`;
             }
 
             function getCatDataFromCard(card) {
@@ -1981,9 +1878,9 @@
 
                 details.forEach(detail => {
                     const text = detail.textContent.trim();
-                    if (text.includes('ano') || text.includes('mes')) {
+                    if (text.includes('year') || text.includes('month')) {
                         age = text;
-                    } else if (text === 'Masculino' || text === 'Feminino') {
+                    } else if (text === 'Male' || text === 'Female') {
                         gender = text;
                     } else {
                         breed = text;
@@ -2034,7 +1931,7 @@
                 if (filters.breed) {
                     const breedMatches = filters.breed.some(filterBreed => {
                         if (filterBreed === 'Other') {
-                            return !['Europeu Comum', 'Siamês', 'Domestico Pelo Longo'].includes(catData.breed);
+                            return !['European Shorthair', 'Siamese', 'Domestic Longhair'].includes(catData.breed);
                         }
                         return catData.breed === filterBreed;
                     });
@@ -2065,11 +1962,11 @@
                         const hasCompatibility = filters.compatibility.some(comp => {
                             switch (comp) {
                                 case 'cats':
-                                    return catData.catInfo.compatibility.some(c => c.includes('outros gatos'));
+                                    return catData.catInfo.compatibility.some(c => c.includes('other cats'));
                                 case 'children':
-                                    return catData.catInfo.compatibility.some(c => c.includes('crianças'));
+                                    return catData.catInfo.compatibility.some(c => c.includes('children'));
                                 case 'dogs':
-                                    return catData.catInfo.compatibility.some(c => c.includes('cães'));
+                                    return catData.catInfo.compatibility.some(c => c.includes('dogs'));
                                 default:
                                     return false;
                             }
@@ -2088,7 +1985,7 @@
                 if (!ageMatch) return 'unknown';
 
                 const age = parseInt(ageMatch[1]);
-                const isMonths = ageText.includes('mes');
+                const isMonths = ageText.includes('month');
 
                 if (isMonths || age <= 2) {
                     return 'young';
@@ -2100,8 +1997,8 @@
             }
 
             function getFivStatus(compatibility) {
-                const fivPositive = compatibility.some(c => c.includes('FIV: Positivo'));
-                const fivNegative = compatibility.some(c => c.includes('FIV: Negativo'));
+                const fivPositive = compatibility.some(c => c.includes('FIV: Positive'));
+                const fivNegative = compatibility.some(c => c.includes('FIV: Negative'));
 
                 if (fivPositive) return 'positive';
                 if (fivNegative) return 'negative';
@@ -2109,8 +2006,8 @@
             }
 
             function getFelvStatus(compatibility) {
-                const felvPositive = compatibility.some(c => c.includes('FeLV: Positivo'));
-                const felvNegative = compatibility.some(c => c.includes('FeLV: Negativo'));
+                const felvPositive = compatibility.some(c => c.includes('FeLV: Positive'));
+                const felvNegative = compatibility.some(c => c.includes('FeLV: Negative'));
 
                 if (felvPositive) return 'positive';
                 if (felvNegative) return 'negative';
