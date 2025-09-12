@@ -8708,7 +8708,6 @@ Cats Grid Page
 
     .filter-section-inline {
         margin: 20px 0 30px 0;
-        padding: 0 20px;
         width: 100%;
         border-radius: 20px;
     }
@@ -9471,7 +9470,6 @@ Responsives
         gap: 15px;
         margin-top: 30px;
         margin-bottom: 100px;
-        padding: 0 20px;
     }
 
     .cat-card {
@@ -9567,7 +9565,6 @@ Responsives
         gap: 15px;
         margin-top: 30px;
         margin-bottom: 100px;
-        padding: 0 16px;
     }
 
     .cat-card {
@@ -9719,7 +9716,6 @@ Responsives
         gap: 12px;
         margin-top: 25px;
         margin-bottom: 100px;
-        padding: 0 16px;
     }
 
     .cat-card {
@@ -9876,7 +9872,6 @@ Responsives
         gap: 10px;
         margin-top: 20px;
         margin-bottom: 100px;
-        padding: 0 12px;
     }
 
     .cat-card {
@@ -10034,7 +10029,6 @@ Responsives
         gap: 8px;
         margin-top: 18px;
         margin-bottom: 100px;
-        padding: 0 12px;
     }
 
     .cat-card {
