@@ -24,6 +24,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/styles.css">
+    <link rel="stylesheet" href="./assets/cats_grid styles.css">
 </head>
 
 <body>
@@ -60,7 +61,7 @@
     <!-- ============================================
     Short information about the cat 
     ============================================ -->
-    <div class="container">
+    <div class="cats-container">
         <div class="header">
             <h1>AMIGATOS DA MILKINHA</h1>
             <p>Current residents at the shelter.</p>
@@ -84,11 +85,13 @@
                             <span class="btn-selections" id="genderSelections"></span>
                             <span class="dropdown-arrow">▼</span>
                         </button>
+
                         <div class="category-dropdown">
                             <label class="dropdown-option">
                                 <input type="checkbox" name="gender" value="Male">
                                 <span>Male</span>
                             </label>
+
                             <label class="dropdown-option">
                                 <input type="checkbox" name="gender" value="Female">
                                 <span>Female</span>
@@ -103,18 +106,21 @@
                             <span class="btn-selections" id="ageSelections"></span>
                             <span class="dropdown-arrow">▼</span>
                         </button>
+
                         <div class="category-dropdown">
                             <label class="dropdown-option">
                                 <input type="checkbox" name="age" value="young">
-                                <span>Young (up to 2 years)</span>
+                                <span>Young (0-2 years)</span>
                             </label>
+
                             <label class="dropdown-option">
                                 <input type="checkbox" name="age" value="adult">
-                                <span>Adult (2-7 years)</span>
+                                <span>Adult (3-7 years)</span>
                             </label>
+
                             <label class="dropdown-option">
                                 <input type="checkbox" name="age" value="senior">
-                                <span>Senior (7+ years)</span>
+                                <span>Senior (8+ years)</span>
                             </label>
                         </div>
                     </div>
@@ -126,18 +132,21 @@
                             <span class="btn-selections" id="fivSelections"></span>
                             <span class="dropdown-arrow">▼</span>
                         </button>
+
                         <div class="category-dropdown">
                             <label class="dropdown-option">
                                 <input type="checkbox" name="fiv" value="positive">
-                                <span>FIV Positive</span>
+                                <span>Positive</span>
                             </label>
+
                             <label class="dropdown-option">
                                 <input type="checkbox" name="fiv" value="negative">
-                                <span>FIV Negative</span>
+                                <span>Negative</span>
                             </label>
+
                             <label class="dropdown-option">
                                 <input type="checkbox" name="fiv" value="unknown">
-                                <span>Not tested</span>
+                                <span>Unknown</span>
                             </label>
                         </div>
                     </div>
@@ -149,18 +158,21 @@
                             <span class="btn-selections" id="felvSelections"></span>
                             <span class="dropdown-arrow">▼</span>
                         </button>
+
                         <div class="category-dropdown">
                             <label class="dropdown-option">
                                 <input type="checkbox" name="felv" value="positive">
-                                <span>FeLV Positive</span>
+                                <span>Positive</span>
                             </label>
+
                             <label class="dropdown-option">
                                 <input type="checkbox" name="felv" value="negative">
-                                <span>FeLV Negative</span>
+                                <span>Negative</span>
                             </label>
+
                             <label class="dropdown-option">
                                 <input type="checkbox" name="felv" value="unknown">
-                                <span>Not tested</span>
+                                <span>Unknown</span>
                             </label>
                         </div>
                     </div>
@@ -172,15 +184,18 @@
                             <span class="btn-selections" id="compatibilitySelections"></span>
                             <span class="dropdown-arrow">▼</span>
                         </button>
+
                         <div class="category-dropdown">
                             <label class="dropdown-option">
                                 <input type="checkbox" name="compatibility" value="cats">
                                 <span>With other cats</span>
                             </label>
+
                             <label class="dropdown-option">
                                 <input type="checkbox" name="compatibility" value="children">
                                 <span>With children</span>
                             </label>
+
                             <label class="dropdown-option">
                                 <input type="checkbox" name="compatibility" value="dogs">
                                 <span>With dogs</span>
@@ -195,22 +210,41 @@
                             <span class="btn-selections" id="breedSelections"></span>
                             <span class="dropdown-arrow">▼</span>
                         </button>
+
                         <div class="category-dropdown">
                             <label class="dropdown-option">
                                 <input type="checkbox" name="breed" value="European Shorthair">
                                 <span>European Shorthair</span>
                             </label>
+
                             <label class="dropdown-option">
                                 <input type="checkbox" name="breed" value="Siamese">
                                 <span>Siamese</span>
                             </label>
+
                             <label class="dropdown-option">
                                 <input type="checkbox" name="breed" value="Domestic Longhair">
                                 <span>Longhair</span>
                             </label>
+
                             <label class="dropdown-option">
-                                <input type="checkbox" name="breed" value="Other">
-                                <span>Other breeds</span>
+                                <input type="checkbox" name="breed" value="Chartreux">
+                                <span>Chartreux</span>
+                            </label>
+
+                            <label class="dropdown-option">
+                                <input type="checkbox" name="breed" value="Calico">
+                                <span>Calico</span>
+                            </label>
+
+                            <label class="dropdown-option">
+                                <input type="checkbox" name="breed" value="Burmese">
+                                <span>Burmese</span>
+                            </label>
+
+                            <label class="dropdown-option">
+                                <input type="checkbox" name="breed" value="Persian">
+                                <span>Persian</span>
                             </label>
                         </div>
                     </div>
@@ -1091,11 +1125,15 @@
                 age: '1 year',
                 breed: 'European Shorthair',
                 compatibility: ['Friendly with other cats', 'Friendly with children'],
+                fivStatus: 'unknown',
+                felvStatus: 'unknown',
+                compatibleWithCats: true,
+                compatibleWithChildren: true,
+                compatibleWithDogs: false,
                 description: 'Very curious and friendly, this beautiful mama was rescued first and only later we discovered she had left 4 kittens behind. They were rescued too and mama has been grateful ever since. Now with her daughters grown up, she prefers the company and lap of humans. Mother of Boganga, Mel and Isa.',
                 images: [
                     './assets/img/Adolfina.png',
-                    'https://images.unsplash.com/photo-1533738363-b7f9aef128ce?w=600&h=400&fit=crop',
-                    'https://images.unsplash.com/photo-1574158622682-e40e69881006?w=600&h=400&fit=crop'
+                    'https://images.unsplash.com/photo-1533738363-b7f9aef128ce?w=600&h=400&fit=crop'
                 ]
             },
             cat2: {
@@ -1104,11 +1142,15 @@
                 age: '2 years',
                 breed: 'European Shorthair',
                 compatibility: ['Friendly with other cats', 'Friendly with children', 'FIV: Positive', 'FeLV: Negative'],
+                fivStatus: 'positive',
+                felvStatus: 'negative',
+                compatibleWithCats: true,
+                compatibleWithChildren: true,
+                compatibleWithDogs: false,
                 description: 'He is Gafanhoto\'s best friend and Quininha\'s most annoying friend. Loves a good game, but doesn\'t give up cuddles and a good lap. He arrived at the shelter very stressed, but among his little friends he became one of the most friendly and gentle cats.',
                 images: [
                     './assets/img/Baunilha.png',
-                    'https://images.unsplash.com/photo-1529257414772-1960b7bea4eb?w=600&h=400&fit=crop',
-                    'https://images.unsplash.com/photo-1554456854-55a089fd4cb2?w=600&h=400&fit=crop'
+                    'https://images.unsplash.com/photo-1529257414772-1960b7bea4eb?w=600&h=400&fit=crop'
                 ]
             },
             cat3: {
@@ -1117,11 +1159,15 @@
                 age: '1 year',
                 breed: 'European Shorthair',
                 compatibility: ['Friendly with other cats', 'Friendly with children'],
+                fivStatus: 'unknown',
+                felvStatus: 'unknown',
+                compatibleWithCats: true,
+                compatibleWithChildren: true,
+                compatibleWithDogs: false,
                 description: 'This friendly young cat always gives a little jump when we pet his head. He started as a very scared kitten, but over time he realized there\'s nothing better than a good pet (and good wet food).',
                 images: [
                     './assets/img/Bino.png',
-                    'https://images.unsplash.com/photo-1571566882372-1598d88abd90?w=600&h=400&fit=crop',
-                    'https://images.unsplash.com/photo-1557246565-8a3d3ab5d7f6?w=600&h=400&fit=crop'
+                    'https://images.unsplash.com/photo-1571566882372-1598d88abd90?w=600&h=400&fit=crop'
                 ]
             },
             cat4: {
@@ -1130,11 +1176,15 @@
                 age: '10 months',
                 breed: 'European Shorthair',
                 compatibility: ['Friendly with other cats'],
+                fivStatus: 'unknown',
+                felvStatus: 'unknown',
+                compatibleWithCats: true,
+                compatibleWithChildren: false,
+                compatibleWithDogs: false,
                 description: 'Still quite shy, but only with humans. She\'s very curious and loves to play with her sisters, with friends and to annoy her mother. Daughter of Adolfina and sister of Mel and Isa.',
                 images: [
                     './assets/img/Boganga.png',
-                    'https://images.unsplash.com/photo-1551717743-49959800b1f6?w=600&h=400&fit=crop',
-                    'https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?w=600&h=400&fit=crop'
+                    'https://images.unsplash.com/photo-1551717743-49959800b1f6?w=600&h=400&fit=crop'
                 ]
             },
             cat5: {
@@ -1143,11 +1193,15 @@
                 age: '10 years',
                 breed: 'European Shorthair',
                 compatibility: [''],
+                fivStatus: 'unknown',
+                felvStatus: 'unknown',
+                compatibleWithCats: false,
+                compatibleWithChildren: false,
+                compatibleWithDogs: false,
                 description: 'Boris appeared one day near Mr. Avelino\'s house with a green collar. Looking a bit lost, Mr. Avelino decided to take him in and help find his owners. With no luck, this big and friendly guy is now looking for a new home.',
                 images: [
                     './assets/img/Boris.png',
-                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
-                    'https://images.unsplash.com/photo-1516750105099-4b8a83e217ee?w=600&h=400&fit=crop'
+                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop'
                 ]
             },
             cat6: {
@@ -1156,11 +1210,15 @@
                 age: '1 year',
                 breed: 'European Shorthair',
                 compatibility: ['Friendly with other cats'],
+                fivStatus: 'unknown',
+                felvStatus: 'unknown',
+                compatibleWithCats: true,
+                compatibleWithChildren: false,
+                compatibleWithDogs: false,
                 description: 'This shy but very dear mama was rescued with her 4 small kittens. With 3 of them adopted, Bowie likes to spend her days napping by the window and observing from above what happens in the shelter.',
                 images: [
                     './assets/img/Bowie.png',
-                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
-                    'https://images.unsplash.com/photo-1516750105099-4b8a83e217ee?w=600&h=400&fit=crop'
+                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop'
                 ]
             },
             cat7: {
@@ -1169,11 +1227,15 @@
                 age: '10 years',
                 breed: 'European Shorthair',
                 compatibility: ['Friendly with other cats'],
+                fivStatus: 'unknown',
+                felvStatus: 'unknown',
+                compatibleWithCats: true,
+                compatibleWithChildren: false,
+                compatibleWithDogs: false,
                 description: 'He has beautiful green eyes, but he was so cute in this photo that we couldn\'t resist using it. Found near the place with the same name, this beautiful and friendly big cat lived for many years on the street until his caregiver asked us to help care for his fur. Loves good wet food and receiving cuddles.',
                 images: [
                     './assets/img/Bragaparque.jpg',
-                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
-                    'https://images.unsplash.com/photo-1516750105099-4b8a83e217ee?w=600&h=400&fit=crop'
+                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop'
                 ]
             },
             cat8: {
@@ -1182,11 +1244,15 @@
                 age: '1 year',
                 breed: 'European Shorthair',
                 compatibility: ['Friendly with other cats'],
+                fivStatus: 'unknown',
+                felvStatus: 'unknown',
+                compatibleWithCats: true,
+                compatibleWithChildren: false,
+                compatibleWithDogs: false,
                 description: 'Little sister of Kika and Daisy. Has beautiful soft fur and blue eyes. A little fearful, but greedy. Loves receiving cuddles and playing with friends.',
                 images: [
                     './assets/img/Branquinha.png',
-                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
-                    'https://images.unsplash.com/photo-1516750105099-4b8a83e217ee?w=600&h=400&fit=crop'
+                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop'
                 ]
             },
             cat9: {
@@ -1195,11 +1261,15 @@
                 age: '2 years',
                 breed: 'Siamese',
                 compatibility: ['FIV: Positive', 'FeLV: Negative'],
+                fivStatus: 'positive',
+                felvStatus: 'negative',
+                compatibleWithCats: false,
+                compatibleWithChildren: false,
+                compatibleWithDogs: false,
                 description: 'Found with a collar on João XXI Avenue and with no luck finding his owners, this boy ended up at our shelter. Recently fought against a lung infection of unknown origin and came out on top. Today he is a healthy kitten who loves human cuddles and grumbling with colleagues.',
                 images: [
                     './assets/img/Brownie.png',
-                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
-                    'https://images.unsplash.com/photo-1516750105099-4b8a83e217ee?w=600&h=400&fit=crop'
+                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop'
                 ]
             },
             cat10: {
@@ -1208,11 +1278,15 @@
                 age: '2 years',
                 breed: 'European Shorthair',
                 compatibility: ['Friendly with other cats', 'NOT compatible with children'],
+                fivStatus: 'unknown',
+                felvStatus: 'unknown',
+                compatibleWithCats: true,
+                compatibleWithChildren: false,
+                compatibleWithDogs: false,
                 description: 'Rescued in Guimarães with her mama Vitória and little brothers. Despite being small and very cute, this rascal is still distrustful of people. Loves wet food time and playing.',
                 images: [
                     './assets/img/Bruxinha.png',
-                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
-                    'https://images.unsplash.com/photo-1516750105099-4b8a83e217ee?w=600&h=400&fit=crop'
+                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop'
                 ]
             },
             cat11: {
@@ -1221,11 +1295,15 @@
                 age: '2 years',
                 breed: 'European Shorthair',
                 compatibility: ['Friendly with other cats'],
+                fivStatus: 'unknown',
+                felvStatus: 'unknown',
+                compatibleWithCats: true,
+                compatibleWithChildren: false,
+                compatibleWithDogs: false,
                 description: 'This beauty has long and soft fur, very inviting for pets. Initially quite shy, Cléo has become a very cuddly and sweet kitten. Loves a good game and wet food time.',
                 images: [
                     './assets/img/Cléo.png',
-                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
-                    'https://images.unsplash.com/photo-1516750105099-4b8a83e217ee?w=600&h=400&fit=crop'
+                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop'
                 ]
             },
             cat12: {
@@ -1234,11 +1312,15 @@
                 age: '1 year',
                 breed: 'Domestic Longhair',
                 compatibility: ['Friendly with other cats', 'Friendly with children'],
+                fivStatus: 'unknown',
+                felvStatus: 'unknown',
+                compatibleWithCats: true,
+                compatibleWithChildren: true,
+                compatibleWithDogs: false,
                 description: 'A little shy, but very soft and friendly. Little sister of Branquinha and Kika, Daisy is the most extroverted of the 3 and often follows us around waiting for her turn to eat wet food. Likes head pets and playing with friends.',
                 images: [
                     './assets/img/Daisy.png',
-                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
-                    'https://images.unsplash.com/photo-1516750105099-4b8a83e217ee?w=600&h=400&fit=crop'
+                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop'
                 ]
             },
             cat13: {
@@ -1247,11 +1329,15 @@
                 age: '1 year',
                 breed: 'European Shorthair',
                 compatibility: ['Friendly with other cats', 'Friendly with children', 'FIV: Negative', 'FeLV: Negative'],
+                fivStatus: 'negative',
+                felvStatus: 'negative',
+                compatibleWithCats: true,
+                compatibleWithChildren: true,
+                compatibleWithDogs: false,
                 description: 'Loves being held like a baby and belly rubs. Very purry and sweet, this little tortoiseshell was rescued with her sister near Palmeira school. Shy with other kittens since losing her sister, she has become Daisy\'s buddy.',
                 images: [
                     './assets/img/Donatella.jpg',
-                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
-                    'https://images.unsplash.com/photo-1516750105099-4b8a83e217ee?w=600&h=400&fit=crop'
+                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop'
                 ]
             },
             cat14: {
@@ -1260,11 +1346,15 @@
                 age: '2 years',
                 breed: 'European Shorthair',
                 compatibility: ['Friendly with other cats', 'FIV: Negative', 'FeLV: Negative'],
+                fivStatus: 'negative',
+                felvStatus: 'negative',
+                compatibleWithCats: true,
+                compatibleWithChildren: false,
+                compatibleWithDogs: false,
                 description: 'Was found with wounds on his little ears. Came to the shelter still very scared, but always let himself be cared for. Now recovered, he doesn\'t give us much trust, but receives pets with some fear. Loves resting by the window with Salmiakki.',
                 images: [
                     './assets/img/Douradinho.jpg',
-                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
-                    'https://images.unsplash.com/photo-1516750105099-4b8a83e217ee?w=600&h=400&fit=crop'
+                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop'
                 ]
             },
             cat15: {
@@ -1273,11 +1363,15 @@
                 age: '5 years',
                 breed: 'European Shorthair',
                 compatibility: ['Friendly with other cats', 'FIV: Negative', 'FeLV: Negative'],
+                fivStatus: 'negative',
+                felvStatus: 'negative',
+                compatibleWithCats: true,
+                compatibleWithChildren: false,
+                compatibleWithDogs: false,
                 description: 'Has a very peculiar and distinctive meow - we can always tell when he\'s up to something. Very sweet and friendly, loves laps, cuddles and wet food. Also known as the shelter daddy, Eusébio loves taking care of the little ones.',
                 images: [
                     './assets/img/Eusébio.jpg',
-                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
-                    'https://images.unsplash.com/photo-1516750105099-4b8a83e217ee?w=600&h=400&fit=crop'
+                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop'
                 ]
             },
             cat16: {
@@ -1286,11 +1380,15 @@
                 age: '3 years',
                 breed: 'Domestic Longhair',
                 compatibility: ['Friendly with other cats'],
+                fivStatus: 'unknown',
+                felvStatus: 'unknown',
+                compatibleWithCats: true,
+                compatibleWithChildren: false,
+                compatibleWithDogs: false,
                 description: 'A quite distrustful kitten, he has been getting comfortable with people gradually (especially if we have wet food to give him). Likes to play and share beds with the young ones from time to time. Thor\'s archenemy.',
                 images: [
                     './assets/img/Flash.jpg',
-                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
-                    'https://images.unsplash.com/photo-1516750105099-4b8a83e217ee?w=600&h=400&fit=crop'
+                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop'
                 ]
             },
             cat17: {
@@ -1299,11 +1397,15 @@
                 age: '1 year',
                 breed: 'European Shorthair',
                 compatibility: ['Friendly with other cats', 'Friendly with children', 'FIV: Negative', 'FeLV: Negative'],
+                fivStatus: 'negative',
+                felvStatus: 'negative',
+                compatibleWithCats: true,
+                compatibleWithChildren: true,
+                compatibleWithDogs: false,
                 description: 'Always very friendly and sociable from day one. Loves playing with friends, eating wet food and receiving cuddles. Always follows volunteers around, hopping from side to side looking for the next game. Baunilha\'s best friend.',
                 images: [
                     './assets/img/Gafanhoto.jpg',
-                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
-                    'https://images.unsplash.com/photo-1516750105099-4b8a83e217ee?w=600&h=400&fit=crop'
+                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop'
                 ]
             },
             cat18: {
@@ -1312,11 +1414,15 @@
                 age: '2 years',
                 breed: 'Chartreux',
                 compatibility: ['Friendly with other cats', 'Friendly with children'],
+                fivStatus: 'unknown',
+                felvStatus: 'unknown',
+                compatibleWithCats: true,
+                compatibleWithChildren: true,
+                compatibleWithDogs: false,
                 description: 'Long and slender, Gaio has short and soft gray fur. Very friendly and playful with his colleagues, he gradually learned to trust humans. Loves a good pet, especially from children.',
                 images: [
                     './assets/img/Gaio.jpg',
-                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
-                    'https://images.unsplash.com/photo-1516750105099-4b8a83e217ee?w=600&h=400&fit=crop'
+                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop'
                 ]
             },
             cat19: {
@@ -1325,11 +1431,15 @@
                 age: '10 years',
                 breed: 'Calico',
                 compatibility: [''],
+                fivStatus: 'unknown',
+                felvStatus: 'unknown',
+                compatibleWithCats: false,
+                compatibleWithChildren: false,
+                compatibleWithDogs: false,
                 description: 'One of the shelter\'s most recent residents, this sweet but shy girl has very peculiar markings on her muzzle, which reminded us of a harlequin. Still needs lots of love and affection to gain confidence with humans.',
                 images: [
                     './assets/img/Harley Quinn.jpg',
-                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
-                    'https://images.unsplash.com/photo-1516750105099-4b8a83e217ee?w=600&h=400&fit=crop'
+                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop'
                 ]
             },
             cat20: {
@@ -1338,11 +1448,15 @@
                 age: '10 months',
                 breed: 'European Shorthair',
                 compatibility: ['Friendly with other cats'],
+                fivStatus: 'unknown',
+                felvStatus: 'unknown',
+                compatibleWithCats: true,
+                compatibleWithChildren: false,
+                compatibleWithDogs: false,
                 description: 'A little shy with humans, sometimes says no to pets, but never says no to good wet food and a good game, whether with humans or kittens. Daughter of Adolfina and sister of Mel and Boganga.',
                 images: [
                     './assets/img/Isa.jpg',
-                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
-                    'https://images.unsplash.com/photo-1516750105099-4b8a83e217ee?w=600&h=400&fit=crop'
+                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop'
                 ]
             },
             cat21: {
@@ -1351,11 +1465,15 @@
                 age: '5 years',
                 breed: 'European Shorthair',
                 compatibility: [''],
+                fivStatus: 'unknown',
+                felvStatus: 'unknown',
+                compatibleWithCats: false,
+                compatibleWithChildren: false,
+                compatibleWithDogs: false,
                 description: 'This big guy was hanging around the shelter doors for a few weeks until we managed to catch him and bring him into the warmth. Very friendly and talkative with humans, but still a bit shy with other shelter colleagues. Really likes being by the window and is not a big fan of wet food (I know it\'s hard to believe).',
                 images: [
                     './assets/img/Jubileu.jpg',
-                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
-                    'https://images.unsplash.com/photo-1516750105099-4b8a83e217ee?w=600&h=400&fit=crop'
+                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop'
                 ]
             },
             cat22: {
@@ -1364,11 +1482,15 @@
                 age: '10 years',
                 breed: 'European Shorthair',
                 compatibility: ['Friendly with children'],
+                fivStatus: 'unknown',
+                felvStatus: 'unknown',
+                compatibleWithCats: false,
+                compatibleWithChildren: true,
+                compatibleWithDogs: false,
                 description: 'Very cute and round, Judy is a very sweet and friendly lady with humans. Really likes being in high places and doesn\'t trust other cats much, preferring to share space only with the calmer kittens. Big fan of cuddles and wet food.',
                 images: [
                     './assets/img/Judy.jpg',
-                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
-                    'https://images.unsplash.com/photo-1516750105099-4b8a83e217ee?w=600&h=400&fit=crop'
+                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop'
                 ]
             },
             cat23: {
@@ -1377,11 +1499,15 @@
                 age: '1 year',
                 breed: 'Domestic Longhair',
                 compatibility: ['Friendly with other cats'],
+                fivStatus: 'unknown',
+                felvStatus: 'unknown',
+                compatibleWithCats: true,
+                compatibleWithChildren: false,
+                compatibleWithDogs: false,
                 description: 'One of the kittens with the softest fur in the shelter. Very shy, but can\'t resist a little wet food (that\'s the only way she lets us pet her). Really likes to play, but also to be in her corner relaxing by the window.',
                 images: [
                     './assets/img/Kika.jpg',
-                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
-                    'https://images.unsplash.com/photo-1516750105099-4b8a83e217ee?w=600&h=400&fit=crop'
+                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop'
                 ]
             },
             cat24: {
@@ -1390,11 +1516,15 @@
                 age: '3 years',
                 breed: 'European Shorthair',
                 compatibility: ['Friendly with other cats', 'Friendly with children', 'FIV: Negative', 'FeLV: Negative'],
+                fivStatus: 'negative',
+                felvStatus: 'negative',
+                compatibleWithCats: true,
+                compatibleWithChildren: true,
+                compatibleWithDogs: false,
                 description: 'Like a true gentleman, Lamaçães always waits patiently for his turn to eat wet food. Despite seeming like a quite independent kitten, he is very attached to people and little friends. Likes to be calm, but never alone.',
                 images: [
                     './assets/img/Lamaçães.jpg',
-                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
-                    'https://images.unsplash.com/photo-1516750105099-4b8a83e217ee?w=600&h=400&fit=crop'
+                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop'
                 ]
             },
             cat25: {
@@ -1403,11 +1533,15 @@
                 age: '6 years',
                 breed: 'European Shorthair',
                 compatibility: ['FIV: Positive', 'FeLV: Negative'],
+                fivStatus: 'positive',
+                felvStatus: 'negative',
+                compatibleWithCats: false,
+                compatibleWithChildren: false,
+                compatibleWithDogs: false,
                 description: 'Found on the highway, this big guy had dog bite marks on his paws. Despite some fear of humans, he was very brave and let himself be treated until he recovered completely. Unfortunately, he then contracted FIP and is currently in treatment recovering.',
                 images: [
                     './assets/img/Link.jpg',
-                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
-                    'https://images.unsplash.com/photo-1516750105099-4b8a83e217ee?w=600&h=400&fit=crop'
+                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop'
                 ]
             },
             cat26: {
@@ -1416,11 +1550,15 @@
                 age: '1 year',
                 breed: 'Calico',
                 compatibility: ['Friendly with other cats', 'Friendly with children', 'FIV: Negative', 'FeLV: Negative'],
+                fivStatus: 'negative',
+                felvStatus: 'negative',
+                compatibleWithCats: true,
+                compatibleWithChildren: true,
+                compatibleWithDogs: false,
                 description: 'Very sweet and playful with everyone (but with no patience for Baunilha). When she was rescued she had been attacked by a dog and was seriously injured, but despite everything she never stopped being a sweetheart. She recovered completely and today is the shelter\'s big mama, as she loves taking care of the little ones (and the shelter mamas are grateful!).',
                 images: [
                     './assets/img/Maria Joaquina (Quininha).jpg',
-                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
-                    'https://images.unsplash.com/photo-1516750105099-4b8a83e217ee?w=600&h=400&fit=crop'
+                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop'
                 ]
             },
             cat27: {
@@ -1429,11 +1567,15 @@
                 age: '5 years',
                 breed: 'European Shorthair',
                 compatibility: ['Friendly with other cats'],
+                fivStatus: 'unknown',
+                felvStatus: 'unknown',
+                compatibleWithCats: true,
+                compatibleWithChildren: false,
+                compatibleWithDogs: false,
                 description: 'This beautiful boy, like many others, was caught for neutering but ended up staying for being a very sweet kitten. He became a bit more shy at the shelter, but loves rubbing against our legs and asking for pets. Always alert for wet food.',
                 images: [
                     './assets/img/Mariano.jpg',
-                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
-                    'https://images.unsplash.com/photo-1516750105099-4b8a83e217ee?w=600&h=400&fit=crop'
+                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop'
                 ]
             },
             cat28: {
@@ -1442,11 +1584,15 @@
                 age: '9 months',
                 breed: 'Siamese',
                 compatibility: ['Friendly with other cats', 'Friendly with children'],
+                fivStatus: 'unknown',
+                felvStatus: 'unknown',
+                compatibleWithCats: true,
+                compatibleWithChildren: true,
+                compatibleWithDogs: false,
                 description: 'Called Meia de Leite to match his little sister\'s name (Café) who was later adopted. This little rascal recovered from an eye infection he had when rescued, losing one eye. Very adventurous and a natural purrer. Loves wet food and playing with friends.',
                 images: [
                     './assets/img/Meia de Leite (Camões).jpg',
-                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
-                    'https://images.unsplash.com/photo-1516750105099-4b8a83e217ee?w=600&h=400&fit=crop'
+                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop'
                 ]
             },
             cat29: {
@@ -1455,11 +1601,15 @@
                 age: '5 years',
                 breed: 'Burmese',
                 compatibility: ['Friendly with other cats'],
+                fivStatus: 'unknown',
+                felvStatus: 'unknown',
+                compatibleWithCats: true,
+                compatibleWithChildren: false,
+                compatibleWithDogs: false,
                 description: 'Despite being blind, nothing stops him. He grumbles at others to get out of the way, but loves the company of colleagues, with Survivor being one of his best friends. He was rescued from the road, as he had already been hit by a car for not seeing, and was left with an injury to one of his paws.',
                 images: [
                     './assets/img/Mr. Blind.jpg',
-                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
-                    'https://images.unsplash.com/photo-1516750105099-4b8a83e217ee?w=600&h=400&fit=crop'
+                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop'
                 ]
             },
             cat30: {
@@ -1468,11 +1618,15 @@
                 age: '2 years',
                 breed: 'European Shorthair',
                 compatibility: ['Friendly with other cats', 'Friendly with dogs', 'Friendly with children'],
+                fivStatus: 'unknown',
+                felvStatus: 'unknown',
+                compatibleWithCats: true,
+                compatibleWithChildren: true,
+                compatibleWithDogs: true,
                 description: 'Rescued at Nova Arcada. This handsome guy likes to take naps and be quietly in his corner. Great appreciator of wet food and cuddles. Very friendly with both humans and any furry friend. Patient and wise. He is blind in his left eye.',
                 images: [
                     './assets/img/Olavo.jpg',
-                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
-                    'https://images.unsplash.com/photo-1516750105099-4b8a83e217ee?w=600&h=400&fit=crop'
+                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop'
                 ]
             },
             cat31: {
@@ -1481,11 +1635,15 @@
                 age: '1 year',
                 breed: 'European Shorthair',
                 compatibility: ['Friendly with other cats'],
+                fivStatus: 'unknown',
+                felvStatus: 'unknown',
+                compatibleWithCats: true,
+                compatibleWithChildren: false,
+                compatibleWithDogs: false,
                 description: 'Rescued at the same time as Bino, Picolé was not used to interaction with humans. This little one is still quite shy, but has been realizing that there\'s nothing better than a good cuddle. Really likes wet food and taking naps with the little ones.',
                 images: [
                     './assets/img/Picolé.jpg',
-                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
-                    'https://images.unsplash.com/photo-1516750105099-4b8a83e217ee?w=600&h=400&fit=crop'
+                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop'
                 ]
             },
             cat32: {
@@ -1494,11 +1652,15 @@
                 age: '10 years',
                 breed: 'Persian',
                 compatibility: ['Friendly with other cats'],
+                fivStatus: 'unknown',
+                felvStatus: 'unknown',
+                compatibleWithCats: true,
+                compatibleWithChildren: false,
+                compatibleWithDogs: false,
                 description: 'Rescued in very bad condition, our little Prince appeared lost covered in oil. With no luck finding his owners, our old boy is now looking for a new home to live out the rest of his golden years. Very sweet and purry. Has a hip problem that causes him some mobility issues.',
                 images: [
                     './assets/img/Príncipe.jpg',
-                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
-                    'https://images.unsplash.com/photo-1516750105099-4b8a83e217ee?w=600&h=400&fit=crop'
+                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop'
                 ]
             },
             cat33: {
@@ -1507,11 +1669,15 @@
                 age: '1 year',
                 breed: 'European Shorthair',
                 compatibility: ['Friendly with other cats'],
+                fivStatus: 'unknown',
+                felvStatus: 'unknown',
+                compatibleWithCats: true,
+                compatibleWithChildren: false,
+                compatibleWithDogs: false,
                 description: 'This shy and friendly mama appeared in a colony in Gualtar. On the day she was rescued she ended up having her small litter of 4 kittens. Tired from the hard work of being a mom, she now spends the day napping by the window with Douradinho. Mama of Kima, Koda and Rodolfo.',
                 images: [
                     './assets/img/Salmiaki.jpg',
-                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
-                    'https://images.unsplash.com/photo-1516750105099-4b8a83e217ee?w=600&h=400&fit=crop'
+                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop'
                 ]
             },
             cat34: {
@@ -1520,11 +1686,15 @@
                 age: '3 years',
                 breed: 'European Shorthair',
                 compatibility: ['Friendly with other cats', 'Friendly with children'],
+                fivStatus: 'unknown',
+                felvStatus: 'unknown',
+                compatibleWithCats: true,
+                compatibleWithChildren: true,
+                compatibleWithDogs: false,
                 description: 'Coming from a complicated situation, Speedy quickly accepted the new humans and colleagues. Loves being on laps (although he grumbles a little just to seem like he doesn\'t) and is addicted to Churus. Very friendly and sweet, just doesn\'t have much patience for dealing with the little ones.',
                 images: [
                     './assets/img/Speedy.jpg',
-                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
-                    'https://images.unsplash.com/photo-1516750105099-4b8a83e217ee?w=600&h=400&fit=crop'
+                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop'
                 ]
             },
             cat35: {
@@ -1533,11 +1703,15 @@
                 age: '2 years',
                 breed: 'European Shorthair',
                 compatibility: ['Friendly with other cats', 'Friendly with children', 'FIV: Negative', 'FeLV: Negative'],
+                fivStatus: 'negative',
+                felvStatus: 'negative',
+                compatibleWithCats: true,
+                compatibleWithChildren: true,
+                compatibleWithDogs: false,
                 description: 'Very friendly and playful, always waits patiently for wet food to reach him. Loves sleeping with colleagues, pets and playing. This furry friend is one of the rare survivors of panleukopenia, hence his name. Mr. Blind\'s buddy.',
                 images: [
                     './assets/img/Survivor.jpg',
-                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
-                    'https://images.unsplash.com/photo-1516750105099-4b8a83e217ee?w=600&h=400&fit=crop'
+                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop'
                 ]
             },
             cat36: {
@@ -1546,11 +1720,15 @@
                 age: '4 years',
                 breed: 'Domestic Longhair',
                 compatibility: ['NOT compatible with other cats', 'NOT compatible with children', 'FIV: Positive', 'FeLV: Negative'],
+                fivStatus: 'positive',
+                felvStatus: 'negative',
+                compatibleWithCats: false,
+                compatibleWithChildren: false,
+                compatibleWithDogs: false,
                 description: 'This handsome guy with green and blue eyes is a quite independent cat. Doesn\'t like cats or humans much, but never says no to a good cuddle (as long as we pay attention). A true wet food connoisseur. Flash\'s archenemy.',
                 images: [
                     './assets/img/Thor.jpg',
-                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
-                    'https://images.unsplash.com/photo-1516750105099-4b8a83e217ee?w=600&h=400&fit=crop'
+                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop'
                 ]
             },
             cat37: {
@@ -1559,11 +1737,15 @@
                 age: '6 years',
                 breed: 'European Shorthair',
                 compatibility: ['Friendly with other cats', 'FIV: Negative', 'FeLV: Negative'],
+                fivStatus: 'negative',
+                felvStatus: 'negative',
+                compatibleWithCats: true,
+                compatibleWithChildren: false,
+                compatibleWithDogs: false,
                 description: 'A true sweetheart, this little one has beautiful big brown eyes. A little shy with some cats, preferring to be alone in her corner. Very patient and sweet with humans, loves a good lap.',
                 images: [
                     './assets/img/Tina.jpg',
-                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
-                    'https://images.unsplash.com/photo-1516750105099-4b8a83e217ee?w=600&h=400&fit=crop'
+                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop'
                 ]
             },
             cat38: {
@@ -1572,11 +1754,15 @@
                 age: '2 years',
                 breed: 'Siamese',
                 compatibility: [''],
+                fivStatus: 'unknown',
+                felvStatus: 'unknown',
+                compatibleWithCats: false,
+                compatibleWithChildren: false,
+                compatibleWithDogs: false,
                 description: 'So called because she has a small imbalance that makes her head always tilted to the left side. Despite this, she runs and plays after other kittens. Shy due to her condition, Tontinha is gradually letting us get closer (especially if we have wet food).',
                 images: [
                     './assets/img/Tontinha.jpg',
-                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
-                    'https://images.unsplash.com/photo-1516750105099-4b8a83e217ee?w=600&h=400&fit=crop'
+                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop'
                 ]
             },
             cat39: {
@@ -1585,11 +1771,15 @@
                 age: '4 years',
                 breed: 'European Shorthair',
                 compatibility: ['FIV: Negative', 'FeLV: Negative'],
+                fivStatus: 'negative',
+                felvStatus: 'negative',
+                compatibleWithCats: false,
+                compatibleWithChildren: false,
+                compatibleWithDogs: false,
                 description: 'A true only child since coming to the shelter, Vegeta started as a complicated and distrustful cat with both colleagues and humans. Today he is the biggest purrer and loves being carried on laps while complaining about colleagues. Loves wet food and napping with friends.',
                 images: [
                     './assets/img/Vegeta.jpg',
-                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
-                    'https://images.unsplash.com/photo-1516750105099-4b8a83e217ee?w=600&h=400&fit=crop'
+                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop'
                 ]
             },
             cat40: {
@@ -1598,11 +1788,15 @@
                 age: '4 years',
                 breed: 'Siamese',
                 compatibility: ['FIV: Positive', 'FeLV: Negative'],
+                fivStatus: 'positive',
+                felvStatus: 'negative',
+                compatibleWithCats: false,
+                compatibleWithChildren: false,
+                compatibleWithDogs: false,
                 description: 'Very calm and quiet, but a little shy. Loves a good dose of pets. Rescued in Guimarães, this round lady was rescued with her kittens and other litters (since adopted). Bruxinha\'s mama.',
                 images: [
                     './assets/img/Vitória.jpg',
-                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
-                    'https://images.unsplash.com/photo-1516750105099-4b8a83e217ee?w=600&h=400&fit=crop'
+                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop'
                 ]
             },
             cat41: {
@@ -1611,11 +1805,15 @@
                 age: '5 years',
                 breed: 'Domestic Longhair',
                 compatibility: ['FIV: Positive', 'FeLV: Negative'],
+                fivStatus: 'positive',
+                felvStatus: 'negative',
+                compatibleWithCats: false,
+                compatibleWithChildren: false,
+                compatibleWithDogs: false,
                 description: 'Always imposing respect at the shelter, but everyone\'s friend, Xerife is a very loving senior kitten. Loves our company and good wet food. Lost all his teeth due to gingivitis, but continues to be one of our biggest foodies. Despite his age, still loves a good game. He lived in a yard until his caregiver asked the shelter for help caring for him.',
                 images: [
                     './assets/img/Xerife.jpg',
-                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
-                    'https://images.unsplash.com/photo-1516750105099-4b8a83e217ee?w=600&h=400&fit=crop'
+                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop'
                 ]
             },
             cat42: {
@@ -1624,11 +1822,15 @@
                 age: '4 years',
                 breed: 'European Shorthair',
                 compatibility: ['Friendly with other cats'],
+                fivStatus: 'unknown',
+                felvStatus: 'unknown',
+                compatibleWithCats: true,
+                compatibleWithChildren: false,
+                compatibleWithDogs: false,
                 description: 'Confused by many with Oreo, but has a beautiful long tail and cut ear. Zuzu is a shy kitten, but very sweet. Loves the company of young cats and never misses an opportunity to eat wet food. Accepts a good pet, but with some care.',
                 images: [
                     './assets/img/Zuzu.jpg',
-                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop',
-                    'https://images.unsplash.com/photo-1516750105099-4b8a83e217ee?w=600&h=400&fit=crop'
+                    'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&h=400&fit=crop'
                 ]
             }
         };
@@ -1716,6 +1918,8 @@
     ============================================ -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
+            window.catData = catData;
+
             const resultsCount = document.getElementById('resultsCount');
             const clearAllBtn = document.getElementById('clearAllBtn');
             const categoryBtns = document.querySelectorAll('.category-btn');
@@ -1724,7 +1928,28 @@
             let activeFilters = {};
             let activeDropdown = null;
 
-            // Handle category button clicks
+            const filterLabels = {
+                gender: { 'Male': '♂', 'Female': '♀' },
+                age: { 'young': 'Young', 'adult': 'Adult', 'senior': 'Senior' },
+                fiv: { 'positive': '+', 'negative': '-', 'unknown': '?' },
+                felv: { 'positive': '+', 'negative': '-', 'unknown': '?' },
+                compatibility: {
+                    'cats': 'Cats',
+                    'children': 'Children',
+                    'dogs': 'Dogs'
+                },
+                breed: {
+                    'European Shorthair': 'European',
+                    'Siamese': 'Siamese',
+                    'Domestic Longhair': 'Longhair',
+                    'Chartreux': 'Chartreux',
+                    'Calico': 'Calico',
+                    'Burmese': 'Burmese',
+                    'Persian': 'Persian',
+                    'Other': 'Other'
+                }
+            };
+
             categoryBtns.forEach(btn => {
                 btn.addEventListener('click', function (e) {
                     e.stopPropagation();
@@ -1743,7 +1968,6 @@
                 });
             });
 
-            // Close dropdown when clicking outside
             document.addEventListener('click', function (e) {
                 if (!e.target.closest('.filter-category')) {
                     closeAllDropdowns();
@@ -1772,7 +1996,6 @@
                 });
             }
 
-            // Handle checkbox changes
             const checkboxes = document.querySelectorAll('.category-dropdown input[type="checkbox"]');
             checkboxes.forEach(checkbox => {
                 checkbox.addEventListener('change', function () {
@@ -1782,7 +2005,6 @@
                 });
             });
 
-            // Clear all filters
             clearAllBtn.addEventListener('click', function () {
                 checkboxes.forEach(checkbox => {
                     checkbox.checked = false;
@@ -1811,24 +2033,6 @@
             }
 
             function updateButtonDisplay() {
-                const filterLabels = {
-                    gender: { 'Male': '♂', 'Female': '♀' },
-                    age: { 'young': 'Young', 'adult': 'Adult', 'senior': 'Senior' },
-                    fiv: { 'positive': '+', 'negative': '-', 'unknown': '?' },
-                    felv: { 'positive': '+', 'negative': '-', 'unknown': '?' },
-                    compatibility: {
-                        'cats': 'Cats',
-                        'children': 'Children',
-                        'dogs': 'Dogs'
-                    },
-                    breed: {
-                        'European Shorthair': 'European',
-                        'Siamese': 'Siamese',
-                        'Domestic Longhair': 'Longhair',
-                        'Other': 'Other'
-                    }
-                };
-
                 filterCategories.forEach(category => {
                     const categoryName = category.getAttribute('data-category');
                     const btn = category.querySelector('.category-btn');
@@ -1840,7 +2044,7 @@
                         btn.classList.add('has-selections');
                         const labels = activeFilters[categoryName].map(value => filterLabels[categoryName][value] || value);
                         selectionsSpan.textContent = labels.join(', ');
-                        selectionsSpan.title = labels.join(', '); // Tooltip for full text
+                        selectionsSpan.title = labels.join(', ');
                     } else {
                         btn.classList.remove('has-selections');
                         selectionsSpan.textContent = '';
@@ -1854,13 +2058,15 @@
                 let visibleCount = 0;
 
                 catCards.forEach(card => {
-                    const catData = getCatDataFromCard(card);
-                    const isVisible = matchesFilters(catData, activeFilters);
+                    const isVisible = matchesFilters(card, activeFilters);
 
                     if (isVisible) {
+                        // Clear all inline styles and let CSS handle everything
+                        card.removeAttribute('style');
                         card.style.display = 'block';
                         visibleCount++;
                     } else {
+                        card.removeAttribute('style');
                         card.style.display = 'none';
                     }
                 });
@@ -1868,10 +2074,20 @@
                 resultsCount.textContent = `${visibleCount} found`;
             }
 
-            function getCatDataFromCard(card) {
-                const name = card.querySelector('.cat-name').textContent.trim();
-                const details = card.querySelectorAll('.detail-tag');
+            function matchesFilters(card, filters) {
+                if (Object.keys(filters).length === 0) return true;
 
+                // Get cat name to find data
+                const catName = card.querySelector('.cat-name').textContent.trim();
+                const catKey = findCatKey(catName);
+                const catInfo = catKey ? window.catData[catKey] : null;
+
+                if (!catInfo) {
+                    return false;
+                }
+
+                // Get data from HTML card for basic info
+                const details = card.querySelectorAll('.detail-tag');
                 let age = '';
                 let gender = '';
                 let breed = '';
@@ -1887,17 +2103,70 @@
                     }
                 });
 
-                const catKey = findCatKey(name);
-                const catInfo = catKey ? window.catData[catKey] : null;
+                // Gender filter
+                if (filters.gender && !filters.gender.includes(gender)) {
+                    return false;
+                }
 
-                return {
-                    name,
-                    age,
-                    gender,
-                    breed,
-                    compatibility: catInfo ? catInfo.compatibility : [],
-                    catInfo
-                };
+                // Age filter
+                if (filters.age) {
+                    const ageCategory = getAgeCategory(age);
+                    if (!filters.age.includes(ageCategory)) {
+                        return false;
+                    }
+                }
+
+                // Breed filter - use data from catInfo object instead of HTML
+                if (filters.breed) {
+                    const breedMatches = filters.breed.some(filterBreed => {
+                        if (filterBreed === 'Other') {
+                            const knownBreeds = [
+                                'European Shorthair', 'Siamese', 'Domestic Longhair',
+                                'Chartreux', 'Calico', 'Burmese', 'Persian'
+                            ];
+                            return !knownBreeds.includes(catInfo.breed);
+                        }
+                        return catInfo.breed === filterBreed;
+                    });
+                    if (!breedMatches) {
+                        return false;
+                    }
+                }
+
+                // FIV filter
+                if (filters.fiv) {
+                    if (!filters.fiv.includes(catInfo.fivStatus)) {
+                        return false;
+                    }
+                }
+
+                // FeLV filter
+                if (filters.felv) {
+                    if (!filters.felv.includes(catInfo.felvStatus)) {
+                        return false;
+                    }
+                }
+
+                // Compatibility filter
+                if (filters.compatibility) {
+                    const hasCompatibility = filters.compatibility.some(comp => {
+                        switch (comp) {
+                            case 'cats':
+                                return catInfo.compatibleWithCats === true;
+                            case 'children':
+                                return catInfo.compatibleWithChildren === true;
+                            case 'dogs':
+                                return catInfo.compatibleWithDogs === true;
+                            default:
+                                return false;
+                        }
+                    });
+                    if (!hasCompatibility) {
+                        return false;
+                    }
+                }
+
+                return true;
             }
 
             function findCatKey(name) {
@@ -1909,75 +2178,6 @@
                     }
                 }
                 return null;
-            }
-
-            function matchesFilters(catData, filters) {
-                if (Object.keys(filters).length === 0) return true;
-
-                // Gender filter
-                if (filters.gender && !filters.gender.includes(catData.gender)) {
-                    return false;
-                }
-
-                // Age filter
-                if (filters.age) {
-                    const ageCategory = getAgeCategory(catData.age);
-                    if (!filters.age.includes(ageCategory)) {
-                        return false;
-                    }
-                }
-
-                // Breed filter
-                if (filters.breed) {
-                    const breedMatches = filters.breed.some(filterBreed => {
-                        if (filterBreed === 'Other') {
-                            return !['European Shorthair', 'Siamese', 'Domestic Longhair'].includes(catData.breed);
-                        }
-                        return catData.breed === filterBreed;
-                    });
-                    if (!breedMatches) {
-                        return false;
-                    }
-                }
-
-                if (catData.catInfo) {
-                    // FIV filter
-                    if (filters.fiv) {
-                        const fivStatus = getFivStatus(catData.catInfo.compatibility);
-                        if (!filters.fiv.includes(fivStatus)) {
-                            return false;
-                        }
-                    }
-
-                    // FeLV filter
-                    if (filters.felv) {
-                        const felvStatus = getFelvStatus(catData.catInfo.compatibility);
-                        if (!filters.felv.includes(felvStatus)) {
-                            return false;
-                        }
-                    }
-
-                    // Compatibility filter
-                    if (filters.compatibility) {
-                        const hasCompatibility = filters.compatibility.some(comp => {
-                            switch (comp) {
-                                case 'cats':
-                                    return catData.catInfo.compatibility.some(c => c.includes('other cats'));
-                                case 'children':
-                                    return catData.catInfo.compatibility.some(c => c.includes('children'));
-                                case 'dogs':
-                                    return catData.catInfo.compatibility.some(c => c.includes('dogs'));
-                                default:
-                                    return false;
-                            }
-                        });
-                        if (!hasCompatibility) {
-                            return false;
-                        }
-                    }
-                }
-
-                return true;
             }
 
             function getAgeCategory(ageText) {
@@ -1996,23 +2196,7 @@
                 }
             }
 
-            function getFivStatus(compatibility) {
-                const fivPositive = compatibility.some(c => c.includes('FIV: Positive'));
-                const fivNegative = compatibility.some(c => c.includes('FIV: Negative'));
-
-                if (fivPositive) return 'positive';
-                if (fivNegative) return 'negative';
-                return 'unknown';
-            }
-
-            function getFelvStatus(compatibility) {
-                const felvPositive = compatibility.some(c => c.includes('FeLV: Positive'));
-                const felvNegative = compatibility.some(c => c.includes('FeLV: Negative'));
-
-                if (felvPositive) return 'positive';
-                if (felvNegative) return 'negative';
-                return 'unknown';
-            }
+            applyFilters();
         });
     </script>
 
