@@ -1204,90 +1204,75 @@ Responsives
     .cats-container {
         padding: 15px;
     }
-
     .header {
         padding: 30px 0;
     }
-
     .header h1 {
         font-size: 1.8rem;
     }
-
     .header p {
         font-size: 0.9rem;
         max-width: 100%;
     }
-
     .cats-grid {
         gap: 15px;
         margin-top: 30px;
         margin-bottom: 100px;
     }
-
     .cat-card {
-        flex: 1 1 calc(50% - 15px);
-        max-width: calc(50% - 15px);
+        flex: 1 1 calc(50% - 10px);
+        max-width: calc(50% - 0px);
     }
-
     .cat-image {
         height: 150px;
     }
-
     .cat-info {
         padding: 15px;
     }
-
     .cat-name {
         font-size: 1.1rem;
         margin-bottom: 8px;
     }
-
     .detail-tag {
         font-size: 0.75rem;
         padding: 3px 8px;
     }
-
     .status-available {
         font-size: 0.7rem;
         padding: 4px 8px;
     }
-
     .modal-content {
-        margin: 5% auto;
-        width: 95%;
+        margin: 2% 10px;
+        width: calc(100% - 20px);
+        max-width: calc(100vw - 20px);
+        max-height: 95vh;
+        overflow-y: auto;
+        box-sizing: border-box;
     }
-
     .modal-body {
         flex-direction: column;
     }
-
     .modal-images,
     .modal-info {
-        padding: 20px;
+        padding: 15px;
     }
-
     .main-image {
         height: 250px;
     }
-
     .modal-cat-name {
         font-size: 1.8rem;
     }
-
     .info-grid {
         grid-template-columns: 1fr 1fr;
         gap: 10px;
     }
-
     .info-item {
         padding: 10px;
     }
-
     .compatibility-tag {
         font-size: 0.9rem;
         padding: 6px 12px;
     }
-
     .contact-button {
         padding: 12px 20px;
         font-size: 1.2rem;
@@ -1384,7 +1369,7 @@ Responsives
     }
 
     .modal-status {
-        font-size: 0.9rem;
+        font-size: 0.75rem;
         padding: 8px 20px;
         margin-bottom: 25px;
     }
@@ -1402,7 +1387,7 @@ Responsives
 
     .info-label {
         font-size: var(--font-text-small);
-        margin-bottom: 5px;
+        margin-bottom: 0px;
     }
 
     .info-value {
