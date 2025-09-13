@@ -1,3 +1,189 @@
+:root {
+    --color-background: #FEFEFE;
+    --color-card-bg: #FFFFFF;
+    --color-accent: #B8798E;
+    --color-accent-2: #D199B0;
+    --color-accent-3: #F2E8ED;
+    --color-text: #2D2D2D;
+    --color-text-secondary: #6B6B6B;
+    --color-nav-inactive: #E5D1DA;
+    --color-nav-active: #B8798E;
+
+    --color-primary: #4A5568;
+    /* For main headings */
+    --color-secondary: #718096;
+    /* For subheadings */
+    --color-section-alt: #F8F9FA;
+    /* For alternating sections */
+    --color-neutral: #A0AEC0;
+    /* For paws and decorative elements */
+    --color-neutral-light: #E2E8F0;
+    /* For card backgrounds */
+    --color-neutral-dark: #2D3748;
+    /* For contrast elements */
+    --color-muted: #EDF2F7;
+    /* For subtle backgrounds */
+}
+
+
+:root {
+    /* Desktop Typography (1280px+) */
+    --font-hero-title: 3.5rem;
+    --font-section-title: 2.5rem;
+    --font-heading-h2: 2.2rem;
+    --font-heading-h3: 1.3rem;
+    --font-heading-h4: 1.1rem;
+    --font-subtitle: 1.1rem;
+    --font-text-body: 1.125rem;
+    --font-text-small: 1rem;
+    --font-button: 1rem;
+    --font-nav: 1rem;
+}
+
+/* Large Desktop (1920px+) */
+@media (min-width: 1920px) {
+    :root {
+        --font-hero-title: 4rem;
+        --font-section-title: 3rem;
+        --font-heading-h2: 2.4rem;
+        --font-heading-h3: 1.9rem;
+        --font-heading-h4: 1.4rem;
+        --font-subtitle: 1.3rem;
+        --font-text-body: 1rem;
+        --font-text-small: 0.9rem;
+        --font-button: 1.1rem;
+        --font-nav: 1.1rem;
+    }
+}
+
+/* Desktop Medium (1600px-1919px) */
+@media (min-width: 1600px) and (max-width: 1919px) {
+    :root {
+        --font-hero-title: 3.8rem;
+        --font-section-title: 2.8rem;
+        --font-heading-h2: 2.2rem;
+        --font-heading-h3: 1.8rem;
+        --font-heading-h4: 1.3rem;
+        --font-subtitle: 1.2rem;
+        --font-text-body: 0.95rem;
+        --font-text-small: 0.85rem;
+        --font-button: 1.1rem;
+        --font-nav: 1.1rem;
+    }
+}
+
+/* Desktop Small (1024px-1279px) */
+@media (min-width: 1024px) and (max-width: 1279px) {
+    :root {
+        --font-hero-title: 3.3rem;
+        --font-section-title: 2.3rem;
+        --font-heading-h2: 1.9rem;
+        --font-heading-h3: 1.5rem;
+        --font-heading-h4: 1.2rem;
+        --font-subtitle: 1.1rem;
+        --font-text-body: 0.9rem;
+        --font-text-small: 0.8rem;
+        --font-button: 0.95rem;
+        --font-nav: 0.95rem;
+    }
+}
+
+/* Tablet (768px-1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    :root {
+        --font-hero-title: 2.8rem;
+        --font-section-title: 1.9rem;
+        --font-heading-h2: 1.6rem;
+        --font-heading-h3: 1.3rem;
+        --font-heading-h4: 1.1rem;
+        --font-subtitle: 1rem;
+        --font-text-body: 0.9rem;
+        --font-text-small: 0.8rem;
+        --font-button: 0.9rem;
+        --font-nav: 0.9rem;
+    }
+}
+
+/* Mobile Large (414px-767px) */
+@media (min-width: 414px) and (max-width: 767px) {
+    :root {
+        --font-hero-title: 2.5rem;
+        --font-section-title: 1.6rem;
+        --font-heading-h2: 1.4rem;
+        --font-heading-h3: 1.2rem;
+        --font-heading-h4: 1.1rem;
+        --font-subtitle: 1rem;
+        --font-text-body: 1rem;
+        --font-text-small: 0.9rem;
+        --font-button: 0.9rem;
+        --font-nav: 1rem;
+    }
+}
+
+/* Mobile Medium (375px-413px) */
+@media (min-width: 375px) and (max-width: 413px) {
+    :root {
+        --font-hero-title: 2.2rem;
+        --font-section-title: 1.5rem;
+        --font-heading-h2: 1.3rem;
+        --font-heading-h3: 1.1rem;
+        --font-heading-h4: 1rem;
+        --font-subtitle: 0.95rem;
+        --font-text-body: 0.95rem;
+        --font-text-small: 0.85rem;
+        --font-button: 0.9rem;
+        --font-nav: 0.95rem;
+    }
+}
+
+/* Mobile Small (360px-374px) */
+@media (min-width: 360px) and (max-width: 374px) {
+    :root {
+        --font-hero-title: 2rem;
+        --font-section-title: 1.4rem;
+        --font-heading-h2: 1.2rem;
+        --font-heading-h3: 1rem;
+        --font-heading-h4: 0.95rem;
+        --font-subtitle: 0.9rem;
+        --font-text-body: 0.9rem;
+        --font-text-small: 0.8rem;
+        --font-button: 0.9rem;
+        --font-nav: 0.9rem;
+    }
+}
+
+/* Mobile Extra Small (320px-359px) */
+@media (min-width: 320px) and (max-width: 359px) {
+    :root {
+        --font-hero-title: 1.9rem;
+        --font-section-title: 1.3rem;
+        --font-heading-h2: 1.1rem;
+        --font-heading-h3: 0.95rem;
+        --font-heading-h4: 0.9rem;
+        --font-subtitle: 0.85rem;
+        --font-text-body: 0.85rem;
+        --font-text-small: 0.75rem;
+        --font-button: 0.85rem;
+        --font-nav: 0.85rem;
+    }
+}
+
+/* Landscape Mobile (896×414, 915×412) */
+@media (max-height: 500px) and (orientation: landscape) {
+    :root {
+        --font-hero-title: 1.5rem;
+        --font-section-title: 1.2rem;
+        --font-heading-h2: 1rem;
+        --font-heading-h3: 0.9rem;
+        --font-heading-h4: 0.85rem;
+        --font-subtitle: 0.8rem;
+        --font-text-body: 0.8rem;
+        --font-text-small: 0.7rem;
+        --font-button: 0.8rem;
+        --font-nav: 0.8rem;
+    }
+}
+
 .cats-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -38,7 +224,7 @@
 
 .filter-label-text {
     font-family: 'Quicksand', sans-serif;
-    font-size: 1.1rem;
+    font-size: var(--font-heading-h4);
     font-weight: 600;
     color: var(--color-accent);
     white-space: nowrap;
@@ -692,14 +878,14 @@ Modal Styles
 }
 
 .info-label {
-    font-size: 0.9rem;
+    font-size: var(--font-text-small);
     color: var(--color-text-secondary);
     margin-bottom: 5px;
     font-weight: 400;
 }
 
 .info-value {
-    font-size: 1.1rem;
+    font-size: var(--font-text-body);
     font-weight: 400;
     color: var(--color-accent);
 }
@@ -1215,12 +1401,12 @@ Responsives
     }
 
     .info-label {
-        font-size: 0.9rem;
+        font-size: var(--font-text-small);
         margin-bottom: 5px;
     }
 
     .info-value {
-        font-size: 1.1rem;
+        font-size: var(--font-text-body);
     }
 
     .compatibility-title {
@@ -1366,12 +1552,12 @@ Responsives
     }
 
     .info-label {
-        font-size: 0.9rem;
+        font-size: var(--font-text-small);
         margin-bottom: 4px;
     }
 
     .info-value {
-        font-size: 1.2rem;
+        font-size: var(--font-text-body);
     }
 
     .compatibility-title {
@@ -1522,12 +1708,12 @@ Responsives
     }
 
     .info-label {
-        font-size: 0.9rem;
+        font-size: var(--font-text-small);
         margin-bottom: 3px;
     }
 
     .info-value {
-        font-size: 0.9rem;
+        font-size: var(--font-text-body);
     }
 
     .compatibility-title {
@@ -1685,12 +1871,12 @@ Responsives
     }
 
     .info-label {
-        font-size: 0.75rem;
+        font-size: var(--font-text-small);
         margin-bottom: 2px;
     }
 
     .info-value {
-        font-size: 0.9rem;
+        font-size: var(--font-text-body);
     }
 
     .compatibility-title {
