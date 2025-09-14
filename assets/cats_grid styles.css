@@ -655,7 +655,7 @@ Cats Grid
     flex-wrap: wrap;
     gap: 25px;
     margin-top: 40px;
-    justify-content: space-between;
+    justify-content: flex-start;
     margin-bottom: 100px;
 }
 
