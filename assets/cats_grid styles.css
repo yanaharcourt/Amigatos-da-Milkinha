@@ -1254,6 +1254,11 @@ Responsives
     .modal-body {
         flex-direction: column;
     }
+
+    .image-thumbnails {
+        justify-content: space-between;
+    }
+    
     .modal-images,
     .modal-info {
         padding: 15px;
@@ -1355,9 +1360,13 @@ Responsives
         border-radius: 15px;
     }
 
+    .image-thumbnails {
+        justify-content: space-between;
+    }
+
     .thumbnail {
-        width: 80px;
-        height: 80px;
+        width: 70px;
+        height: 70px;
         border-radius: 10px;
     }
 
@@ -1506,9 +1515,13 @@ Responsives
         border-radius: 12px;
     }
 
+    .image-thumbnails {
+        justify-content: space-between;
+    }
+    
     .thumbnail {
-        width: 75px;
-        height: 75px;
+        width: 65px;
+        height: 65px;
         border-radius: 8px;
     }
 
